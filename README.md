@@ -2,7 +2,7 @@
 
 <h1>baggie</h1>
 
-[The little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+The little bag-of-tricks
 <hr>
 <br>
 
