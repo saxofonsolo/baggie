@@ -14,6 +14,7 @@ packages/**/*.*
 !packages/*/src/**/*.tsx
 !packages/*/*.js
 !packages/*/*.json
+!packages/*/*.md
 
 # ignore everything under "scripts" except certain files
 scripts/**/*.*
