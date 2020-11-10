@@ -1,6 +1,7 @@
 <img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/graphics/baggie.svg" height="100" />
 
-#@baggie/detection
+<h1>@baggie/detection</h1>
+
 Detection tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
 <hr>
 <br>

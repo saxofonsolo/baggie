@@ -1,6 +1,7 @@
 <img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/graphics/baggie.svg" height="100" />
 
-#@baggie/string
+<h1>@baggie/string</h1>
+
 String tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
 <hr>
 <br>
