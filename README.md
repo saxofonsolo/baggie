@@ -1,10 +1,8 @@
 <img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/graphics/baggie.svg" height="100" />
 
-#baggie
+<h1>baggie</h1>
+
 [The little bag-of-tricks](https://github.com/larsmunkholm/baggie)
-<br>
-<br>
-<br>
 <hr>
 <br>
 
