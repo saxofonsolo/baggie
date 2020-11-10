@@ -2,7 +2,7 @@ import {
     isBrowser,
     prefersReducedMotion,
     supportsSmoothScroll,
-} from "@baggie/feature-detection";
+} from "@baggie/detection";
 import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
 
 export function scrollToTop(smooth = true): void {
