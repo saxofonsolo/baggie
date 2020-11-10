@@ -1,0 +1,9 @@
+# Node
+**/node_modules
+
+# Generated
+**/.git
+**/.idea
+
+# Build
+**/lib

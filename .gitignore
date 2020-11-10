@@ -1,0 +1,32 @@
+# ignore all folders in root except a few
+*/**/*
+!graphics/**
+!packages/**
+!scripts/**
+
+# ignore everything under "graphics" except SVGs
+packages/**/*.*
+!packages/**/*.svg
+
+# ignore everything under "packages" except certain files
+packages/**/*.*
+!packages/*/src/**/*.ts
+!packages/*/src/**/*.tsx
+!packages/*/*.js
+!packages/*/*.json
+
+# ignore everything under "scripts" except certain files
+scripts/**/*.*
+!scripts/**/*.js
+
+# ignore debugging files
+*.log
+.eslintcache
+
+# ignore editor folders and files
+.idea
+.vs
+.vscode
+
+# ignore packages
+node_modules
