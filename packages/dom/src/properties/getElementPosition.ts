@@ -1,4 +1,4 @@
-import { getScrollPosition } from "..";
+import { getScrollPosition } from "../..";
 
 export const getElementYPosition = (element?: Element): number => {
     if (element) {
