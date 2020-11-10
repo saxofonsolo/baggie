@@ -1,13 +1,9 @@
-<div align="center">
-  <img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/graphics/baggie.svg" height="100" />
-</div>
+<img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/graphics/baggie.svg" height="100" />
 
-<div align="center">
-  <h1>@baggie/detection</h1>
-  <p>Detection tools from the little bag-of-tricks</p>
-  <br>
-  <br>
-</div>
+#@baggie/detection
+Detection tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+<hr>
+<br>
 
 ## 🚀 Installation
 ```bash

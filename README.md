@@ -1,17 +1,16 @@
-<div align="center">
-  <img alt="Baggie logo" src="graphics/baggie.svg" height="100" />
-</div>
+<img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/graphics/baggie.svg" height="100" />
 
-<div align="center">
-  <h1>baggie</h1>
-  <p>The little bag-of-tricks</p>
-  <br>
-  <br>
-</div>
+#baggie
+[The little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+<br>
+<br>
+<br>
+<hr>
+<br>
 
 ## 🎁 Packages
 | Name | Description |
-| --- | --- |
+| ---- | ----------- |
 | **[@baggie/color](https://www.npmjs.com/package/@baggie/color)** | Color tools |
 | **[@baggie/detection](https://www.npmjs.com/package/@baggie/detection)** | Tools for detecting media features, browser support, input method etc. |
 | **[@baggie/dom](https://www.npmjs.com/package/@baggie/dom)** | DOM tools |

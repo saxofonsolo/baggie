@@ -1,13 +1,9 @@
-<div align="center">
-  <img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/graphics/baggie.svg" height="100" />
-</div>
+<img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/graphics/baggie.svg" height="100" />
 
-<div align="center">
-  <h1>@baggie/functions</h1>
-  <p>Tools from the little bag-of-tricks</p>
-  <br>
-  <br>
-</div>
+#@baggie/functions
+Tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+<hr>
+<br>
 
 ## 🚀 Installation
 ```bash
