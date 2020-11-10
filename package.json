@@ -13,7 +13,7 @@
     "clean:lock": "rimraf packages/**/package-lock.json",
     "lint": "prettier --write \"**/*.{js,jsx,ts,tsx}\" && eslint --cache --fix \"**/*.{js,jsx,ts,tsx}\"",
     "check-commit-msg": "node scripts/check-commit-msg",
-    "deploy": "lerna publish"
+    "deploy": "lerna publish --skip-npm && lerna run publish-npm"
   },
   "files": [
     "lib/**/*"
