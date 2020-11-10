@@ -29,7 +29,7 @@
     "tools"
   ],
   "author": "Lars Munkholm <mail@larsersej.dk>",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/larsmunkholm/baggie#readme",
   "devDependencies": {
     "@types/jest": "^26.0.15",
