@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Baggie logo" src="graphics/baggie.svg" height="100" />
+  <img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/graphics/baggie.svg" height="100" />
 </div>
 
 <div align="center">
