@@ -10,7 +10,8 @@
     "test": "lerna run test --concurrency 1",
     "clean": "npx npm-run-all clean:*",
     "clean:lerna": "lerna clean --yes",
-    "clean:lock": "rimraf packages/**/package-lock.json",
+    "clean:lock": "rimraf **/package-lock.json",
+    "clean:modules": "rimraf node_modules",
     "lint": "prettier --write \"**/*.{js,jsx,ts,tsx}\" && eslint --cache --fix \"**/*.{js,jsx,ts,tsx}\"",
     "check-commit-msg": "node scripts/check-commit-msg",
     "deploy": "lerna publish --skip-npm && lerna run publish-npm"
