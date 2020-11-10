@@ -1,4 +1,4 @@
-export interface ScrollPosition {
+interface ScrollPosition {
     x: number;
     y: number;
 }

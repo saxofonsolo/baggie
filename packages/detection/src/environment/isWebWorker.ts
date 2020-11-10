@@ -1,3 +1,6 @@
-export const isWebWorker: boolean = typeof self === "object"
-    && self.constructor
-    && self.constructor.name === "DedicatedWorkerGlobalScope";
+/* globals self */
+
+export const isWebWorker: boolean =
+    typeof self === "object" &&
+    self.constructor &&
+    self.constructor.name === "DedicatedWorkerGlobalScope";

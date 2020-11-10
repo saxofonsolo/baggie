@@ -1,4 +1,4 @@
 import { isBrowser } from "./isBrowser";
 
 export const isReactNative =
-    isBrowser && navigator && navigator.product === "ReactNative";
+    isBrowser && window.navigator && window.navigator.product === "ReactNative";

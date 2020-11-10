@@ -12,7 +12,9 @@
     "clean:lerna": "lerna clean --yes",
     "clean:lock": "rimraf **/package-lock.json",
     "clean:modules": "rimraf node_modules",
-    "lint": "prettier --write \"**/*.{js,jsx,ts,tsx}\" && eslint --cache --fix \"**/*.{js,jsx,ts,tsx}\"",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+    "lint:eslint": "eslint --cache --fix \"**/*.{js,jsx,ts,tsx}\"",
     "check-commit-msg": "node scripts/check-commit-msg",
     "deploy": "lerna publish --skip-npm && lerna run publish-npm"
   },
@@ -38,6 +40,7 @@
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.22.1",
     "husky": "^4.2.5",
     "jest": "^26.6.1",
     "lerna": "^3.22.1",

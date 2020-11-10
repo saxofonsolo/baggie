@@ -1,5 +1,3 @@
-/* global process */
-
 const fs = require("fs");
 const log = require("../_helpers/log.helper");
 

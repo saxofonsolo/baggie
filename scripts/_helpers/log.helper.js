@@ -1,5 +1,3 @@
-/* global process */
-
 const message = (linesOfText) => {
     const maxCharacters = linesOfText.reduce(
         (accumulator, currentLineOfText) =>

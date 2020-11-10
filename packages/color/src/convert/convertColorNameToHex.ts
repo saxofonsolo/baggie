@@ -2,9 +2,8 @@
  * An object with W3S' list of color names supported by all browsers
  *
  * @see https://www.w3schools.com/colors/colors_names.asp
- * @type {Object}
  */
-export const colorNames: { [colorName: string]: string } = {
+const colorNames: { [colorName: string]: string } = {
     aliceblue: "#f0f8ff",
     antiquewhite: "#faebd7",
     aqua: "#00ffff",

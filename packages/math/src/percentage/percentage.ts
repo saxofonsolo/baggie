@@ -22,11 +22,11 @@ export const percentage = ({
     percentage,
 }: GetPart | GetWhole | GetPercentage): number => {
     if (part && whole) {
-        return part / whole * 100;
+        return (part / whole) * 100;
     }
 
     if (whole && percentage) {
-        return percentage / 100 * whole;
+        return (percentage / 100) * whole;
     }
 
     if (part && percentage) {
