@@ -8,6 +8,7 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * and a and b (green–red and blue–yellow color components) in the set -128 to 128. Alpha is always 0 to 1.
  *
  * @see https://github.com/antimatter15/rgb-lab/blob/master/color.js
+ * @category Convert
  */
 export const convertRgbToLab = ({
     red,

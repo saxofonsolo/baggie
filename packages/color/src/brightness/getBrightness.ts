@@ -1,6 +1,7 @@
 /**
  * Get the perceived brightness of a color as percentage in decimal form.
  *
+ * @category Brightness
  * @param color - Color in hex-format
  * @returns A number from 0 to 1, 1 being the brightest and 0 being not bright at all.
  */

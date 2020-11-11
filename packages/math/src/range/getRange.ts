@@ -12,6 +12,8 @@ import { NonEmptyArray } from "@baggie/typescript";
  * const range = getRange(numbers);
  * // range = 38
  * ```
+ *
+ * @category Distance
  */
 export const getRange = (numbers: NonEmptyArray<number>): number => {
     // Put the array of numbers in ascending order (small to large)

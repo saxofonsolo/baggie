@@ -1,5 +1,7 @@
 /**
  * An interface containing the values for red, green, blue and alpha.
+ *
+ * @category Interfaces
  */
 export interface RGBA {
     /**

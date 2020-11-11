@@ -9,6 +9,8 @@ import { RGBA } from "../_interfaces/rgba.interface";
 /**
  * Parse a string (like `#fff`, `#f0dd6a`, `violet`, `rgb(255, 100, 50)` or `rgba(255,255,255,.5)`) to an object
  * containing red, green, blue and alpha.
+ *
+ * @category Convert
  */
 export function parseColor(
     input: string | NonEmptyArray<number> | HSLA | RGBA

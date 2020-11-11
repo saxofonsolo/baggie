@@ -12,6 +12,7 @@ import { NonEmptyArray } from "@baggie/typescript";
  * // total = 45
  * ```
  *
+ * @category Arithmetic
  * @param numbers - An array of numbers to add together
  */
 export const addNumbers = (numbers: NonEmptyArray<number>): number =>

@@ -1,9 +1,9 @@
 /**
  * Check if an element is empty.
  *
- * @param element Check if this element is empty.
- * @param trimWhitespace Set this to **false** to ignore nodes with whitespace.
- * @returns **True** if the element is empty.
+ * @category Properties
+ * @param element - Element to check
+ * @param trimWhitespace - Set this to **true** to trim whitespace before checking if element is empty
  */
 export const isElementEmpty = (
     element: Element,

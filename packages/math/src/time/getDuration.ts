@@ -11,6 +11,8 @@
  * const duration = getDuration(10, 100);
  * // duration = 10
  * ```
+ *
+ * @category Time
  */
 export const getDuration = (speed: number, distance: number): number =>
     distance / speed;

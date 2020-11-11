@@ -7,8 +7,6 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * Result will be lighter, since we're working with an additive color model (RGB).
  * This function is the opposite of `multiplyColors()`.
  *
- * @see https://en.wikipedia.org/wiki/Blend_modes
- *
  * @example
  * ```ts
  * import { convertRgbToHex, screenColors } from "@baggie/color";
@@ -17,6 +15,9 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * const hex = convertRgbToHex(color);
  * // hex = "#FFFF00"
  * ```
+ *
+ * @see https://en.wikipedia.org/wiki/Blend_modes
+ * @category Manipulate
  */
 export const screenColors = (color1: RGBA, color2: RGBA): RGBA => ({
     red: Math.round(1 - (1 - color1.red) * (1 - color2.red)),

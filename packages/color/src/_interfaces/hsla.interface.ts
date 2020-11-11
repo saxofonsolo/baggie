@@ -1,5 +1,7 @@
 /**
  * An interface containing the values for hue, saturation, lightness and alpha.
+ *
+ * @category Interfaces
  */
 export interface HSLA {
     /**

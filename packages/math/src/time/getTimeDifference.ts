@@ -39,6 +39,7 @@ interface GetTimeDifferenceReturn {
  * *\/
  * ```
  *
+ * @category Time
  * @param fromTimestampMs - A timestamp in milliseconds
  * @param toTimestampMs - A timestamp in milliseconds
  */

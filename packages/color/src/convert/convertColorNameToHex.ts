@@ -2,6 +2,7 @@
  * An object with W3S' list of color names supported by all browsers
  *
  * @see https://www.w3schools.com/colors/colors_names.asp
+ * @category Convert
  */
 const colorNames: { [colorName: string]: string } = {
     aliceblue: "#f0f8ff",

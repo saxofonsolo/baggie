@@ -5,6 +5,8 @@ import { degreesToRadians } from "../..";
  * Get distance between two sets of coordinates on a sphere using the Haversine Distance Formula.
  *
  * This function takes coordinates given in latitudes and longitudes as both arrays and objects.
+ *
+ * @category Distance
  */
 export const getDistanceOnSphere = (
     from: CoordinatesLatLng,

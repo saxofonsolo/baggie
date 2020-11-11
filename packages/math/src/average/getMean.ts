@@ -7,8 +7,6 @@ import { addNumbers } from "..";
  *
  * All the values are added together and divided by the amount of numbers.
  *
- * @category Average
- *
  * @example
  * ```ts
  * import { getMean } from "@baggie/math";
@@ -17,6 +15,8 @@ import { addNumbers } from "..";
  * const mean = getMean(numbers);
  * // mean = 18
  * ```
+ *
+ * @category Average
  */
 export const getMean = (numbers: NonEmptyArray<number>): number =>
     addNumbers(numbers) / numbers.length;

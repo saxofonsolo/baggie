@@ -13,6 +13,8 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * const hex = convertRgbToHex(color);
  * // hex = "#FEFEFF"
  * ```
+ *
+ * @category Manipulate
  */
 export const mixColors = (color1: RGBA, color2: RGBA, weight = 0.5): RGBA => {
     const red1 = color1.red / 255;

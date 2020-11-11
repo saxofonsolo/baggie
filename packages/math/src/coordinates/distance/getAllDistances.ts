@@ -19,12 +19,12 @@ interface GetAllDistancesReturn {
  * The first argument `fromCoordinates` is the base from where the distances are measured. If this is set to `null`,
  * distances will be measured between all the coordinates given in the `toCoordinates` argument.
  *
- * @example 
+ * @example
  * **Find all the distances from `[9, 30]` to other coordinates:**
  * ```ts
  * import { getAllDistances } from "@baggie/math";
  * getAllDistances([9, 30], [10, 2], [20, 20], [-20, 20]);
- * 
+ *
  * // This returns the following array of objects:
  * [
  *     {
@@ -40,7 +40,8 @@ interface GetAllDistancesReturn {
  *     }
  * ]
  * ```
- * @example 
+ *
+ * @example
  * **Find all the distances between all the coordinates:**
  * ```ts
  * import { getAllDistances } from "@baggie/math";
@@ -50,7 +51,7 @@ interface GetAllDistancesReturn {
  *     { x: 2, y: 2, name: "c" },
  *     { x: 30, y: 50, name: "d" }
  * );
- * 
+ *
  * // This returns the following array of objects:
  * [
  *     {
@@ -79,6 +80,8 @@ interface GetAllDistancesReturn {
  *     }
  * ]
  * ```
+ *
+ * @category Distance
  */
 export const getAllDistances = (
     fromCoordinates: CoordinatesXY | null,

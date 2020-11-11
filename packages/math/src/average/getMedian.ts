@@ -7,8 +7,6 @@ import { getMean } from "./getMean";
  * The median is the middle value or, if two middle values,
  * the mean of those two with the numbers in ascending order.
  *
- * @category Average
- *
  * @example
  * ```ts
  * import { getMedian } from "@baggie/math";
@@ -17,6 +15,8 @@ import { getMean } from "./getMean";
  * const median = getMedian(numbers);
  * // median = 16
  * ```
+ *
+ * @category Average
  */
 export const getMedian = (numbers: NonEmptyArray<number>): number => {
     const numbersCount = numbers.length;

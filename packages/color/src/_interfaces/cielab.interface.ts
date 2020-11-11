@@ -5,6 +5,8 @@
  * Take a look at these, if you're interested:
  * [CIELAB Color Space](https://en.wikipedia.org/wiki/CIELAB_color_space)
  * and [color difference](https://en.wikipedia.org/wiki/Color_difference).
+ *
+ * @category Interfaces
  */
 export interface CIELAB {
     /**

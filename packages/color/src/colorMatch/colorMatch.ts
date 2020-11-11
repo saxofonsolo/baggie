@@ -48,6 +48,8 @@ interface ColorHaystack extends CIELAB {
  * // If we have no further use for this, we can clean up.
  * colors.destroy();
  * ```
+ *
+ * @category Color Match
  */
 export class ColorMatch {
     haystack: ColorHaystack[];

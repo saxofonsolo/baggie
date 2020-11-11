@@ -2,6 +2,8 @@ import { RGBA } from "../_interfaces/rgba.interface";
 
 /**
  * Convert an RGB color value to a hexadecimal color.
+ *
+ * @category Convert
  */
 export const convertRgbToHex = (
     { red, green, blue, alpha = 1 }: RGBA,
