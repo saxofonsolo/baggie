@@ -18,6 +18,19 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
+  "typedocOptions": {
+    "name": "baggie",
+    "readme": "./README.md",
+    "mode": "modules",
+    "out": "docs",
+    "exclude": "**/src/index.ts",
+    "external-modulemap":  ".*packages\/([^\/]+)\/.*",
+    "categorizeByGroup": true,
+    "excludeNotExported": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "stripInternal": true
+  },
   "exclude": [
     "node_modules",
     "**/__tests__/*"

@@ -1,5 +1,5 @@
 module.exports = {
-    ignorePatterns: ["lib/"],
+    ignorePatterns: ["lib/", "docs/"],
     parserOptions: {
         ecmaVersion: "2018",
         sourceType: "module",
@@ -32,13 +32,17 @@ module.exports = {
             // -------------------------------------------
             files: ["*.ts"],
             excludedFiles: ["**/src/index.ts", "*.test.ts"],
-            plugins: ["eslint-plugin-tsdoc"],
+            plugins: ["eslint-plugin-tsdoc", "jsdoc"],
             rules: {
                 "import/no-unused-modules": [
                     1,
                     { missingExports: true, unusedExports: true },
                 ],
                 "tsdoc/syntax": "warn",
+                // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-description
+                "jsdoc/check-alignment": 1,
+                "jsdoc/newline-after-description": 1,
+                "jsdoc/require-description": 1,
             },
         },
         {
