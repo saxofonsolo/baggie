@@ -6,7 +6,7 @@ export { getClassByPrefix } from "./classes/getClassByPrefix";
 export { removeClassByPrefix } from "./classes/removeClassByPrefix";
 
 /* properties */
-export { getElementYPosition } from "./properties/getElementPosition";
+export { getElementPosition } from "./properties/getElementPosition";
 export { isElementEmpty } from "./properties/isElementEmpty";
 export { isElementHidden } from "./properties/isElementHidden";
 export { isElementVisible } from "./properties/isElementVisible";

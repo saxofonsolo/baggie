@@ -4,7 +4,7 @@ import {
     supportsSmoothScroll,
 } from "@baggie/detection";
 import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
-import { getElementYPosition } from "..";
+import { getElementPosition } from "..";
 
 export const scrollToElement = (
     element: Element | string,
@@ -18,7 +18,7 @@ export const scrollToElement = (
         typeof element === "string" ? document.querySelector(element) : element;
 
     if (scrollToElement) {
-        const targetY = getElementYPosition(scrollToElement) - offset;
+        const targetY = getElementPosition(scrollToElement).y - offset;
 
         if (supportsSmoothScroll && !prefersReducedMotion) {
             window.scrollTo({ behavior: "smooth", top: targetY });
