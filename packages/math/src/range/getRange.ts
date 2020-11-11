@@ -1,13 +1,17 @@
 import { NonEmptyArray } from "@baggie/typescript";
 
 /**
- * Get the range from an array of numbers. This is the largest value minus the smallest value.
+ * Get the range from an array of numbers.
+ * This is the largest value minus the smallest value.
  *
  * @example
- * import { getRange } from "./utils/calc/average";
+ * ```ts
+ * import { getRange } from "@baggie/math";
  *
  * const numbers = [4, 8, 15, 16, 23, 42];
- * const mode = getRange(numbers); // 38
+ * const range = getRange(numbers);
+ * // range = 38
+ * ```
  */
 export const getRange = (numbers: NonEmptyArray<number>): number => {
     // Put the array of numbers in ascending order (small to large)

@@ -1,15 +1,25 @@
+import { degreesToRadians, radiansToDegrees } from "@baggie/math";
+import { CIELAB, convertRgbToLab, RGBA } from "..";
+
+interface ColorHaystack extends CIELAB {
+    source: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+}
+
 /**
  * Find the nearest or farthest matching colors.
  *
  * Create a set of available or accepted colors, and in this set find the closest or farthest match to any other color.
  *
+ * @remarks
  * **Nerd alert:** Colors are converted to the [CIELAB color space](https://en.wikipedia.org/wiki/CIELAB_color_space)
  * (Lab), which is designed to be "perceptually uniform" with respect to human vision, meaning that the same amount of
  * numerical change in these values corresponds to about the same amount of visually perceived change. Colors are then
  * matched using the [Euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance) formula.
  *
- * @example <caption>Basic usage:</caption>
- * import { ColorMatch } from "./utils/calc/colors/colorMatch";
+ * @example
+ * **Basic usage:**
+ * ```ts
+ * import { ColorMatch } from "@baggie/colors";
  *
  * const colors = new ColorMatch([
  *     "#FF0000",
@@ -37,17 +47,8 @@
  *
  * // If we have no further use for this, we can clean up.
  * colors.destroy();
+ * ```
  */
-
-import { degreesToRadians, radiansToDegrees } from "@baggie/math";
-import { convertRgbToLab } from "..";
-import { CIELAB } from "../_interfaces/cielab.interface";
-import { RGBA } from "../_interfaces/rgba.interface";
-
-interface ColorHaystack extends CIELAB {
-    source: any; // eslint-disable-line @typescript-eslint/no-explicit-any
-}
-
 export class ColorMatch {
     haystack: ColorHaystack[];
 

@@ -7,11 +7,16 @@ import { NonEmptyArray } from "@baggie/typescript";
  * There can be more than one mode if multiple values
  * are repeated an equal amount of times.
  *
+ * @category Average
+ * 
  * @example
- * import { getMode } from "./utils/calc/average";
+ * ```ts
+ * import { getMode } from "@baggie/math";
  *
  * const numbers = [4, 8, 8, 8, 15, 16, 23, 42, 42, 42];
- * const mode = getMode(numbers); // { mode: [8, 42], frequency: 3 }
+ * const mode = getMode(numbers);
+ * // mode = { mode: [8, 42], frequency: 3 }
+ * ```
  */
 export const getMode = (
     numbers: NonEmptyArray<number>

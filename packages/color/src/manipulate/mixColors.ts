@@ -6,13 +6,13 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * This works pretty much like the `mix()` function in SASS.
  *
  * @example
- * import { mixColors } from "./utils/calc/colors/colorManipulation";
- * import { rgbToHex } from "./utils/calc/colors/colorConversion";
+ * ```ts
+ * import { mixColors, convertRgbToHex } from "@baggie/color";
  *
  * const color = mixColors("#FFFFFF", "#F3F9FA", .91);
- *
- * // This will output "#fefeff"
- * window.console.log(rgbToHex(color));
+ * const hex = convertRgbToHex(color);
+ * // hex = "#FEFEFF"
+ * ```
  */
 export const mixColors = (color1: RGBA, color2: RGBA, weight = 0.5): RGBA => {
     const red1 = color1.red / 255;

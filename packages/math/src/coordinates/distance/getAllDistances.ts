@@ -1,6 +1,14 @@
 import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
 import { getDistance } from "./getDistance";
 
+interface GetAllDistancesReturn {
+    distance: number;
+    coordinates: {
+        from: CoordinatesXY;
+        to: CoordinatesXY;
+    };
+}
+
 /**
  * Get the all the distances between multiple sets of coordinates sorted from shortest to longest.
  *
@@ -11,10 +19,12 @@ import { getDistance } from "./getDistance";
  * The first argument `fromCoordinates` is the base from where the distances are measured. If this is set to `null`,
  * distances will be measured between all the coordinates given in the `toCoordinates` argument.
  *
- * @example <caption>Find all the distances from `[9, 30]` to other coordinates.</caption>
- * import { getAllDistances } from "./utils/calc/coordinates";
+ * @example 
+ * **Find all the distances from `[9, 30]` to other coordinates:**
+ * ```ts
+ * import { getAllDistances } from "@baggie/math";
  * getAllDistances([9, 30], [10, 2], [20, 20], [-20, 20]);
- *
+ * 
  * // This returns the following array of objects:
  * [
  *     {
@@ -29,16 +39,18 @@ import { getDistance } from "./getDistance";
  *         "coordinates": [[9, 30], [-20, 20]]
  *     }
  * ]
- *
- * @example <caption>Find all the distances between all the coordinates.</caption>
- * import { getAllDistances } from "./utils/calc/coordinates";
+ * ```
+ * @example 
+ * **Find all the distances between all the coordinates:**
+ * ```ts
+ * import { getAllDistances } from "@baggie/math";
  * getAllDistances(null,
  *     { x: -10, y: -10, name: "a" },
  *     { x: 1, y: 1, name: "b" },
  *     { x: 2, y: 2, name: "c" },
  *     { x: 30, y: 50, name: "d" }
  * );
- *
+ * 
  * // This returns the following array of objects:
  * [
  *     {
@@ -66,16 +78,8 @@ import { getDistance } from "./getDistance";
  *         "coordinates": [{ "x": -10, "y": -10, "name": "a" }, { "x": 30, "y": 50, "name": "d" }]
  *     }
  * ]
+ * ```
  */
-
-interface GetAllDistancesReturn {
-    distance: number;
-    coordinates: {
-        from: CoordinatesXY;
-        to: CoordinatesXY;
-    };
-}
-
 export const getAllDistances = (
     fromCoordinates: CoordinatesXY | null,
     ...toCoordinates: CoordinatesXY[]

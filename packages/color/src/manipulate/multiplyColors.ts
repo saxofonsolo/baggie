@@ -8,15 +8,14 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * This function is the opposite of `screenColors()`.
  *
  * @see https://en.wikipedia.org/wiki/Blend_modes
- *
  * @example
- * import { multiplyColors } from "./utils/calc/colors/colorManipulation";
- * import { rgbToHex } from "./utils/calc/colors/colorConversion";
+ * ```ts
+ * import { multiplyColors, convertRgbToHex } from "@baggie/color";
  *
  * const color = multiplyColors("#FF1100", "#88FF00");
- *
- * // This will output "#881100"
- * window.console.log(rgbToHex(color));
+ * const hex = convertRgbToHex(color);
+ * // hex = "#881100"
+ * ```
  */
 export const multiplyColors = (color1: RGBA, color2: RGBA): RGBA => ({
     red: Math.round((color1.red * color2.red) / 255),

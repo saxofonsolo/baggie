@@ -1,3 +1,6 @@
+/**
+ * @internal
+ */
 export interface CoordinatesXY {
     x: number;
     y: number;
