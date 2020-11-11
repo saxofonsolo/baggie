@@ -2,7 +2,7 @@
 
 <h1>@baggie/detection</h1>
 
-Detection tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+Detection tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
 <hr>
 <br>
 

@@ -2,7 +2,7 @@
 
 <h1>@baggie/math</h1>
 
-Math tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+Math tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
 <hr>
 <br>
 

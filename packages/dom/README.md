@@ -2,7 +2,7 @@
 
 <h1>@baggie/dom</h1>
 
-DOM tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+DOM tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
 <hr>
 <br>
 

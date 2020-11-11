@@ -2,7 +2,7 @@
 
 <h1>@baggie/string</h1>
 
-String tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+String tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
 <hr>
 <br>
 

@@ -2,7 +2,7 @@
 
 <h1>@baggie/typescript</h1>
 
-TypeScript tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+TypeScript tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
 <hr>
 <br>
 

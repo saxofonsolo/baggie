@@ -2,7 +2,7 @@
 
 <h1>@baggie/color</h1>
 
-Color tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+Color tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
 <hr>
 <br>
 

@@ -2,7 +2,7 @@
 
 <h1>@baggie/functions</h1>
 
-Tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie)
+Tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
 <hr>
 <br>
 
