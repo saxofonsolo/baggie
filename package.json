@@ -15,7 +15,9 @@
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "lint:eslint": "eslint --cache --fix \"**/*.{js,jsx,ts,tsx}\"",
-    "docs": "typedoc",
+    "docs": "npm run docs:build && npm run docs:serve",
+    "docs:build": "typedoc",
+    "docs:serve": "serve docs",
     "check-commit-msg": "node scripts/check-commit-msg",
     "deploy": "lerna publish --skip-npm && lerna run publish-npm"
   },
@@ -50,6 +52,7 @@
     "lint-staged": "^10.2.11",
     "prettier": "2.0.1",
     "rimraf": "^3.0.2",
+    "serve": "^11.3.2",
     "ts-jest": "^26.4.1",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typedoc": "^0.19.2",

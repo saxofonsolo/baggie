@@ -6,7 +6,7 @@ The little bag-of-tricks
 <hr>
 <br>
 
-## 🎁 Packages
+## 🎁 NPM Packages
 | Name | Description |
 | ---- | ----------- |
 | **[@baggie/color](https://www.npmjs.com/package/@baggie/color#readme)** | Color tools |

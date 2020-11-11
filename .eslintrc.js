@@ -41,8 +41,22 @@ module.exports = {
                 "tsdoc/syntax": "warn",
                 // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-description
                 "jsdoc/check-alignment": 1,
+                "jsdoc/require-description": [1, { exemptedBy: ["internal"]}],
                 "jsdoc/newline-after-description": 1,
-                "jsdoc/require-description": 1,
+                "jsdoc/require-jsdoc": [
+                    1,
+                    {
+                        enableFixer: false,
+                        require: {
+                            ArrowFunctionExpression: true,
+                            ClassDeclaration: true,
+                            ClassExpression: true,
+                            FunctionDeclaration: true,
+                            FunctionExpression: true,
+                            MethodDefinition: true,
+                        },
+                    },
+                ],
             },
         },
         {
