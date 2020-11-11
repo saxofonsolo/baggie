@@ -2,6 +2,7 @@ module.exports = {
     ignorePatterns: ["lib/"],
     parserOptions: {
         ecmaVersion: "2018",
+        sourceType: "module",
     },
     env: { es6: true },
     plugins: ["import"],
@@ -12,6 +13,8 @@ module.exports = {
     ],
     overrides: [
         {
+            // ALL TS-files (including tests and barrels)
+            // ------------------------------------------
             files: ["*.ts"],
             parser: "@typescript-eslint/parser",
             plugins: ["@typescript-eslint"],
@@ -25,16 +28,22 @@ module.exports = {
             },
         },
         {
+            // ALL TS-files (except for tests and barrels)
+            // -------------------------------------------
             files: ["*.ts"],
             excludedFiles: ["**/src/index.ts", "*.test.ts"],
+            plugins: ["eslint-plugin-tsdoc"],
             rules: {
                 "import/no-unused-modules": [
                     1,
                     { missingExports: true, unusedExports: true },
                 ],
+                "tsdoc/syntax": "warn",
             },
         },
         {
+            // Only test-files
+            // ---------------
             files: ["*.test.ts"],
             globals: {
                 describe: true,
@@ -43,6 +52,8 @@ module.exports = {
             },
         },
         {
+            // Only JS-files
+            // -------------
             files: ["*.js"],
             globals: {
                 console: true,
