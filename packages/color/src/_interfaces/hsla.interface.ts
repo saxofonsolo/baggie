@@ -1,6 +1,24 @@
+/**
+ * An interface containing the values for hue, saturation, lightness and alpha.
+ */
 export interface HSLA {
-    hue: number; // 0 to 360
-    saturation: number; // 0 to 1
-    lightness: number; // 0 to 1
-    alpha?: number; // 0 to 1
+    /**
+     * The hue value (0-360)
+     */
+    hue: number;
+
+    /**
+     * The saturation value (0-1)
+     */
+    saturation: number;
+
+    /**
+     * The lightness value (0-1)
+     */
+    lightness: number;
+
+    /**
+     * The alpha value (0-1)
+     */
+    alpha?: number;
 }
