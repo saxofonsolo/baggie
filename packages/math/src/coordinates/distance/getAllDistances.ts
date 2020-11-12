@@ -23,10 +23,10 @@ interface GetAllDistancesReturn {
  * **Find all the distances from `[9, 30]` to other coordinates:**
  * ```ts
  * import { getAllDistances } from "@baggie/math";
- * getAllDistances([9, 30], [10, 2], [20, 20], [-20, 20]);
  *
- * // This returns the following array of objects:
- * [
+ * const results = getAllDistances([9, 30], [10, 2], [20, 20], [-20, 20]);
+ * /*
+ * results = [
  *     {
  *         "distance": 14.866068747318506,
  *         "coordinates": [[9, 30], [20, 20]]
@@ -39,21 +39,22 @@ interface GetAllDistancesReturn {
  *         "coordinates": [[9, 30], [-20, 20]]
  *     }
  * ]
+ * *\/
  * ```
  *
  * @example
  * **Find all the distances between all the coordinates:**
  * ```ts
  * import { getAllDistances } from "@baggie/math";
- * getAllDistances(null,
+ *
+ * const results = getAllDistances(null,
  *     { x: -10, y: -10, name: "a" },
  *     { x: 1, y: 1, name: "b" },
  *     { x: 2, y: 2, name: "c" },
  *     { x: 30, y: 50, name: "d" }
  * );
- *
- * // This returns the following array of objects:
- * [
+ * /*
+ * results = [
  *     {
  *         "distance": 1.4142135623730951,
  *         "coordinates": [{ "x": 1, "y": 1, "name": "b" }, { "x": 2, "y": 2, "name": "c" }]
@@ -79,6 +80,7 @@ interface GetAllDistancesReturn {
  *         "coordinates": [{ "x": -10, "y": -10, "name": "a" }, { "x": 30, "y": 50, "name": "d" }]
  *     }
  * ]
+ * *\/
  * ```
  *
  * @category Distance

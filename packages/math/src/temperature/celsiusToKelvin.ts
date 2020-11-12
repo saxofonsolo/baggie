@@ -5,6 +5,7 @@
  * **Basic usage:**
  * ```ts
  * import { celsiusToKelvin } from "@baggie/math";
+ *
  * const kelvin = celsiusToKelvin(100);
  * // kelvin = 373.15
  * ```

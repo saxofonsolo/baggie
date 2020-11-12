@@ -5,6 +5,7 @@
  * **Basic usage:**
  * ```ts
  * import { newtonToCelsius } from "@baggie/math";
+ *
  * const celsius = newtonToCelsius(33);
  * // celsius = 100
  * ```

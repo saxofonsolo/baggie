@@ -5,6 +5,7 @@
  * **Basic usage:**
  * ```ts
  * import { reaumurToCelsius } from "@baggie/math";
+ *
  * const celsius = reaumurToCelsius(80);
  * // celsius = 100
  * ```

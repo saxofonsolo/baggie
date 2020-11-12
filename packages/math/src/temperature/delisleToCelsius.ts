@@ -5,6 +5,7 @@
  * **Basic usage:**
  * ```ts
  * import { delisleToCelsius } from "@baggie/math";
+ *
  * const celsius = delisleToCelsius(0);
  * // celsius = 100
  * ```

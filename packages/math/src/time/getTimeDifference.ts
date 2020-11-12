@@ -20,8 +20,8 @@ interface GetTimeDifferenceReturn {
  * **Basic usage:**
  * ```ts
  * import { timeDifference } from "@baggie/math";
- * const data = timeDifference(1523607256543, 1533906712955);
  *
+ * const data = timeDifference(1523607256543, 1533906712955);
  * /*
  * data = {
  *     "days": 119,

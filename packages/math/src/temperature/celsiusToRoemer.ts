@@ -5,6 +5,7 @@
  * **Basic usage:**
  * ```ts
  * import { celsiusToRoemer } from "@baggie/math";
+ *
  * const roemer = celsiusToRoemer(100);
  * // roemer = 60
  * ```

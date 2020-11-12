@@ -7,6 +7,7 @@ import { fahrenheitToCelsius } from "./fahrenheitToCelsius";
  * **Basic usage:**
  * ```ts
  * import { rankineToCelsius } from "@baggie/math";
+ *
  * const celsius = rankineToCelsius(509.67);
  * // celsius = 10
  * ```

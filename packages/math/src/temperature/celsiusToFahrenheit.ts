@@ -5,6 +5,7 @@
  * **Basic usage:**
  * ```ts
  * import { celsiusToFahrenheit } from "@baggie/math";
+ *
  * const fahrenheit = celsiusToFahrenheit(100);
  * // fahrenheit = 212
  * ```
