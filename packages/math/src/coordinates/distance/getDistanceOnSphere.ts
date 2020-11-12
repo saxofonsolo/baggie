@@ -6,7 +6,7 @@ import { degreesToRadians } from "../..";
  *
  * This function takes coordinates given in latitudes and longitudes as both arrays and objects.
  *
- * @category Distance
+ * @category Coordinate - Distance
  */
 export const getDistanceOnSphere = (
     from: CoordinatesLatLng,

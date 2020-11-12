@@ -6,7 +6,7 @@ import { getDistanceOnSphere } from "./getDistanceOnSphere";
  *
  * This function takes coordinates given in latitudes and longitudes as both arrays and objects (compatible with Google Maps).
  *
- * @category Distance
+ * @category Coordinate - Distance
  */
 export const getDistanceOnEarth = (
     from: CoordinatesLatLng,
