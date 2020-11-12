@@ -13,4 +13,7 @@ export { DetectInputMethod } from "./input/detectInputMethod";
 export type { DetectInputMethodOptions } from "./input/detectInputMethod";
 
 /* Media Features */
+export { OnPrefersDarkColorSchemeChange } from "./mediaFeatures/onPrefersDarkColorSchemeChange";
+export { OnPrefersReducedMotionChange } from "./mediaFeatures/onPrefersReducedMotionChange";
+export { prefersDarkColorScheme } from "./mediaFeatures/prefersDarkColorScheme";
 export { prefersReducedMotion } from "./mediaFeatures/prefersReducedMotion";

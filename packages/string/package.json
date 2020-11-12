@@ -1,6 +1,7 @@
 {
   "name": "@baggie/string",
   "version": "1.0.6-alpha.0",
+  "description": "A library of string for JavaScript and TypeScript.",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -11,6 +12,15 @@
   },
   "files": [
     "lib"
+  ],
+  "keywords": [
+    "javascript-library",
+    "typescript-library",
+    "library",
+    "toolbox",
+    "tools",
+    "string manipulation",
+    "replace string"
   ],
   "module": "lib/",
   "sideEffects": false,

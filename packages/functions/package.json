@@ -1,6 +1,7 @@
 {
   "name": "@baggie/functions",
   "version": "1.0.6-alpha.0",
+  "description": "A library of tools for JavaScript and TypeScript. Timers that can be paused and resumed. More to come.",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -11,6 +12,14 @@
   },
   "files": [
     "lib"
+  ],
+  "keywords": [
+    "javascript-library",
+    "typescript-library",
+    "library",
+    "toolbox",
+    "tools",
+    "timer"
   ],
   "module": "lib/",
   "sideEffects": false,

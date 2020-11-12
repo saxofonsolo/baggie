@@ -1,5 +1,10 @@
-import { matchMedia } from "./_helpers/matchMedia.helper";
+import { dontMatchMedia } from "./_helpers/dontMatchMedia.helper";
 
-export const prefersReducedMotion = matchMedia(
+/**
+ * If the user **prefers reduced motion**, this will be `true`.
+ *
+ * @category Media Features
+ */
+export const prefersReducedMotion = dontMatchMedia(
     "(prefers-reduced-motion: no-preference)"
 );

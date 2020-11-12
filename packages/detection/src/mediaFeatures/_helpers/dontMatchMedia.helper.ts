@@ -7,5 +7,5 @@ import { isBrowser } from "../..";
  * @param string - The media string to test
  * @returns `true` if the media string matches an applied feature
  */
-export const matchMedia = (string: string): boolean =>
-    isBrowser && window.matchMedia && window.matchMedia(string).matches;
+export const dontMatchMedia = (string: string): boolean =>
+    isBrowser && window.matchMedia && !window.matchMedia(string).matches;

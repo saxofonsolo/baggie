@@ -2,6 +2,7 @@
   "name": "@baggie/color",
   "version": "1.0.6-alpha.0",
   "license": "MIT",
+  "description": "A library of color tools for JavaScript and TypeScript. Manipulate, convert and compare colors, find color combinations etc.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -11,6 +12,15 @@
   },
   "files": [
     "lib"
+  ],
+  "keywords": [
+    "javascript-library",
+    "typescript-library",
+    "library",
+    "toolbox",
+    "tools",
+    "colors",
+    "color"
   ],
   "module": "lib/",
   "sideEffects": false,
