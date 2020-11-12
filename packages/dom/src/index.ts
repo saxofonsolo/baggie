@@ -5,6 +5,12 @@ export { blurFocusedElement } from "./actions/blurFocusedElement";
 export { getClassByPrefix } from "./classes/getClassByPrefix";
 export { removeClassByPrefix } from "./classes/removeClassByPrefix";
 
+/* Parents */
+export { getAllParents } from "./parents/getAllParents";
+export { getClosestParent } from "./parents/getClosestParent";
+export { isElementChildOf } from "./parents/isElementChildOf";
+export { isElementParentTo } from "./parents/isElementParentTo";
+
 /* Properties */
 export { getElementPosition } from "./properties/getElementPosition";
 export { isElementEmpty } from "./properties/isElementEmpty";

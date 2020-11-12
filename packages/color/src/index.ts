@@ -8,9 +8,6 @@ export { getBrightness } from "./brightness/getBrightness";
 export { isColorBrighterThan } from "./brightness/isColorBrighterThan";
 export { isColorDarkerThan } from "./brightness/isColorDarkerThan";
 
-/* Color Match */
-export { ColorMatch } from "./matching/colorMatch";
-
 /* Combinations */
 export { getAnalogousColorScheme } from "./combinations/getAnalogousColorScheme";
 export { getComplementaryColorScheme } from "./combinations/getComplementaryColorScheme";
@@ -31,3 +28,6 @@ export { parseColor } from "./convert/parseColor";
 export { mixColors } from "./manipulate/mixColors";
 export { multiplyColors } from "./manipulate/multiplyColors";
 export { screenColors } from "./manipulate/screenColors";
+
+/* Matching */
+export { ColorMatch } from "./matching/colorMatch";
