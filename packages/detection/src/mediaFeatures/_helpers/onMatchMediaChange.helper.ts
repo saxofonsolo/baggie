@@ -13,7 +13,6 @@ export class OnMatchMediaChange {
         this.callback = callback;
 
         if (isBrowser && window.matchMedia) {
-
             window
                 .matchMedia(this.query)
                 .addEventListener("change", this.onChange);

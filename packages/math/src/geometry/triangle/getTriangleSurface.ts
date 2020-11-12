@@ -19,10 +19,5 @@ import { getTrianglePerimeter } from "../..";
  */
 export const getTriangleSurface = (a: number, b: number, c: number): number => {
     const semiperimeter = getTrianglePerimeter(a, b, c) / 2;
-    return Math.sqrt(
-        semiperimeter *
-            (-a + b + c) *
-            (a - b + c) *
-            (a + b - c)
-    );
+    return Math.sqrt(semiperimeter * (-a + b + c) * (a - b + c) * (a + b - c));
 };
