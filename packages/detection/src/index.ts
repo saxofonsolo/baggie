@@ -12,4 +12,7 @@ export { isWebWorker } from "./environment/isWebWorker";
 export { DetectInputMethod } from "./input/detectInputMethod";
 
 /* media features */
+export { OnPrefersDarkColorSchemeChange } from "./mediaFeatures/onPrefersDarkColorSchemeChange";
+export { OnPrefersReducedMotionChange } from "./mediaFeatures/onPrefersReducedMotionChange";
+export { prefersDarkColorScheme } from "./mediaFeatures/prefersDarkColorScheme";
 export { prefersReducedMotion } from "./mediaFeatures/prefersReducedMotion";
