@@ -1,5 +1,5 @@
 module.exports = {
-    ignorePatterns: ["lib/", "docs/"],
+    ignorePatterns: ["lib/", "docs/", "node_modules/"],
     parserOptions: {
         ecmaVersion: "2018",
         sourceType: "module",
