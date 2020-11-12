@@ -13,7 +13,12 @@ module.exports = {
     ],
     rules: {
         "import/first": 1,
+        "import/newline-after-import": 1,
         "import/no-default-export": 1,
+        "import/no-deprecated": 1,
+        "import/no-mutable-exports": 1,
+        "import/no-unused-modules": 1,
+        "import/order": 1,
     },
     overrides: [
         {
@@ -33,7 +38,6 @@ module.exports = {
             rules: {
                 "import/no-commonjs": 1,
                 "import/no-amd": 1,
-                "import/order": 1,
             },
         },
         {
