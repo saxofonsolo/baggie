@@ -59,6 +59,7 @@ export { getTriangleSurface } from "./geometry/triangle/getTriangleSurface";
 
 /* Percentage */
 export { getPercentage } from "./percentage/getPercentage";
+export { getPercentageIncrease } from "./percentage/getPercentageIncrease";
 
 /* Radians */
 export { degreesToRadians } from "./radians/degreesToRadians";
