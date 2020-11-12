@@ -1,6 +1,14 @@
-import { RGBA } from "../_interfaces/rgba.interface";
-import { convertHslToRgb, convertRgbToHsl } from "..";
+import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
 
+/**
+ * Get a tetradic color scheme.
+ * The four colors are evenly spaced on the color wheel,
+ * 90 degrees apart from each other.
+ *
+ * @category Combine
+ * @param color - Your base color.
+ * @returns An array of four RGBA color objects.
+ */
 export const getTetradicColorScheme = (color: RGBA): RGBA[] => {
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(color);
     return [

@@ -1,18 +1,30 @@
-import { getScrollPosition } from "./getScrollPosition";
+import { getScrollPosition } from "../getScrollPosition";
 
 interface ScrollLockSettings {
     className?: string;
-    callback?: (isScrollLocked: boolean) => void;
+    callback?: (scrollLockState: boolean) => void;
 }
 
 let settings: ScrollLockSettings = {
     className: "scroll-lock",
 };
 
+let scrollLockState = false;
 let scrollTop = 0;
 
-export let isScrollLocked = false;
+/**
+ * Get to know if scroll is locked.
+ *
+ * @category Scroll - Scroll Lock
+ */
+export const isScrollLocked = (): boolean => scrollLockState;
 
+/**
+ * Set scroll lock settings.
+ * Probably just the class name that is set on the HTML element.
+ *
+ * @category Scroll - Scroll Lock
+ */
 export function setScrollLockSettings(options: ScrollLockSettings): void {
     settings = {
         ...settings,
@@ -20,8 +32,13 @@ export function setScrollLockSettings(options: ScrollLockSettings): void {
     };
 }
 
+/**
+ * Enable scroll lock.
+ *
+ * @category Scroll - Scroll Lock
+ */
 export function enableScrollLock(): void {
-    if (!isScrollLocked) {
+    if (!scrollLockState) {
         // Get scroll position
         const scrollPosition = getScrollPosition();
 
@@ -37,17 +54,22 @@ export function enableScrollLock(): void {
         }
 
         // Remember state
-        isScrollLocked = true;
+        scrollLockState = true;
         scrollTop = scrollPosition.y;
 
         if (settings.callback) {
-            settings.callback(isScrollLocked);
+            settings.callback(scrollLockState);
         }
     }
 }
 
+/**
+ * Disable scroll lock.
+ *
+ * @category Scroll - Scroll Lock
+ */
 export function disableScrollLock(): void {
-    if (isScrollLocked) {
+    if (scrollLockState) {
         const scrollPosition = getScrollPosition();
 
         const htmlTag = document.documentElement;
@@ -62,16 +84,21 @@ export function disableScrollLock(): void {
         window.scrollTo(scrollPosition.x, scrollTop);
 
         // Remember state
-        isScrollLocked = false;
+        scrollLockState = false;
 
         if (settings.callback) {
-            settings.callback(isScrollLocked);
+            settings.callback(scrollLockState);
         }
     }
 }
 
+/**
+ * Toggle scroll lock.
+ *
+ * @category Scroll - Scroll Lock
+ */
 export function toggleScrollLock(): void {
-    if (isScrollLocked) {
+    if (scrollLockState) {
         disableScrollLock();
     } else {
         enableScrollLock();

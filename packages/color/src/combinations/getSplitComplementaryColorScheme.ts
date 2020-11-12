@@ -1,6 +1,12 @@
-import { RGBA } from "../_interfaces/rgba.interface";
-import { convertHslToRgb, convertRgbToHsl } from "..";
+import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
 
+/**
+ * Get a split complementary color scheme.
+ *
+ * @category Combine
+ * @param color - Your base color.
+ * @returns An array of three RGBA color objects.
+ */
 export const getSplitComplementaryColorScheme = (color: RGBA): RGBA[] => {
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(color);
     return [
