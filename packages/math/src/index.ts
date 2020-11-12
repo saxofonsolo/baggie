@@ -58,7 +58,7 @@ export { getTrianglePerimeter } from "./geometry/triangle/getTrianglePerimeter";
 export { getTriangleSurface } from "./geometry/triangle/getTriangleSurface";
 
 /* Percentage */
-export { percentage } from "./percentage/percentage";
+export { getPercentage } from "./percentage/getPercentage";
 
 /* Radians */
 export { degreesToRadians } from "./radians/degreesToRadians";
