@@ -2,9 +2,20 @@ import { CoordinatesLatLng } from "../_interfaces/coordinatesLatLng.interface";
 import { degreesToRadians } from "../..";
 
 /**
- * Get distance between two sets of coordinates on a sphere using the Haversine Distance Formula.
+ * Get distance between two sets of coordinates on a sphere using the Haversine
+ * Distance Formula.
  *
- * This function takes coordinates given in latitudes and longitudes as both arrays and objects.
+ * @example
+ * **Basic usage:**
+ * ```ts
+ * import { getDistanceOnSphere } from "@baggie/math";
+ *
+ * const from = { lat: 56.15674, lng: 10.21076 };
+ * const to = { lat: 57.048, lng: 9.9187 };
+ *
+ * const distance = getDistanceOnSphere(from, to, 12742);
+ * // distance = 100.70265108699398
+ * ```
  *
  * @category Coordinate - Distance
  */

@@ -1,3 +1,26 @@
+/**
+ * Check if an angle is within one or multiple ranges of angles.
+ *
+ * @example
+ * **Basic usage:**
+ * ```ts
+ * import { isAngleInRange } from "@baggie/math";
+ *
+ * const checkA = isAngleInRange(10, [5, 15]);
+ * // checkA = true
+ *
+ * const checkB = isAngleInRange(300, [100, 200]);
+ * // checkB = false
+ *
+ * const checkC = isAngleInRange(360, [100, 1]);
+ * // checkC = true
+ *
+ * const checkD = isAngleInRange(360, [100, -1]);
+ * // checkD = false
+ * ```
+ *
+ * @category Coordinates - Angle
+ */
 export const isAngleInRange = (
     angle: number,
     ...ranges: [number, number][]

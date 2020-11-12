@@ -4,7 +4,17 @@ import { getDistanceOnSphere } from "./getDistanceOnSphere";
 /**
  * Get distance between two sets of coordinates on Earth in kilometers using the Haversine Distance Formula.
  *
- * This function takes coordinates given in latitudes and longitudes as both arrays and objects (compatible with Google Maps).
+ * @example
+ * **Basic usage:**
+ * ```ts
+ * import { getDistanceOnEarth } from "@baggie/math";
+ *
+ * const from = { lat: 56.15674, lng: 10.21076 };
+ * const to = { lat: 57.048, lng: 9.9187 };
+ *
+ * const distance = getDistanceOnEarth(from, to);
+ * // distance = 100.70265108699398
+ * ```
  *
  * @category Coordinate - Distance
  */

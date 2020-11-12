@@ -12,31 +12,32 @@ interface GetAllDistancesReturn {
 /**
  * Get the all the distances between multiple sets of coordinates sorted from shortest to longest.
  *
- * The coordinates are given as arrays `[x, y]` or objects like `{ x: 100, y: 100 }`.
- * You can add other values and properties as long as the first two values in the array are x and y, or as long as the
- * objects have the properties "x" and "y".
+ * The coordinates are given as objects like `{ x: 100, y: 100 }`.
+ * You can add other values and properties as long as the the
+ * objects have the properties `x` and `y`.
  *
- * The first argument `fromCoordinates` is the base from where the distances are measured. If this is set to `null`,
- * distances will be measured between all the coordinates given in the `toCoordinates` argument.
+ * The first argument `fromCoordinates` is the base from where the distances are
+ * measured. If this is set to `null`, distances will be measured between all of
+ * the following coordinates.
  *
  * @example
- * **Find all the distances from `[9, 30]` to other coordinates:**
+ * **Find all the distances from `{ x: 9, y: 30 }` to other coordinates:**
  * ```ts
  * import { getAllDistances } from "@baggie/math";
  *
- * const results = getAllDistances([9, 30], [10, 2], [20, 20], [-20, 20]);
+ * const results = getAllDistances({ x: 9, y: 30 }, { x: 10, y: 2 }, { x: 20, y: 20 }, { x: -20, y: 20 });
  * /*
  * results = [
  *     {
  *         "distance": 14.866068747318506,
- *         "coordinates": [[9, 30], [20, 20]]
+ *         "coordinates": [{ x: 9, y: 30 }, { x: 20, y: 20 }]
  *     }, {
  *         "distance": 28.0178514522438,
- *         "coordinates": [[9, 30], [10, 2]]
+ *         "coordinates": [{ x: 9, y: 30 }, { x: 10, y: 2 }]
  *     },
  *     {
  *         "distance": 30.675723300355934,
- *         "coordinates": [[9, 30], [-20, 20]]
+ *         "coordinates": [{ x: 9, y: 30 }, { x: -20, y: 20 }]
  *     }
  * ]
  * *\/
