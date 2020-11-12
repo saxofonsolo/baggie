@@ -49,17 +49,15 @@ interface ColorHaystack extends CIELAB {
  * colors.destroy();
  * ```
  *
- * @category Color Match
+ * @category Matching
  */
 export class ColorMatch {
-    private haystack: ColorHaystack[];
+    private haystack: ColorHaystack[] = [];
 
     /**
      * Create a set of colors to search for the closest match in.
      */
     constructor(colors?: RGBA | RGBA[] | CIELAB | CIELAB[]) {
-        this.haystack = [];
-
         if (colors) {
             this.add(colors);
         }

@@ -11,6 +11,10 @@ module.exports = {
         "plugin:import/errors",
         "plugin:import/warnings",
     ],
+    rules: {
+        "import/first": 1,
+        "import/no-default-export": 1,
+    },
     overrides: [
         {
             // ALL TS-files (including tests and barrels)
@@ -26,6 +30,11 @@ module.exports = {
                 document: true,
                 window: true,
             },
+            rules: {
+                "import/no-commonjs": 1,
+                "import/no-amd": 1,
+                "import/order": 1,
+            },
         },
         {
             // ALL TS-files (except for tests and barrels)
@@ -36,12 +45,12 @@ module.exports = {
             rules: {
                 "import/no-unused-modules": [
                     1,
-                    { missingExports: true, unusedExports: true },
+                    { missingExports: true, unusedExports: false },
                 ],
                 "tsdoc/syntax": "warn",
                 // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-description
                 "jsdoc/check-alignment": 1,
-                "jsdoc/require-description": [1, { exemptedBy: ["internal"]}],
+                "jsdoc/require-description": [1, { exemptedBy: ["internal"] }],
                 "jsdoc/newline-after-description": 1,
                 "jsdoc/require-jsdoc": [
                     1,
@@ -54,7 +63,7 @@ module.exports = {
                             ClassExpression: true,
                             FunctionDeclaration: true,
                             FunctionExpression: true,
-                            MethodDefinition: true,
+                            MethodDefinition: false,
                         },
                     },
                 ],

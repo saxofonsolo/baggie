@@ -9,7 +9,7 @@ export { isColorBrighterThan } from "./brightness/isColorBrighterThan";
 export { isColorDarkerThan } from "./brightness/isColorDarkerThan";
 
 /* Color Match */
-export { ColorMatch } from "./colorMatch/colorMatch";
+export { ColorMatch } from "./matching/colorMatch";
 
 /* Combinations */
 export { getAnalogousColorScheme } from "./combinations/getAnalogousColorScheme";

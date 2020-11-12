@@ -3,8 +3,8 @@ import {
     prefersReducedMotion,
     supportsSmoothScroll,
 } from "@baggie/detection";
-import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
 import { getElementPosition } from "..";
+import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
 
 /**
  * Scroll to an element.

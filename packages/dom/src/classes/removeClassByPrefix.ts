@@ -7,7 +7,7 @@ import { getClassByPrefix } from "./getClassByPrefix";
  */
 export const removeClassByPrefix = (
     element = document.body,
-    prefix: string,
+    prefix: string
 ): void =>
     getClassByPrefix(element, prefix).forEach((className) =>
         element.classList.remove(className)

@@ -25,13 +25,15 @@ export class DetectInputMethod {
     private settings: DetectInputMethodOptions;
     private mouseMoveCount: number;
 
-    constructor(options: DetectInputMethodOptions = {
-        touchClass: "touch-input",
-        mouseClass: "mouse-input",
-        mouseMoveThreshold: 5,
-        continuousDetection: false,
-        setClassOnElement: document.documentElement,
-    }) {
+    constructor(
+        options: DetectInputMethodOptions = {
+            touchClass: "touch-input",
+            mouseClass: "mouse-input",
+            mouseMoveThreshold: 5,
+            continuousDetection: false,
+            setClassOnElement: document.documentElement,
+        }
+    ) {
         this.settings = options;
         this.mouseMoveCount = 0;
 
@@ -61,9 +63,7 @@ export class DetectInputMethod {
     private mouseMoved = (): void => {
         this.mouseMoveCount += 1;
 
-        if (
-            this.mouseMoveCount >= (this.settings.mouseMoveThreshold || 5)
-        ) {
+        if (this.mouseMoveCount >= (this.settings.mouseMoveThreshold || 5)) {
             if (!this.settings.continuousDetection) {
                 this.unbind();
             }
