@@ -4,7 +4,7 @@ import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
  * Get an analogous color scheme.
  * These colors are next to each other on the color wheel.
  *
- * @category Combine
+ * @category Combinations
  * @param color - Your base color.
  * @param amount - The amount of colors you want (including the one you put in).
  * @param steps - The number of steps you want the color spectrum split into.

@@ -1,18 +1,22 @@
-/* actions */
+/* Actions */
 export { blurFocusedElement } from "./actions/blurFocusedElement";
 
-/* classes */
+/* Classes */
 export { getClassByPrefix } from "./classes/getClassByPrefix";
 export { removeClassByPrefix } from "./classes/removeClassByPrefix";
 
-/* properties */
+/* Properties */
 export { getElementPosition } from "./properties/getElementPosition";
 export { isElementEmpty } from "./properties/isElementEmpty";
 export { isElementHidden } from "./properties/isElementHidden";
 export { isElementVisible } from "./properties/isElementVisible";
 
-/* scroll */
+/* Scroll */
 export { getScrollPosition } from "./scroll/getScrollPosition";
+export { scrollToElement } from "./scroll/scrollToElement";
+export { scrollToTop } from "./scroll/scrollToTop";
+
+/* Scroll - Scroll Lock */
 export {
     disableScrollLock,
     enableScrollLock,
@@ -20,10 +24,8 @@ export {
     setScrollLockSettings,
     toggleScrollLock,
 } from "./scroll/scrollLock";
-export { scrollToElement } from "./scroll/scrollToElement";
-export { scrollToTop } from "./scroll/scrollToTop";
 
-/* siblings */
+/* Siblings */
 export { areElementsSiblings } from "./siblings/areElementsSiblings";
 export { getNextSiblings } from "./siblings/getNextSiblings";
 export { getPreviousSiblings } from "./siblings/getPreviousSiblings";

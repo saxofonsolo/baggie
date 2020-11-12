@@ -1,5 +1,4 @@
-import { CIELAB } from "../_interfaces/cielab.interface";
-import { RGBA } from "../_interfaces/rgba.interface";
+import { CIELAB, RGBA } from "..";
 
 /**
  * Convert an RGB color value to Lab (CIELAB CIE76).

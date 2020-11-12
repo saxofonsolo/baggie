@@ -5,7 +5,7 @@ import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
  * The three colors are evenly spaced on the color wheel,
  * 120 degrees apart from each other.
  *
- * @category Combine
+ * @category Combinations
  * @param color - Your base color.
  * @returns An array of three RGBA color objects.
  */

@@ -6,6 +6,11 @@ import {
 import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
 import { getElementPosition } from "..";
 
+/**
+ * Scroll to an element.
+ *
+ * @category Scroll
+ */
 export const scrollToElement = (
     element: Element | string,
     offset = 0

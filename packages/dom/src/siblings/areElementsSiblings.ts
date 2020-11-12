@@ -1,5 +1,13 @@
 import { getSiblings } from "./getSiblings";
 
+/**
+ * Check if two elements are siblings.
+ *
+ * @category Siblings
+ * @param element1 - An element to check
+ * @param element2 - Another element to check
+ * @param adjacentOnly - Set to **true** if elements have to be right next to each other
+ */
 export const areElementsSiblings = (
     element1: Element,
     element2: Element,

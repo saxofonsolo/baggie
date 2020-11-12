@@ -1,4 +1,7 @@
-interface DetectInputMethodOptions {
+/**
+ * @category Input - Detect Input Method
+ */
+export interface DetectInputMethodOptions {
     touchClass?: string;
     mouseClass?: string;
     mouseMoveThreshold?: number;
@@ -13,31 +16,30 @@ interface DetectInputMethodOptions {
     }) => void;
 }
 
-const defaultSettings = {
-    mouseClass: "mouse-input",
-    touchClass: "touch-input",
-    mouseMoveThreshold: 5,
-    continuousDetection: false,
-    setClassOnElement: document.documentElement,
-};
-
+/**
+ * Detect if the user is using **touch** or a **mouse** as an input device.
+ *
+ * @category Input - Detect Input Method
+ */
 export class DetectInputMethod {
-    settings: DetectInputMethodOptions;
-    mouseMoveCount: number;
+    private settings: DetectInputMethodOptions;
+    private mouseMoveCount: number;
 
-    constructor(options?: DetectInputMethodOptions) {
-        this.settings = {
-            ...defaultSettings,
-            ...options,
-        };
-
+    constructor(options: DetectInputMethodOptions = {
+        touchClass: "touch-input",
+        mouseClass: "mouse-input",
+        mouseMoveThreshold: 5,
+        continuousDetection: false,
+        setClassOnElement: document.documentElement,
+    }) {
+        this.settings = options;
         this.mouseMoveCount = 0;
 
         document.addEventListener("touchstart", this.touchFired);
         document.addEventListener("mousemove", this.mouseMoved);
     }
 
-    touchFired = (): void => {
+    private touchFired = (): void => {
         this.mouseMoveCount = 0;
 
         if (!this.settings.continuousDetection) {
@@ -50,21 +52,17 @@ export class DetectInputMethod {
                 isTouch: true,
             });
         } else {
-            const element =
-                this.settings.setClassOnElement ||
-                defaultSettings.setClassOnElement;
-            element.classList.remove(this.settings.mouseClass || "");
-            element.classList.add(this.settings.touchClass || "");
+            const element = this.settings.setClassOnElement;
+            element?.classList.remove(this.settings.mouseClass || "");
+            element?.classList.add(this.settings.touchClass || "");
         }
     };
 
-    mouseMoved = (): void => {
+    private mouseMoved = (): void => {
         this.mouseMoveCount += 1;
 
         if (
-            this.mouseMoveCount >=
-            (this.settings.mouseMoveThreshold ||
-                defaultSettings.mouseMoveThreshold)
+            this.mouseMoveCount >= (this.settings.mouseMoveThreshold || 5)
         ) {
             if (!this.settings.continuousDetection) {
                 this.unbind();
@@ -76,11 +74,9 @@ export class DetectInputMethod {
                     isTouch: false,
                 });
             } else {
-                const element =
-                    this.settings.setClassOnElement ||
-                    defaultSettings.setClassOnElement;
-                element.classList.remove(this.settings.touchClass || "");
-                element.classList.add(this.settings.mouseClass || "");
+                const element = this.settings.setClassOnElement;
+                element?.classList.remove(this.settings.touchClass || "");
+                element?.classList.add(this.settings.mouseClass || "");
             }
         }
     };

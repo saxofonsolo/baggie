@@ -1,4 +1,4 @@
-import { RGBA } from "../_interfaces/rgba.interface";
+import { RGBA } from "..";
 
 /**
  * Convert an RGB color value to a hexadecimal color.

@@ -1,9 +1,14 @@
 import { getClassByPrefix } from "./getClassByPrefix";
 
+/**
+ * Remove all classes of an element that starts with a specified string.
+ *
+ * @category Classes
+ */
 export const removeClassByPrefix = (
+    element = document.body,
     prefix: string,
-    element = document.body
 ): void =>
-    getClassByPrefix(prefix, element).forEach((className) =>
+    getClassByPrefix(element, prefix).forEach((className) =>
         element.classList.remove(className)
     );

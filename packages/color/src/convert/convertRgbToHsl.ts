@@ -1,6 +1,10 @@
-import { HSLA } from "../_interfaces/hsla.interface";
-import { RGBA } from "../_interfaces/rgba.interface";
+import { HSLA, RGBA } from "..";
 
+/**
+ * Convert an RGB color to an HSL color value.
+ *
+ * @category Convert
+ */
 export const convertRgbToHsl = ({
     red,
     green,

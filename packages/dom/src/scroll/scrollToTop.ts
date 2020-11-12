@@ -5,6 +5,11 @@ import {
 } from "@baggie/detection";
 import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
 
+/**
+ * Scroll to the top of the page.
+ *
+ * @category Scroll
+ */
 export function scrollToTop(smooth = true): void {
     if (isBrowser) {
         if (smooth) {

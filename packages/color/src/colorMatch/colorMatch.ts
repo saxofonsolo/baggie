@@ -52,7 +52,7 @@ interface ColorHaystack extends CIELAB {
  * @category Color Match
  */
 export class ColorMatch {
-    haystack: ColorHaystack[];
+    private haystack: ColorHaystack[];
 
     /**
      * Create a set of colors to search for the closest match in.
@@ -65,7 +65,7 @@ export class ColorMatch {
         }
     }
 
-    static parseColorToLab(color: RGBA | CIELAB): CIELAB {
+    private static parseColorToLab(color: RGBA | CIELAB): CIELAB {
         if ("l" in color && "a" in color && "b" in color) {
             return {
                 ...color,

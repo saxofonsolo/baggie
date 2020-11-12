@@ -3,7 +3,7 @@ import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
 /**
  * Get a split complementary color scheme.
  *
- * @category Combine
+ * @category Combinations
  * @param color - Your base color.
  * @returns An array of three RGBA color objects.
  */

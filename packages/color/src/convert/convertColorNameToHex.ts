@@ -2,7 +2,7 @@
  * An object with W3S' list of color names supported by all browsers
  *
  * @see https://www.w3schools.com/colors/colors_names.asp
- * @category Convert
+ * @internal
  */
 const colorNames: { [colorName: string]: string } = {
     aliceblue: "#f0f8ff",
@@ -155,5 +155,11 @@ const colorNames: { [colorName: string]: string } = {
     yellowgreen: "#9acd32",
 };
 
+/**
+ * Convert a color name to a hex color.
+ *
+ * @see https://www.w3schools.com/colors/colors_names.asp
+ * @category Convert
+ */
 export const convertColorNameToHex = (input: string): string | null =>
     input in colorNames ? colorNames[input] : null;

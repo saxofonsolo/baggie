@@ -16,8 +16,8 @@
     "lint:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "lint:eslint": "eslint --cache --fix \"**/*.{js,jsx,ts,tsx}\"",
     "docs": "npm run docs:build && npm run docs:serve",
-    "docs:build": "typedoc",
-    "docs:serve": "serve docs",
+    "docs:build": "rimraf docs && typedoc",
+    "docs:serve": "serve docs -n",
     "check-commit-msg": "node scripts/check-commit-msg",
     "deploy": "lerna publish --skip-npm && lerna run publish-npm"
   },

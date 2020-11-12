@@ -47,6 +47,7 @@ module.exports = {
                     1,
                     {
                         enableFixer: false,
+                        publicOnly: true,
                         require: {
                             ArrowFunctionExpression: true,
                             ClassDeclaration: true,

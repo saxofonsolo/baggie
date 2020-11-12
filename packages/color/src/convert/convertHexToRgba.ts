@@ -1,5 +1,10 @@
-import { RGBA } from "../_interfaces/rgba.interface";
+import { RGBA } from "..";
 
+/**
+ * Convert an hex color to an RGB color value.
+ *
+ * @category Convert
+ */
 export const convertHexToRgba = (hex: string): RGBA | null => {
     const hexMatch = hex.match(
         /^#((([0-9a-f]{3}){1,2})|(([0-9a-f]{4}){1,2}))$/i

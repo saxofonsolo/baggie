@@ -1,3 +1,8 @@
+/**
+ * Replace new lines with break elements.
+ *
+ * @category Replace
+ */
 export const replaceNewLineWithBreak = (
     text: string,
     keepWhitespace = false

@@ -4,7 +4,7 @@ import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
  * Get a complementary color scheme.
  * The two colors are opposite each other on the color wheel.
  *
- * @category Combine
+ * @category Combinations
  * @param color - Your base color.
  * @returns An array of two RGBA color objects.
  */

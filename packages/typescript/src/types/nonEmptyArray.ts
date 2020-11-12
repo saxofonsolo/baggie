@@ -11,7 +11,5 @@
  * const addNumbers = (numbers: NonEmptyArray<number>): number =>
  *     numbers.reduce((a, b) => a + b, 0);
  * ```
- *
- * @category Types
  */
 export type NonEmptyArray<T> = [T, ...T[]];
