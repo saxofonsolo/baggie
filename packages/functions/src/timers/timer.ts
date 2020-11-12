@@ -1,5 +1,36 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+/**
+ * An alternative to `setTimeout` that can be paused, resumed and reset.
+ *
+ * @example
+ * **Basic usage:**
+ * ```ts
+ * import { Timer } from "@baggie/functions";
+ *
+ * // Create a timer that executes a function after 2 seconds
+ * const timer = new Timer((a, b) => {
+ *     window.console.log(`${a}, ${b}`);
+ * }, 2000, "Hello", "friend");
+ *
+ * // Start timer
+ * timer.start();
+ *
+ * // Pause timer after 1 second
+ * setTimeout(() => {
+ *     timer.pause();
+ *
+ *     // And resume it after 3 seconds
+ *     setTimeout(() => {
+ *         timer.start();
+ *     }, 3000);
+ * }, 1000);
+ *
+ * // After 5 seconds the function will output "Hello, friend" to the console.
+ * ```
+ *
+ * @category Timers
+ */
 export class Timer {
     protected startMs: number;
     protected durationMs: number;
