@@ -5,7 +5,7 @@ const chunkFiles = require("lint-staged/lib/chunkFiles");
 const MAX_ARGUMENT_LENGTH = 8000;
 
 module.exports = {
-    "./packages/**/*.{js,jsx,ts,tsx}": [
+    "./**/*.{js,jsx,ts,tsx}": [
         "prettier --write",
         (allFiles) => {
             const chunkedFiles = chunkFiles({
