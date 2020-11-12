@@ -5,6 +5,7 @@ import { NonEmptyArray } from "@baggie/typescript";
  * This is the largest value minus the smallest value.
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { getRange } from "@baggie/math";
  *
@@ -13,7 +14,7 @@ import { NonEmptyArray } from "@baggie/typescript";
  * // range = 38
  * ```
  *
- * @category Distance
+ * @category Range
  */
 export const getRange = (numbers: NonEmptyArray<number>): number => {
     // Put the array of numbers in ascending order (small to large)

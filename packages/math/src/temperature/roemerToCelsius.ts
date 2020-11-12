@@ -1,6 +1,14 @@
 /**
  * Convert Roemer to Celsius.
  *
+ * @example
+ * **Basic usage:**
+ * ```ts
+ * import { roemerToCelsius } from "@baggie/math";
+ * const celsius = roemerToCelsius(60);
+ * // celsius = 100
+ * ```
+ *
  * @category Temperature
  */
 export const roemerToCelsius = (roemer: number): number =>

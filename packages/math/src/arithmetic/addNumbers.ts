@@ -4,6 +4,7 @@ import { NonEmptyArray } from "@baggie/typescript";
  * Add an array of numbers together.
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { addNumbers } from "@baggie/math";
  *

@@ -3,7 +3,7 @@
  *
  * @category Siblings
  * @param element - The element which siblings you need
- * @param includeOriginalElement - Set to **true** to include the original element in the returned set of elements.
+ * @param includeOriginalElement - Set to `true` to include the original element in the returned set of elements.
  * @param fromElement - If set, siblings prier to this element won't be captured.
  * @param untilElement - If set, siblings past this element won't be captured.
  */

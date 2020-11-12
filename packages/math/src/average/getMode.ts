@@ -8,6 +8,7 @@ import { NonEmptyArray } from "@baggie/typescript";
  * are repeated an equal amount of times.
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { getMode } from "@baggie/math";
  *

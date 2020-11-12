@@ -8,6 +8,7 @@ import { getMean } from "./getMean";
  * the mean of those two with the numbers in ascending order.
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { getMedian } from "@baggie/math";
  *

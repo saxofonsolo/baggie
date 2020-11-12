@@ -17,6 +17,7 @@ interface GetTimeDifferenceReturn {
  * Calculate the difference between two timestamps.
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { timeDifference } from "@baggie/math";
  * const data = timeDifference(1523607256543, 1533906712955);

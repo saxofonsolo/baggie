@@ -6,7 +6,7 @@ import { getBrightness } from "./getBrightness";
  * @category Brightness
  * @param colorA - Color in hex-format
  * @param colorB - Color in hex-format
- * @returns **True** if color1 is brighter than color2.
+ * @returns `true` if color1 is brighter than color2.
  */
 export const isColorBrighterThan = (colorA: string, colorB: string): boolean =>
     getBrightness(colorA) > getBrightness(colorB);

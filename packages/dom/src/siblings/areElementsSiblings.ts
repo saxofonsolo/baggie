@@ -6,7 +6,7 @@ import { getSiblings } from "./getSiblings";
  * @category Siblings
  * @param element1 - An element to check
  * @param element2 - Another element to check
- * @param adjacentOnly - Set to **true** if elements have to be right next to each other
+ * @param adjacentOnly - Set to `true` if elements have to be right next to each other
  */
 export const areElementsSiblings = (
     element1: Element,

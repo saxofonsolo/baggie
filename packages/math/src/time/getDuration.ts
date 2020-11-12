@@ -5,6 +5,7 @@
  * then the duration will be 10 (minutes).
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { getDuration } from "@baggie/math";
  *

@@ -8,6 +8,7 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * This function is the opposite of `screenColors()`.
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { multiplyColors, convertRgbToHex } from "@baggie/color";
  *

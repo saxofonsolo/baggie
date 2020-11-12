@@ -8,6 +8,7 @@ import { addNumbers } from "..";
  * All the values are added together and divided by the amount of numbers.
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { getMean } from "@baggie/math";
  *

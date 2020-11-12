@@ -1,6 +1,16 @@
 /**
  * Convert radians to degrees.
  *
+ * @example
+ * **Basic usage:**
+ * ```ts
+ * import { radiansToDegrees } from "@baggie/math";
+ *
+ * const radians = 100;
+ * const degrees = radiansToDegrees(degrees);
+ * // degrees = 5729.5779513082325
+ * ```
+ *
  * @category Radians
  */
 export const radiansToDegrees = (radians: number): number =>

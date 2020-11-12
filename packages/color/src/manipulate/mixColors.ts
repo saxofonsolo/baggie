@@ -6,6 +6,7 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * This works pretty much like the `mix()` function in SASS.
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { mixColors, convertRgbToHex } from "@baggie/color";
  *
