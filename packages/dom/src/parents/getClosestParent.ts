@@ -9,7 +9,10 @@ import { getAllParents } from "./getAllParents";
  *
  * @category Parents
  */
-export function getClosestParent(element: HTMLElement, matchSelector = "*"): Element | null {
+export function getClosestParent(
+    element: HTMLElement,
+    matchSelector = "*"
+): Element | null {
     if (typeof element.closest === "function") {
         return element.closest(matchSelector);
     } else {

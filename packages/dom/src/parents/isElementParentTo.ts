@@ -7,4 +7,5 @@ export const isElementParentTo = (
     parent: Element,
     child: Element,
     immediateParent = false
-): boolean => (immediateParent ? child.parentNode === parent : parent.contains(child));
+): boolean =>
+    immediateParent ? child.parentNode === parent : parent.contains(child);
