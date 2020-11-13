@@ -18,8 +18,9 @@
     "docs": "npm run docs:build && npm run docs:serve",
     "docs:build": "rimraf docs && typedoc",
     "docs:serve": "serve docs -n",
-    "check-commit-msg": "node scripts/check-commit-msg",
-    "deploy": "npm run lint && npm run test && lerna publish --skip-npm && lerna run publish-npm"
+    "deploy": "npm run lint && npm run test && lerna publish --skip-npm && npm run deploy:publish",
+    "deploy:publish": "lerna run publish-npm",
+    "check-commit-msg": "node scripts/check-commit-msg"
   },
   "files": [
     "lib/**/*"

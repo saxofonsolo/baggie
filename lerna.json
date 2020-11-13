@@ -1,7 +1,7 @@
 {
   "command": {
     "publish": {
-      "message": "Deploy: Publish version %v"
+      "message": "deploy: publish version %v"
     }
   },
   "packages": [
