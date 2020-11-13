@@ -9,8 +9,8 @@ export { isReactNative } from "./environment/isReactNative";
 export { isWebWorker } from "./environment/isWebWorker";
 
 /* Input */
-export { DetectInputMethod } from "./input/detectInputMethod";
 export type { DetectInputMethodOptions } from "./input/detectInputMethod";
+export { DetectInputMethod } from "./input/detectInputMethod";
 
 /* Media Features */
 export { OnPrefersDarkColorSchemeChange } from "./mediaFeatures/onPrefersDarkColorSchemeChange";
