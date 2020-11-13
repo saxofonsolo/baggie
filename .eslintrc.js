@@ -22,8 +22,8 @@ module.exports = {
     },
     overrides: [
         {
-            // ALL TS-files (including tests and barrels)
-            // ------------------------------------------
+            // ALL TS-files
+            // ------------
             files: ["*.ts"],
             parser: "@typescript-eslint/parser",
             plugins: ["@typescript-eslint"],
@@ -41,6 +41,27 @@ module.exports = {
             },
         },
         {
+            // only barrels
+            // ------------
+            files: ["**/src/index.ts"],
+            rules: {
+                "import/no-unused-modules": [
+                    1,
+                    { missingExports: true, unusedExports: false },
+                ],
+            },
+        },
+        {
+            // Only test-files
+            // ---------------
+            files: ["*.test.ts"],
+            globals: {
+                describe: true,
+                expect: true,
+                test: true,
+            },
+        },
+        {
             // ALL TS-files (except for tests and barrels)
             // -------------------------------------------
             files: ["*.ts"],
@@ -49,7 +70,7 @@ module.exports = {
             rules: {
                 "import/no-unused-modules": [
                     1,
-                    { missingExports: true, unusedExports: false },
+                    { missingExports: true, unusedExports: true },
                 ],
                 "tsdoc/syntax": "warn",
                 // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-description
@@ -71,16 +92,6 @@ module.exports = {
                         },
                     },
                 ],
-            },
-        },
-        {
-            // Only test-files
-            // ---------------
-            files: ["*.test.ts"],
-            globals: {
-                describe: true,
-                expect: true,
-                test: true,
             },
         },
         {
