@@ -1,4 +1,4 @@
-import { percentage } from "@baggie/math";
+import { getPercentage } from "@baggie/math";
 import { NonEmptyArray } from "@baggie/typescript";
 import { HSLA, RGBA } from "..";
 import { convertHexToRgba } from "./convertHexToRgba";
@@ -48,19 +48,19 @@ export function parseColor(
             );
             if (rgbMatch && rgbMatch.length) {
                 returnObject.red = rgbMatch[1].endsWith("%")
-                    ? percentage({
+                    ? getPercentage({
                           percentage: parseFloat(rgbMatch[1]),
                           whole: 255,
                       })
                     : parseInt(rgbMatch[1], 10);
                 returnObject.green = rgbMatch[2].endsWith("%")
-                    ? percentage({
+                    ? getPercentage({
                           percentage: parseFloat(rgbMatch[2]),
                           whole: 255,
                       })
                     : parseInt(rgbMatch[2], 10);
                 returnObject.blue = rgbMatch[3].endsWith("%")
-                    ? percentage({
+                    ? getPercentage({
                           percentage: parseFloat(rgbMatch[3]),
                           whole: 255,
                       })
