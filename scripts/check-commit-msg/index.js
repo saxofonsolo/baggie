@@ -10,31 +10,31 @@ const maxLength = 70;
 const acceptedStart = {
     Merge: { emoji: "🔀", ignoreMaxLength: true },
     Revert: { emoji: "⏪", ignoreMaxLength: true },
-    "Feature:": { emoji: "✨" },
-    "Remove:": { emoji: "🔥" },
-    "Bugfix:": { emoji: "🐛" },
-    "Hotfix:": { emoji: "🚑" },
-    "Refactor:": { emoji: "♻" },
-    "Test:": { emoji: "✅" },
-    "Docs:": { emoji: "📝" },
-    "Chore:": { emoji: "👷" },
-    "Config:": { emoji: "🔧" },
-    "Deploy:": { emoji: "🚀" },
-    "Perf:": { emoji: "⚡" },
-    "A11y:": { emoji: "♿" },
-    "SEO:": { emoji: "🔎" },
+    "feat:": { emoji: "✨" },
+    "remove:": { emoji: "🔥" },
+    "fix:": { emoji: "🐛" },
+    "refactor:": { emoji: "♻" },
+    "test:": { emoji: "✅" },
+    "docs:": { emoji: "📝" },
+    "chore:": { emoji: "👷" },
+    "config:": { emoji: "🔧" },
+    "deploy:": { emoji: "🚀" },
 };
 
 // Remove excessive whitespace and trailing dot
 const message = textFromFile.trim().replace(/ +/, " ").replace(/\.$/, "");
 
-const test = new RegExp(`^(${Object.keys(acceptedStart).join("|")})\\s+(.*)`);
+const test = new RegExp(
+    `^(${Object.keys(acceptedStart)
+        .map((key) => key.replace(/^([a-z]+):$/, "$1(?:\\([a-z]+\\))?:"))
+        .join("|")})\\s+(.*)`
+);
 const match = message.match(test);
 
 if (!match) {
     log.error([
         `Commit messages must start with on of the string below:`,
-        Object.keys(acceptedStart).join(", "),
+        Object.keys(acceptedStart).join(", ").toLocaleLowerCase(),
         `followed by a space and a description.`,
         ` `,
         `Your message is not valid:`,
@@ -65,6 +65,9 @@ if (!match) {
         message,
     ]);
 } else {
-    const newMessage = `${acceptedStart[match[1]].emoji} ${message}`;
+    console.log(match);
+    const newMessage = `${
+        acceptedStart[match[1].replace(/\([a-z]+\)/, "")].emoji
+    } ${message.charAt(0).toLowerCase() + message.slice(1)}`;
     fs.writeFileSync(filePath, newMessage);
 }
