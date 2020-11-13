@@ -39,7 +39,7 @@ export function getCookie(name: string, dontParseCookie = false) {
                 if (!dontParseCookie) {
                     // Try parsing cookie
                     try {
-                        cookieValue = JSON.parsecookieValue;
+                        cookieValue = JSON.parse(cookieValue);
                     } catch (error) {
                         // Cookie value could not be parsed - return unparsed string
                     }
