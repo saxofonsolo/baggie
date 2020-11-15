@@ -20,5 +20,6 @@ export { getTagsRegex } from "./regex/getTagsRegex";
 export { getYouTubeIdRegex } from "./regex/getYouTubeIdRegex";
 
 /* Validation */
+export { isCprValid } from "./validation/isCprValid";
 export { isEmailValid } from "./validation/isEmailValid";
 export { isPasswordValid } from "./validation/isPasswordValid";
