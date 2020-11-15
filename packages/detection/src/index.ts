@@ -3,6 +3,7 @@ export { supportsSmoothScroll } from "./browserSupport/supportsSmoothScroll";
 
 /* Environment */
 export { isBrowser } from "./environment/isBrowser";
+export { isIE11 } from "./environment/isIE11";
 export { isJsDom } from "./environment/isJsDom";
 export { isNode } from "./environment/isNode";
 export { isReactNative } from "./environment/isReactNative";

@@ -41,15 +41,19 @@ module.exports = {
             },
         },
         {
-            // ALL TS-files (except for tests and barrels)
-            // -------------------------------------------
+            // ALL TS-files (except for tests)
+            // -------------------------------
             files: ["*.ts"],
             excludedFiles: ["*.test.ts"],
             plugins: ["eslint-plugin-tsdoc", "jsdoc"],
             rules: {
                 "import/no-unused-modules": [
                     1,
-                    { missingExports: true, unusedExports: true },
+                    {
+                        missingExports: true,
+                        unusedExports: true,
+                        ignoreExports: ["**/src/index.ts"],
+                    },
                 ],
                 "tsdoc/syntax": "warn",
                 // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-description
@@ -70,17 +74,6 @@ module.exports = {
                             MethodDefinition: false,
                         },
                     },
-                ],
-            },
-        },
-        {
-            // only barrels
-            // ------------
-            files: ["**/src/index.ts"],
-            rules: {
-                "import/no-unused-modules": [
-                    1,
-                    { missingExports: true, unusedExports: false },
                 ],
             },
         },
