@@ -8,7 +8,7 @@
  * @example
  * **Basic usage:**
  * ```ts
- * import { getYouTubeIdRegex } from "./utils/patternMatching/youTubeId";
+ * import { getYouTubeIdRegex } from "@baggie/string";
  *
  * const youTubeUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
  * const youTubeId = youTubeUrl.match(getYouTubeIdRegex())[1];

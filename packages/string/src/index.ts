@@ -3,6 +3,7 @@ export { convertEmailsToLinks } from "./convert/convertEmailsToLinks";
 export { convertNewLinesToBreaks } from "./convert/convertNewLinesToBreaks";
 export { convertToDate } from "./convert/convertToDate";
 export { getEmailsFromString } from "./convert/getEmailsFromString";
+export { getVimeoId } from "./convert/getVimeoId";
 export { getYouTubeId } from "./convert/getYouTubeId";
 export { stripTags } from "./convert/stripTags";
 
@@ -17,6 +18,7 @@ export {
     passwordSpecialCharactersDefault,
 } from "./regex/getPasswordRegex";
 export { getTagsRegex } from "./regex/getTagsRegex";
+export { getVimeoIdRegex } from "./regex/getVimeoIdRegex";
 export { getYouTubeIdRegex } from "./regex/getYouTubeIdRegex";
 
 /* Validation */
