@@ -2,7 +2,9 @@
 
 <h1>@baggie/dom</h1>
 
-DOM tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
+DOM tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme).
+
+Get element properties, related elements, handle scroll etc.
 <hr>
 <br>
 

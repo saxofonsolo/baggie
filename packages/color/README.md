@@ -2,7 +2,9 @@
 
 <h1>@baggie/color</h1>
 
-Color tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
+Color tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme).
+
+Manipulate, convert and compare colors, find color combinations etc.
 <hr>
 <br>
 

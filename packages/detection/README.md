@@ -2,7 +2,9 @@
 
 <h1>@baggie/detection</h1>
 
-Detection tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
+Detection tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme).
+
+Tools for detecting media features, browser support, input method etc.
 <hr>
 <br>
 
