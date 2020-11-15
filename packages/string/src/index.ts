@@ -2,6 +2,7 @@
 export { convertEmailsToLinks } from "./convert/convertEmailsToLinks";
 export { convertNewLinesToBreaks } from "./convert/convertNewLinesToBreaks";
 export { convertToDate } from "./convert/convertToDate";
+export { getEmailsFromString } from "./convert/getEmailsFromString";
 export { stripTags } from "./convert/stripTags";
 
 /* Interfaces */
