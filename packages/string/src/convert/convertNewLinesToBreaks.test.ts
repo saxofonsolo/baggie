@@ -1,16 +1,16 @@
-import { replaceNewLineWithBreak } from "./replaceNewLineWithBreak";
+import { convertNewLinesToBreaks } from "./convertNewLinesToBreaks";
 
 describe("newLineToBreak", () => {
     test("Replace single new line with <br /> and remove whitespace", () => {
         expect(
-            replaceNewLineWithBreak(`hey nå, hvasså
+            convertNewLinesToBreaks(`hey nå, hvasså
         eller hvad?`)
         ).toBe(`hey nå, hvasså<br />eller hvad?`);
     });
 
     test("Replace multiple new lines with <br /> and remove whitespace", () => {
         expect(
-            replaceNewLineWithBreak(`hey nå, hvasså
+            convertNewLinesToBreaks(`hey nå, hvasså
         der
         eller hvad?`)
         ).toBe(`hey nå, hvasså<br />der<br />eller hvad?`);
@@ -18,7 +18,7 @@ describe("newLineToBreak", () => {
 
     test("Replace multiple continuous new lines with <br /> and remove whitespace", () => {
         expect(
-            replaceNewLineWithBreak(`hey nå, hvasså
+            convertNewLinesToBreaks(`hey nå, hvasså
 
 
 
@@ -28,7 +28,7 @@ describe("newLineToBreak", () => {
 
     test("Replace single new line with <br /> and keep whitespace", () => {
         expect(
-            replaceNewLineWithBreak(
+            convertNewLinesToBreaks(
                 `hey nå, hvasså
         eller hvad?`,
                 true
@@ -38,7 +38,7 @@ describe("newLineToBreak", () => {
 
     test("Replace multiple new lines with <br /> and keep whitespace", () => {
         expect(
-            replaceNewLineWithBreak(
+            convertNewLinesToBreaks(
                 `hey nå, hvasså
         der
         eller hvad?`,
@@ -49,7 +49,7 @@ describe("newLineToBreak", () => {
 
     test("Replace multiple continuous new lines with <br /> and keep whitespace", () => {
         expect(
-            replaceNewLineWithBreak(
+            convertNewLinesToBreaks(
                 `hey nå, hvasså
 
 
