@@ -2,7 +2,9 @@
 
 <h1>@baggie/functions</h1>
 
-Tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
+Misc. tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme).
+
+Handle cookies and timers that can be paused and resumed, etc.
 <hr>
 <br>
 

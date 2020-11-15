@@ -2,7 +2,9 @@
 
 <h1>@baggie/string</h1>
 
-String tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme)
+String tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme).
+
+Find emails in strings, strip html tags, validate password etc.
 <hr>
 <br>
 
