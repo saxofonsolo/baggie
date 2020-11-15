@@ -8,7 +8,7 @@ import { getEmailRegex } from "..";
 export function convertEmailsToLinks(
     string: string,
     subject: boolean | string = false
-) {
+): string {
     const setSubject = !!subject;
     const subjectString = `?subject=${
         typeof subject === "string"

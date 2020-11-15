@@ -6,6 +6,7 @@ import { getEmailRegex } from "..";
  * Accept a string or an input element.
  *
  * @example
+ * **Basic usage:**
  * ```ts
  * import { isEmailValid } from "@baggie/string";
  *

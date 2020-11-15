@@ -7,6 +7,7 @@
  * import { getEmailRegex } from "@baggie/string";
  *
  * const string = "My private email is mail@private.com, but my business email is mail@business.com.";
+ *
  * const emails = string.match(getEmailRegex());
  * // emails = ["mail@private.com", "mail@business.com"]
  * ```
