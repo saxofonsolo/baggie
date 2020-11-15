@@ -41,31 +41,10 @@ module.exports = {
             },
         },
         {
-            // only barrels
-            // ------------
-            files: ["**/src/index.ts"],
-            rules: {
-                "import/no-unused-modules": [
-                    1,
-                    { missingExports: true, unusedExports: false },
-                ],
-            },
-        },
-        {
-            // Only test-files
-            // ---------------
-            files: ["*.test.ts"],
-            globals: {
-                describe: true,
-                expect: true,
-                test: true,
-            },
-        },
-        {
             // ALL TS-files (except for tests and barrels)
             // -------------------------------------------
             files: ["*.ts"],
-            excludedFiles: ["**/src/index.ts", "*.test.ts"],
+            excludedFiles: ["*.test.ts"],
             plugins: ["eslint-plugin-tsdoc", "jsdoc"],
             rules: {
                 "import/no-unused-modules": [
@@ -92,6 +71,27 @@ module.exports = {
                         },
                     },
                 ],
+            },
+        },
+        {
+            // only barrels
+            // ------------
+            files: ["**/src/index.ts"],
+            rules: {
+                "import/no-unused-modules": [
+                    1,
+                    { missingExports: true, unusedExports: false },
+                ],
+            },
+        },
+        {
+            // Only test-files
+            // ---------------
+            files: ["*.test.ts"],
+            globals: {
+                describe: true,
+                expect: true,
+                test: true,
             },
         },
         {
