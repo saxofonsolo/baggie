@@ -7,6 +7,7 @@ export { removeClassByPrefix } from "./classes/removeClassByPrefix";
 
 /* Parents */
 export { getAllParents } from "./parents/getAllParents";
+export { getClosestParent } from "./parents/getClosestParent";
 export { isElementChildOf } from "./parents/isElementChildOf";
 export { isElementParentTo } from "./parents/isElementParentTo";
 
