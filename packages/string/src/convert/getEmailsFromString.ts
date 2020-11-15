@@ -16,6 +16,5 @@ import { getEmailRegex } from "..";
  *
  * @category Convert
  */
-export function getEmailsFromString(string: string) {
-    return string.match(getEmailRegex(true)) || [];
-}
+export const getEmailsFromString = (string: string): string[] =>
+    string.match(getEmailRegex(true)) || [];
