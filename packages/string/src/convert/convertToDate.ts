@@ -55,7 +55,6 @@ export function convertToDate(
 
     if (typeof date === "string") {
         dateArray = date.replace(/^[^0-9]+|[^0-9]+$/g, "").split(/[^0-9]+/);
-        dateArray = dateArray.filter((item) => !!item);
 
         if (
             dateArray.length === 1 &&
