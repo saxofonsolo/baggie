@@ -19,9 +19,9 @@ interface ColorHaystack extends CIELAB {
  * @example
  * **Basic usage:**
  * ```ts
- * import { ColorMatch } from "@baggie/colors";
+ * import { ColorComparison } from "@baggie/colors";
  *
- * const colors = new ColorMatch([
+ * const colors = new ColorComparison([
  *     "#FF0000",
  *     "#FFFF00",
  *     "#FF00FF",
@@ -49,9 +49,9 @@ interface ColorHaystack extends CIELAB {
  * colors.destroy();
  * ```
  *
- * @category Matching
+ * @category Comparison
  */
-export class ColorMatch {
+export class ColorComparison {
     private haystack: ColorHaystack[] = [];
 
     /**
@@ -81,7 +81,7 @@ export class ColorMatch {
 
     add(colors: RGBA | RGBA[] | CIELAB | CIELAB[]): this {
         (Array.isArray(colors) ? colors : [colors]).forEach((color) => {
-            const parsedColor = ColorMatch.parseColorToLab(color);
+            const parsedColor = ColorComparison.parseColorToLab(color);
             this.haystack.push({
                 ...parsedColor,
                 source: color,
@@ -91,13 +91,13 @@ export class ColorMatch {
         return this;
     }
 
-    match(
+    compare(
         color: RGBA | CIELAB,
         amount = 1,
         sortFarthestToNearest = false
     ): RGBA[] | CIELAB[] | null {
         if (this.haystack.length) {
-            const needle = ColorMatch.parseColorToLab(color);
+            const needle = ColorComparison.parseColorToLab(color);
             const iterations = Math.min(amount, this.haystack.length);
             const results = new Array(iterations);
 
@@ -227,11 +227,11 @@ export class ColorMatch {
     }
 
     nearest(color: RGBA | CIELAB, amount = 1): RGBA[] | CIELAB[] | null {
-        return this.match(color, amount);
+        return this.compare(color, amount);
     }
 
     farthest(color: RGBA | CIELAB, amount = 1): RGBA[] | CIELAB[] | null {
-        return this.match(color, amount, true);
+        return this.compare(color, amount, true);
     }
 
     reset(): this {

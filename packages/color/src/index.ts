@@ -15,6 +15,9 @@ export { getSplitComplementaryColorScheme } from "./combinations/getSplitComplem
 export { getTetradicColorScheme } from "./combinations/getTetradicColorScheme";
 export { getTriadicColorScheme } from "./combinations/getTriadicColorScheme";
 
+/* Comparison */
+export { ColorComparison } from "./comparison/colorComparison";
+
 /* Convert */
 export { convertColorNameToHex } from "./convert/convertColorNameToHex";
 export { convertHexToRgba } from "./convert/convertHexToRgba";
@@ -28,6 +31,3 @@ export { parseColor } from "./convert/parseColor";
 export { mixColors } from "./manipulate/mixColors";
 export { multiplyColors } from "./manipulate/multiplyColors";
 export { screenColors } from "./manipulate/screenColors";
-
-/* Matching */
-export { ColorMatch } from "./matching/colorMatch";
