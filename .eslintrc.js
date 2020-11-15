@@ -88,10 +88,13 @@ module.exports = {
             // Only test-files
             // ---------------
             files: ["*.test.ts"],
-            globals: {
-                describe: true,
-                expect: true,
-                test: true,
+            plugins: ["jest", "jest-formatting"],
+            extends: [
+                "plugin:jest/recommended",
+                "plugin:jest-formatting/recommended",
+            ],
+            env: {
+                "jest/globals": true,
             },
         },
         {
