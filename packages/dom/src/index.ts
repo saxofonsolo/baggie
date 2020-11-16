@@ -1,5 +1,6 @@
 /* Actions */
 export { blurFocusedElement } from "./actions/blurFocusedElement";
+export { getFocusedElement } from "./actions/getFocusedElement";
 
 /* Classes */
 export { getClassByPrefix } from "./classes/getClassByPrefix";
