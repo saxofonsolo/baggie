@@ -19,8 +19,8 @@ jobs:
       - name: Install and build
         run: |
           npm install
-          npm bootstrap
-          npm build
+          npm run bootstrap
+          npm run build
           npm run docs:build
 
       - name: Deploy
