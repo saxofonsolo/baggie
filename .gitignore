@@ -1,12 +1,17 @@
 # ignore all folders in root except a few
 */**/*
-!graphics/**
+!.github/**
+!media/**
 !packages/**
 !scripts/**
 
-# ignore everything under "graphics" except SVGs
-packages/**/*.*
-!packages/**/*.svg
+# ignore everything under ".github" except YML-files
+.github/**/*.*
+!.github/**/*.yml
+
+# ignore everything under "media" except SVGs
+media/**/*.*
+!media/**/*.svg
 
 # ignore everything under "packages" except certain files
 packages/**/*.*
@@ -29,5 +34,5 @@ scripts/**/*.*
 .vs
 .vscode
 
-# ignore packages
+# ignore node modules
 node_modules

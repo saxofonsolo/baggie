@@ -4,6 +4,7 @@
 # Generated
 **/.git
 **/.idea
+**/docs
 
 # Build
 **/lib

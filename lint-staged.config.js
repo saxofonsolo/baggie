@@ -1,7 +1,6 @@
-/* eslint-disable */
 const chunkFiles = require("lint-staged/lib/chunkFiles");
 
-// The linters fail for very large lists of files
+// The linters fail for very large lists of files, this helps:
 const MAX_ARGUMENT_LENGTH = 8000;
 
 module.exports = {
