@@ -1,12 +1,12 @@
 # ignore all folders in root except a few
 */**/*
-!graphics/**
+!media/**
 !packages/**
 !scripts/**
 
-# ignore everything under "graphics" except SVGs
-packages/**/*.*
-!packages/**/*.svg
+# ignore everything under "media" except SVGs
+media/**/*.*
+!media/**/*.svg
 
 # ignore everything under "packages" except certain files
 packages/**/*.*

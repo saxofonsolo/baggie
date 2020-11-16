@@ -22,6 +22,7 @@
     "name": "baggie",
     "readme": "./README.md",
     "mode": "modules",
+    "media": "/media",
     "out": "docs",
     "exclude": "**/src/index.ts",
     "external-modulemap": ".*packages\/([^\/]+)\/.*",
