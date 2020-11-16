@@ -1,8 +1,8 @@
-<img alt="Baggie logo" src="https://github.com/larsmunkholm/baggie/raw/master/media/baggie.svg" height="100" />
+<img alt="Baggie logo" src="https://github.com/bag-of-tricks/baggie/raw/master/media/baggie.svg" height="100" />
 
 <h1>@baggie/dom</h1>
 
-DOM tools from [the little bag-of-tricks](https://github.com/larsmunkholm/baggie#readme).
+DOM tools from [the little bag-of-tricks](https://github.com/bag-of-tricks/baggie#readme).
 
 Get element properties, related elements, handle scroll etc.
 <hr>
