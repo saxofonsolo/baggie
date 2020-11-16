@@ -6,18 +6,20 @@ import { getTagsRegex } from "..";
  * @example
  * **Basic usage:**
  * ```ts
- * import { stripTags } from "@baggie/string";
+ * import { stripTagsFromString } from "@baggie/string";
  *
  * const markup = "<p><b>Bold move.</b><br/>Paragraph.</p><!-- comment -->:)";
  *
- * const stripped = stripTags(markup);
+ * const stripped = stripTagsFromString(markup);
  * // stripped = "Bold move.Paragraph.:)"
  *
- * const spacedAndTrimmed = stripTags(markup, " ").trim();
+ * const spacedAndTrimmed = stripTagsFromString(markup, " ").trim();
  * // spacedAndTrimmed = "Bold move. Paragraph. :)"
  * ```
  *
  * @category Convert
  */
-export const stripTags = (markup: string, replaceWith = " "): string =>
-    markup.replace(getTagsRegex(true), replaceWith);
+export const stripTagsFromString = (
+    markup: string,
+    replaceWith = " "
+): string => markup.replace(getTagsRegex(true), replaceWith);

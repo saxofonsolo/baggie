@@ -5,7 +5,7 @@ export { convertToDate } from "./convert/convertToDate";
 export { getEmailsFromString } from "./convert/getEmailsFromString";
 export { getVimeoId } from "./convert/getVimeoId";
 export { getYouTubeId } from "./convert/getYouTubeId";
-export { stripTags } from "./convert/stripTags";
+export { stripTagsFromString } from "./convert/stripTagsFromString";
 
 /* Interfaces */
 export type { PasswordOptions } from "./_interfaces/passwordOptions.interface";
