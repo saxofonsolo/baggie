@@ -1,8 +1,13 @@
 # ignore all folders in root except a few
 */**/*
+!.github/**
 !media/**
 !packages/**
 !scripts/**
+
+# ignore everything under ".github" except YML-files
+.github/**/*.*
+!.github/**/*.yml
 
 # ignore everything under "media" except SVGs
 media/**/*.*
