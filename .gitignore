@@ -29,5 +29,5 @@ scripts/**/*.*
 .vs
 .vscode
 
-# ignore packages
+# ignore node modules
 node_modules

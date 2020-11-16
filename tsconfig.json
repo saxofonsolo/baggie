@@ -27,6 +27,7 @@
     "exclude": "**/src/index.ts",
     "external-modulemap": ".*packages\/([^\/]+)\/.*",
     "categorizeByGroup": false,
+    "excludeExternals": true,
     "excludeNotExported": true,
     "excludePrivate": true,
     "excludeProtected": true,
