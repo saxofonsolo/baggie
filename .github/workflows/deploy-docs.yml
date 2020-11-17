@@ -28,5 +28,5 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           REPOSITORY_NAME: bag-of-tricks/bag-of-tricks.github.io
-          BRANCH: master
+          BRANCH: main
           FOLDER: docs
