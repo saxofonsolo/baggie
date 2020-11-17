@@ -21,6 +21,7 @@ jobs:
           npm run bootstrap
           npm run build
           npm run docs:build
+          rm -rf node_modules/gh-pages/.cache
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
