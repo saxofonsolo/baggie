@@ -90,9 +90,3 @@ export { roemerToCelsius } from "./temperature/roemerToCelsius";
 /* Time */
 export { getDuration } from "./time/getDuration";
 export { getTimeDifference } from "./time/getTimeDifference";
-
-/**
- * A test
- */
-export const thisIsADumbTest = (): void =>
-    window.console.log("this is a dumb test");

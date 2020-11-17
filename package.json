@@ -18,7 +18,7 @@
     "docs": "npm-run-all docs:*",
     "docs:build": "rimraf docs && typedoc",
     "docs:serve": "serve docs -n",
-    "deploy": "npm run lint && npm run test && lerna publish --canary --skip-npm && npm run deploy:publish",
+    "deploy": "npm run lint && npm run test && lerna publish --skip-npm && npm run deploy:publish",
     "deploy:publish": "lerna run publish-npm",
     "check-commit-msg": "node scripts/check-commit-msg"
   },
