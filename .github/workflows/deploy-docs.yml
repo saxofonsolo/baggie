@@ -1,8 +1,9 @@
 name: Build and deploy docs
-on:
-  push:
-    tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+*'
+on: push
+#on:
+#  push:
+#    tags:
+#      - 'v[0-9]+.[0-9]+.[0-9]+*'
 jobs:
   build-and-deploy:
     name: Deploying docs to gh-pages
@@ -27,6 +28,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          REPOSITORY_NAME: bag-of-tricks/bag-of-tricks.github.io
+          BRANCH: main
           FOLDER: docs
           CLEAN: true
