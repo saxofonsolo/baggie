@@ -66,7 +66,6 @@ if (!match) {
         message,
     ]);
 } else {
-    console.log(match);
     const newMessage = `${
         acceptedStart[match[1].replace(/\([a-z]+\)/, "")].emoji
     } ${message.charAt(0).toLowerCase() + message.slice(1)}`;
