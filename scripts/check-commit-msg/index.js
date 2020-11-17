@@ -19,6 +19,7 @@ const acceptedStart = {
     "chore:": { emoji: "👷" },
     "config:": { emoji: "🔧" },
     "deploy:": { emoji: "🚀" },
+    "debug:": { emoji: "🩺" },
 };
 
 // Remove excessive whitespace and trailing dot
