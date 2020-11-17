@@ -25,11 +25,9 @@ jobs:
           npm run docs:build
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          REPOSITORY_NAME: bag-of-tricks/bag-of-tricks.github.io
-          BRANCH: main
-          FOLDER: docs
-          CLEAN: true
+          dir: docs
+          repo: bag-of-tricks/bag-of-tricks.github.io
+          branch: main
+          token: ${{ secrets.ACCESS_TOKEN }}
