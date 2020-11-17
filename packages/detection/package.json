@@ -1,6 +1,6 @@
 {
   "name": "@baggie/detection",
-  "version": "0.1.3-alpha.0",
+  "version": "0.1.5-alpha.0",
   "description": "A library of detection tools for JavaScript and TypeScript. Detect browser support, media features, environment etc.",
   "license": "MIT",
   "main": "lib/index.js",
