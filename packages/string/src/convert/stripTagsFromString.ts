@@ -19,7 +19,5 @@ import { getTagsRegex } from "..";
  *
  * @category Convert
  */
-export const stripTagsFromString = (
-    markup: string,
-    replaceWith = " "
-): string => markup.replace(getTagsRegex(true), replaceWith);
+export const stripTagsFromString = (markup: string, replaceWith = ""): string =>
+    markup.replace(getTagsRegex(true), replaceWith);
