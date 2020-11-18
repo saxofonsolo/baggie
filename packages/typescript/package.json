@@ -1,13 +1,12 @@
 {
   "name": "@baggie/typescript",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.7-alpha.0",
   "description": "A library of TypeScript tools. Just a few helpers for defining more specific types.",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rimraf lib && tsc",
-    "publish-npm": "npm publish --access public"
+    "build": "rimraf lib && tsc"
   },
   "files": [
     "lib"

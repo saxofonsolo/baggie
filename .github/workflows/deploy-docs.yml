@@ -19,12 +19,14 @@ jobs:
       - name: Install and build
         run: |
           npm install
+          npm run bootstrap
+          npm run build
           npm run docs:build
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPOSITORY_NAME: bag-of-tricks/bag-of-tricks.github.io
-          BRANCH: master
-          FOLDER: docs
+          dir: docs
+          repo: bag-of-tricks/bag-of-tricks.github.io
+          branch: main
+          token: ${{ secrets.ACCESS_TOKEN }}
