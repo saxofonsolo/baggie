@@ -75,14 +75,14 @@ export function convertToDate(
             ? monthBeforeDay
                 ? dateArray[1]
                 : dateArray[0]
-            : null) || (date as DateObject).day
+            : 0) || (date as DateObject).day
     );
     dateObject.month = Number(
         (dateArray.length
             ? monthBeforeDay
                 ? dateArray[0]
                 : dateArray[1]
-            : null) || (date as DateObject).month
+            : 0) || (date as DateObject).month
     );
     dateObject.year = Number(dateArray[2] || (date as DateObject).year);
 
