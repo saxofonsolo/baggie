@@ -161,5 +161,5 @@ const colorNames: { [colorName: string]: string } = {
  * @see https://www.w3schools.com/colors/colors_names.asp
  * @category Convert
  */
-export const convertColorNameToHex = (input: string): string | null =>
-    input in colorNames ? colorNames[input] : null;
+export const convertColorNameToHex = (input: string): string | undefined =>
+    input in colorNames ? colorNames[input] : undefined;
