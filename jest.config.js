@@ -5,4 +5,7 @@ module.exports = {
     },
     testRegex: "(/src/.*)\\.test.tsx?$",
     moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
+    moduleNameMapper: {
+        "@baggie/(.+)": "<rootDir>../$1/src",
+    },
 };
