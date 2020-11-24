@@ -23,6 +23,10 @@ describe("getYouTubeId", () => {
         expect(getYouTubeId("https://www.youtube.com/embed/N7-7HJCXx10")).toBe(
             "N7-7HJCXx10"
         );
+
+        expect(
+            getYouTubeId("https://www.youtube.com/embed/N7-7HJCXx10?autoplay=1")
+        ).toBe("N7-7HJCXx10");
     });
 
     test("Get undefined from URL for another site", () => {
