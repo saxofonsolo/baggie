@@ -18,7 +18,7 @@ import { getYouTubeIdRegex } from "..";
  *
  * @category Convert
  */
-export function getYouTubeId(url: string): string {
+export function getYouTubeId(url: string): string | undefined {
     const match = url.match(getYouTubeIdRegex());
-    return match && match.length > 1 ? match[1] : "";
+    return match && match.length > 1 ? match[1] : undefined;
 }
