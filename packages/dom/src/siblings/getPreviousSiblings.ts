@@ -7,6 +7,17 @@ import { getSiblings } from "./getSiblings";
  */
 export const getPreviousSiblings = (
     element: Element,
-    includeOriginalElement = false
-): Element[] =>
-    getSiblings(element, includeOriginalElement, undefined, element);
+    options?: {
+        includeOriginalElement?: boolean;
+        matchSelector?: string;
+    }
+): Element[] => {
+    const { includeOriginalElement, matchSelector } = {
+        ...options,
+    };
+    return getSiblings(element, {
+        includeOriginalElement,
+        matchSelector,
+        untilElement: element,
+    });
+};

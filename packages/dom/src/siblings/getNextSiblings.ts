@@ -7,5 +7,17 @@ import { getSiblings } from "./getSiblings";
  */
 export const getNextSiblings = (
     element: Element,
-    includeOriginalElement = false
-): Element[] => getSiblings(element, includeOriginalElement, element);
+    options?: {
+        includeOriginalElement?: boolean;
+        matchSelector?: string;
+    }
+): Element[] => {
+    const { includeOriginalElement, matchSelector } = {
+        ...options,
+    };
+    return getSiblings(element, {
+        includeOriginalElement,
+        matchSelector,
+        fromElement: element,
+    });
+};
