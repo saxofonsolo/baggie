@@ -16,4 +16,12 @@ describe("isCprValid", () => {
     test("CPR with invalid gender", () => {
         expect(isCprValid(`300186-2134`, "m")).toBe(false);
     });
+
+    test("CPR from input element", () => {
+        document.body.innerHTML = `<input id="cpr1" value="300186-2134"><input id="cpr2" value="300286-2134">`;
+        const cpr1 = document.getElementById("cpr1");
+        const cpr2 = document.getElementById("cpr2");
+        expect(isCprValid(cpr1 as HTMLInputElement)).toBe(true);
+        expect(isCprValid(cpr2 as HTMLInputElement)).toBe(false);
+    });
 });

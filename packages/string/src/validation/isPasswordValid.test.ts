@@ -126,4 +126,10 @@ describe("isPasswordValid", () => {
             })
         ).toBe(false);
     });
+
+    test("Password from input element", () => {
+        document.body.innerHTML = `<input value="abcABC_1">`;
+        const input = document.querySelector("input");
+        expect(isPasswordValid(input as HTMLInputElement)).toBe(true);
+    });
 });
