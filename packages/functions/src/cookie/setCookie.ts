@@ -27,7 +27,7 @@ export interface CookieAttributes {
  */
 export function setCookie(
     name: string,
-    value: any, // eslint-disable-line @typescript-eslint/no-explicit-any
+    value: any, // eslint-disable-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
     attributes: CookieAttributes
 ): void {
     // Changeable variables for name and value
