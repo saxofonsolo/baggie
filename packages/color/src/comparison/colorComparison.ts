@@ -22,31 +22,31 @@ interface ColorHaystack extends CIELAB {
  * import { ColorComparison } from "@baggie/colors";
  *
  * const colors = new ColorComparison([
- *     "#FF0000",
- *     "#FFFF00",
- *     "#FF00FF",
- *     "#00FFFF",
- *     "#00FF00",
+ *     { red: 255, green: 0, blue: 0 },
+ *     { red: 255, green: 255, blue: 0 },
+ *     { red: 255, green: 0, blue: 255 },
+ *     { red: 0, green: 255, blue: 255 },
+ *     { red: 0, green: 255, blue: 0 },
  * ]);
  *
- * // This will return ["#FF0000"], since that's the nearest color in the set.
- * colors.near("#FF1111");
+ * colors.nearest({ red: 255, green: 60, blue: 10 });
+ * // = [{ red: 255, green: 0, blue: 0 }]
  *
- * // Add a new color to the set.
- * colors.add("#FF1100");
+ * colors.add({ red: 255, green: 50, blue: 0 });
  *
- * // Now, the same execution as before will return ["#FF1100"].
- * colors.near("#FF1111");
+ * colors.near({ red: 255, green: 60, blue: 10 });
+ * // = { red: 255, green: 50, blue: 0 }
  *
- * // Let's find the two colors least matching #FF1111.
- * // That'll be ["#00FF00", "#00FFFF"].
- * colors.far("#FF1111", 2);
+ * colors.farthest({ red: 255, green: 50, blue: 50 }, 2);
+ * // = [{ red: 0, green: 255, blue: 0 }, { red: 0, green: 255, blue: 255 }]
  *
  * // We can also remove all the colors and add new ones to it.
- * colors.flush().add(["#FF0", "#F00"]);
- *
- * // If we have no further use for this, we can clean up.
- * colors.destroy();
+ * colors
+ *     .reset()
+ *     .add([
+ *         { red: 255, green: 50, blue: 50 },
+ *         { red: 0, green: 255, blue: 0 }
+ *     ]);
  * ```
  *
  * @category Comparison
@@ -74,7 +74,7 @@ export class ColorComparison {
         return convertRgbToLab(color);
     }
 
-    flush(): this {
+    reset(): this {
         this.haystack = [];
         return this;
     }
@@ -232,10 +232,5 @@ export class ColorComparison {
 
     farthest(color: RGBA | CIELAB, amount = 1): RGBA[] | CIELAB[] | undefined {
         return this.compare(color, amount, true);
-    }
-
-    reset(): this {
-        this.haystack = [];
-        return this;
     }
 }

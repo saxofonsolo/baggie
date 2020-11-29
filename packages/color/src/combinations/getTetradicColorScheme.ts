@@ -9,7 +9,9 @@ import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
  * @param color - Your base color.
  * @returns An array of four RGBA color objects.
  */
-export const getTetradicColorScheme = (color: RGBA): RGBA[] => {
+export const getTetradicColorScheme = (
+    color: RGBA
+): [RGBA, RGBA, RGBA, RGBA] => {
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(color);
     return [
         color,
