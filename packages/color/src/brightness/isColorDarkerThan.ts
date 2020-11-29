@@ -1,3 +1,4 @@
+import { RGBA } from "..";
 import { getBrightness } from "./getBrightness";
 
 /**
@@ -8,5 +9,5 @@ import { getBrightness } from "./getBrightness";
  * @param colorB - Color in hex-format
  * @returns `true` if color1 is darker than color2.
  */
-export const isColorDarkerThan = (colorA: string, colorB: string): boolean =>
+export const isColorDarkerThan = (colorA: RGBA, colorB: RGBA): boolean =>
     getBrightness(colorA) < getBrightness(colorB);

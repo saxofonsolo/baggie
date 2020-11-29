@@ -5,7 +5,7 @@ import { RGBA } from "..";
  *
  * @category Convert
  */
-export const convertHexToRgba = (hex: string): RGBA | null => {
+export const convertHexToRgb = (hex: string): RGBA | undefined => {
     const hexMatch = hex.match(
         /^#((([0-9a-f]{3}){1,2})|(([0-9a-f]{4}){1,2}))$/i
     );
@@ -44,5 +44,5 @@ export const convertHexToRgba = (hex: string): RGBA | null => {
         }
     }
 
-    return null;
+    return undefined;
 };

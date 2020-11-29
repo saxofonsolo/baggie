@@ -8,7 +8,7 @@ describe("getPercentageIncrease", () => {
 
     test("Decrease", () => {
         expect(getPercentageIncrease(100, 10)).toBe(-90);
-        expect(getPercentageIncrease(1, 0)).toBe(-Infinity);
+        expect(getPercentageIncrease(0, -1)).toBe(-Infinity);
     });
 
     test("No change", () => {

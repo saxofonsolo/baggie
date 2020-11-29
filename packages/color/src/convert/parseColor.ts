@@ -1,7 +1,7 @@
 import { getPercentage } from "@baggie/math";
 import { NonEmptyArray } from "@baggie/typescript";
 import { HSLA, RGBA } from "..";
-import { convertHexToRgba } from "./convertHexToRgba";
+import { convertHexToRgb } from "./convertHexToRgb";
 import { convertHslToRgb } from "./convertHslToRgb";
 import { convertColorNameToHex } from "./convertColorNameToHex";
 
@@ -39,7 +39,7 @@ export function parseColor(
         let stringInput = input.toLowerCase();
         stringInput = convertColorNameToHex(stringInput) || stringInput;
 
-        const rgba = convertHexToRgba(stringInput);
+        const rgba = convertHexToRgb(stringInput);
         if (rgba) {
             returnObject = rgba;
         } else {

@@ -10,11 +10,13 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * @example
  * **Basic usage:**
  * ```ts
- * import { multiplyColors, convertRgbToHex } from "@baggie/color";
+ * import { multiplyColors } from "@baggie/color";
  *
- * const color = multiplyColors("#FF1100", "#88FF00");
- * const hex = convertRgbToHex(color);
- * // hex = "#881100"
+ * const colorA = { red: 255, green: 255, blue: 255 };
+ * const colorB = { red: 90, green: 98, blue: 98 };
+ *
+ * const newColor = multiplyColors(colorA, colorB);
+ * // newColor = { red: 90, green: 98, blue: 98, alpha: 1 }
  * ```
  *
  * @see https://en.wikipedia.org/wiki/Blend_modes

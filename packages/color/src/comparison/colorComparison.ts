@@ -95,7 +95,7 @@ export class ColorComparison {
         color: RGBA | CIELAB,
         amount = 1,
         sortFarthestToNearest = false
-    ): RGBA[] | CIELAB[] | null {
+    ): RGBA[] | CIELAB[] | undefined {
         if (this.haystack.length) {
             const needle = ColorComparison.parseColorToLab(color);
             const iterations = Math.min(amount, this.haystack.length);
@@ -223,14 +223,14 @@ export class ColorComparison {
             return results.map((result) => result.straw.source);
         }
 
-        return null;
+        return undefined;
     }
 
-    nearest(color: RGBA | CIELAB, amount = 1): RGBA[] | CIELAB[] | null {
+    nearest(color: RGBA | CIELAB, amount = 1): RGBA[] | CIELAB[] | undefined {
         return this.compare(color, amount);
     }
 
-    farthest(color: RGBA | CIELAB, amount = 1): RGBA[] | CIELAB[] | null {
+    farthest(color: RGBA | CIELAB, amount = 1): RGBA[] | CIELAB[] | undefined {
         return this.compare(color, amount, true);
     }
 

@@ -12,7 +12,7 @@ import { getTrianglePerimeter } from "../..";
  * const b = 15;
  * const c = 20;
  * const surface = getTriangleSurface(a, b, c);
- * // surface = 205.3959590644373getTrianglePerimeter
+ * // surface = 205.3959590644373
  * ```
  *
  * @category Geometry - Triangle
