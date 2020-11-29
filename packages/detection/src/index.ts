@@ -16,5 +16,7 @@ export { DetectInputMethod } from "./input/detectInputMethod";
 /* Media Features */
 export { OnPrefersDarkColorSchemeChange } from "./mediaFeatures/onPrefersDarkColorSchemeChange";
 export { OnPrefersReducedMotionChange } from "./mediaFeatures/onPrefersReducedMotionChange";
+export { orientationIsLandscape } from "./mediaFeatures/orientationIsLandscape";
+export { orientationIsPortrait } from "./mediaFeatures/orientationIsPortrait";
 export { prefersDarkColorScheme } from "./mediaFeatures/prefersDarkColorScheme";
 export { prefersReducedMotion } from "./mediaFeatures/prefersReducedMotion";
