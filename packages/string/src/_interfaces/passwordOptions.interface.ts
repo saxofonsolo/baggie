@@ -12,7 +12,7 @@ export interface PasswordOptions {
     maxUppercase?: number;
     minSpecial?: number;
     maxSpecial?: number;
-    specialChars?: string;
-    forbiddenChars?: string;
-    acceptUnicode?: boolean;
+    specialCharacters?: string;
+    forbiddenCharacters?: string;
+    allowUnicode?: boolean;
 }

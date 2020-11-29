@@ -9,7 +9,7 @@ export const convertHslToRgb = ({
     hue,
     saturation,
     lightness,
-    alpha,
+    alpha = 1,
 }: HSLA): RGBA => {
     let red = 0;
     let green = 0;

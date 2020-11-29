@@ -23,9 +23,9 @@ export const passwordSpecialCharactersDefault =
  * - maxUppercase
  * - minSpecial - defaults to `1`
  * - maxSpecial
- * - specialChars - defaults to {@link passwordSpecialCharactersDefault}
- * - forbiddenChars - default to `" "`
- * - acceptUnicode - defaults to `false`
+ * - specialCharacters - defaults to {@link passwordSpecialCharactersDefault}
+ * - forbiddenCharacters - default to `" "`
+ * - allowUnicode - defaults to `false`
  *
  * @category Regex
  */
@@ -36,9 +36,9 @@ export function getPasswordRegex(options?: PasswordOptions): RegExp {
         minLowercase: 1,
         minUppercase: 1,
         minSpecial: 1,
-        specialChars: passwordSpecialCharactersDefault,
-        forbiddenChars: " ",
-        acceptUnicode: false,
+        specialCharacters: passwordSpecialCharactersDefault,
+        forbiddenCharacters: " ",
+        allowUnicode: false,
         ...options,
     };
 
@@ -48,20 +48,23 @@ export function getPasswordRegex(options?: PasswordOptions): RegExp {
     const hasMaxUppercase = typeof passwordSettings.maxUppercase === "number";
     const hasMaxSpecial = typeof passwordSettings.maxSpecial === "number";
 
-    const lowercaseLetters = passwordSettings.acceptUnicode
+    const lowercaseLetters = passwordSettings.allowUnicode
         ? "\\p{Ll}"
         : "[a-z]";
-    const uppercaseLetters = passwordSettings.acceptUnicode
+    const uppercaseLetters = passwordSettings.allowUnicode
         ? "\\p{Lu}"
         : "[A-Z]";
-    const specialChars = passwordSettings.specialChars
-        ? passwordSettings.specialChars.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    const specialChars = passwordSettings.specialCharacters
+        ? passwordSettings.specialCharacters.replace(
+              /[.*+?^${}()|[\]\\]/g,
+              "\\$&"
+          )
         : "";
 
     return new RegExp(
         `^${
-            passwordSettings.forbiddenChars
-                ? `(?!(?:.*[${passwordSettings.forbiddenChars}].*){1,})`
+            passwordSettings.forbiddenCharacters
+                ? `(?!(?:.*[${passwordSettings.forbiddenCharacters}].*){1,})`
                 : ""
         }(?=(?:.*${lowercaseLetters}.*){${passwordSettings.minLowercase}${
             !hasMaxLowercase ? "," : ""
@@ -98,6 +101,6 @@ export function getPasswordRegex(options?: PasswordOptions): RegExp {
         }.{${passwordSettings.minLength},${
             hasMaxLength ? passwordSettings.maxLength : ""
         }}$`,
-        passwordSettings.acceptUnicode ? "u" : ""
+        passwordSettings.allowUnicode ? "u" : ""
     );
 }

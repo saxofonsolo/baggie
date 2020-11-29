@@ -9,7 +9,7 @@ import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
  * @param color - Your base color.
  * @returns An array of three RGBA color objects.
  */
-export const getTriadicColorScheme = (color: RGBA): RGBA[] => {
+export const getTriadicColorScheme = (color: RGBA): [RGBA, RGBA, RGBA] => {
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(color);
     return [
         color,

@@ -8,11 +8,13 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * @example
  * **Basic usage:**
  * ```ts
- * import { mixColors, convertRgbToHex } from "@baggie/color";
+ * import { mixColors } from "@baggie/color";
  *
- * const color = mixColors("#FFFFFF", "#F3F9FA", .91);
- * const hex = convertRgbToHex(color);
- * // hex = "#FEFEFF"
+ * const colorA = { red: 255, green: 255, blue: 255 };
+ * const colorB = { red: 95, green: 98, blue: 98 };
+ *
+ * const newColor = mixColors(colorA, colorB, .91);
+ * // newColor = { red: 241, green: 241, blue: 241, alpha: 1 }
  * ```
  *
  * @category Manipulate

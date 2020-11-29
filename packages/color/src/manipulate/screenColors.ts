@@ -10,11 +10,13 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * @example
  * **Basic usage:**
  * ```ts
- * import { convertRgbToHex, screenColors } from "@baggie/color";
+ * import { screenColors } from "@baggie/color";
  *
- * const color = screenColors("#FF0000", "#00FF00");
- * const hex = convertRgbToHex(color);
- * // hex = "#FFFF00"
+ * const colorA = { red: 255, green: 0, blue: 0 };
+ * const colorB = { red: 0, green: 255, blue: 0 };
+ *
+ * const newColor = screenColors(colorA, colorB);
+ * // newColor = { red: 255, green: 255, blue: 0 }
  * ```
  *
  * @see https://en.wikipedia.org/wiki/Blend_modes

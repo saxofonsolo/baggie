@@ -27,30 +27,38 @@ export interface CookieAttributes {
  */
 export function setCookie(
     name: string,
-    value: any, // eslint-disable-line @typescript-eslint/no-explicit-any
-    attributes: CookieAttributes
+    value: any, // eslint-disable-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
+    attributes?: CookieAttributes
 ): void {
-    // Changeable variables for name and value
+    const options: CookieAttributes = {
+        path: "",
+        domain: "",
+        maxAge: undefined,
+        expires: undefined,
+        httpOnly: false,
+        secure: false,
+        ...attributes,
+    }; // Changeable variables for name and value
     let cookieName = name;
     let cookieValue = value;
 
     // Set object with attributes
     const cookieAttributes: { [key: string]: string | boolean | undefined } = {
-        Path: attributes.path || "/",
-        Domain: attributes.domain || "",
-        HttpOnly: !!attributes.httpOnly,
-        Secure: !!attributes.secure,
+        Path: options.path,
+        Domain: options.domain,
+        HttpOnly: options.httpOnly,
+        Secure: options.secure,
     };
 
-    if (typeof attributes.maxAge === "number") {
-        cookieAttributes["Max-Age"] = attributes.maxAge.toString();
-    } else if (attributes.expires) {
-        if (typeof attributes.expires === "number") {
+    if (typeof options.maxAge === "number") {
+        cookieAttributes["Max-Age"] = options.maxAge.toString();
+    } else if (options.expires) {
+        if (typeof options.expires === "number") {
             cookieAttributes.Expires = new Date(
-                Date.now() + attributes.expires * 864e5
+                Date.now() + options.expires * 864e5
             ).toUTCString();
         } else {
-            cookieAttributes.Expires = attributes.expires.toUTCString();
+            cookieAttributes.Expires = options.expires.toUTCString();
         }
     }
 

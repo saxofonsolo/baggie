@@ -4,8 +4,9 @@
  * @category Classes
  */
 export const getClassByPrefix = (
-    element = document.body,
+    element: Element = document.body,
     prefix: string
 ): string[] =>
-    element.className.match(new RegExp(`\\b${prefix}[-_a-z0-9]*\\b`, "gi")) ||
-    [];
+    element.className
+        .match(new RegExp(`(^|\\s)${prefix}\\S*`, "gi"))
+        ?.map((result) => result.trim()) || [];

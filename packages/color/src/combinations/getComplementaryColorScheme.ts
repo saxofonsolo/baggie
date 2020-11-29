@@ -8,7 +8,7 @@ import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
  * @param color - Your base color.
  * @returns An array of two RGBA color objects.
  */
-export const getComplementaryColorScheme = (color: RGBA): RGBA[] => {
+export const getComplementaryColorScheme = (color: RGBA): [RGBA, RGBA] => {
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(color);
     return [
         color,
