@@ -30,14 +30,14 @@ interface GetAllDistancesReturn {
  * results = [
  *     {
  *         "distance": 14.866068747318506,
- *         "coordinates": [{ x: 9, y: 30 }, { x: 20, y: 20 }]
+ *         "coordinates": { from: { x: 9, y: 30 }, to: { x: 20, y: 20 } }
  *     }, {
  *         "distance": 28.0178514522438,
- *         "coordinates": [{ x: 9, y: 30 }, { x: 10, y: 2 }]
+ *         "coordinates": { from: { x: 9, y: 30 }, to: { x: 10, y: 2 } }
  *     },
  *     {
  *         "distance": 30.675723300355934,
- *         "coordinates": [{ x: 9, y: 30 }, { x: -20, y: 20 }]
+ *         "coordinates": { from: { x: 9, y: 30 }, to: { x: -20, y: 20 } }
  *     }
  * ]
  * *\/
@@ -58,27 +58,27 @@ interface GetAllDistancesReturn {
  * results = [
  *     {
  *         "distance": 1.4142135623730951,
- *         "coordinates": [{ "x": 1, "y": 1, "name": "b" }, { "x": 2, "y": 2, "name": "c" }]
+ *         "coordinates": { from: { "x": 1, "y": 1, "name": "b" }, to: { "x": 2, "y": 2, "name": "c" } }
  *     },
  *     {
  *         "distance": 15.556349186104045,
- *         "coordinates": [{ "x": -10, "y": -10, "name": "a" }, { "x": 1, "y": 1, "name": "b" }]
+ *         "coordinates": { from: { "x": -10, "y": -10, "name": "a" }, to: { "x": 1, "y": 1, "name": "b" } }
  *     },
  *     {
  *         "distance": 16.97056274847714,
- *         "coordinates": [{ "x": -10, "y": -10, "name": "a" }, { "x": 2, "y": 2, "name": "c" }]
+ *         "coordinates": { from: { "x": -10, "y": -10, "name": "a" }, to: { "x": 2, "y": 2, "name": "c" } }
  *     },
  *     {
  *         "distance": 55.569775957799216,
- *         "coordinates": [{ "x": 2, "y": 2, "name": "c" }, { "x": 30, "y": 50, "name": "d" }]
+ *         "coordinates": { from: { "x": 2, "y": 2, "name": "c" }, to: { "x": 30, "y": 50, "name": "d" } }
  *     },
  *     {
  *         "distance": 56.938563381947034,
- *         "coordinates": [{ "x": 1, "y": 1, "name": "b" }, { "x": 30, "y": 50, "name": "d" }]
+ *         "coordinates": { from: { "x": 1, "y": 1, "name": "b" }, to: { "x": 30, "y": 50, "name": "d" } }
  *     },
  *     {
  *         "distance": 72.11102550927978,
- *         "coordinates": [{ "x": -10, "y": -10, "name": "a" }, { "x": 30, "y": 50, "name": "d" }]
+ *         "coordinates": { from: { "x": -10, "y": -10, "name": "a" }, to: { "x": 30, "y": 50, "name": "d" } }
  *     }
  * ]
  * *\/

@@ -21,4 +21,4 @@ import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
  * @category Coordinates - Slope
  */
 export const getSlope = (from: CoordinatesXY, to: CoordinatesXY): number =>
-    (to.y - from.y) / (to.x - from.x);
+    (to.y - from.y) / (to.x - from.x) || 0;
