@@ -30,4 +30,4 @@
 export const getPercentageIncrease = (
     startingValue: number,
     finalValue: number
-): number => ((finalValue - startingValue) / startingValue) * 100;
+): number => ((finalValue - startingValue) / startingValue) * 100 || 0;

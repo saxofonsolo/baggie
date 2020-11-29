@@ -52,7 +52,7 @@ export function forEach(
         | Map<any, any>
         | Set<any>
         | any,
-    iterator: (value: any, key: number | string) => void,
+    iterator: (value: any, key: any) => void,
     allowNullValues = false
 ): void {
     // ** NODE LISTS
