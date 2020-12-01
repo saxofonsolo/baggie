@@ -20,7 +20,7 @@
   },
   "typedocOptions": {
     "name": "baggie",
-    "readme": "./README.md",
+    "readme": "./DOCS.md",
     "mode": "modules",
     "media": "/media",
     "out": "docs",
