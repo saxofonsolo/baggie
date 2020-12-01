@@ -1,6 +1,6 @@
 {
   "name": "@baggie/color",
-  "version": "0.1.7-alpha.0",
+  "version": "0.1.7-alpha.1",
   "license": "MIT",
   "description": "A library of color tools for JavaScript and TypeScript. Manipulate, convert and compare colors, find color combinations etc.",
   "main": "lib/index.js",
@@ -24,8 +24,8 @@
   "module": "lib/",
   "sideEffects": false,
   "dependencies": {
-    "@baggie/math": "^0.1.7-alpha.0",
-    "@baggie/typescript": "^0.1.7-alpha.0"
+    "@baggie/math": "^0.1.7-alpha.1",
+    "@baggie/typescript": "^0.1.7-alpha.1"
   },
   "devDependencies": {
     "jest": "^26.6.3",
