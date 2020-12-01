@@ -1,6 +1,6 @@
 {
   "name": "@baggie/typescript",
-  "version": "0.1.7-alpha.1",
+  "version": "1.0.0",
   "description": "A library of TypeScript tools. Just a few helpers for defining more specific types.",
   "license": "MIT",
   "main": "lib/index.js",
