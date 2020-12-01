@@ -6,7 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "bootstrap": "lerna bootstrap --no-ci --hoist",
-    "build": "lerna run build",
+    "build": "lerna run build && npm run bootstrap",
     "test": "lerna run test --concurrency 1",
     "##==-- CLEAN": "",
     "clean": "npm-run-all clean:*",
