@@ -31,13 +31,16 @@ export { keepInsideRadius } from "./coordinates/radius/keepInsideRadius";
 /* Coordinates - Slope */
 export { getSlope } from "./coordinates/slope/getSlope";
 
-/* Decimals - Slope */
-export { decimalCeil } from "./decimals/decimalCeil";
-export { decimalFloor } from "./decimals/decimalFloor";
-export { decimalRound } from "./decimals/decimalRound";
-export { decimalTrunc } from "./decimals/decimalTrunc";
-export { isNumberRound } from "./decimals/isNumberRound";
-export { truncNumber } from "./decimals/truncNumber";
+/* Rounding */
+export { ceilDecimals } from "./rounding/ceilDecimals";
+export { ceilToMultipleOf } from "./rounding/ceilToMultipleOf";
+export { floorDecimals } from "./rounding/floorDecimals";
+export { floorToMultipleOf } from "./rounding/floorToMultipleOf";
+export { roundDecimals } from "./rounding/roundDecimals";
+export { roundToMultipleOf } from "./rounding/roundToMultipleOf";
+export { truncDecimals } from "./rounding/truncDecimals";
+export { isNumberRound } from "./rounding/isNumberRound";
+export { truncNumber } from "./rounding/truncNumber";
 
 /* Geometry - Circle */
 export { getCircleCircumference } from "./geometry/circle/getCircleCircumference";

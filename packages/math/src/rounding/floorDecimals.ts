@@ -6,16 +6,16 @@ import { decimalAdjust } from "./_helpers/decimalAdjust.helper";
  * @example
  * **Basic usage:**
  * ```ts
- * import { decimalFloor } from "@baggie/math";
+ * import { floorDecimals } from "@baggie/math";
  *
- * const two = decimalFloor(13.345, 2);
+ * const two = floorDecimals(13.345, 2);
  * // two = 13.34
  *
- * const three = decimalFloor(13.1111, 3);
+ * const three = floorDecimals(13.1111, 3);
  * // three = 13.111
  * ```
  *
- * @category Decimals
+ * @category Rounding
  */
-export const decimalFloor = (number: number, decimalPlaces: number): number =>
+export const floorDecimals = (number: number, decimalPlaces: number): number =>
     decimalAdjust(number, decimalPlaces, Math.floor);

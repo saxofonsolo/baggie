@@ -6,16 +6,16 @@ import { decimalAdjust } from "./_helpers/decimalAdjust.helper";
  * @example
  * **Basic usage:**
  * ```ts
- * import { decimalCeil } from "@baggie/math";
+ * import { ceilDecimals } from "@baggie/math";
  *
- * const two = decimalCeil(13.345, 2);
+ * const two = ceilDecimals(13.345, 2);
  * // two = 13.35
  *
- * const three = decimalCeil(13.1111, 3);
+ * const three = ceilDecimals(13.1111, 3);
  * // three = 13.112
  * ```
  *
- * @category Decimals
+ * @category Rounding
  */
-export const decimalCeil = (number: number, decimalPlaces: number): number =>
+export const ceilDecimals = (number: number, decimalPlaces: number): number =>
     decimalAdjust(number, decimalPlaces, Math.ceil);

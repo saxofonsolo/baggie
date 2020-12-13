@@ -7,19 +7,19 @@ import { truncNumber } from "./truncNumber";
  * @example
  * **Basic usage:**
  * ```ts
- * import { decimalTrunc } from "@baggie/math";
+ * import { truncDecimals } from "@baggie/math";
  *
- * const two = decimalTrunc(13.3689, 2);
+ * const two = truncDecimals(13.3689, 2);
  * // two = 13.36
  *
- * const three = decimalTrunc(-13.111111, 3);
+ * const three = truncDecimals(-13.111111, 3);
  * // three = -13.111
  *
- * const four = decimalTrunc(-13.9999999, 3);
+ * const four = truncDecimals(-13.9999999, 3);
  * // four = -13.9999
  * ```
  *
- * @category Decimals
+ * @category Rounding
  */
-export const decimalTrunc = (number: number, decimalPlaces: number): number =>
+export const truncDecimals = (number: number, decimalPlaces: number): number =>
     decimalAdjust(number, decimalPlaces, truncNumber);

@@ -27,9 +27,10 @@ describe("convertToCoordinates", () => {
     test("Invalid values", () => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        expect(
-            convertToCoordinates({ x: "1", y: 2, monkey: 123 })
-        ).toStrictEqual({ x: 1, y: 2 });
+        expect(convertToCoordinates({ x: "1", y: 2, m: 123 })).toStrictEqual({
+            x: 1,
+            y: 2,
+        });
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         expect(convertToCoordinates([12, "30"])).toStrictEqual({

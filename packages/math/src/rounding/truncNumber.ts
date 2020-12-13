@@ -16,7 +16,7 @@
  * // up = -1
  * ```
  *
- * @category Decimals
+ * @category Rounding
  */
 export const truncNumber = (number: number): number =>
     typeof Math.trunc === "undefined"

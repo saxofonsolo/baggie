@@ -13,7 +13,7 @@
  * // three = false
  * ```
  *
- * @category Decimals
+ * @category Rounding
  */
 export const isNumberRound = (
     number: number,
