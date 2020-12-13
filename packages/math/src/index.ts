@@ -28,6 +28,14 @@ export { keepInsideRadius } from "./coordinates/radius/keepInsideRadius";
 /* Coordinates - Slope */
 export { getSlope } from "./coordinates/slope/getSlope";
 
+/* Decimals - Slope */
+export { decimalCeil } from "./decimals/decimalCeil";
+export { decimalFloor } from "./decimals/decimalFloor";
+export { decimalRound } from "./decimals/decimalRound";
+export { decimalTrunc } from "./decimals/decimalTrunc";
+export { isNumberRound } from "./decimals/isNumberRound";
+export { truncNumber } from "./decimals/truncNumber";
+
 /* Geometry - Circle */
 export { getCircleCircumference } from "./geometry/circle/getCircleCircumference";
 export { getCircleSurface } from "./geometry/circle/getCircleSurface";
