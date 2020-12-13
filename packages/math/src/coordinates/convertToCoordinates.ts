@@ -1,5 +1,6 @@
 import { CoordinatesXY } from "./_interfaces/coordinatesXY.interface";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const returnZeroIfNotNumber = (value: any): number =>
     typeof value === "number"
         ? value
