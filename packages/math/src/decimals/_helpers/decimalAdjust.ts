@@ -1,9 +1,7 @@
 import { isNumberRound } from "../isNumberRound";
 
 /**
- * Helper for rounding with decimal points.
- *
- * @category Decimals
+ * @internal
  */
 export const decimalAdjust = (
     number: number,
