@@ -22,7 +22,7 @@
 export const capitalizeFirstLetter = (
     [first, ...rest]: string,
     options?: { lowerCaseEverythingElse?: boolean; locale?: string }
-) =>
+): string =>
     [
         first.toLocaleUpperCase(options?.locale || navigator.language),
         ...(options?.lowerCaseEverythingElse
