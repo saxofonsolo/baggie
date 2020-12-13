@@ -1,3 +1,4 @@
+import { decimalRound } from "@baggie/math";
 import { CIELAB, RGBA } from "..";
 
 /**
@@ -35,9 +36,9 @@ export const convertRgbToLab = ({
     z = z > 0.008856 ? Math.pow(z, 1 / 3) : 7.787 * z + 16 / 116;
 
     return {
-        l: (116 * y - 16) / 100,
-        a: 500 * (x - y),
-        b: 200 * (y - z),
+        l: decimalRound((116 * y - 16) / 100, 3),
+        a: decimalRound(500 * (x - y), 3),
+        b: decimalRound(200 * (y - z), 3),
         alpha,
     };
 };
