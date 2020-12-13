@@ -6,6 +6,9 @@ export { getMean } from "./average/getMean";
 export { getMedian } from "./average/getMedian";
 export { getMode } from "./average/getMode";
 
+/* Coordinates */
+export { convertToCoordinates } from "./coordinates/convertToCoordinates";
+
 /* Coordinates - Angle */
 export { getAngle } from "./coordinates/angle/getAngle";
 export { getClosestAngles } from "./coordinates/angle/getClosestAngles";
