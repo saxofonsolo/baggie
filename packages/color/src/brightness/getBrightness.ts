@@ -6,7 +6,6 @@ import { RGBA } from "..";
  * @see http://alienryderflex.com/hsp.html
  *
  * @category Brightness
- * @param color - Color in hex-format
  * @returns A number from 0 to 1, 1 being the brightest and 0 being not bright at all.
  */
 export const getBrightness = ({ red, green, blue }: RGBA): number => {
