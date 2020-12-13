@@ -45,7 +45,11 @@ module.exports = {
             // -------------------------------
             files: ["*.ts"],
             excludedFiles: ["*.test.ts"],
-            plugins: ["eslint-plugin-tsdoc", "jsdoc"],
+            plugins: [
+                "eslint-plugin-filenames",
+                "eslint-plugin-tsdoc",
+                "jsdoc",
+            ],
             rules: {
                 "@typescript-eslint/explicit-function-return-type": ["error"],
                 "@typescript-eslint/explicit-module-boundary-types": ["error"],
@@ -90,6 +94,22 @@ module.exports = {
             ],
             env: {
                 "jest/globals": true,
+            },
+        },
+        {
+            // Only helper-files
+            // -----------------
+            files: ["**/_helpers/**/*.ts"],
+            rules: {
+                "filenames/match-regex": [2, "^[a-zA-Z0-9]+.helper$"],
+            },
+        },
+        {
+            // Only interface-files
+            // --------------------
+            files: ["**/_interfaces/**/*.ts"],
+            rules: {
+                "filenames/match-regex": [2, "^[a-zA-Z0-9]+.interface$"],
             },
         },
         {

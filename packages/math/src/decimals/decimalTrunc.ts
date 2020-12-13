@@ -1,4 +1,4 @@
-import { decimalAdjust } from "./_helpers/decimalAdjust";
+import { decimalAdjust } from "./_helpers/decimalAdjust.helper";
 import { truncNumber } from "./truncNumber";
 
 /**

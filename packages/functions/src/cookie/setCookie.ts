@@ -1,5 +1,5 @@
-import { encodeCookieValue } from "./_helpers/encodeCookieValue";
-import { encodeCookieName } from "./_helpers/encodeCookieName";
+import { encodeCookieValue } from "./_helpers/encodeCookieValue.helper";
+import { encodeCookieName } from "./_helpers/encodeCookieName.helper";
 
 /**
  * These are the properties that can be set in the `attributes` objects of the
