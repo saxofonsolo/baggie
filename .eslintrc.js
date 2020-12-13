@@ -47,6 +47,8 @@ module.exports = {
             excludedFiles: ["*.test.ts"],
             plugins: ["eslint-plugin-tsdoc", "jsdoc"],
             rules: {
+                "@typescript-eslint/explicit-function-return-type": ["error"],
+                "@typescript-eslint/explicit-module-boundary-types": ["error"],
                 "import/no-unused-modules": [
                     1,
                     {
