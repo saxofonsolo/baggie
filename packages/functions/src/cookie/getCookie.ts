@@ -1,4 +1,4 @@
-import { decodeCookieParts } from "./_helpers/decodeCookiePart";
+import { decodeCookieParts } from "./_helpers/decodeCookiePart.helper";
 
 /**
  * Get a cookie.

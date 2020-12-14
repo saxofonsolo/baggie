@@ -6,6 +6,9 @@ export { getMean } from "./average/getMean";
 export { getMedian } from "./average/getMedian";
 export { getMode } from "./average/getMode";
 
+/* Coordinates */
+export { convertToCoordinates } from "./coordinates/convertToCoordinates";
+
 /* Coordinates - Angle */
 export { getAngle } from "./coordinates/angle/getAngle";
 export { getClosestAngles } from "./coordinates/angle/getClosestAngles";
@@ -27,6 +30,17 @@ export { keepInsideRadius } from "./coordinates/radius/keepInsideRadius";
 
 /* Coordinates - Slope */
 export { getSlope } from "./coordinates/slope/getSlope";
+
+/* Rounding */
+export { ceilDecimals } from "./rounding/ceilDecimals";
+export { ceilToMultipleOf } from "./rounding/ceilToMultipleOf";
+export { floorDecimals } from "./rounding/floorDecimals";
+export { floorToMultipleOf } from "./rounding/floorToMultipleOf";
+export { roundDecimals } from "./rounding/roundDecimals";
+export { roundToMultipleOf } from "./rounding/roundToMultipleOf";
+export { truncDecimals } from "./rounding/truncDecimals";
+export { isNumberRound } from "./rounding/isNumberRound";
+export { truncNumber } from "./rounding/truncNumber";
 
 /* Geometry - Circle */
 export { getCircleCircumference } from "./geometry/circle/getCircleCircumference";

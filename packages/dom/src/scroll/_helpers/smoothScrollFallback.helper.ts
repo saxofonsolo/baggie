@@ -1,7 +1,5 @@
 /**
  * @internal
- * @param x - Position on the x-axis to scroll to
- * @param y - Position on the y-axis to scroll to
  */
 export function smoothScrollFallback(x: number, y: number): Promise<void> {
     const durationMs = 1000;

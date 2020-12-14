@@ -4,22 +4,33 @@ import {
     supportsSmoothScroll,
 } from "@baggie/detection";
 import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
+import { getScrollPosition } from "./getScrollPosition";
 
 /**
  * Scroll to the top of the page.
  *
  * @category Scroll
  */
-export function scrollToTop(smooth = true): void {
+export function scrollToTop(options?: {
+    offset?: number;
+    smooth?: boolean;
+}): void {
     if (isBrowser) {
-        if (smooth) {
-            if (supportsSmoothScroll && !prefersReducedMotion) {
-                window.scrollTo({ behavior: "smooth", top: 0 });
+        const targetX = getScrollPosition().x;
+        const targetY = options?.offset ? Math.abs(options.offset) : 0;
+
+        if (options?.smooth !== false && !prefersReducedMotion) {
+            if (supportsSmoothScroll) {
+                window.scrollTo({
+                    behavior: "smooth",
+                    left: targetX,
+                    top: targetY,
+                });
             } else {
-                void smoothScrollFallback(0, 0);
+                void smoothScrollFallback(targetX, targetY);
             }
         } else {
-            window.scrollTo(0, 0);
+            window.scrollTo(targetX, targetY);
         }
     }
 }
