@@ -2,7 +2,7 @@
 
 <h1>baggie</h1>
 
-The little bag-of-tricks
+The little bag-of-tricks. Check out the code on [GitHub](https://github.com/bag-of-tricks/baggie/).
 
 <hr>
 <br>
