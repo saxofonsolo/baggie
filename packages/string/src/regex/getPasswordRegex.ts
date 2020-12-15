@@ -7,7 +7,7 @@ import { PasswordOptions } from "../_interfaces/passwordOptions.interface";
  * @category Regex
  */
 export const passwordSpecialCharactersDefault =
-    " !\"#$%&'()*+,./:;<=>?@[]\\^_`{|}~¨-";
+    "!#$%&'()*+,./:;<=>?@[]\\^_`{|}~¨-";
 
 /**
  * Returns a regular expression to validate passwords with.
@@ -55,10 +55,7 @@ export function getPasswordRegex(options?: PasswordOptions): RegExp {
         ? "\\p{Lu}"
         : "[A-Z]";
     const specialChars = passwordSettings.specialCharacters
-        ? passwordSettings.specialCharacters.replace(
-              /[.*+?^${}()|[\]\\]/g,
-              "\\$&"
-          )
+        ? passwordSettings.specialCharacters.replace(/[\^\-\]\\]/g, "\\$&")
         : "";
 
     return new RegExp(
