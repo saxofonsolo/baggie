@@ -1,4 +1,9 @@
-// This type comes from here: https://stackoverflow.com/a/49725198
+/**
+ * Require at least one of the properties of an interface.
+ *
+ * @remarks
+ * This type comes from here: https://stackoverflow.com/a/49725198
+ */
 export type RequireAtLeastOne<T, Keys extends keyof T = keyof T> = Pick<
     T,
     Exclude<keyof T, Keys>
