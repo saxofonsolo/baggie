@@ -14,10 +14,6 @@ interface Options {
  *
  * Returns `false` if given an invalid date.
  *
- * @remarks
- * If you provide a year with only two digits, it's up to the browser to decide
- * which decade you meant, so you might want to be more specific.
- *
  * @example
  * **Basic usage:**
  * ```ts
