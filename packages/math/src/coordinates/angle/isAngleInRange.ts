@@ -27,7 +27,7 @@ export const isAngleInRange = (
     angle: number,
     ...ranges: NonEmptyArray<[number, number]>
 ): boolean =>
-    ranges.reduce<boolean>((inRange, range) => {
+    ranges.reduce<boolean>((inRange: boolean, range: [number, number]) => {
         if (inRange) return inRange;
 
         const [from, to] = range;

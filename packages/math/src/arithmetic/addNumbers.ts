@@ -17,4 +17,4 @@ import { NonEmptyArray } from "@baggie/typescript";
  * @param numbers - An array of numbers to add together
  */
 export const addNumbers = (numbers: NonEmptyArray<number>): number =>
-    numbers.reduce((a, b) => a + b, 0);
+    numbers.reduce((a: number, b: number) => a + b, 0);
