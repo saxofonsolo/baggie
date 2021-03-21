@@ -31,6 +31,8 @@ import { convertToDate } from "..";
  * const invalidCpr = isCprValid(cprWithInvalidDate, gender);
  * // invalidCpr = false
  * ```
+ *
+ * @category Validation
  */
 export const isCprValid = (
     cprNumber: string | number | HTMLInputElement,
