@@ -18,7 +18,7 @@ import { getVimeoIdRegex } from "..";
  *
  * @category Convert
  */
-export function getVimeoId(url: string): string | undefined {
+export const getVimeoId = (url: string): string | undefined => {
     const match = url.match(getVimeoIdRegex());
     return match && match.length > 0 ? match[1] : undefined;
-}
+};

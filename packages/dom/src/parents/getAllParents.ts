@@ -30,14 +30,14 @@
  *
  * @category Parents
  */
-export function getAllParents(
+export const getAllParents = (
     element: HTMLElement,
     options?: {
         matchSelector?: string;
         limit?: number;
         maxDistance?: number | string | HTMLElement;
     }
-): Element[] {
+): Element[] => {
     const matchSelector = options?.matchSelector || "*";
     const limit = options?.limit || Infinity;
     const maxDistance = options?.maxDistance || Infinity;
@@ -68,4 +68,4 @@ export function getAllParents(
     }
 
     return parents;
-}
+};

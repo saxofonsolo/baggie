@@ -40,7 +40,7 @@ import { isBrowser } from "@baggie/detection";
  * @category Iterators
  * @author [\@DonGissel](https://github.com/DonGissel)
  */
-export function forEach(
+export const forEach = (
     collection:
         | Node
         | NodeList
@@ -54,7 +54,7 @@ export function forEach(
         | any,
     iterator: (value: any, key: any) => void,
     allowNullValues = false
-): void {
+): void => {
     // ** NODE LISTS
     // If we're dealing with a node list (see document.querySelectorAll()) or HTMLCollections (see eg. document.getElementByClassName, node.children),
     // we'll iterate through it the old fashioned way.
@@ -130,4 +130,4 @@ export function forEach(
             iterator(collection, 0);
         }
     }
-}
+};

@@ -25,19 +25,19 @@ export const isScrollLocked = (): boolean => scrollLockState;
  *
  * @category Scroll - Scroll Lock
  */
-export function setScrollLockSettings(options: ScrollLockSettings): void {
+export const setScrollLockSettings = (options: ScrollLockSettings): void => {
     settings = {
         ...settings,
         ...options,
     };
-}
+};
 
 /**
  * Enable scroll lock.
  *
  * @category Scroll - Scroll Lock
  */
-export function enableScrollLock(): void {
+export const enableScrollLock = (): void => {
     if (!scrollLockState) {
         // Get scroll position
         const scrollPosition = getScrollPosition();
@@ -61,14 +61,14 @@ export function enableScrollLock(): void {
             settings.callback(scrollLockState);
         }
     }
-}
+};
 
 /**
  * Disable scroll lock.
  *
  * @category Scroll - Scroll Lock
  */
-export function disableScrollLock(): void {
+export const disableScrollLock = (): void => {
     if (scrollLockState) {
         const scrollPosition = getScrollPosition();
 
@@ -90,17 +90,17 @@ export function disableScrollLock(): void {
             settings.callback(scrollLockState);
         }
     }
-}
+};
 
 /**
  * Toggle scroll lock.
  *
  * @category Scroll - Scroll Lock
  */
-export function toggleScrollLock(): void {
+export const toggleScrollLock = (): void => {
     if (scrollLockState) {
         disableScrollLock();
     } else {
         enableScrollLock();
     }
-}
+};

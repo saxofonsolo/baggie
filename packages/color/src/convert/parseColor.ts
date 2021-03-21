@@ -11,9 +11,9 @@ import { convertColorNameToHex } from "./convertColorNameToHex";
  *
  * @category Convert
  */
-export function parseColor(
+export const parseColor = (
     input: string | NonEmptyArray<number> | HSLA | RGBA
-): RGBA {
+): RGBA => {
     let returnObject: RGBA = {
         red: 0,
         green: 0,
@@ -71,4 +71,4 @@ export function parseColor(
     }
 
     return returnObject;
-}
+};

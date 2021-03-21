@@ -1,7 +1,7 @@
 /**
  * @internal
  */
-export function smoothScrollFallback(x: number, y: number): Promise<void> {
+export const smoothScrollFallback = (x: number, y: number): Promise<void> => {
     const durationMs = 1000;
 
     // Calculate scroll progress
@@ -76,4 +76,4 @@ export function smoothScrollFallback(x: number, y: number): Promise<void> {
 
         window.requestAnimationFrame(step);
     });
-}
+};

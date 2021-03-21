@@ -44,10 +44,10 @@ interface GetTimeDifferenceReturn {
  * @param fromTimestampMs - A timestamp in milliseconds
  * @param toTimestampMs - A timestamp in milliseconds
  */
-export function getTimeDifference(
+export const getTimeDifference = (
     fromTimestampMs: number,
     toTimestampMs: number
-): GetTimeDifferenceReturn {
+): GetTimeDifferenceReturn => {
     let difference = Math.abs(fromTimestampMs - toTimestampMs);
 
     const onlyMilliseconds = difference;
@@ -80,4 +80,4 @@ export function getTimeDifference(
             onlyMilliseconds,
         },
     };
-}
+};

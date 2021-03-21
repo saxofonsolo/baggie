@@ -11,10 +11,10 @@ import { getAllParents } from "./getAllParents";
  *
  * @category Parents
  */
-export function getClosestParent(
+export const getClosestParent = (
     element: HTMLElement,
     matchSelector = "*"
-): Element | undefined {
+): Element | undefined => {
     const parent = getAllParents(element, { matchSelector, limit: 1 });
     return parent.length ? parent[0] : undefined;
-}
+};

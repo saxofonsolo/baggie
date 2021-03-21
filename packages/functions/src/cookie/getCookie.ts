@@ -10,7 +10,7 @@ import { decodeCookieParts } from "./_helpers/decodeCookiePart.helper";
  * @category Cookie
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function getCookie(name: string, dontParseCookie = false): any {
+export const getCookie = (name: string, dontParseCookie = false): any => {
     // Object for storing cookies
     const cookieJar: { [name: string]: string } = {};
 
@@ -56,4 +56,4 @@ export function getCookie(name: string, dontParseCookie = false): any {
 
     // Return specific cookie if a name is defined - otherwise return all cookies in an object
     return name ? cookieJar[name] : cookieJar;
-}
+};

@@ -25,11 +25,11 @@ export interface CookieAttributes {
  *
  * @category Cookie
  */
-export function setCookie(
+export const setCookie = (
     name: string,
     value: any, // eslint-disable-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
     attributes?: CookieAttributes
-): void {
+): void => {
     const options: CookieAttributes = {
         path: "",
         domain: "",
@@ -103,4 +103,4 @@ export function setCookie(
 
     // Set cookie
     document.cookie = `${cookieName}=${cookieValue + attributesString}`;
-}
+};

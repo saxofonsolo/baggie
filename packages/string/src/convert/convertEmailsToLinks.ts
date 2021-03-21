@@ -5,10 +5,10 @@ import { getEmailRegex } from "..";
  *
  * @category Convert
  */
-export function convertEmailsToLinks(
+export const convertEmailsToLinks = (
     string: string,
     subject: boolean | string = false
-): string {
+): string => {
     const setSubject = !!subject;
     const subjectString = `?subject=${
         typeof subject === "string"
@@ -22,4 +22,4 @@ export function convertEmailsToLinks(
                 match + (setSubject ? subjectString : "")
             }">${match}</a>`
     );
-}
+};

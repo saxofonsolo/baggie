@@ -11,10 +11,10 @@ import { getScrollPosition } from "./getScrollPosition";
  *
  * @category Scroll
  */
-export function scrollToTop(options?: {
+export const scrollToTop = (options?: {
     offset?: number;
     smooth?: boolean;
-}): void {
+}): void => {
     if (isBrowser) {
         const targetX = getScrollPosition().x;
         const targetY = options?.offset ? Math.abs(options.offset) : 0;
@@ -33,4 +33,4 @@ export function scrollToTop(options?: {
             window.scrollTo(targetX, targetY);
         }
     }
-}
+};

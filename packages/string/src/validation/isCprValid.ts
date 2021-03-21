@@ -32,10 +32,10 @@ import { convertToDate } from "..";
  * // invalidCpr = false
  * ```
  */
-export function isCprValid(
+export const isCprValid = (
     cprNumber: string | number | HTMLInputElement,
     gender?: "f" | "female" | "m" | "male"
-): boolean {
+): boolean => {
     const cpr =
         typeof cprNumber === "string"
             ? cprNumber
@@ -65,4 +65,4 @@ export function isCprValid(
         (genderLetter === "f" && !lastDigitIsEven) ||
         (genderLetter === "m" && lastDigitIsEven)
     );
-}
+};
