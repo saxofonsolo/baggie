@@ -45,10 +45,10 @@ interface Options {
  *
  * @category Convert
  */
-export function convertToDate(
+export const convertToDate = (
     date: string | DateObject,
     options?: Options
-): Date | false {
+): Date | false => {
     const { zeroBasedMonth = false, monthBeforeDay = false } = { ...options };
     const dateObject: DateObject = {};
     let dateArray: string[] = [];
@@ -86,18 +86,23 @@ export function convertToDate(
     );
     dateObject.year = Number(dateArray[2] || (date as DateObject).year);
 
-    const trueMonth = dateObject.month + (zeroBasedMonth ? +1 : 0);
-    const validDate = new Date(
-        `${trueMonth} ${dateObject.day} ${dateObject.year}`
-    );
+    const trueMonth = dateObject.month - (zeroBasedMonth ? 0 : 1);
+    const validDate = new Date();
+    validDate.setFullYear(dateObject.year);
+    validDate.setMonth(trueMonth);
+    validDate.setDate(dateObject.day);
+    validDate.setHours(0);
+    validDate.setMinutes(0);
+    validDate.setSeconds(0);
+    validDate.setMilliseconds(0);
 
     if (
         validDate.getDate() === dateObject.day &&
-        validDate.getMonth() === dateObject.month - (zeroBasedMonth ? 0 : 1) &&
+        validDate.getMonth() === trueMonth &&
         String(validDate.getFullYear()).endsWith(String(dateObject.year))
     ) {
         return validDate;
     } else {
         return false;
     }
-}
+};

@@ -10,10 +10,8 @@ describe("convertToDate", () => {
             1580425200000
         );
 
-        expect((convertToDate("310120") as Date).getTime()).toBe(1580425200000);
-
         expect(
-            (convertToDate("day: 31, month: 01, year: 20") as Date).getTime()
+            (convertToDate("day: 31, month: 01, year: 2020") as Date).getTime()
         ).toBe(1580425200000);
     });
 
@@ -31,13 +29,7 @@ describe("convertToDate", () => {
         ).toBe(1580425200000);
 
         expect(
-            (convertToDate("013120", {
-                monthBeforeDay: true,
-            }) as Date).getTime()
-        ).toBe(1580425200000);
-
-        expect(
-            (convertToDate("month: 01, day: 31, year: 20", {
+            (convertToDate("month: 01, day: 31, year: 2020", {
                 monthBeforeDay: true,
             }) as Date).getTime()
         ).toBe(1580425200000);
@@ -59,14 +51,7 @@ describe("convertToDate", () => {
         ).toBe(1580425200000);
 
         expect(
-            (convertToDate("003120", {
-                monthBeforeDay: true,
-                zeroBasedMonth: true,
-            }) as Date).getTime()
-        ).toBe(1580425200000);
-
-        expect(
-            (convertToDate("month: 0, day: 31, year: 20", {
+            (convertToDate("month: 0, day: 31, year: 2020", {
                 monthBeforeDay: true,
                 zeroBasedMonth: true,
             }) as Date).getTime()
@@ -95,7 +80,7 @@ describe("convertToDate", () => {
                 {
                     day: 31,
                     month: "00",
-                    year: 20,
+                    year: 2020,
                 },
                 {
                     zeroBasedMonth: true,
