@@ -1,3 +1,8 @@
+/* Interfaces */
+export type { Bounds } from "./coordinates/_interfaces/bounds.interface";
+export type { CoordinatesLatLng } from "./coordinates/_interfaces/coordinatesLatLng.interface";
+export type { CoordinatesXY } from "./coordinates/_interfaces/coordinatesXY.interface";
+
 /* Arithmetic */
 export { addNumbers } from "./arithmetic/addNumbers";
 

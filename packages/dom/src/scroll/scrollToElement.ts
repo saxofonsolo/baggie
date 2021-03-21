@@ -3,9 +3,8 @@ import {
     prefersReducedMotion,
     supportsSmoothScroll,
 } from "@baggie/detection";
+import { convertToCoordinates, CoordinatesXY } from "@baggie/math";
 import { getElementPosition } from "..";
-import { convertToCoordinates } from "../../../math/src";
-import { CoordinatesXY } from "../../../math/src/coordinates/_interfaces/coordinatesXY.interface";
 import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
 
 /**
