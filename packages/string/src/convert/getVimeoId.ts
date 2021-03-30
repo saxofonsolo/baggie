@@ -1,4 +1,4 @@
-import { getVimeoIdRegex } from "..";
+import { getVimeoIdRegex } from "../regex/getVimeoIdRegex";
 
 /**
  * Convert a YouTube URL to a video ID.

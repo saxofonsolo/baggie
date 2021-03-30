@@ -1,5 +1,5 @@
 import { CoordinatesLatLng } from "../_interfaces/coordinatesLatLng.interface";
-import { degreesToRadians } from "../..";
+import { degreesToRadians } from "../../radians/degreesToRadians";
 
 /**
  * Get distance between two sets of coordinates on a sphere using the Haversine

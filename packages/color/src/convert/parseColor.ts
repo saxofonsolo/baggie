@@ -1,6 +1,7 @@
 import { getPercentage } from "@baggie/math";
 import { NonEmptyArray } from "@baggie/typescript";
-import { HSLA, RGBA } from "..";
+import { HSLA } from "../_interfaces/hsla.interface";
+import { RGBA } from "../_interfaces/rgba.interface";
 import { convertHexToRgb } from "./convertHexToRgb";
 import { convertHslToRgb } from "./convertHslToRgb";
 import { convertColorNameToHex } from "./convertColorNameToHex";

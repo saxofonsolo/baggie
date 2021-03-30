@@ -1,4 +1,4 @@
-import { isBrowser } from "../..";
+import { isBrowser } from "../../environment/isBrowser";
 
 /**
  * Match media

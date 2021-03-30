@@ -1,4 +1,4 @@
-import { getEmailRegex } from "..";
+import { getEmailRegex } from "../regex/getEmailRegex";
 
 /**
  * Returns email addresses in a string.

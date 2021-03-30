@@ -1,4 +1,4 @@
-import { getCircleSurface } from "../..";
+import { getCircleSurface } from "../circle/getCircleSurface";
 
 /**
  * Get surface area of a cone.

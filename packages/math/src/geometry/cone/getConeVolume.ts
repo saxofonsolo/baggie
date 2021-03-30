@@ -1,4 +1,4 @@
-import { getCylinderVolume } from "../..";
+import { getCylinderVolume } from "../cylinder/getCylinderVolume";
 
 /**
  * Get volume of a cone.

@@ -1,4 +1,4 @@
-import { isBrowser } from "..";
+import { isBrowser } from "../environment/isBrowser";
 
 /**
  * If the browser supports smooth scroll, this will be `true`.

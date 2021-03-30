@@ -1,5 +1,7 @@
 import { degreesToRadians, radiansToDegrees } from "@baggie/math";
-import { CIELAB, convertRgbToLab, RGBA } from "..";
+import { CIELAB } from "../_interfaces/cielab.interface";
+import { RGBA } from "../_interfaces/rgba.interface";
+import { convertRgbToLab } from "../convert/convertRgbToLab";
 
 interface ColorHaystack extends CIELAB {
     source: any; // eslint-disable-line @typescript-eslint/no-explicit-any

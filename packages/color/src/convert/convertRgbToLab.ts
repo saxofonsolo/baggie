@@ -1,5 +1,6 @@
 import { roundDecimals } from "@baggie/math";
-import { CIELAB, RGBA } from "..";
+import { CIELAB } from "../_interfaces/cielab.interface";
+import { RGBA } from "../_interfaces/rgba.interface";
 
 /**
  * Convert an RGB color value to Lab (CIELAB CIE76).

@@ -1,4 +1,4 @@
-import { RGBA } from "..";
+import { RGBA } from "../_interfaces/rgba.interface";
 
 /**
  * Get the perceived brightness of a color as percentage in decimal form.

@@ -1,4 +1,4 @@
-import { getScrollPosition } from "..";
+import { getScrollPosition } from "../scroll/getScrollPosition";
 
 interface OffsetObject {
     x?: number;

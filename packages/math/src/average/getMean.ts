@@ -1,5 +1,5 @@
 import { NonEmptyArray } from "@baggie/typescript";
-import { addNumbers } from "..";
+import { addNumbers } from "../arithmetic/addNumbers";
 
 /**
  * Get the mean value of an array of numbers.

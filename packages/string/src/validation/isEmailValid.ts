@@ -1,4 +1,4 @@
-import { getEmailRegex } from "..";
+import { getEmailRegex } from "../regex/getEmailRegex";
 
 /**
  * Check if an email address is valid.

@@ -1,5 +1,5 @@
 import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
-import { radiansToDegrees } from "../..";
+import { radiansToDegrees } from "../../radians/radiansToDegrees";
 
 /**
  * Get the angle from one set of coordinates to another.

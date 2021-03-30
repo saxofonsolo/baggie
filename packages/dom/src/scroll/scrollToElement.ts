@@ -4,7 +4,7 @@ import {
     supportsSmoothScroll,
 } from "@baggie/detection";
 import { convertToCoordinates, CoordinatesXY } from "@baggie/math";
-import { getElementPosition } from "..";
+import { getElementPosition } from "../properties/getElementPosition";
 import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
 
 /**

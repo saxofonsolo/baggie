@@ -1,4 +1,5 @@
-import { getBrightness, RGBA } from "..";
+import { RGBA } from "../_interfaces/rgba.interface";
+import { getBrightness } from "./getBrightness";
 
 /**
  * Get the perceived darkness of a color as percentage in decimal form.

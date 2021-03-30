@@ -1,4 +1,5 @@
-import { getPercentage, degreesToRadians } from "../..";
+import { degreesToRadians } from "../../radians/degreesToRadians";
+import { getPercentage } from "../../percentage/getPercentage";
 
 interface GetPointsOnCircleProperties {
     radius: number;

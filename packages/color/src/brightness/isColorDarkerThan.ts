@@ -1,4 +1,4 @@
-import { RGBA } from "..";
+import { RGBA } from "../_interfaces/rgba.interface";
 import { getBrightness } from "./getBrightness";
 
 /**

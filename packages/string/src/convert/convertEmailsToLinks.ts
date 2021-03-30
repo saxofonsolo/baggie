@@ -1,4 +1,4 @@
-import { getEmailRegex } from "..";
+import { getEmailRegex } from "../regex/getEmailRegex";
 
 /**
  * Find email addresses in a string and convert them to links.

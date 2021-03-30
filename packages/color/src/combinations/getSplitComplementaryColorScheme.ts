@@ -1,4 +1,6 @@
-import { convertHslToRgb, convertRgbToHsl, RGBA } from "..";
+import { RGBA } from "../_interfaces/rgba.interface";
+import { convertHslToRgb } from "../convert/convertHslToRgb";
+import { convertRgbToHsl } from "../convert/convertRgbToHsl";
 
 /**
  * Get a split complementary color scheme.

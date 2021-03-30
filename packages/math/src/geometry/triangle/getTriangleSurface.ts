@@ -1,4 +1,4 @@
-import { getTrianglePerimeter } from "../..";
+import { getTrianglePerimeter } from "./getTrianglePerimeter";
 
 /**
  * Get surface area of a triangle.
