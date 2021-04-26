@@ -17,5 +17,7 @@ describe("getClosestAngles", () => {
             300,
             200,
         ]);
+
+        expect(getClosestAngles(35, [])).toEqual([]);
     });
 });

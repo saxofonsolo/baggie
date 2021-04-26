@@ -21,4 +21,11 @@ describe("getMode", () => {
             frequency: 1,
         });
     });
+
+    test("Get the mode value of an empty array", () => {
+        expect(getMode([])).toMatchObject({
+            mode: [],
+            frequency: 0,
+        });
+    });
 });

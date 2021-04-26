@@ -1,5 +1,3 @@
-import { NonEmptyArray } from "@baggie/typescript";
-
 /**
  * Get an array of angles sorted by which is closest to the target.
  *
@@ -22,10 +20,7 @@ import { NonEmptyArray } from "@baggie/typescript";
  *
  * @category Coordinates - Angle
  */
-export const getClosestAngles = (
-    target: number,
-    angles: NonEmptyArray<number>
-): number[] =>
+export const getClosestAngles = (target: number, angles: number[]): number[] =>
     [...angles].sort((a, b) => {
         const aRawDiff = a > target ? a - target : target - a;
         const aModulusDiff = aRawDiff % 360;

@@ -1,4 +1,3 @@
-import { NonEmptyArray } from "@baggie/typescript";
 import { addNumbers } from "../arithmetic/addNumbers";
 
 /**
@@ -19,5 +18,5 @@ import { addNumbers } from "../arithmetic/addNumbers";
  *
  * @category Average
  */
-export const getMean = (numbers: NonEmptyArray<number>): number =>
+export const getMean = (numbers: number[]): number =>
     addNumbers(numbers) / numbers.length;

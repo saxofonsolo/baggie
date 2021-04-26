@@ -1,5 +1,3 @@
-import { NonEmptyArray } from "@baggie/typescript";
-
 /**
  * Add an array of numbers together.
  *
@@ -16,5 +14,5 @@ import { NonEmptyArray } from "@baggie/typescript";
  * @category Arithmetic
  * @param numbers - An array of numbers to add together
  */
-export const addNumbers = (numbers: NonEmptyArray<number>): number =>
-    numbers.reduce((a: number, b: number) => a + b, 0);
+export const addNumbers = (numbers: number[]): number =>
+    [...numbers].reduce((a: number, b: number) => a + b, 0);

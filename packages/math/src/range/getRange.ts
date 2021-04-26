@@ -1,5 +1,3 @@
-import { NonEmptyArray } from "@baggie/typescript";
-
 /**
  * Get the range from an array of numbers.
  * This is the largest value minus the smallest value.
@@ -16,9 +14,9 @@ import { NonEmptyArray } from "@baggie/typescript";
  *
  * @category Range
  */
-export const getRange = (numbers: NonEmptyArray<number>): number => {
+export const getRange = (numbers: number[]): number => {
     // Put the array of numbers in ascending order (small to large)
-    numbers.sort((a: number, b: number) => a - b);
+    const sortedNumbers = [...numbers].sort((a: number, b: number) => a - b);
 
-    return numbers[numbers.length - 1] - numbers[0];
+    return sortedNumbers[sortedNumbers.length - 1] - sortedNumbers[0] || 0;
 };

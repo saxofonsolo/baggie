@@ -20,4 +20,8 @@ describe("getMedian", () => {
     test("Get the median of positive and negative numbers", () => {
         expect(getMedian([4, -8])).toBe(-2);
     });
+
+    test("Get the median of an empty array", () => {
+        expect(getMedian([])).toBe(0);
+    });
 });

@@ -1,5 +1,3 @@
-import { NonEmptyArray } from "@baggie/typescript";
-
 /**
  * Get the mode from an array of numbers.
  * The mode is the most frequent value in a data set
@@ -20,7 +18,7 @@ import { NonEmptyArray } from "@baggie/typescript";
  * @category Average
  */
 export const getMode = (
-    numbers: NonEmptyArray<number>
+    numbers: number[]
 ): { mode: number[]; frequency: number } | undefined => {
     const numbersMapping: { [key: string]: number } = {};
     let greatestFrequency = 0;
@@ -37,10 +35,8 @@ export const getMode = (
         }
     });
 
-    return greatestFrequency
-        ? {
-              mode,
-              frequency: greatestFrequency,
-          }
-        : undefined;
+    return {
+        mode,
+        frequency: greatestFrequency,
+    };
 };

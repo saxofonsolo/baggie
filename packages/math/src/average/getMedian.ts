@@ -1,4 +1,3 @@
-import { NonEmptyArray } from "@baggie/typescript";
 import { getMean } from "./getMean";
 
 /**
@@ -19,19 +18,21 @@ import { getMean } from "./getMean";
  *
  * @category Average
  */
-export const getMedian = (numbers: NonEmptyArray<number>): number => {
+export const getMedian = (numbers: number[]): number => {
     const numbersCount = numbers.length;
     const halfOfNumbersCount = Math.floor(numbersCount / 2);
 
     // Put the array of numbers in ascending order (small to large)
-    numbers.sort((a: number, b: number) => a - b);
+    const sortedNumbers = [...numbers].sort((a: number, b: number) => a - b);
 
-    return !(numbersCount % 2)
-        ? // If the amount of numbers is even, the median is the mean of the two middle numbers
-          getMean([
-              numbers[halfOfNumbersCount - 1],
-              numbers[halfOfNumbersCount],
-          ])
-        : // If the amount of numbers is odd, the median is the middle number
-          numbers[halfOfNumbersCount];
+    return numbersCount
+        ? !(numbersCount % 2)
+            ? // If the amount of numbers is even, the median is the mean of the two middle numbers
+              getMean([
+                  sortedNumbers[halfOfNumbersCount - 1],
+                  sortedNumbers[halfOfNumbersCount],
+              ])
+            : // If the amount of numbers is odd, the median is the middle number
+              sortedNumbers[halfOfNumbersCount]
+        : 0;
 };

@@ -12,4 +12,8 @@ describe("getRange", () => {
     test("Get the range of an array of 1 number", () => {
         expect(getRange([42])).toBe(0);
     });
+
+    test("Get the range of an empty array", () => {
+        expect(getRange([])).toBe(0);
+    });
 });

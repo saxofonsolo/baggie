@@ -16,4 +16,8 @@ describe("addNumbers", () => {
     test("Add an array of 1 number", () => {
         expect(addNumbers([19])).toBe(19);
     });
+
+    test("Add an empty array", () => {
+        expect(addNumbers([])).toBe(0);
+    });
 });
