@@ -7,7 +7,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "rimraf lib && tsc",
-    "test": "jest --verbose --runInBand --passWithNoTests"
+    "test": "jest --verbose --runInBand --passWithNoTests",
+    "publish": "npm publish"
   },
   "files": [
     "lib"

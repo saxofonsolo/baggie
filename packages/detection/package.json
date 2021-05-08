@@ -6,7 +6,8 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rimraf lib && tsc"
+    "build": "rimraf lib && tsc",
+    "publish": "npm publish"
   },
   "files": [
     "lib"
