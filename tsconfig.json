@@ -21,18 +21,24 @@
   "typedocOptions": {
     "name": "baggie",
     "readme": "./DOCS.md",
-    "mode": "modules",
     "media": "/media",
     "out": "docs",
+    "entryPoints": [
+      "packages/color/src/index.ts",
+      "packages/detection/src/index.ts",
+      "packages/dom/src/index.ts",
+      "packages/functions/src/index.ts",
+      "packages/math/src/index.ts",
+      "packages/string/src/index.ts",
+      "packages/typescript/src/index.ts"
+    ],
     "exclude": "**/src/index.ts",
     "external-modulemap": ".*packages\/([^\/]+)\/.*",
     "categorizeByGroup": false,
     "excludeExternals": true,
-    "excludeNotExported": true,
     "excludePrivate": true,
     "excludeProtected": true,
-    "includeVersion": true,
-    "stripInternal": true
+    "includeVersion": true
   },
   "exclude": [
     "node_modules"

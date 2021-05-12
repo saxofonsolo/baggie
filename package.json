@@ -66,8 +66,8 @@
     "serve": "^11.3.2",
     "ts-jest": "^26.4.4",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
-    "typedoc": "^0.19.2",
-    "typescript": "^4.2.3"
+    "typedoc": "^0.20.36",
+    "typescript": "^4.2.4"
   },
   "husky": {
     "hooks": {
