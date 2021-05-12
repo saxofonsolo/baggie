@@ -15,7 +15,7 @@ import { truncNumber } from "./truncNumber";
  * const three = truncDecimals(-13.111111, 3);
  * // three = -13.111
  *
- * const four = truncDecimals(-13.9999999, 3);
+ * const four = truncDecimals(-13.9999999, 4);
  * // four = -13.9999
  * ```
  *
