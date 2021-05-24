@@ -3,7 +3,9 @@ export { blurFocusedElement } from "./actions/blurFocusedElement";
 export { getFocusedElement } from "./actions/getFocusedElement";
 
 /* Classes */
+export { getClassByPostfix } from "./classes/getClassByPostfix";
 export { getClassByPrefix } from "./classes/getClassByPrefix";
+export { removeClassByPostfix } from "./classes/removeClassByPostfix";
 export { removeClassByPrefix } from "./classes/removeClassByPrefix";
 
 /* Parents */
