@@ -12,6 +12,7 @@ export { stripTagsFromString } from "./convert/stripTagsFromString";
 export type { PasswordOptions } from "./_interfaces/passwordOptions.interface";
 
 /* Regex */
+export { getCprRegex } from "./regex/getCprRegex";
 export { getEmailRegex } from "./regex/getEmailRegex";
 export { getNewLineRegex } from "./regex/getNewLineRegex";
 export {
