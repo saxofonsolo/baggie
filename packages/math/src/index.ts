@@ -5,6 +5,8 @@ export type { CoordinatesXY } from "./coordinates/_interfaces/coordinatesXY.inte
 
 /* Arithmetic */
 export { addNumbers } from "./arithmetic/addNumbers";
+export { countDecimals } from "./arithmetic/countDecimals";
+export { getClosest } from "./arithmetic/getClosest";
 
 /* Average */
 export { getMean } from "./average/getMean";
@@ -35,17 +37,6 @@ export { keepInsideRadius } from "./coordinates/radius/keepInsideRadius";
 
 /* Coordinates - Slope */
 export { getSlope } from "./coordinates/slope/getSlope";
-
-/* Rounding */
-export { ceilDecimals } from "./rounding/ceilDecimals";
-export { ceilToMultipleOf } from "./rounding/ceilToMultipleOf";
-export { floorDecimals } from "./rounding/floorDecimals";
-export { floorToMultipleOf } from "./rounding/floorToMultipleOf";
-export { roundDecimals } from "./rounding/roundDecimals";
-export { roundToMultipleOf } from "./rounding/roundToMultipleOf";
-export { truncDecimals } from "./rounding/truncDecimals";
-export { isNumberRound } from "./rounding/isNumberRound";
-export { truncNumber } from "./rounding/truncNumber";
 
 /* Geometry - Circle */
 export { getCircleCircumference } from "./geometry/circle/getCircleCircumference";
@@ -78,7 +69,9 @@ export { getTriangleSurface } from "./geometry/triangle/getTriangleSurface";
 
 /* Percentage */
 export { getPercentage } from "./percentage/getPercentage";
+export { getPercentageBetween } from "./percentage/getPercentageBetween";
 export { getPercentageIncrease } from "./percentage/getPercentageIncrease";
+export { getPositionBetween } from "./percentage/getPositionBetween";
 
 /* Radians */
 export { degreesToRadians } from "./radians/degreesToRadians";
@@ -86,9 +79,21 @@ export { radiansToDegrees } from "./radians/radiansToDegrees";
 
 /* Range */
 export { clamp } from "./range/clamp";
+export { convertRangePosition } from "./range/convertRangePosition";
 export { getRange } from "./range/getRange";
 export { isInRange } from "./range/isInRange";
 export { keepOutsideRange } from "./range/keepOutsideRange";
+
+/* Rounding */
+export { ceilDecimals } from "./rounding/ceilDecimals";
+export { ceilToMultipleOf } from "./rounding/ceilToMultipleOf";
+export { floorDecimals } from "./rounding/floorDecimals";
+export { floorToMultipleOf } from "./rounding/floorToMultipleOf";
+export { roundDecimals } from "./rounding/roundDecimals";
+export { roundToMultipleOf } from "./rounding/roundToMultipleOf";
+export { truncDecimals } from "./rounding/truncDecimals";
+export { isNumberRound } from "./rounding/isNumberRound";
+export { truncNumber } from "./rounding/truncNumber";
 
 /* Temperature */
 export { celsiusToDelisle } from "./temperature/celsiusToDelisle";
