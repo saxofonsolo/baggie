@@ -54,10 +54,11 @@ module.exports = {
                 "@typescript-eslint/explicit-function-return-type": ["error"],
                 "@typescript-eslint/explicit-module-boundary-types": ["error"],
                 "import/no-unused-modules": [
-                    1,
+                    2,
                     {
                         missingExports: true,
                         unusedExports: true,
+                        src: ["**/src/**/!(*.test.ts)"],
                         ignoreExports: ["**/src/index.ts"],
                     },
                 ],
