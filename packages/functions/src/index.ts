@@ -1,3 +1,6 @@
+/* Arrays */
+export { intersperse } from "./arrays/intersperse";
+
 /* Cookie */
 export type { CookieAttributes } from "./cookie/setCookie";
 export { deleteCookie } from "./cookie/deleteCookie";
