@@ -38,8 +38,7 @@
     "categorizeByGroup": false,
     "excludeExternals": true,
     "excludePrivate": true,
-    "excludeProtected": true,
-    "includeVersion": true
+    "excludeProtected": true
   },
   "exclude": [
     "node_modules"
