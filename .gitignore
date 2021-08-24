@@ -20,7 +20,6 @@ packages/**/*.*
 !packages/*/*.js
 !packages/*/*.json
 !packages/*/*.md
-packages/*/package-lock.json
 
 # ignore everything under "scripts" except certain files
 scripts/**/*.*
