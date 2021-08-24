@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.3.4](https://github.com/bag-of-tricks/baggie/compare/v1.3.4) (2021-08-24)
+
+Change target back to "es6" but keep "commonjs"
+
+
 ## [1.3.1](https://github.com/bag-of-tricks/baggie/compare/v1.3.2) (2021-08-24)
 
 Change target to "es5" and "commonjs" to support older versions of javascript

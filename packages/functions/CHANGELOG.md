@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/bag-of-tricks/baggie/compare/v1.3.4) (2021-08-24)
+
+Change target back to "es6" but keep "commonjs"
+
+
 ## [1.3.2](https://github.com/bag-of-tricks/baggie/compare/v1.3.2) (2021-08-24)
 
 Change target to "es5" and "commonjs" to support older versions of javascript
