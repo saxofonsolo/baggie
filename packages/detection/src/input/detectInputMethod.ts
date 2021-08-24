@@ -22,20 +22,19 @@ export interface DetectInputMethodOptions {
  * @category Input - Detect Input Method
  */
 export class DetectInputMethod {
-    private settings: DetectInputMethodOptions;
     private mouseMoveCount: number;
+    private settings: DetectInputMethodOptions;
 
-    constructor(
-        options: DetectInputMethodOptions = {
+    constructor(options: DetectInputMethodOptions) {
+        this.mouseMoveCount = 0;
+        this.settings = {
             touchClass: "touch-input",
             mouseClass: "mouse-input",
             mouseMoveThreshold: 5,
             continuousDetection: false,
             setClassOnElement: document.documentElement,
-        }
-    ) {
-        this.settings = options;
-        this.mouseMoveCount = 0;
+            ...options,
+        };
 
         document.addEventListener("touchstart", this.touchFired);
         document.addEventListener("mousemove", this.mouseMoved);
