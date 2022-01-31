@@ -1,6 +1,6 @@
 {
   "name": "@baggie/color",
-  "version": "1.3.4",
+  "version": "1.4.0",
   "license": "MIT",
   "description": "A library of color tools for JavaScript and TypeScript. Manipulate, convert and compare colors, find color combinations etc.",
   "main": "lib/index.js",
