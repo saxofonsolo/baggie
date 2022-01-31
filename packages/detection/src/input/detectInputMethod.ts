@@ -6,7 +6,7 @@ export interface DetectInputMethodOptions {
     mouseClass?: string;
     mouseMoveThreshold?: number;
     continuousDetection?: boolean;
-    setClassOnElement?: HTMLElement;
+    setClassOnElement?: HTMLElement | false;
     callback?: ({
         isMouse,
         isTouch,
@@ -47,15 +47,17 @@ export class DetectInputMethod {
             this.unbind();
         }
 
+        const element = this.settings.setClassOnElement;
+        if (element) {
+            element.classList.remove(this.settings.mouseClass || "");
+            element.classList.add(this.settings.touchClass || "");
+        }
+
         if (this.settings.callback) {
             this.settings.callback({
                 isMouse: false,
                 isTouch: true,
             });
-        } else {
-            const element = this.settings.setClassOnElement;
-            element?.classList.remove(this.settings.mouseClass || "");
-            element?.classList.add(this.settings.touchClass || "");
         }
     };
 
@@ -67,15 +69,17 @@ export class DetectInputMethod {
                 this.unbind();
             }
 
+            const element = this.settings.setClassOnElement;
+            if (element) {
+                element.classList.remove(this.settings.touchClass || "");
+                element.classList.add(this.settings.mouseClass || "");
+            }
+
             if (this.settings.callback) {
                 this.settings.callback({
                     isMouse: true,
                     isTouch: false,
                 });
-            } else {
-                const element = this.settings.setClassOnElement;
-                element?.classList.remove(this.settings.touchClass || "");
-                element?.classList.add(this.settings.mouseClass || "");
             }
         }
     };
