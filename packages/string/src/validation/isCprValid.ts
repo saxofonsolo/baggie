@@ -46,7 +46,10 @@ export const isCprValid = (
             : cprNumber.value;
 
     // Check that the format is correct and that the date is valid
-    if (!getCprRegex().test(cpr) || !convertToDate(cpr.slice(0, 6))) {
+    if (
+        !getCprRegex().test(cpr) ||
+        !convertToDate(cpr.slice(0, 4) + "19" + cpr.slice(4, 6))
+    ) {
         return false;
     }
 
@@ -58,7 +61,7 @@ export const isCprValid = (
         return true;
     }
 
-    // Otherwise check that the gender matches the CPR number
+    // Otherwise, check that the gender matches the CPR number
     const genderLetter = (gender as string).charAt(0).toLowerCase();
     const lastDigit = parseInt(cpr.slice(-1));
     const lastDigitIsEven = lastDigit % 2;
