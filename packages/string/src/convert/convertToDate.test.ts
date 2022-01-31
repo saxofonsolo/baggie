@@ -1,9 +1,11 @@
 import { convertToDate } from "./convertToDate";
 
+jest.useFakeTimers("modern").setSystemTime(new Date("2022-01-31").getTime());
+
 describe("convertToDate", () => {
     test("String to a date", () => {
-        expect((convertToDate("31-01-2020") as Date).getTime()).toBe(
-            1580425200000
+        expect((convertToDate("17-06-1986") as Date).getTime()).toBe(
+            519343200000
         );
 
         expect((convertToDate("31012020") as Date).getTime()).toBe(
@@ -17,75 +19,93 @@ describe("convertToDate", () => {
 
     test("String to a date (month before day)", () => {
         expect(
-            (convertToDate("01-31-2020", {
-                monthBeforeDay: true,
-            }) as Date).getTime()
+            (
+                convertToDate("01-31-2020", {
+                    monthBeforeDay: true,
+                }) as Date
+            ).getTime()
         ).toBe(1580425200000);
 
         expect(
-            (convertToDate("01312020", {
-                monthBeforeDay: true,
-            }) as Date).getTime()
+            (
+                convertToDate("01312020", {
+                    monthBeforeDay: true,
+                }) as Date
+            ).getTime()
         ).toBe(1580425200000);
 
         expect(
-            (convertToDate("month: 01, day: 31, year: 2020", {
-                monthBeforeDay: true,
-            }) as Date).getTime()
+            (
+                convertToDate("month: 01, day: 31, year: 2020", {
+                    monthBeforeDay: true,
+                }) as Date
+            ).getTime()
         ).toBe(1580425200000);
     });
 
     test("String to a date (zero based month)", () => {
         expect(
-            (convertToDate("00-31-2020", {
-                monthBeforeDay: true,
-                zeroBasedMonth: true,
-            }) as Date).getTime()
+            (
+                convertToDate("00-31-2020", {
+                    monthBeforeDay: true,
+                    zeroBasedMonth: true,
+                }) as Date
+            ).getTime()
         ).toBe(1580425200000);
 
         expect(
-            (convertToDate("00312020", {
-                monthBeforeDay: true,
-                zeroBasedMonth: true,
-            }) as Date).getTime()
+            (
+                convertToDate("00312020", {
+                    monthBeforeDay: true,
+                    zeroBasedMonth: true,
+                }) as Date
+            ).getTime()
         ).toBe(1580425200000);
 
         expect(
-            (convertToDate("month: 0, day: 31, year: 2020", {
-                monthBeforeDay: true,
-                zeroBasedMonth: true,
-            }) as Date).getTime()
+            (
+                convertToDate("month: 0, day: 31, year: 2020", {
+                    monthBeforeDay: true,
+                    zeroBasedMonth: true,
+                }) as Date
+            ).getTime()
         ).toBe(1580425200000);
     });
 
     test("Object to a date", () => {
         expect(
-            (convertToDate({
-                day: 31,
-                month: 1,
-                year: 2020,
-            }) as Date).getTime()
-        ).toBe(1580425200000);
-
-        expect(
-            (convertToDate({
-                day: "31",
-                month: "01",
-                year: "2020",
-            }) as Date).getTime()
-        ).toBe(1580425200000);
-
-        expect(
-            (convertToDate(
-                {
+            (
+                convertToDate({
                     day: 31,
-                    month: "00",
+                    month: 1,
                     year: 2020,
-                },
-                {
-                    zeroBasedMonth: true,
-                }
-            ) as Date).getTime()
+                }) as Date
+            ).getTime()
+        ).toBe(1580425200000);
+
+        expect(
+            (
+                convertToDate({
+                    day: "31",
+                    month: "01",
+                    year: "2020",
+                }) as Date
+            ).getTime()
+        ).toBe(1580425200000);
+
+        expect(
+            (
+                convertToDate(
+                    {
+                        day: 31,
+                        month: "00",
+                        year: 2020,
+                    },
+                    {
+                        zeroBasedMonth: true,
+                    }
+                ) as Date
+            ).getTime()
         ).toBe(1580425200000);
     });
 });

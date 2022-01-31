@@ -57,9 +57,9 @@ export const convertToDate = (
             (dateArray[0].length === 6 || dateArray[0].length === 8)
         ) {
             dateArray = [
-                dateArray[0].substr(0, 2),
-                dateArray[0].substr(2, 2),
-                dateArray[0].substr(4),
+                dateArray[0].substring(0, 2),
+                dateArray[0].substring(2, 4),
+                dateArray[0].substring(4),
             ];
         } else if (dateArray.length !== 3) {
             throw "Invalid date format";
@@ -83,14 +83,11 @@ export const convertToDate = (
     dateObject.year = Number(dateArray[2] || (date as DateObject).year);
 
     const trueMonth = dateObject.month - (zeroBasedMonth ? 0 : 1);
-    const validDate = new Date();
-    validDate.setFullYear(dateObject.year);
-    validDate.setMonth(trueMonth);
-    validDate.setDate(dateObject.day);
-    validDate.setHours(0);
-    validDate.setMinutes(0);
-    validDate.setSeconds(0);
-    validDate.setMilliseconds(0);
+    const validDate = new Date(
+        `${dateObject.year}-${String(trueMonth + 1).padStart(2, "0")}-${String(
+            dateObject.day
+        ).padStart(2, "0")}T00:00:00`
+    );
 
     if (
         validDate.getDate() === dateObject.day &&
