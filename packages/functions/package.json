@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rimraf lib && tsc",
     "test": "jest --verbose --runInBand",
-    "publish": "npm publish"
+    "deploy": "npm publish"
   },
   "files": [
     "lib"
