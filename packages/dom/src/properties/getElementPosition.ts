@@ -14,10 +14,8 @@ export const getElementPosition = (
     element: Element,
     offset?: number | OffsetObject
 ): { x: number; y: number } => {
-    const {
-        left: elementPositionX,
-        top: elementPositionY,
-    } = element.getBoundingClientRect();
+    const { left: elementPositionX, top: elementPositionY } =
+        element.getBoundingClientRect();
     const { x: currentScrollX, y: currentScrollY } = getScrollPosition();
     const offsetIsNumber = typeof offset === "number";
     const offsetX = offsetIsNumber

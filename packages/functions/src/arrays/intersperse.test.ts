@@ -8,12 +8,7 @@ describe("intersperse", () => {
 
     test("Insert multiple values", () => {
         expect(intersperse([10, 15], 11, 12, 13, 14)).toStrictEqual([
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
+            10, 11, 12, 13, 14, 15,
         ]);
         expect(intersperse([10, 15], ...["11", 12, "13", 14])).toStrictEqual([
             10,

@@ -12,14 +12,10 @@ export const getSiblings = (
         matchSelector?: string;
     }
 ): Element[] => {
-    const {
-        includeOriginalElement,
-        fromElement,
-        untilElement,
-        matchSelector,
-    } = {
-        ...options,
-    };
+    const { includeOriginalElement, fromElement, untilElement, matchSelector } =
+        {
+            ...options,
+        };
     const parent = element.parentNode;
 
     if (!parent) {
