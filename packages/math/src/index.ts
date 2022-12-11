@@ -9,6 +9,8 @@ export { countDecimals } from "./arithmetic/countDecimals";
 export { getClosest } from "./arithmetic/getClosest";
 
 /* Average */
+export { getAntiMode } from "./average/getAntiMode";
+export { getFrequency } from "./average/getFrequency";
 export { getMean } from "./average/getMean";
 export { getMedian } from "./average/getMedian";
 export { getMode } from "./average/getMode";
