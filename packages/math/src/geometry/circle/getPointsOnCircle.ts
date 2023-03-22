@@ -1,5 +1,5 @@
 import { degreesToRadians } from "../../radians/degreesToRadians";
-import { getPercentage } from "../../percentage/getPercentage";
+import { getPercentage } from "../../percentage/getPercentage/getPercentage";
 
 interface GetPointsOnCircleProperties {
     radius: number;
@@ -52,11 +52,11 @@ export const getPointsOnCircle = ({
     const result = [];
 
     const degreesToFirstPoint =
-        getPercentage({ part: 1, whole: numberOfPoints }) * 3.6;
+        getPercentage({ part: 1, whole: numberOfPoints }) * 360;
 
     for (let i = 1; i <= numberOfPoints; i += 1) {
         let degrees =
-            getPercentage({ part: i, whole: numberOfPoints }) * 3.6 -
+            getPercentage({ part: i, whole: numberOfPoints }) * 360 -
             degreesToFirstPoint +
             (offset % 360);
         const radians = degreesToRadians(degrees - 90);

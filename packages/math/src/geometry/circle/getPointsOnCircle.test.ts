@@ -10,16 +10,16 @@ describe("getPointsOnCircle", () => {
                     y: -100,
                 }),
                 expect.objectContaining({
-                    degrees: 119.99999999999999,
+                    degrees: 120,
                     x: 86.60254037844388,
-                    y: 49.99999999999998,
+                    y: 49.99999999999999,
                 }),
                 expect.objectContaining({
                     degrees: 240,
                     x: -86.60254037844388,
                     y: 49.99999999999999,
                 }),
-            ])
+            ]),
         );
     });
 });

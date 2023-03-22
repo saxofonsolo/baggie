@@ -10,7 +10,7 @@
  * const finalValue = 100;
  *
  * const increase = getPercentageIncrease(startingValue, finalValue);
- * // increase = 900
+ * // increase = 9 (900%)
  * ```
  *
  * @example
@@ -22,12 +22,15 @@
  * const finalValue = 10;
  *
  * const increase = getPercentageIncrease(startingValue, finalValue);
- * // increase = -90
+ * // increase = -0.9 (-90%)
  * ```
  *
  * @category Percentage
  */
 export const getPercentageIncrease = (
     startingValue: number,
-    finalValue: number
-): number => ((finalValue - startingValue) / startingValue) * 100 || 0;
+    finalValue: number,
+    percentageAsDecimal = true,
+): number =>
+    ((finalValue - startingValue) / startingValue) *
+        (percentageAsDecimal ? 1 : 100) || 0;
