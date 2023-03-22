@@ -27,7 +27,7 @@ const message = textFromFile.trim().replace(/ +/, " ").replace(/\.$/, "");
 
 const test = new RegExp(
     `^(${Object.keys(acceptedStart)
-        .map((key) => key.replace(/^([a-z]+):$/, "$1(?:\\([a-z]+\\))?:"))
+        .map((key) => key.replace(/^([a-z]+):$/, "$1(?:\\([a-z]+\\))?!?:"))
         .join("|")})\\s+(.*)`,
 );
 const match = message.match(test);
@@ -66,8 +66,10 @@ if (!match) {
         message,
     ]);
 } else {
-    const newMessage = `${
-        acceptedStart[match[1].replace(/\([a-z]+\)/, "")].emoji
-    } ${message.charAt(0).toLowerCase() + message.slice(1)}`;
+    const splitMessage = message.split(/: /s);
+    const newMessage = `${splitMessage[0]}: ${
+        acceptedStart[match[1].replace(/\([a-z]+\)!?/, "")].emoji
+    } ${splitMessage[1].charAt(0).toLowerCase() + splitMessage[1].slice(1)}`;
+
     fs.writeFileSync(filePath, newMessage);
 }
