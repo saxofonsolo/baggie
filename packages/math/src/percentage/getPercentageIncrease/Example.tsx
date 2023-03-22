@@ -1,20 +1,22 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { InputWrapper } from "@baggie/react";
-import { getPercentageBetween } from "./getPercentageBetween";
+import { getPercentageIncrease } from "./getPercentageIncrease";
 
 interface Props {
     from: number;
     to: number;
-    position: number;
 }
 
 export const Example = (props: Props) => {
     const [from, setFrom] = useState(props.from);
     const [to, setTo] = useState(props.to);
-    const [position, setPosition] = useState(props.position);
+    const [percentageAsDecimal, setPercentageAsDecimal] = useState(true);
 
-    const result = useMemo(() => getPercentageBetween(from, to, position), [from, to, position]);
+    const result = useMemo(
+        () => getPercentageIncrease(from, to, percentageAsDecimal),
+        [from, to, percentageAsDecimal],
+    );
 
     return (
         <>
@@ -37,31 +39,30 @@ export const Example = (props: Props) => {
                     />
                 </InputWrapper>
 
-                <InputWrapper label="Position" labelForId="position-input">
-                    <input
-                        id="position-input"
-                        type="number"
-                        value={position}
-                        onChange={({ target }) => setPosition(target.valueAsNumber || 0)}
-                    />
-                </InputWrapper>
-
                 <InputWrapper label="Percentage" labelForId={undefined}>
                     <div style={{ padding: "5px" }}>{result}</div>
                 </InputWrapper>
             </div>
 
+            <label>
+                <input
+                    type="checkbox"
+                    checked={percentageAsDecimal}
+                    onChange={() => setPercentageAsDecimal((current) => !current)}
+                />
+                Percentage as decimal
+            </label>
+
             <Source
                 dark
                 code={`
-import { getPercentageBetween } from "@baggie/math";
+import { setPercentageAsDecimal } from "@baggie/math";
 
 const from = ${from};
 const to = ${to};
-const position = ${position};
 
-const percentage = getPercentageBetween(from, to, position);
-// percentage = ${result}
+const percentage = setPercentageAsDecimal(from, to${percentageAsDecimal ? "" : ", false"});
+// percentage = ${result}${percentageAsDecimal ? ` (${result * 100}%)` : ""}
 `}
             />
         </>

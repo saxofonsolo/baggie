@@ -1,20 +1,20 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { InputWrapper } from "@baggie/react";
-import { getPercentageBetween } from "./getPercentageBetween";
+import { getPositionBetween } from "./getPositionBetween";
 
 interface Props {
     from: number;
     to: number;
-    position: number;
+    percentage: number;
 }
 
 export const Example = (props: Props) => {
     const [from, setFrom] = useState(props.from);
     const [to, setTo] = useState(props.to);
-    const [position, setPosition] = useState(props.position);
+    const [percentage, setPercentage] = useState(props.percentage);
 
-    const result = useMemo(() => getPercentageBetween(from, to, position), [from, to, position]);
+    const result = useMemo(() => getPositionBetween(from, to, percentage), [from, to, percentage]);
 
     return (
         <>
@@ -37,16 +37,16 @@ export const Example = (props: Props) => {
                     />
                 </InputWrapper>
 
-                <InputWrapper label="Position" labelForId="position-input">
+                <InputWrapper label="Percentage" labelForId="percentage-input">
                     <input
-                        id="position-input"
+                        id="percentage-input"
                         type="number"
-                        value={position}
-                        onChange={({ target }) => setPosition(target.valueAsNumber || 0)}
+                        value={percentage}
+                        onChange={({ target }) => setPercentage(target.valueAsNumber || 0)}
                     />
                 </InputWrapper>
 
-                <InputWrapper label="Percentage" labelForId={undefined}>
+                <InputWrapper label="Position" labelForId={undefined}>
                     <div style={{ padding: "5px" }}>{result}</div>
                 </InputWrapper>
             </div>
@@ -54,14 +54,14 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { getPercentageBetween } from "@baggie/math";
+import { getPositionBetween } from "@baggie/math";
 
 const from = ${from};
 const to = ${to};
-const position = ${position};
+const percentage = ${percentage};
 
-const percentage = getPercentageBetween(from, to, position);
-// percentage = ${result}
+const position = getPositionBetween(from, to, percentage);
+// position = ${result}
 `}
             />
         </>
