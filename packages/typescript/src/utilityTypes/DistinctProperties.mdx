@@ -1,0 +1,31 @@
+import { Source } from "@storybook/blocks";
+
+# DistinctProperties
+
+Extract the distinct properties from a type or interface by comparing it to another.
+
+<Source dark language="ts" code={`
+import { DistinctProperties } from "@baggie/typescript";
+
+interface Car {
+    model: string;
+    diesel: boolean;
+    wheels: number;
+    doors: number;
+}
+
+interface Bicycle {
+    model: string;
+    wheels: number;
+    cargoBike: boolean;
+}
+
+type CarSpecificProperties = DistinctProperties<Car, Bicycle>;
+
+// The type above matches the interface below
+
+interface CarSpecificProperties {
+    diesel: boolean;
+    doors: number;
+}
+`} />
