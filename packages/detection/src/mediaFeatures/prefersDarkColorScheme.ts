@@ -6,5 +6,5 @@ import { matchMedia } from "./_helpers/matchMedia.helper";
  * @category Media Features
  */
 export const prefersDarkColorScheme = matchMedia(
-    "(prefers-color-scheme: dark)"
+    "(prefers-color-scheme: dark)",
 );

@@ -10,7 +10,7 @@ import { CookieAttributes, setCookie } from "./setCookie";
  */
 export const deleteCookie = (
     name: string,
-    attributes: CookieAttributes = {}
+    attributes: CookieAttributes = {},
 ): void =>
     setCookie(name, "", {
         ...attributes,

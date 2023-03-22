@@ -7,7 +7,7 @@ import { getEmailRegex } from "../regex/getEmailRegex";
  */
 export const convertEmailsToLinks = (
     string: string,
-    subject: boolean | string = false
+    subject: boolean | string = false,
 ): string => {
     const setSubject = !!subject;
     const subjectString = `?subject=${
@@ -20,6 +20,6 @@ export const convertEmailsToLinks = (
         (match) =>
             `<a href="mailto:${
                 match + (setSubject ? subjectString : "")
-            }">${match}</a>`
+            }">${match}</a>`,
     );
 };

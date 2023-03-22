@@ -6,7 +6,7 @@ describe("removeClassByPrefix", () => {
         const element = document.querySelector(".edgars");
         removeClassByPrefix(element as Element, "edgar-");
         expect((element as Element).className).toBe(
-            `edgars judge-edgar thomas-edison`
+            `edgars judge-edgar thomas-edison`,
         );
     });
 
@@ -15,7 +15,7 @@ describe("removeClassByPrefix", () => {
         const element = document.querySelector(".edgars");
         removeClassByPrefix(element as Element, "julius-");
         expect((element as Element).className).toBe(
-            `edgars edgar-allan-poe edgar-wright judge-edgar edgar-oliver thomas-edison`
+            `edgars edgar-allan-poe edgar-wright judge-edgar edgar-oliver thomas-edison`,
         );
     });
 });

@@ -13,7 +13,7 @@ import { convertColorNameToHex } from "./convertColorNameToHex";
  * @category Convert
  */
 export const parseColor = (
-    input: string | NonEmptyArray<number> | HSLA | RGBA
+    input: string | NonEmptyArray<number> | HSLA | RGBA,
 ): RGBA => {
     let returnObject: RGBA = {
         red: 0,
@@ -45,7 +45,7 @@ export const parseColor = (
             returnObject = rgba;
         } else {
             const rgbMatch = stringInput.match(
-                /^rgb[a]?\(\s*(\d{1,3}%?),\s*(\d{1,3}%?),\s*(\d{1,3}%?)\s*(?:,\s*(0?\.\d+|0|1?))?\s*\)/i
+                /^rgb[a]?\(\s*(\d{1,3}%?),\s*(\d{1,3}%?),\s*(\d{1,3}%?)\s*(?:,\s*(0?\.\d+|0|1?))?\s*\)/i,
             );
             if (rgbMatch && rgbMatch.length) {
                 returnObject.red = rgbMatch[1].endsWith("%")

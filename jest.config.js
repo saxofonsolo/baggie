@@ -1,11 +1,8 @@
 module.exports = {
-    verbose: true,
-    transform: {
-        "^.+\\.(t|j)sx?$": "ts-jest",
-    },
-    testRegex: "(/src/.*)\\.test.tsx?$",
-    moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
+    preset: "ts-jest",
+    testEnvironment: "jsdom",
     moduleNameMapper: {
         "@baggie/(.+)": "<rootDir>../$1/src",
     },
+    testPathIgnorePatterns: ["/node_modules/", "/lib/"],
 };

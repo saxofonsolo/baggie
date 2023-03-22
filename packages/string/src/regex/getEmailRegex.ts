@@ -23,6 +23,6 @@ export const getEmailRegex = (global = true): RegExp => {
         }(?!\\.)((?!.*\\.{2})[0-9${letters}\\.!#$%&'*+-/=?^_\`{|}~\\-\\d]+)@(?!\\.)([0-9${letters}\\-\\.\\d]+)((\\.([${letters}]){2,63})+)${
             global ? "" : "$"
         }`,
-        `${global ? "g" : ""}i`
+        `${global ? "g" : ""}i`,
     );
 };

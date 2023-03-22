@@ -40,7 +40,7 @@ describe("getFrequency", () => {
                 "lorem ipsum",
                 "dolor sit amet",
                 "dolor sit amet",
-            ])
+            ]),
         ).toMatchObject([
             { frequency: 1, value: 4 },
             { frequency: 1, value: 15 },

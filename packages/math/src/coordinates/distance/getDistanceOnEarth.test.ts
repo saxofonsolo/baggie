@@ -5,8 +5,8 @@ describe("getDistanceOnEarth", () => {
         expect(
             getDistanceOnEarth(
                 { lat: 56.15674, lng: 10.21076 },
-                { lat: 57.048, lng: 9.9187 }
-            )
+                { lat: 57.048, lng: 9.9187 },
+            ),
         ).toBe(100.70265108699398);
     });
 });

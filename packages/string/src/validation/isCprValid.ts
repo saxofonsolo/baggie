@@ -36,7 +36,7 @@ import { convertToDate } from "../convert/convertToDate";
  */
 export const isCprValid = (
     cprNumber: string | number | HTMLInputElement,
-    gender?: "f" | "female" | "m" | "male"
+    gender?: "f" | "female" | "m" | "male",
 ): boolean => {
     const cpr =
         typeof cprNumber === "string"

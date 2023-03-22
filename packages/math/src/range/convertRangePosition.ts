@@ -1,5 +1,5 @@
-import { getPositionBetween } from "../percentage/getPositionBetween";
-import { getPercentageBetween } from "../percentage/getPercentageBetween";
+import { getPositionBetween } from "../percentage/getPositionBetween/getPositionBetween";
+import { getPercentageBetween } from "../percentage/getPercentageBetween/getPercentageBetween";
 
 /**
  * Convert the position in a range to the position in another range.
@@ -28,10 +28,10 @@ import { getPercentageBetween } from "../percentage/getPercentageBetween";
  */
 export const convertRangePosition = (
     input: { from: number; to: number; position: number },
-    output: { from: number; to: number }
+    output: { from: number; to: number },
 ): number =>
     getPositionBetween(
         output.from,
         output.to,
-        getPercentageBetween(input.from, input.to, input.position)
+        getPercentageBetween(input.from, input.to, input.position),
     );

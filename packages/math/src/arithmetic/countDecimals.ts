@@ -14,10 +14,8 @@
  */
 export const countDecimals = (value: number | string): number => {
     const valueIsString = typeof value === "string";
-    const text = valueIsString ? (value as string) : value.toString();
-    const number = valueIsString
-        ? parseInt(value as string, 10)
-        : (value as number);
+    const text = valueIsString ? value : value.toString();
+    const number = valueIsString ? parseInt(value, 10) : value;
 
     // verify if number 0.000005 is represented as "5e-6"
     if (text.indexOf("e-") > -1) {

@@ -18,7 +18,7 @@
  * @category Average
  */
 export const getMode = (
-    numbers: number[]
+    numbers: number[],
 ): { mode: number[]; frequency: number } | undefined => {
     const numbersMapping: { [key: string]: number } = {};
     let greatestFrequency = 0;

@@ -8,8 +8,8 @@ describe("areElementsSiblings", () => {
         expect(
             areElementsSiblings(
                 element1 as HTMLElement,
-                element2 as HTMLElement
-            )
+                element2 as HTMLElement,
+            ),
         ).toBe(true);
     });
 
@@ -20,8 +20,8 @@ describe("areElementsSiblings", () => {
         expect(
             areElementsSiblings(
                 element1 as HTMLElement,
-                element2 as HTMLElement
-            )
+                element2 as HTMLElement,
+            ),
         ).toBe(false);
     });
 });

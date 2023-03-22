@@ -1,4 +1,4 @@
-<img alt="Baggie logo" src="https://github.com/bag-of-tricks/baggie/raw/master/media/baggie.svg" height="100" />
+<img alt="Baggie logo" src="https://github.com/bag-of-tricks/baggie/raw/master/public/baggie.svg" height="100" />
 
 <h1>@baggie/string</h1>
 

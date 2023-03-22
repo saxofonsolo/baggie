@@ -7,7 +7,7 @@ describe("convertRgbToHex", () => {
                 red: 255,
                 green: 0,
                 blue: 0,
-            })
+            }),
         ).toBe("#ff0000");
     });
 
@@ -17,7 +17,7 @@ describe("convertRgbToHex", () => {
                 red: 0,
                 green: 255,
                 blue: 0,
-            })
+            }),
         ).toBe("#00ff00");
     });
 
@@ -27,7 +27,7 @@ describe("convertRgbToHex", () => {
                 red: 0,
                 green: 0,
                 blue: 255,
-            })
+            }),
         ).toBe("#0000ff");
     });
 
@@ -38,7 +38,7 @@ describe("convertRgbToHex", () => {
                 green: 0,
                 blue: 255,
                 alpha: 0.5,
-            })
+            }),
         ).toBe("#0000ff80");
     });
 
@@ -51,8 +51,8 @@ describe("convertRgbToHex", () => {
                     blue: 255,
                     alpha: 0.5,
                 },
-                false
-            )
+                false,
+            ),
         ).toBe("#0000ff");
     });
 
@@ -64,8 +64,8 @@ describe("convertRgbToHex", () => {
                     green: 0,
                     blue: 255,
                 },
-                true
-            )
+                true,
+            ),
         ).toBe("#0000ffff");
     });
 });

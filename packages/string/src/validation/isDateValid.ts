@@ -43,5 +43,5 @@ interface Options {
  */
 export const isDateValid = (
     date: string | DateObject,
-    options?: Options
+    options?: Options,
 ): boolean => !!convertToDate(date, options);

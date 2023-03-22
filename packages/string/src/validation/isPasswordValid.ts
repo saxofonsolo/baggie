@@ -27,8 +27,8 @@ import { PasswordOptions } from "../_interfaces/passwordOptions.interface";
  */
 export const isPasswordValid = (
     password: string | HTMLInputElement,
-    options?: PasswordOptions
+    options?: PasswordOptions,
 ): boolean =>
     getPasswordRegex(options).test(
-        typeof password === "string" ? password : password.value
+        typeof password === "string" ? password : password.value,
     );

@@ -11,7 +11,7 @@ describe("getBrightness", () => {
 
     test("Grey", () => {
         expect(getBrightness({ red: 127, green: 127, blue: 127 })).toBe(
-            0.4980392156862745
+            0.4980392156862745,
         );
     });
 });

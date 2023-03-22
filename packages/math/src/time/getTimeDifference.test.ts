@@ -16,7 +16,7 @@ describe("getTimeDifference", () => {
                     onlySeconds: 10299456.412,
                     onlyMilliseconds: 10299456412,
                 },
-            })
+            }),
         );
     });
 });

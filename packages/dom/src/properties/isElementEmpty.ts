@@ -7,7 +7,7 @@
  */
 export const isElementEmpty = (
     element: Element,
-    trimWhitespace = false
+    trimWhitespace = false,
 ): boolean =>
     trimWhitespace
         ? !element.innerHTML.trim().length

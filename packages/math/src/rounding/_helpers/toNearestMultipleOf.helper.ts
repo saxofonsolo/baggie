@@ -7,7 +7,7 @@ export const toNearestMultipleOf = (
     number: number,
     nearest: number,
     func: (number: number) => number,
-    self: (number: number, nearest: number) => number
+    self: (number: number, nearest: number) => number,
 ): number => {
     const decimalCount = countDecimals(nearest);
     const decimalMultiplier = decimalCount * 10;

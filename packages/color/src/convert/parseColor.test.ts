@@ -8,7 +8,7 @@ describe("parseColor", () => {
                 green: 0,
                 blue: 0,
                 alpha: 1,
-            })
+            }),
         );
     });
 
@@ -19,7 +19,7 @@ describe("parseColor", () => {
                 green: 0,
                 blue: 0,
                 alpha: 1,
-            })
+            }),
         );
     });
 
@@ -30,7 +30,7 @@ describe("parseColor", () => {
                 green: 0,
                 blue: 0,
                 alpha: 0,
-            })
+            }),
         );
     });
 
@@ -41,7 +41,7 @@ describe("parseColor", () => {
                 green: 0,
                 blue: 0,
                 alpha: 1,
-            })
+            }),
         );
     });
 
@@ -52,7 +52,7 @@ describe("parseColor", () => {
                 green: 0,
                 blue: 0,
                 alpha: 0,
-            })
+            }),
         );
     });
 
@@ -63,7 +63,7 @@ describe("parseColor", () => {
                 green: 0,
                 blue: 0,
                 alpha: 1,
-            })
+            }),
         );
     });
 
@@ -74,7 +74,7 @@ describe("parseColor", () => {
                 green: 0,
                 blue: 0,
                 alpha: 0.5,
-            })
+            }),
         );
     });
 
@@ -85,7 +85,7 @@ describe("parseColor", () => {
                 green: 0,
                 blue: 0,
                 alpha: 1,
-            })
+            }),
         );
     });
 
@@ -96,7 +96,7 @@ describe("parseColor", () => {
                 green: 0,
                 blue: 0,
                 alpha: 0.5,
-            })
+            }),
         );
     });
 
@@ -107,14 +107,14 @@ describe("parseColor", () => {
                 saturation: 1,
                 lightness: 0.5,
                 alpha: 0.5,
-            })
+            }),
         ).toEqual(
             expect.objectContaining({
                 red: 0,
                 green: 0,
                 blue: 255,
                 alpha: 0.5,
-            })
+            }),
         );
     });
 });

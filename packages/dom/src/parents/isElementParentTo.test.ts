@@ -6,7 +6,7 @@ describe("isElementParentTo", () => {
         const parent = document.getElementById("parent");
         const child = document.getElementById("target");
         expect(
-            isElementParentTo(parent as HTMLElement, child as HTMLElement)
+            isElementParentTo(parent as HTMLElement, child as HTMLElement),
         ).toBe(true);
     });
 
@@ -15,7 +15,11 @@ describe("isElementParentTo", () => {
         const parent = document.getElementById("parent");
         const child = document.getElementById("target");
         expect(
-            isElementParentTo(parent as HTMLElement, child as HTMLElement, true)
+            isElementParentTo(
+                parent as HTMLElement,
+                child as HTMLElement,
+                true,
+            ),
         ).toBe(true);
     });
 
@@ -24,7 +28,11 @@ describe("isElementParentTo", () => {
         const parent = document.getElementById("parent");
         const child = document.getElementById("target");
         expect(
-            isElementParentTo(parent as HTMLElement, child as HTMLElement, true)
+            isElementParentTo(
+                parent as HTMLElement,
+                child as HTMLElement,
+                true,
+            ),
         ).toBe(false);
     });
 
@@ -33,7 +41,7 @@ describe("isElementParentTo", () => {
         const parent = document.getElementById("parent");
         const child = document.getElementById("target");
         expect(
-            isElementParentTo(child as HTMLElement, parent as HTMLElement)
+            isElementParentTo(child as HTMLElement, parent as HTMLElement),
         ).toBe(false);
     });
 });

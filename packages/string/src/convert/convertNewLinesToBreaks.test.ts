@@ -4,7 +4,7 @@ describe("newLineToBreak", () => {
     test("Replace single new line with <br /> and remove whitespace", () => {
         expect(
             convertNewLinesToBreaks(`hey nå, hvasså
-        eller hvad?`)
+        eller hvad?`),
         ).toBe(`hey nå, hvasså<br />eller hvad?`);
     });
 
@@ -12,7 +12,7 @@ describe("newLineToBreak", () => {
         expect(
             convertNewLinesToBreaks(`hey nå, hvasså
         der
-        eller hvad?`)
+        eller hvad?`),
         ).toBe(`hey nå, hvasså<br />der<br />eller hvad?`);
     });
 
@@ -22,7 +22,7 @@ describe("newLineToBreak", () => {
 
 
 
-        eller hvad?`)
+        eller hvad?`),
         ).toBe(`hey nå, hvasså<br /><br /><br /><br />eller hvad?`);
     });
 
@@ -31,8 +31,8 @@ describe("newLineToBreak", () => {
             convertNewLinesToBreaks(
                 `hey nå, hvasså
         eller hvad?`,
-                true
-            )
+                true,
+            ),
         ).toBe(`hey nå, hvasså<br />        eller hvad?`);
     });
 
@@ -42,8 +42,8 @@ describe("newLineToBreak", () => {
                 `hey nå, hvasså
         der
         eller hvad?`,
-                true
-            )
+                true,
+            ),
         ).toBe(`hey nå, hvasså<br />        der<br />        eller hvad?`);
     });
 
@@ -55,8 +55,8 @@ describe("newLineToBreak", () => {
 
 
         eller hvad?`,
-                true
-            )
+                true,
+            ),
         ).toBe(`hey nå, hvasså<br /><br /><br /><br />        eller hvad?`);
     });
 });

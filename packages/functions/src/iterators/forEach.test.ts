@@ -26,8 +26,8 @@ describe("forEach", () => {
         };
         let result = "";
 
-        forEach(data, (value, key) => {
-            result += key + value;
+        forEach(data, (value: string, key: string) => {
+            result += `${key}${value}`;
         });
 
         expect(result).toBe(`aAbBBcCCC`);
@@ -38,8 +38,8 @@ describe("forEach", () => {
         const data = document.querySelectorAll("div");
         let result = "";
 
-        forEach(data, (value, key) => {
-            result += key + value.id;
+        forEach(data, (value: HTMLElement, key: number) => {
+            result += `${key}${value.id}`;
         });
 
         expect(result).toBe(`0a1c2e`);
@@ -53,8 +53,8 @@ describe("forEach", () => {
         data.set(["d", "e"], ["e", "f"]);
         data.set(["g", "h"], ["h", "i"]);
 
-        forEach(data, (value, key) => {
-            result += key[1] + value[0];
+        forEach(data, (value: string[], key: string[]) => {
+            result += `${key[1]}${value[0]}`;
         });
 
         expect(result).toBe(`bbeehh`);
@@ -68,8 +68,8 @@ describe("forEach", () => {
         data.add(["d", "e"]);
         data.add(["g", "h"]);
 
-        forEach(data, (value, key) => {
-            result += key + value[0];
+        forEach(data, (value: string[], key: number) => {
+            result += `${key}${value[0]}`;
         });
 
         expect(result).toBe(`0a1d2g`);
@@ -84,8 +84,8 @@ describe("forEach", () => {
         data.add("c");
         data.add("c");
 
-        forEach(data, (value, key) => {
-            result += key + value;
+        forEach(data, (value: string, key: number) => {
+            result += `${key}${value}`;
         });
 
         expect(result).toBe(`0a1b2c`);
@@ -95,8 +95,8 @@ describe("forEach", () => {
         const data = "hey";
         let result = "";
 
-        forEach(data, (value, key) => {
-            result += key + value;
+        forEach(data, (value: string, key: number) => {
+            result += `${key}${value}`;
         });
 
         expect(result).toBe(`0hey`);

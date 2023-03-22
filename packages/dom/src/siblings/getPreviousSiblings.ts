@@ -10,7 +10,7 @@ export const getPreviousSiblings = (
     options?: {
         includeOriginalElement?: boolean;
         matchSelector?: string;
-    }
+    },
 ): Element[] => {
     const { includeOriginalElement, matchSelector } = {
         ...options,

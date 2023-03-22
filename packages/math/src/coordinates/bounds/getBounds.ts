@@ -53,6 +53,6 @@ export const getBounds = (coordinates: CoordinatesXY[]): Bounds => {
                 x: -Infinity,
                 y: -Infinity,
             },
-        }
+        },
     );
 };

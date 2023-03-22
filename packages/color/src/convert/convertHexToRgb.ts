@@ -7,7 +7,7 @@ import { RGBA } from "../_interfaces/rgba.interface";
  */
 export const convertHexToRgb = (hex: string): RGBA | undefined => {
     const hexMatch = hex.match(
-        /^#((([0-9a-f]{3}){1,2})|(([0-9a-f]{4}){1,2}))$/i
+        /^#((([0-9a-f]{3}){1,2})|(([0-9a-f]{4}){1,2}))$/i,
     );
 
     if (hexMatch && hexMatch.length > 1) {

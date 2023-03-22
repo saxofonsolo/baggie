@@ -2,7 +2,7 @@ const message = (linesOfText) => {
     const maxCharacters = linesOfText.reduce(
         (accumulator, currentLineOfText) =>
             Math.max(accumulator, currentLineOfText.length),
-        0
+        0,
     );
     console.log(` `);
     console.log(`-`.repeat(maxCharacters));

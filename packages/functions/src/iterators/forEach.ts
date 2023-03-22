@@ -1,5 +1,4 @@
 /* globals Document, HTMLCollection, Node, NodeList, Window */
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types */
 import { isBrowser } from "@baggie/detection";
 
 /**
@@ -53,7 +52,7 @@ export const forEach = (
         | Set<any>
         | any,
     iterator: (value: any, key: any) => void,
-    allowNullValues = false
+    allowNullValues = false,
 ): void => {
     // ** NODE LISTS
     // If we're dealing with a node list (see document.querySelectorAll()) or HTMLCollections (see eg. document.getElementByClassName, node.children),

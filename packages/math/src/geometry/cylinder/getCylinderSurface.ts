@@ -22,7 +22,7 @@ import { getCircleSurface } from "../circle/getCircleSurface";
 export const getCylinderSurface = (
     radius: number,
     height: number,
-    excludeEnds = false
+    excludeEnds = false,
 ): number =>
     Math.PI * (radius * 2) * height +
     (excludeEnds ? 0 : 2 * getCircleSurface(radius));

@@ -6,7 +6,7 @@ describe("isElementChildOf", () => {
         const parent = document.getElementById("parent");
         const child = document.getElementById("target");
         expect(
-            isElementChildOf(child as HTMLElement, parent as HTMLElement)
+            isElementChildOf(child as HTMLElement, parent as HTMLElement),
         ).toBe(true);
     });
 
@@ -15,7 +15,7 @@ describe("isElementChildOf", () => {
         const parent = document.getElementById("parent");
         const child = document.getElementById("target");
         expect(
-            isElementChildOf(child as HTMLElement, parent as HTMLElement, true)
+            isElementChildOf(child as HTMLElement, parent as HTMLElement, true),
         ).toBe(true);
     });
 
@@ -24,7 +24,7 @@ describe("isElementChildOf", () => {
         const parent = document.getElementById("parent");
         const child = document.getElementById("target");
         expect(
-            isElementChildOf(child as HTMLElement, parent as HTMLElement, true)
+            isElementChildOf(child as HTMLElement, parent as HTMLElement, true),
         ).toBe(false);
     });
 
@@ -33,7 +33,7 @@ describe("isElementChildOf", () => {
         const parent = document.getElementById("parent");
         const child = document.getElementById("target");
         expect(
-            isElementChildOf(parent as HTMLElement, child as HTMLElement)
+            isElementChildOf(parent as HTMLElement, child as HTMLElement),
         ).toBe(false);
     });
 });

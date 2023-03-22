@@ -1,0 +1,23 @@
+import { Source } from "@storybook/blocks";
+
+# NonEmptyArray
+
+Require an array to have at least one value.
+
+> This type comes from here: https://stackoverflow.com/a/56006703/1446188
+
+<Source dark language="ts" code={`
+import { NonEmptyArray } from "@baggie/typescript";
+
+const addNumbers = (numbers: NonEmptyArray<number>): number =>
+    numbers.reduce((a, b) => a + b, 0);
+
+// ✅ Good
+addNumbers([1, 2, 3]);
+
+// ✅ Good
+addNumbers([1]);
+
+// ⛔️ TypeScript error
+addNumbers([]);
+`} />

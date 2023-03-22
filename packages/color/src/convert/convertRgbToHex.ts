@@ -7,7 +7,7 @@ import { RGBA } from "../_interfaces/rgba.interface";
  */
 export const convertRgbToHex = (
     { red, green, blue, alpha }: RGBA,
-    includeAlpha?: boolean
+    includeAlpha?: boolean,
 ): string => {
     const hasAlpha = typeof alpha === "number";
     const alphaValue = hasAlpha ? alpha : 1;
@@ -18,9 +18,7 @@ export const convertRgbToHex = (
         includeAlpha === false
             ? ""
             : includeAlpha || typeof alpha === "number"
-            ? `0${Math.round((alphaValue as number) * 255).toString(16)}`.slice(
-                  -2
-              )
+            ? `0${Math.round(alphaValue * 255).toString(16)}`.slice(-2)
             : "",
     ];
 

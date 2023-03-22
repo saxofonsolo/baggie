@@ -6,7 +6,7 @@ describe("removeClassByPostfix", () => {
         const element = document.querySelector(".edgars");
         removeClassByPostfix(element as Element, "r");
         expect((element as Element).className).toBe(
-            `edgars edgar-allan-poe edgar-wright thomas-edison`
+            `edgars edgar-allan-poe edgar-wright thomas-edison`,
         );
     });
 
@@ -15,7 +15,7 @@ describe("removeClassByPostfix", () => {
         const element = document.querySelector(".edgars");
         removeClassByPostfix(element as Element, "-julius");
         expect((element as Element).className).toBe(
-            `edgars edgar-allan-poe edgar-wright judge-edgar edgar-oliver thomas-edison`
+            `edgars edgar-allan-poe edgar-wright judge-edgar edgar-oliver thomas-edison`,
         );
     });
 });

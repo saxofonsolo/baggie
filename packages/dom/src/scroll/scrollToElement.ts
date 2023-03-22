@@ -18,7 +18,7 @@ export const scrollToElement = (
         scrollOnXAxis: boolean;
         offset?: number | [number, number] | CoordinatesXY;
         smooth?: boolean;
-    }
+    },
 ): void => {
     if (isBrowser) {
         const actualElement =

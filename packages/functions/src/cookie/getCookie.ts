@@ -9,7 +9,6 @@ import { decodeCookieParts } from "./_helpers/decodeCookiePart.helper";
  *
  * @category Cookie
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getCookie = (name: string, dontParseCookie = false): any => {
     // Object for storing cookies
     const cookieJar: { [name: string]: string } = {};

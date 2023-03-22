@@ -10,7 +10,7 @@ import { RGBA } from "../_interfaces/rgba.interface";
  */
 export const getBrightness = ({ red, green, blue }: RGBA): number => {
     const perceivedBrightness = Math.sqrt(
-        0.299 * (red * red) + 0.587 * (green * green) + 0.114 * (blue * blue)
+        0.299 * (red * red) + 0.587 * (green * green) + 0.114 * (blue * blue),
     );
 
     // Return perceived brightness as percentage in decimal form

@@ -22,6 +22,6 @@ import { getCircleSurface } from "../circle/getCircleSurface";
 export const getConeSurface = (
     radius: number,
     height: number,
-    excludeBottom = false
+    excludeBottom = false,
 ): number =>
     Math.PI * radius * height + (excludeBottom ? 0 : getCircleSurface(radius));

@@ -8,7 +8,7 @@ describe("convertHexToRgb", () => {
                 blue: 0,
                 green: 0,
                 red: 255,
-            })
+            }),
         );
     });
 
@@ -19,7 +19,7 @@ describe("convertHexToRgb", () => {
                 blue: 0,
                 green: 255,
                 red: 0,
-            })
+            }),
         );
     });
 
@@ -30,7 +30,7 @@ describe("convertHexToRgb", () => {
                 blue: 255,
                 green: 0,
                 red: 0,
-            })
+            }),
         );
     });
 
@@ -41,7 +41,7 @@ describe("convertHexToRgb", () => {
                 blue: 255,
                 green: 0,
                 red: 0,
-            })
+            }),
         );
     });
 });

@@ -4,8 +4,8 @@ describe("stripTagsFromString", () => {
     test("Strip tags from string", () => {
         expect(
             stripTagsFromString(
-                `<p><b>Bold move.</b><br/>Paragraph.</p><!-- comment -->:)`
-            )
+                `<p><b>Bold move.</b><br/>Paragraph.</p><!-- comment -->:)`,
+            ),
         ).toBe("Bold move.Paragraph.:)");
     });
 
@@ -13,14 +13,14 @@ describe("stripTagsFromString", () => {
         expect(
             stripTagsFromString(
                 `<p><b>Bold move.</b><br/>Paragraph.</p><!-- comment -->:)`,
-                " "
-            )
+                " ",
+            ),
         ).toBe(" Bold move. Paragraph. :)");
     });
 
     test("String with no tags", () => {
         expect(stripTagsFromString(`Bold move. Paragraph. :)`, " ")).toBe(
-            "Bold move. Paragraph. :)"
+            "Bold move. Paragraph. :)",
         );
     });
 });

@@ -40,7 +40,7 @@ export const keepOutsideRange = (
     input: number,
     rangeStart: number,
     rangeStop: number,
-    roundDownMidpoint = false
+    roundDownMidpoint = false,
 ): number =>
     input < rangeStop && input > rangeStart
         ? [rangeStart, rangeStop].reduce(
@@ -49,6 +49,6 @@ export const keepOutsideRange = (
                   const b = Math.abs(previous - input);
                   const comparison = roundDownMidpoint ? a < b : a <= b;
                   return comparison ? current : previous;
-              }
+              },
           )
         : input;

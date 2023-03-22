@@ -1,10 +1,1 @@
-# Node
-**/node_modules
-
-# Generated
-**/.git
-**/.idea
-**/docs
-
-# Build
-**/lib
+*.mdx

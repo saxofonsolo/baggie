@@ -22,16 +22,16 @@
  * @category Average
  */
 export const getFrequency = <T>(
-    values: T[]
+    values: T[],
 ): { value: T; frequency: number }[] => {
     const map = new Map<T, number>();
     values.forEach((value) =>
-        map.set(value, map.has(value) ? (map.get(value) || 0) + 1 : 1)
+        map.set(value, map.has(value) ? (map.get(value) || 0) + 1 : 1),
     );
     return Array.from(map, ([value, frequency]) => ({
         value,
         frequency,
     })).sort((a, b) =>
-        a.frequency < b.frequency ? -1 : a.frequency > b.frequency ? 1 : 0
+        a.frequency < b.frequency ? -1 : a.frequency > b.frequency ? 1 : 0,
     );
 };

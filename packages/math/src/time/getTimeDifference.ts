@@ -46,7 +46,7 @@ interface GetTimeDifferenceReturn {
  */
 export const getTimeDifference = (
     fromTimestampMs: number,
-    toTimestampMs: number
+    toTimestampMs: number,
 ): GetTimeDifferenceReturn => {
     let difference = Math.abs(fromTimestampMs - toTimestampMs);
 

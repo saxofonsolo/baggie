@@ -1,5 +1,3 @@
-import { NonEmptyArray } from "@baggie/typescript";
-
 /**
  * Check if an angle is within one or multiple ranges of angles.
  *
@@ -25,7 +23,7 @@ import { NonEmptyArray } from "@baggie/typescript";
  */
 export const isAngleInRange = (
     angle: number,
-    ...ranges: NonEmptyArray<[number, number]>
+    ...ranges: [number, number][]
 ): boolean =>
     ranges.reduce<boolean>((inRange: boolean, range: [number, number]) => {
         if (inRange) return inRange;

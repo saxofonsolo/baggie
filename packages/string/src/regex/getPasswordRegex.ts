@@ -31,15 +31,28 @@ export const passwordSpecialCharactersDefault =
  */
 export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
     const passwordSettings: PasswordOptions = {
-        minLength: 8,
-        minDigits: 1,
-        minLowercase: 1,
-        minUppercase: 1,
-        minSpecial: 1,
-        specialCharacters: passwordSpecialCharactersDefault,
-        forbiddenCharacters: " ",
-        allowUnicode: false,
         ...options,
+        minLength:
+            typeof options?.minLength === "number" ? options.minLength : 8,
+        minDigits:
+            typeof options?.minDigits === "number" ? options.minDigits : 1,
+        minLowercase:
+            typeof options?.minLowercase === "number"
+                ? options.minLowercase
+                : 1,
+        minUppercase:
+            typeof options?.minUppercase === "number"
+                ? options.minUppercase
+                : 1,
+        minSpecial:
+            typeof options?.minSpecial === "number" ? options.minSpecial : 1,
+        specialCharacters:
+            options?.specialCharacters || passwordSpecialCharactersDefault,
+        forbiddenCharacters:
+            typeof options?.forbiddenCharacters === "string"
+                ? options.forbiddenCharacters
+                : " ",
+        allowUnicode: options?.allowUnicode || false,
     };
 
     const hasMaxLength = typeof passwordSettings.maxLength === "number";
@@ -63,23 +76,23 @@ export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
             passwordSettings.forbiddenCharacters
                 ? `(?!(?:.*[${passwordSettings.forbiddenCharacters}].*){1,})`
                 : ""
-        }(?=(?:.*${lowercaseLetters}.*){${passwordSettings.minLowercase}${
-            !hasMaxLowercase ? "," : ""
-        }})${
+        }(?=(.*${lowercaseLetters}.*){${
+            passwordSettings.minLowercase as number
+        }${!hasMaxLowercase ? "," : ""}})${
             hasMaxLowercase
                 ? `(?!(?:.*${lowercaseLetters}.*){${
                       (passwordSettings.maxLowercase as number) + 1
                   },})`
                 : ""
-        }(?=(?:.*${uppercaseLetters}.*){${passwordSettings.minUppercase}${
-            !hasMaxUppercase ? "," : ""
-        }})${
+        }(?=(.*${uppercaseLetters}.*){${
+            passwordSettings.minUppercase as number
+        }${!hasMaxUppercase ? "," : ""}})${
             hasMaxUppercase
                 ? `(?!(?:.*${uppercaseLetters}.*){${
                       (passwordSettings.maxUppercase as number) + 1
                   },})`
                 : ""
-        }(?=(?:.*\\d.*){${passwordSettings.minDigits}${
+        }(?=(.*\\d.*){${passwordSettings.minDigits as number}${
             !hasMaxDigits ? "," : ""
         }})${
             hasMaxDigits
@@ -87,7 +100,7 @@ export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
                       (passwordSettings.maxDigits as number) + 1
                   },})`
                 : ""
-        }(?=(?:.*[${specialChars}].*){${passwordSettings.minSpecial}${
+        }(?=(.*[${specialChars}].*){${passwordSettings.minSpecial as number}${
             !hasMaxSpecial ? "," : ""
         }})${
             hasMaxSpecial
@@ -95,9 +108,9 @@ export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
                       (passwordSettings.maxSpecial as number) + 1
                   },})`
                 : ""
-        }.{${passwordSettings.minLength},${
-            hasMaxLength ? passwordSettings.maxLength : ""
+        }.{${passwordSettings.minLength as number},${
+            hasMaxLength ? (passwordSettings.maxLength as number) : ""
         }}$`,
-        passwordSettings.allowUnicode ? "u" : ""
+        passwordSettings.allowUnicode ? "u" : "",
     );
 };

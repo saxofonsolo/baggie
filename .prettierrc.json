@@ -1,0 +1,24 @@
+{
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "printWidth": 80,
+  "singleQuote": false,
+  "tabWidth": 4,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": ["*.json"],
+      "options": {
+        "printWidth": 80,
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": ["Example.tsx"],
+      "options": {
+        "printWidth": 100
+      }
+    }
+  ]
+}

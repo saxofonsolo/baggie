@@ -12,7 +12,7 @@ import { convertRgbToHsl } from "../convert/convertRgbToHsl";
  * @returns An array of four RGBA color objects.
  */
 export const getTetradicColorScheme = (
-    color: RGBA
+    color: RGBA,
 ): [RGBA, RGBA, RGBA, RGBA] => {
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(color);
     return [

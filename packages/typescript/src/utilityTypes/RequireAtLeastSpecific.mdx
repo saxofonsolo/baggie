@@ -1,0 +1,34 @@
+import { Source } from "@storybook/blocks";
+
+# RequireAtLeastSpecific
+
+Require at least one specific property of an interface.
+
+> This type comes from here: https://stackoverflow.com/a/49725198
+
+<Source dark language="ts" code={`
+import { RequireAtLeastSpecific } from "@baggie/typescript";
+
+interface TestInterface {
+    propA: string;
+    propB: number;
+};
+
+type AtLeastPropA = RequireAtLeastSpecific<TestInterface, "propA">;
+
+// ✅ Good
+const testObjectA: AtLeastPropA = {
+    propA: "...",
+    propB: 123,
+};
+
+// ✅ Good
+const testObjectB: AtLeastPropA = {
+    propA: "...",
+};
+
+// ⛔️ TypeScript error
+const testObjectD: AtLeastPropA = {
+    propB: 123,
+};
+`} />

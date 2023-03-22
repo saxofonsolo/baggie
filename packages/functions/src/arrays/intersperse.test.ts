@@ -25,23 +25,23 @@ describe("intersperse", () => {
             intersperse(
                 [10, 12],
                 ({ previous, next }: { previous: number; next: number }) =>
-                    previous + (next - previous) / 2
-            )
+                    previous + (next - previous) / 2,
+            ),
         ).toStrictEqual([10, 11, 12]);
         expect(
             intersperse(
                 [1, 2, 3, 4],
                 ({ previous, next }: { previous: number; next: number }) =>
-                    previous + (next - previous) / 2
-            )
+                    previous + (next - previous) / 2,
+            ),
         ).toStrictEqual([1, 1.5, 2, 2.5, 3, 3.5, 4]);
         expect(
             intersperse(
                 [1, 2, 3, 4],
                 ({ previous, next }: { previous: number; next: number }) =>
                     previous + (next - previous) / 2,
-                "hello"
-            )
+                "hello",
+            ),
         ).toStrictEqual([1, 1.5, "hello", 2, 2.5, "hello", 3, 3.5, "hello", 4]);
     });
 });

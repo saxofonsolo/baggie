@@ -17,7 +17,7 @@
  */
 export const isNumberRound = (
     number: number,
-    decimalPlaces: number
+    decimalPlaces: number,
 ): boolean => {
     const p = Math.pow(10, decimalPlaces);
     return Math.round(number * p) / p === number;

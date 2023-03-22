@@ -22,5 +22,5 @@ import { getNewLineRegex } from "../regex/getNewLineRegex";
  */
 export const convertNewLinesToBreaks = (
     text: string,
-    keepWhitespace = false
+    keepWhitespace = false,
 ): string => text.replace(getNewLineRegex(!keepWhitespace), "<br />");

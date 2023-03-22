@@ -1,5 +1,3 @@
-import { NonEmptyArray } from "@baggie/typescript";
-
 /**
  * Check if a number is within the range of a minimum and maximum value.
  *
@@ -31,10 +29,10 @@ import { NonEmptyArray } from "@baggie/typescript";
  */
 export const isInRange = (
     number: number,
-    ...ranges: NonEmptyArray<[number, number]>
+    ...ranges: [number, number][]
 ): boolean =>
     ranges.reduce<boolean>(
         (inRange: boolean, range: number[]) =>
             inRange || (number >= range[0] && number <= range[1]),
-        false
+        false,
     );

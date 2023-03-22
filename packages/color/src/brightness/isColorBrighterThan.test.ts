@@ -5,8 +5,8 @@ describe("isColorBrighterThan", () => {
         expect(
             isColorBrighterThan(
                 { red: 255, green: 255, blue: 255 },
-                { red: 0, green: 0, blue: 0 }
-            )
+                { red: 0, green: 0, blue: 0 },
+            ),
         ).toBe(true);
     });
 
@@ -14,8 +14,8 @@ describe("isColorBrighterThan", () => {
         expect(
             isColorBrighterThan(
                 { red: 0, green: 0, blue: 0 },
-                { red: 255, green: 255, blue: 255 }
-            )
+                { red: 255, green: 255, blue: 255 },
+            ),
         ).toBe(false);
     });
 
@@ -23,8 +23,8 @@ describe("isColorBrighterThan", () => {
         expect(
             isColorBrighterThan(
                 { red: 52, green: 52, blue: 52 },
-                { red: 51, green: 51, blue: 51 }
-            )
+                { red: 51, green: 51, blue: 51 },
+            ),
         ).toBe(true);
     });
 });

@@ -28,7 +28,7 @@ const message = textFromFile.trim().replace(/ +/, " ").replace(/\.$/, "");
 const test = new RegExp(
     `^(${Object.keys(acceptedStart)
         .map((key) => key.replace(/^([a-z]+):$/, "$1(?:\\([a-z]+\\))?:"))
-        .join("|")})\\s+(.*)`
+        .join("|")})\\s+(.*)`,
 );
 const match = message.match(test);
 

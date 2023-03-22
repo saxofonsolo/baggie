@@ -3,7 +3,7 @@ import { getSplitComplementaryColorScheme } from "./getSplitComplementaryColorSc
 describe("getSplitComplementaryColorScheme", () => {
     test("Get colors", () => {
         expect(
-            getSplitComplementaryColorScheme({ red: 255, green: 255, blue: 0 })
+            getSplitComplementaryColorScheme({ red: 255, green: 255, blue: 0 }),
         ).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({
@@ -23,7 +23,7 @@ describe("getSplitComplementaryColorScheme", () => {
                     blue: 255,
                     alpha: 1,
                 }),
-            ])
+            ]),
         );
     });
 });

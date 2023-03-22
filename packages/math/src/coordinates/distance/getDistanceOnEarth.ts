@@ -20,5 +20,5 @@ import { getDistanceOnSphere } from "./getDistanceOnSphere";
  */
 export const getDistanceOnEarth = (
     from: CoordinatesLatLng,
-    to: CoordinatesLatLng
+    to: CoordinatesLatLng,
 ): number => getDistanceOnSphere(from, to, 12742);

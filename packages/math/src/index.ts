@@ -69,11 +69,14 @@ export { getSphereVolume } from "./geometry/sphere/getSphereVolume";
 export { getTrianglePerimeter } from "./geometry/triangle/getTrianglePerimeter";
 export { getTriangleSurface } from "./geometry/triangle/getTriangleSurface";
 
+/* Helpers */
+export { zeroIfNotNumber } from "./helpers/zeroIfNotNumber/zeroIfNotNumber";
+
 /* Percentage */
-export { getPercentage } from "./percentage/getPercentage";
-export { getPercentageBetween } from "./percentage/getPercentageBetween";
-export { getPercentageIncrease } from "./percentage/getPercentageIncrease";
-export { getPositionBetween } from "./percentage/getPositionBetween";
+export { getPercentage } from "./percentage/getPercentage/getPercentage";
+export { getPercentageBetween } from "./percentage/getPercentageBetween/getPercentageBetween";
+export { getPercentageIncrease } from "./percentage/getPercentageIncrease/getPercentageIncrease";
+export { getPositionBetween } from "./percentage/getPositionBetween/getPositionBetween";
 
 /* Radians */
 export { degreesToRadians } from "./radians/degreesToRadians";

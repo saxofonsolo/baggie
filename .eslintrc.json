@@ -1,0 +1,190 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:css-modules/recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "import",
+    "unused-imports",
+    "jsx-a11y",
+    "css-modules"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": "*.mdx",
+      "parser": "eslint-mdx",
+      "extends": ["plugin:mdx/recommended"],
+      "settings": {
+        "mdx/code-blocks": true
+      },
+      "rules": {
+        "import/no-unresolved": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "tsconfigRootDir": ".",
+        "project": ["./tsconfig.json"]
+      },
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:storybook/recommended"
+      ],
+      "plugins": ["@typescript-eslint"],
+      "settings": {
+        "import/resolver": {
+          "typescript": {
+            "project": "./tsconfig.json"
+          }
+        }
+      },
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unsafe-argument": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/ban-types": [
+          "error",
+          {
+            "extendDefaults": true,
+            "types": {
+              "{}": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "excludedFiles": ["*.test.ts", "*.stories.tsx"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "typeProperty",
+            "format": ["camelCase"],
+            "custom": {
+              "regex": "^(className|style)$",
+              "match": false
+            }
+          },
+          {
+            "selector": ["interface", "typeAlias"],
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": ["interface", "typeAlias"],
+            "modifiers": ["exported"],
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": "variable",
+            "modifiers": ["exported"],
+            "types": ["function"],
+            "format": ["PascalCase"],
+            "filter": {
+              "regex": "(?!Example[0-9]*$)^[A-Z]",
+              "match": true
+            }
+          },
+          {
+            "selector": "variable",
+            "modifiers": ["exported"],
+            "types": ["function"],
+            "format": ["camelCase"],
+            "filter": {
+              "regex": "^[a-z]",
+              "match": true
+            }
+          },
+          {
+            "selector": "function",
+            "modifiers": ["exported"],
+            "format": ["camelCase"]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.d.ts", "*.stories.tsx"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    },
+    {
+      "files": ["Example.tsx"],
+      "rules": {
+        "@typescript-eslint/ban-ts-comment": "off"
+      }
+    },
+    {
+      // Only test-files
+      // ---------------
+      "files": ["*.test.ts"],
+      "plugins": ["jest", "jest-formatting"],
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest-formatting/recommended"
+      ],
+      "env": {
+        "jest/globals": true
+      },
+      "rules": {
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off"
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "18.x"
+    }
+  },
+  "rules": {
+    "eqeqeq": ["error", "always"],
+    "import/first": 1,
+    "import/no-default-export": 1,
+    "import/no-mutable-exports": 1,
+    "linebreak-style": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-unused-vars": "off",
+    "object-shorthand": "error",
+    "react/forbid-component-props": "error",
+    "react/jsx-uses-react": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "ignorePatterns": ["/generate/"]
+}

@@ -18,7 +18,7 @@
  * @category Average
  */
 export const getAntiMode = (
-    numbers: number[]
+    numbers: number[],
 ): { antiMode: number[]; frequency: number } | undefined => {
     const numbersMapping = numbers.reduce<
         Record<string, { value: number; frequency: number }>
@@ -36,7 +36,7 @@ export const getAntiMode = (
     return Object.values(numbersMapping)
         .map(({ value, frequency }) => ({ value, frequency }))
         .sort((a, b) =>
-            a.frequency < b.frequency ? -1 : a.frequency > b.frequency ? 1 : 0
+            a.frequency < b.frequency ? -1 : a.frequency > b.frequency ? 1 : 0,
         )
         .filter((cur, _index, arr) => cur.frequency === arr[0].frequency)
         .reduce<{ antiMode: number[]; frequency: number }>(
@@ -47,6 +47,6 @@ export const getAntiMode = (
             {
                 antiMode: [],
                 frequency: 0,
-            }
+            },
         );
 };

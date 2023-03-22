@@ -3,7 +3,7 @@ import { getTetradicColorScheme } from "./getTetradicColorScheme";
 describe("getTetradicColorScheme", () => {
     test("Get colors", () => {
         expect(
-            getTetradicColorScheme({ red: 255, green: 255, blue: 0 })
+            getTetradicColorScheme({ red: 255, green: 255, blue: 0 }),
         ).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({
@@ -29,7 +29,7 @@ describe("getTetradicColorScheme", () => {
                     blue: 128,
                     alpha: 1,
                 }),
-            ])
+            ]),
         );
     });
 });

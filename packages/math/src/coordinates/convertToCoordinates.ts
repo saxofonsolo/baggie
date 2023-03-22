@@ -1,12 +1,5 @@
+import { zeroIfNotNumber } from "../helpers/zeroIfNotNumber/zeroIfNotNumber";
 import { CoordinatesXY } from "./_interfaces/coordinatesXY.interface";
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const returnZeroIfNotNumber = (value: any): number =>
-    typeof value === "number"
-        ? value
-        : typeof value === "string"
-        ? parseInt(value, 10) || 0
-        : 0;
 
 /**
  * Convert a single number or an array with two numbers to a set of coordinates.
@@ -32,21 +25,21 @@ const returnZeroIfNotNumber = (value: any): number =>
  * @category Coordinates
  */
 export const convertToCoordinates = (
-    coordinates?: number | [number, number] | CoordinatesXY
+    coordinates?: number | [number, number] | CoordinatesXY,
 ): CoordinatesXY =>
     typeof coordinates === "object" &&
     Object.prototype.hasOwnProperty.call(coordinates, "x") &&
     Object.prototype.hasOwnProperty.call(coordinates, "y")
         ? {
-              x: returnZeroIfNotNumber((coordinates as CoordinatesXY).x),
-              y: returnZeroIfNotNumber((coordinates as CoordinatesXY).y),
+              x: zeroIfNotNumber((coordinates as CoordinatesXY).x),
+              y: zeroIfNotNumber((coordinates as CoordinatesXY).y),
           }
         : Array.isArray(coordinates)
         ? {
-              x: returnZeroIfNotNumber(coordinates[0]),
-              y: returnZeroIfNotNumber(coordinates[1]),
+              x: zeroIfNotNumber(coordinates[0]),
+              y: zeroIfNotNumber(coordinates[1]),
           }
         : {
-              x: returnZeroIfNotNumber(coordinates),
-              y: returnZeroIfNotNumber(coordinates),
+              x: zeroIfNotNumber(coordinates),
+              y: zeroIfNotNumber(coordinates),
           };

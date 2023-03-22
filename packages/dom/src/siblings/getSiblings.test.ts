@@ -7,7 +7,7 @@ describe("getSiblings", () => {
         expect(
             getSiblings(element3 as HTMLElement, {
                 untilElement: element3 as HTMLElement,
-            }).length
+            }).length,
         ).toBe(2);
     });
 
@@ -18,7 +18,7 @@ describe("getSiblings", () => {
             getSiblings(element3 as HTMLElement, {
                 untilElement: element3 as HTMLElement,
                 includeOriginalElement: true,
-            }).length
+            }).length,
         ).toBe(3);
     });
 
@@ -28,7 +28,7 @@ describe("getSiblings", () => {
         expect(
             getSiblings(element2 as HTMLElement, {
                 fromElement: element2 as HTMLElement,
-            }).length
+            }).length,
         ).toBe(2);
     });
 
@@ -39,7 +39,7 @@ describe("getSiblings", () => {
             getSiblings(element2 as HTMLElement, {
                 fromElement: element2 as HTMLElement,
                 includeOriginalElement: true,
-            }).length
+            }).length,
         ).toBe(3);
     });
 
@@ -55,7 +55,7 @@ describe("getSiblings", () => {
         expect(
             getSiblings(element1 as HTMLElement, {
                 untilElement: element1 as HTMLElement,
-            })
+            }),
         ).toEqual([]);
     });
 
@@ -65,7 +65,7 @@ describe("getSiblings", () => {
         expect(
             getSiblings(element2 as HTMLElement, {
                 fromElement: element2 as HTMLElement,
-            })
+            }),
         ).toEqual([]);
     });
 
@@ -75,7 +75,7 @@ describe("getSiblings", () => {
         expect(
             getSiblings(element2 as HTMLElement, {
                 includeOriginalElement: true,
-            }).length
+            }).length,
         ).toBe(1);
     });
 
@@ -88,7 +88,7 @@ describe("getSiblings", () => {
             getSiblings(element1 as HTMLElement, {
                 fromElement: element2 as HTMLElement,
                 untilElement: element4 as HTMLElement,
-            }).length
+            }).length,
         ).toBe(3);
     });
 
@@ -101,7 +101,7 @@ describe("getSiblings", () => {
             getSiblings(element3 as HTMLElement, {
                 fromElement: element2 as HTMLElement,
                 untilElement: element4 as HTMLElement,
-            }).length
+            }).length,
         ).toBe(2);
     });
 
@@ -112,7 +112,7 @@ describe("getSiblings", () => {
             getSiblings(target as HTMLElement, {
                 matchSelector: ".a",
                 includeOriginalElement: true,
-            }).length
+            }).length,
         ).toBe(3);
     });
 
@@ -123,7 +123,7 @@ describe("getSiblings", () => {
             getSiblings(target as HTMLElement, {
                 matchSelector: ".a",
                 includeOriginalElement: true,
-            }).length
+            }).length,
         ).toBe(4);
     });
 });

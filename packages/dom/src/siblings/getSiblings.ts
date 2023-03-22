@@ -10,7 +10,7 @@ export const getSiblings = (
         fromElement?: Element;
         untilElement?: Element;
         matchSelector?: string;
-    }
+    },
 ): Element[] => {
     const { includeOriginalElement, fromElement, untilElement, matchSelector } =
         {
@@ -25,7 +25,7 @@ export const getSiblings = (
     if (includeOriginalElement && !fromElement && !untilElement) {
         // Return array including the original element and all its siblings
         return Array.from(parent.children).filter(
-            (element) => !matchSelector || element.matches(matchSelector)
+            (element) => !matchSelector || element.matches(matchSelector),
         );
     }
 

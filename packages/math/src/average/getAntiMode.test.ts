@@ -3,7 +3,7 @@ import { getAntiMode } from "./getAntiMode";
 describe("getAntiMode", () => {
     test("Get a single anti mode value of an array", () => {
         expect(
-            getAntiMode([4, 8, 8, 15, 15, 16, 16, 42, 42, 42])
+            getAntiMode([4, 8, 8, 15, 15, 16, 16, 42, 42, 42]),
         ).toMatchObject({
             antiMode: [4],
             frequency: 1,
@@ -12,7 +12,7 @@ describe("getAntiMode", () => {
 
     test("Get a single anti mode value of an array (larger frequency)", () => {
         expect(
-            getAntiMode([3, 3, 3, 3, 4, 4, 8, 8, 8, 16, 16, 16, 42, 42, 42])
+            getAntiMode([3, 3, 3, 3, 4, 4, 8, 8, 8, 16, 16, 16, 42, 42, 42]),
         ).toMatchObject({
             antiMode: [4],
             frequency: 2,
@@ -24,7 +24,7 @@ describe("getAntiMode", () => {
             {
                 antiMode: [4, 15, 16, 23],
                 frequency: 1,
-            }
+            },
         );
     });
 

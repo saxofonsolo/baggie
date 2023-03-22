@@ -25,7 +25,7 @@ import { isInsideRadius } from "./isInsideRadius";
  */
 export const keepInsideRadius = (
     position: CoordinatesXY,
-    radius: number
+    radius: number,
 ): CoordinatesXY => {
     if (isInsideRadius(position, radius)) {
         return position;

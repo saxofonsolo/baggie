@@ -53,12 +53,12 @@ export const smoothScrollFallback = (x: number, y: number): Promise<void> => {
                 moveToX = Math.round(
                     x +
                         cosParameters.x +
-                        cosParameters.x * Math.cos(scrollCount)
+                        cosParameters.x * Math.cos(scrollCount),
                 );
                 moveToY = Math.round(
                     y +
                         cosParameters.y +
-                        cosParameters.y * Math.cos(scrollCount)
+                        cosParameters.y * Math.cos(scrollCount),
                 );
             }
 

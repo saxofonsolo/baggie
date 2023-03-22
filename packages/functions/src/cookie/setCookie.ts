@@ -27,8 +27,8 @@ export interface CookieAttributes {
  */
 export const setCookie = (
     name: string,
-    value: any, // eslint-disable-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
-    attributes?: CookieAttributes
+    value: any,
+    attributes?: CookieAttributes,
 ): void => {
     const options: CookieAttributes = {
         path: "",
@@ -55,7 +55,7 @@ export const setCookie = (
     } else if (options.expires) {
         if (typeof options.expires === "number") {
             cookieAttributes.Expires = new Date(
-                Date.now() + options.expires * 864e5
+                Date.now() + options.expires * 864e5,
             ).toUTCString();
         } else {
             cookieAttributes.Expires = options.expires.toUTCString();
@@ -82,7 +82,7 @@ export const setCookie = (
         if (
             Object.prototype.hasOwnProperty.call(
                 cookieAttributes,
-                attributeName
+                attributeName,
             ) &&
             cookieAttributes[attributeName]
         ) {
@@ -102,5 +102,7 @@ export const setCookie = (
     }
 
     // Set cookie
-    document.cookie = `${cookieName}=${cookieValue + attributesString}`;
+    document.cookie = `${cookieName}=${
+        cookieValue as string
+    }${attributesString}`;
 };

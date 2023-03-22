@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types */
-
 /**
- * Insert new values between between all values in an array.
+ * Insert new values between all values in an array.
  *
  * @example
  * **Basic usage:**
@@ -54,19 +52,24 @@
  *
  * @category Arrays
  */
-export const intersperse = (input: any[], ...insertion: any): any[] =>
+export const intersperse = (input: any[], ...insertion: any[]): any[] =>
     input.reduce((accumulator: any[], element, index, array) => {
         accumulator.push(element);
         if (index < array.length - 1) {
             insertion.forEach((insert: any) =>
                 accumulator.push(
                     typeof insert === "function"
-                        ? insert({
+                        ? (
+                              insert as (args: {
+                                  previous: any;
+                                  next: any;
+                              }) => any
+                          )({
                               previous: array[index],
                               next: array[index + 1],
                           })
-                        : insert
-                )
+                        : insert,
+                ),
             );
         }
         return accumulator;
