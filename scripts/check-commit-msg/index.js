@@ -1,7 +1,7 @@
 const fs = require("fs");
 const log = require("../_helpers/log.helper");
 
-const filePath = process.env.HUSKY_GIT_PARAMS;
+const filePath = process.argv[2];
 const textFromFile = fs.readFileSync(filePath, "utf-8");
 
 const minLength = 10;
