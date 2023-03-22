@@ -1,16 +1,5 @@
 /**
  * Count the number of decimals in a number.
- *
- * @example
- * **Basic usage:**
- * ```ts
- * import { countDecimals } from "@baggie/math";
- *
- * const decimalCount = countDecimals(1.0000000001);
- * // decimalCount = 10
- * ```
- *
- * @category Arithmetic
  */
 export const countDecimals = (value: number | string): number => {
     const valueIsString = typeof value === "string";

@@ -1,4 +1,4 @@
-import { countDecimals } from "../../arithmetic/countDecimals";
+import { countDecimals } from "../../arithmetic/countDecimals/countDecimals";
 
 /**
  * @internal

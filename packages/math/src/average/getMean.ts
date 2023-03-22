@@ -1,4 +1,4 @@
-import { addNumbers } from "../arithmetic/addNumbers";
+import { addNumbers } from "../arithmetic/addNumbers/addNumbers";
 
 /**
  * Get the mean value of an array of numbers.

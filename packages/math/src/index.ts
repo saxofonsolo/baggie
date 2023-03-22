@@ -4,9 +4,9 @@ export type { CoordinatesLatLng } from "./coordinates/_interfaces/coordinatesLat
 export type { CoordinatesXY } from "./coordinates/_interfaces/coordinatesXY.interface";
 
 /* Arithmetic */
-export { addNumbers } from "./arithmetic/addNumbers";
-export { countDecimals } from "./arithmetic/countDecimals";
-export { getClosest } from "./arithmetic/getClosest";
+export { addNumbers } from "./arithmetic/addNumbers/addNumbers";
+export { countDecimals } from "./arithmetic/countDecimals/countDecimals";
+export { getClosest } from "./arithmetic/getClosest/getClosest";
 
 /* Average */
 export { getAntiMode } from "./average/getAntiMode";
