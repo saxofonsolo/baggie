@@ -1,0 +1,81 @@
+import { Meta } from "@storybook/react";
+import { faker } from "@faker-js/faker";
+import { InputWrapper } from "./InputWrapper";
+import { InputWrapperProps } from "./InputWrapper.props";
+
+type StoryType = Meta<InputWrapperProps>;
+
+/**
+ * Wrap this around inputs and select boxes to give them a label and a helper text.
+ */
+export default {
+    component: InputWrapper,
+    args: {
+        label: "",
+        labelForId: "input-id",
+        helperText: "",
+        labelRight: "",
+        invalid: false,
+        children: (
+            <input
+                readOnly
+                placeholder="Input"
+                style={{ width: "100%", boxSizing: "border-box" }}
+            />
+        ),
+    },
+    argTypes: {
+        label: {
+            type: "string",
+        },
+        labelForId: {
+            description:
+                "**All inputs with a label should have an ID**, which also goes in the `for` attribute of the label in order to connect them.<br />If you can't think of one, use React's `useId()`",
+        },
+        helperText: {
+            type: "string",
+        },
+        labelRight: {
+            type: "string",
+        },
+        children: {
+            control: "none",
+        },
+    },
+} as StoryType;
+
+export const WithEverything: StoryType = {
+    args: {
+        label: faker.lorem.sentence(2).replace(/\.$/, ""),
+        labelRight: faker.lorem.sentence(3).replace(/\.$/, ""),
+        helperText: faker.lorem.sentence(6).replace(/\.$/, ""),
+    },
+};
+
+export const WithLabel: StoryType = {
+    args: {
+        label: faker.lorem.sentence(2).replace(/\.$/, ""),
+    },
+};
+
+export const WithHelperText: StoryType = {
+    args: {
+        label: faker.lorem.sentence(2).replace(/\.$/, ""),
+        helperText: faker.lorem.sentence(6).replace(/\.$/, ""),
+    },
+};
+
+export const Invalid: StoryType = {
+    args: {
+        label: faker.lorem.sentence(2).replace(/\.$/, ""),
+        helperText: faker.lorem.sentence(6).replace(/\.$/, ""),
+        invalid: true,
+    },
+};
+
+export const WithTooltip: StoryType = {
+    args: {
+        label: faker.lorem.sentence(2).replace(/\.$/, ""),
+        labelRight: faker.lorem.sentence(3).replace(/\.$/, ""),
+    },
+};

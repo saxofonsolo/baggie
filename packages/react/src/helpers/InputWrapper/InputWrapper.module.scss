@@ -1,0 +1,38 @@
+$gap: var(--input-wrapper-gap, 10px);
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+.header {
+    align-items: flex-end;
+    display: flex;
+    gap: $gap;
+    justify-content: space-between;
+}
+
+.label {
+    align-self: flex-end;
+    font: var(--input-wrapper-label-font, 600 1em sans-serif);
+}
+
+.labelRight {
+    font: var(--input-wrapper-label-right-font, 0.8em sans-serif);
+    margin-left: auto;
+    text-align: right;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.helperText {
+    color: var(--color-grey-80, #666);
+    font: var(--input-wrapper-helper-text-font, 0.8em sans-serif);
+
+    &.invalid {
+        color: var(--color-alert, #c00);
+    }
+}
