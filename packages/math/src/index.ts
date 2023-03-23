@@ -11,8 +11,8 @@ export { getClosest } from "./arithmetic/getClosest/getClosest";
 /* Average */
 export { getAntiMode } from "./average/getAntiMode/getAntiMode";
 export { getFrequency } from "./average/getFrequency/getFrequency";
-export { getMean } from "./average/getMean";
-export { getMedian } from "./average/getMedian";
+export { getMean } from "./average/getMean/getMean";
+export { getMedian } from "./average/getMedian/getMedian";
 export { getMode } from "./average/getMode/getMode";
 
 /* Coordinates */
