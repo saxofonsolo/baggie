@@ -1,25 +1,10 @@
 /**
  * Get the mode from an array of numbers.
- * The mode is the most frequent value in a data set
- *
- * There can be more than one mode if multiple values
- * are repeated an equal amount of times.
- *
- * @example
- * **Basic usage:**
- * ```ts
- * import { getMode } from "@baggie/math";
- *
- * const numbers = [4, 8, 8, 8, 15, 16, 23, 42, 42, 42];
- * const mode = getMode(numbers);
- * // mode = { mode: [8, 42], frequency: 3 }
- * ```
- *
- * @category Average
+ * The mode is the most frequent value in a data set.
  */
 export const getMode = (
     numbers: number[],
-): { mode: number[]; frequency: number } | undefined => {
+): { numbers: number[]; frequency: number } | undefined => {
     const numbersMapping: { [key: string]: number } = {};
     let greatestFrequency = 0;
     let mode: number[] = [];
@@ -36,7 +21,7 @@ export const getMode = (
     });
 
     return {
-        mode,
+        numbers: mode,
         frequency: greatestFrequency,
     };
 };

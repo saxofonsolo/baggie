@@ -16,7 +16,7 @@ export const Example = (props: Props) => {
         const numbers = inputNumbers
             .split(/\s*,\s*/)
             .filter((value) => value.length)
-            .map((string) => (string.match(/\D/) ? NaN : parseFloat(string)));
+            .map((string) => (string.match(/^-?[0-9]*\.?[0-9]*$/) ? parseFloat(string) : NaN));
         return { numbers, sorted: getClosest(target, numbers) };
     }, [target, inputNumbers]);
 

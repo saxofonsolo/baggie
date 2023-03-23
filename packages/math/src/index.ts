@@ -9,11 +9,11 @@ export { countDecimals } from "./arithmetic/countDecimals/countDecimals";
 export { getClosest } from "./arithmetic/getClosest/getClosest";
 
 /* Average */
-export { getAntiMode } from "./average/getAntiMode";
-export { getFrequency } from "./average/getFrequency";
+export { getAntiMode } from "./average/getAntiMode/getAntiMode";
+export { getFrequency } from "./average/getFrequency/getFrequency";
 export { getMean } from "./average/getMean";
 export { getMedian } from "./average/getMedian";
-export { getMode } from "./average/getMode";
+export { getMode } from "./average/getMode/getMode";
 
 /* Coordinates */
 export { convertToCoordinates } from "./coordinates/convertToCoordinates";
