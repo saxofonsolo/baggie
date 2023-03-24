@@ -7,3 +7,4 @@ export type { RequireAtLeastOne } from "./utilityTypes/RequireAtLeastOne";
 export type { RequireAtLeastSpecific } from "./utilityTypes/RequireAtLeastSpecific";
 export type { RequireOnlyOne } from "./utilityTypes/RequireOnlyOne";
 export type { SharedProperties } from "./utilityTypes/SharedProperties";
+export type { TupleToObject } from "./utilityTypes/TupleToObject";

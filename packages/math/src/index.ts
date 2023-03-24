@@ -90,15 +90,14 @@ export { isInRange } from "./range/isInRange";
 export { keepOutsideRange } from "./range/keepOutsideRange";
 
 /* Rounding */
-export { ceilDecimals } from "./rounding/ceilDecimals";
-export { ceilToMultipleOf } from "./rounding/ceilToMultipleOf";
-export { floorDecimals } from "./rounding/floorDecimals";
-export { floorToMultipleOf } from "./rounding/floorToMultipleOf";
-export { roundDecimals } from "./rounding/roundDecimals";
-export { roundToMultipleOf } from "./rounding/roundToMultipleOf";
-export { truncDecimals } from "./rounding/truncDecimals";
-export { isNumberRound } from "./rounding/isNumberRound";
-export { truncNumber } from "./rounding/truncNumber";
+export { ceilDecimals } from "./rounding/ceilDecimals/ceilDecimals";
+export { ceilToMultipleOf } from "./rounding/ceilToMultipleOf/ceilToMultipleOf";
+export { floorDecimals } from "./rounding/floorDecimals/floorDecimals";
+export { floorToMultipleOf } from "./rounding/floorToMultipleOf/floorToMultipleOf";
+export { roundDecimals } from "./rounding/roundDecimals/roundDecimals";
+export { roundToMultipleOf } from "./rounding/roundToMultipleOf/roundToMultipleOf";
+export { truncDecimals } from "./rounding/truncDecimals/truncDecimals";
+export { isNumberRound } from "./rounding/isNumberRound/isNumberRound";
 
 /* Temperature */
 export { celsiusToDelisle } from "./temperature/celsiusToDelisle";

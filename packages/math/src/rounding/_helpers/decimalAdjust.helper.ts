@@ -1,4 +1,4 @@
-import { isNumberRound } from "../isNumberRound";
+import { isNumberRound } from "../isNumberRound/isNumberRound";
 
 /**
  * @internal

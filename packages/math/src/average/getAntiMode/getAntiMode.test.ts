@@ -5,7 +5,7 @@ describe("getAntiMode", () => {
         expect(
             getAntiMode([4, 8, 8, 15, 15, 16, 16, 42, 42, 42]),
         ).toMatchObject({
-            antiMode: [4],
+            numbers: [4],
             frequency: 1,
         });
     });
@@ -14,7 +14,7 @@ describe("getAntiMode", () => {
         expect(
             getAntiMode([3, 3, 3, 3, 4, 4, 8, 8, 8, 16, 16, 16, 42, 42, 42]),
         ).toMatchObject({
-            antiMode: [4],
+            numbers: [4],
             frequency: 2,
         });
     });
@@ -22,7 +22,7 @@ describe("getAntiMode", () => {
     test("Get multiple anti mode values of an array", () => {
         expect(getAntiMode([4, 8, 8, 8, 15, 16, 23, 42, 42, 42])).toMatchObject(
             {
-                antiMode: [4, 15, 16, 23],
+                numbers: [4, 15, 16, 23],
                 frequency: 1,
             },
         );
@@ -30,14 +30,14 @@ describe("getAntiMode", () => {
 
     test("Get the anti mode value of an array of 1 number", () => {
         expect(getAntiMode([4])).toMatchObject({
-            antiMode: [4],
+            numbers: [4],
             frequency: 1,
         });
     });
 
     test("Get the anti mode value of an empty array", () => {
         expect(getAntiMode([])).toMatchObject({
-            antiMode: [],
+            numbers: [],
             frequency: 0,
         });
     });
