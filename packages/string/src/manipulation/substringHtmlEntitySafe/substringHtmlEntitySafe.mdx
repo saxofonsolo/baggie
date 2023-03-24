@@ -1,0 +1,20 @@
+import { Example } from "./Example";
+
+# substringHtmlSafe
+
+Get part of a string between the start and end indexes, or to the end of the
+string. **HTML entities are each counted as one character, and HTML tags are
+ignored.**
+
+> HTML entities begin with an ampersand (&) and ends with a semicolon (;).
+>
+> They are frequently used to display characters that reserved by HTML,
+> invisible or difficult to type.
+
+## Examples
+
+<Example defaultInput="lorem &amp;aelig;&amp;oslash;&amp;aelig; ipsum" start={0} end={12} />
+
+<Example defaultInput="&amp;aelig;&amp;oslash;&amp;aelig;" start={0} end={2} />
+
+<Example defaultInput="sit &amp;amp; amet" start={4} end={5} />

@@ -17,7 +17,7 @@ import { getTagsRegex } from "../regex/getTagsRegex";
  * // spacedAndTrimmed = "Bold move. Paragraph. :)"
  * ```
  *
- * @category Convert
+ * @category Manipulation
  */
 export const stripTagsFromString = (markup: string, replaceWith = ""): string =>
     markup.replace(getTagsRegex(true), replaceWith);
