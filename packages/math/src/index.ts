@@ -100,20 +100,20 @@ export { truncDecimals } from "./rounding/truncDecimals/truncDecimals";
 export { isNumberRound } from "./rounding/isNumberRound/isNumberRound";
 
 /* Temperature */
-export { celsiusToDelisle } from "./temperature/celsiusToDelisle";
-export { celsiusToFahrenheit } from "./temperature/celsiusToFahrenheit";
-export { celsiusToKelvin } from "./temperature/celsiusToKelvin";
-export { celsiusToNewton } from "./temperature/celsiusToNewton";
-export { celsiusToRankine } from "./temperature/celsiusToRankine";
-export { celsiusToReaumur } from "./temperature/celsiusToReaumur";
-export { celsiusToRoemer } from "./temperature/celsiusToRoemer";
-export { delisleToCelsius } from "./temperature/delisleToCelsius";
-export { fahrenheitToCelsius } from "./temperature/fahrenheitToCelsius";
-export { kelvinToCelsius } from "./temperature/kelvinToCelsius";
-export { newtonToCelsius } from "./temperature/newtonToCelsius";
-export { rankineToCelsius } from "./temperature/rankineToCelsius";
-export { reaumurToCelsius } from "./temperature/reaumurToCelsius";
-export { roemerToCelsius } from "./temperature/roemerToCelsius";
+export { celsiusToDelisle } from "./temperature/celsiusToDelisle/celsiusToDelisle";
+export { celsiusToFahrenheit } from "./temperature/celsiusToFahrenheit/celsiusToFahrenheit";
+export { celsiusToKelvin } from "./temperature/celsiusToKelvin/celsiusToKelvin";
+export { celsiusToNewton } from "./temperature/celsiusToNewton/celsiusToNewton";
+export { celsiusToRankine } from "./temperature/celsiusToRankine/celsiusToRankine";
+export { celsiusToReaumur } from "./temperature/celsiusToReaumur/celsiusToReaumur";
+export { celsiusToRoemer } from "./temperature/celsiusToRoemer/celsiusToRoemer";
+export { delisleToCelsius } from "./temperature/delisleToCelsius/delisleToCelsius";
+export { fahrenheitToCelsius } from "./temperature/fahrenheitToCelsius/fahrenheitToCelsius";
+export { kelvinToCelsius } from "./temperature/kelvinToCelsius/kelvinToCelsius";
+export { newtonToCelsius } from "./temperature/newtonToCelsius/newtonToCelsius";
+export { rankineToCelsius } from "./temperature/rankineToCelsius/rankineToCelsius";
+export { reaumurToCelsius } from "./temperature/reaumurToCelsius/reaumurToCelsius";
+export { roemerToCelsius } from "./temperature/roemerToCelsius/roemerToCelsius";
 
 /* Time */
 export { getDuration } from "./time/getDuration";
