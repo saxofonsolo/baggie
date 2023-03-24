@@ -116,5 +116,5 @@ export { reaumurToCelsius } from "./temperature/reaumurToCelsius/reaumurToCelsiu
 export { roemerToCelsius } from "./temperature/roemerToCelsius/roemerToCelsius";
 
 /* Time */
-export { getDuration } from "./time/getDuration";
-export { getTimeDifference } from "./time/getTimeDifference";
+export { getDuration } from "./time/getDuration/getDuration";
+export { getTimeDifference } from "./time/getTimeDifference/getTimeDifference";
