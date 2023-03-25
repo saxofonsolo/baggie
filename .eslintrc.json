@@ -172,7 +172,6 @@
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-unused-vars": "off",
     "object-shorthand": "error",
-    "react/forbid-component-props": "error",
     "react/jsx-uses-react": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
