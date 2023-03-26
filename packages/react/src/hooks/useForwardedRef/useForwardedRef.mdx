@@ -1,0 +1,79 @@
+import { Source } from "@storybook/blocks";
+
+# useForwardedRef
+
+A hook to sync a forwarded ref with an internal ref.
+
+This allows you to use forwarded refs internally in a component.
+
+> The ESLint rule `react-hooks/exhaustive-deps` will tell you that
+> the ref returned by "useForwardedRef" is dynamic and necessary as a
+> dependency when used with `useEffect` and `useCallback`.
+>
+> **This is not true**, as the ref is stable, but adding it as a dependency
+> will not cause any issues.
+
+## Example
+
+Using a forwarded ref inside a component
+
+<Source dark code={`
+import React, { forwardRef, useEffect } from "react";
+import { useForwardedRef } from "@baggie/react";
+
+interface Props {
+    defaultValue: string;
+    onChange: (newValue: string) => void;
+}
+
+export const CustomInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
+    // This is where the magic happens
+    const inputRef = useForwardedRef(ref);
+
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+        // The ESLint rule react-hooks/exhaustive-deps will tell you that
+        // the ref returned by "useForwardedRef" is dynamic and necessary as a dependency.
+        // This is not true, as the ref is stable, but adding it as a dependency
+        // will not cause any issues.
+    }, [inputRef]);
+
+    return (
+        <input
+            ref={inputRef}
+            defaultValue={props.defaultValue}
+            onChange={({ target }) => props.onChange(target.value)}
+        />
+    );
+});
+
+CustomInput.displayName = "CustomInput";
+`} />
+
+Using a ref on the component above
+
+<Source dark code={`
+import React, { useRef, useState } from "react";
+import { CustomInput } from "./components/CustomInput";
+
+export const App = () => {
+    const [inputValue, setInputValue] = useState("Lorem ipsum");
+    const componentRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        if (componentRef.current) {
+            console.log(componentRef.current.value());
+        }
+    }, []);
+
+    return (
+        <CustomInput
+            ref={inputRef}
+            defaultValue={inputValue}
+            onChange={setInputValue}
+        />
+    );
+});
+`} />

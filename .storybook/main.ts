@@ -34,7 +34,7 @@ const config: StorybookConfig = {
         {
             titlePrefix: "React",
             directory: "../packages/react/src",
-            files: "**/*.stories.tsx",
+            files: "**/*.@(stories.tsx|mdx)",
         },
         {
             titlePrefix: "String",
