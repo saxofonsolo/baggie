@@ -1,3 +1,9 @@
+type VerboseOutput = {
+    output: string;
+    realIndexStart: number;
+    realIndexEnd: number;
+};
+
 /**
  * Get part of a string between the start and end indexes, or to the end of the
  * string. HTML entities are each counted as one character, and HTML tags are
@@ -8,14 +14,15 @@
  * They are frequently used to display characters that reserved by HTML,
  * invisible or difficult to type.
  */
-export const substringHtmlSafe = (
+export const substringHtmlSafe = <Verbose extends boolean = false>(
     string: string,
     indexStart: number,
     indexEnd?: number,
     options?: {
-        document: globalThis.Document;
+        document?: globalThis.Document;
+        verbose?: Verbose;
     },
-) => {
+): Verbose extends true ? VerboseOutput : string => {
     const end =
         typeof indexEnd === "undefined"
             ? undefined
@@ -30,5 +37,18 @@ export const substringHtmlSafe = (
     const slicedString = splitString.slice(indexStart, end).join("");
     const tempElement = (options?.document || document).createElement("div");
     tempElement.innerHTML = slicedString;
-    return tempElement.innerHTML;
+    const output = tempElement.innerHTML;
+    const realIndexStart = options?.verbose
+        ? splitString.slice(0, indexStart).join("").length
+        : 0;
+
+    return (
+        options?.verbose
+            ? {
+                  output,
+                  realIndexStart,
+                  realIndexEnd: realIndexStart + slicedString.length,
+              }
+            : output
+    ) as Verbose extends true ? VerboseOutput : string;
 };

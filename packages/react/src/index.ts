@@ -1,3 +1,7 @@
+// Inputs
+export { TextareaWithHighlights } from "./inputs/TextareaWithHighlights/TextareaWithHighlights";
+
+// Wrappers
 export { ConditionalWrapper } from "./wrappers/ConditionalWrapper/ConditionalWrapper";
 export { InputWrapper } from "./wrappers/InputWrapper/InputWrapper";
 

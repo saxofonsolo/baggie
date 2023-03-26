@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
-import { InputWrapper } from "@baggie/react";
+import { InputWrapper, TextareaWithHighlights } from "@baggie/react";
 import { substringHtmlSafe } from "./substringHtmlSafe";
 
 interface Props {
@@ -13,20 +13,28 @@ export const Example = (props: Props) => {
     const [input, setInput] = useState(props.defaultInput);
     const [start, setStart] = useState(props.start);
     const [end, setEnd] = useState(props.end);
+    const [verbose, setVerbose] = useState(false);
 
-    const output = useMemo(() => substringHtmlSafe(input, start, end), [input, start, end]);
+    const { output, realIndexStart, realIndexEnd } = useMemo(
+        () => substringHtmlSafe(input, start, end, { verbose: true }),
+        [input, start, end],
+    );
 
     return (
         <>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                 <InputWrapper label="Input" labelForId="input-input">
-                    <textarea
-                        id="input-input"
-                        value={input}
-                        onChange={({ target }) => setInput(target.value)}
-                        style={{ width: "100%", maxWidth: "360px" }}
-                        rows={3}
-                    />
+                    <div style={{ position: "relative" }}>
+                        <TextareaWithHighlights
+                            id="input-input"
+                            value={input}
+                            onChange={({ target }) => setInput(target.value)}
+                            style={{ width: "100%", maxWidth: "360px" }}
+                            highlights={[realIndexStart, realIndexEnd]}
+                            spellCheck={false}
+                            rows={3}
+                        />
+                    </div>
                 </InputWrapper>
 
                 <div style={{ display: "flex", gap: "10px" }}>
@@ -48,6 +56,15 @@ export const Example = (props: Props) => {
                         />
                     </InputWrapper>
                 </div>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={verbose}
+                        onChange={() => setVerbose((current) => !current)}
+                    />
+                    Verbose
+                </label>
             </div>
 
             <Source
@@ -57,12 +74,16 @@ import { substringHtmlSafe } from "@baggie/string";
 
 const input = \`${input.replace(/`/g, "\\`")}\`;
 
-const indexStart = ${start};
+const indexStart = ${start || 0};
 const indexEnd = ${isNaN(end as number) ? "undefined" : (end as number)};
 
 const output = substringHtmlSafe(input, indexStart, indexEnd);
 /*
-output = \`${output}\`
+${
+    verbose
+        ? `output = ${JSON.stringify({ output, realIndexStart, realIndexEnd }, null, 4)}`
+        : `output = \`${output}\``
+}
 */
 `}
             />
