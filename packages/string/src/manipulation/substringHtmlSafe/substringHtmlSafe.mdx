@@ -1,3 +1,4 @@
+import { Source } from "@storybook/blocks";
 import { Example } from "./Example";
 
 # substringHtmlSafe
@@ -11,6 +12,11 @@ ignored.**
 > They are frequently used to display characters that reserved by HTML,
 > invisible or difficult to type.
 
+## Notice
+
+If you're using this in an environment without a document (like **NodeJS**),
+[see this example](#nodejs).
+
 ## Examples
 
 <Example defaultInput="lorem &amp;amp; <b>ipsum</b> dolor sit amet" start={0} end={12} />
@@ -18,3 +24,28 @@ ignored.**
 <Example defaultInput="lorem &amp;amp; <b>ipsum</b> dolor sit amet" start={7} end={-2} />
 
 <Example defaultInput="<b>sit</b> &amp; amet" start={1} end={5} />
+
+## NodeJS
+
+This tool creates a temporary `<div />` element, which the substring is inserted
+into, in order to close unclosed HTML tags.
+
+If you're using this in an environment without a document (like **NodeJS**), you
+must supply a document (e.g. [jsdom](https://www.npmjs.com/package/jsdom)).
+
+<Source
+    dark
+    code={`
+import { substringHtmlSafe } from "@baggie/string";
+import { JSDOM } from jsdom";
+
+const { window } = new JSDOM("<!DOCTYPE html>");
+
+const input = "<div>...</div>";
+const indexStart = 0;
+const indexEnd = 125;
+
+const substring = substringHtmlSafe(input, indexStart, indexEnd, {
+    document: window.document,
+});
+`} />

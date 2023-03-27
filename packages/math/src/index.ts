@@ -41,9 +41,9 @@ export { keepInsideRadius } from "./coordinates/radius/keepInsideRadius";
 export { getSlope } from "./coordinates/slope/getSlope";
 
 /* Geometry - Circle */
-export { getCircleCircumference } from "./geometry/circle/getCircleCircumference";
-export { getCircleSurface } from "./geometry/circle/getCircleSurface";
-export { getPointsOnCircle } from "./geometry/circle/getPointsOnCircle";
+export { getCircleArea } from "./geometry/circle/getCircleArea/getCircleArea";
+export { getCircleCircumference } from "./geometry/circle/getCircleCircumference/getCircleCircumference";
+export { getPointsOnCircle } from "./geometry/circle/getPointsOnCircle/getPointsOnCircle";
 
 /* Geometry - Cone */
 export { getConeSurface } from "./geometry/cone/getConeSurface";

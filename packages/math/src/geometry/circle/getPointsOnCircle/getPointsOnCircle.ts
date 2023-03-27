@@ -1,5 +1,5 @@
-import { degreesToRadians } from "../../radians/degreesToRadians";
-import { getPercentage } from "../../percentage/getPercentage/getPercentage";
+import { degreesToRadians } from "../../../radians/degreesToRadians";
+import { getPercentage } from "../../../percentage/getPercentage/getPercentage";
 
 interface GetPointsOnCircleProperties {
     radius: number;
@@ -15,34 +15,6 @@ interface GetPointsOnCircleReturn {
 
 /**
  * Get an array of equally distanced points on the perimeter of a circle.
- *
- * @example
- * **Basic usage:**
- * ```ts
- * import { getPointsOnCircle } from "@baggie/math";
- *
- * const points = getPointsOnCircle({ radius: 100, numberOfPoints: 3 });
- * /*
- * points = [
- *     {
- *         degrees: 0,
- *         x: 6.123233995736766e-15,
- *         y: -100,
- *     },
- *     {
- *         degrees: 119.99999999999999,
- *         x: 86.60254037844388,
- *         y: 49.99999999999998,
- *     },
- *     {
- *         degrees: 240,
- *         x: -86.60254037844388,
- *         y: 49.99999999999999,
- *     },
- * ]
- * ```
- *
- * @category Geometry - Circle
  */
 export const getPointsOnCircle = ({
     radius,

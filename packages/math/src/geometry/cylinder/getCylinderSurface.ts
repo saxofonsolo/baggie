@@ -1,4 +1,4 @@
-import { getCircleSurface } from "../circle/getCircleSurface";
+import { getCircleArea } from "../circle/getCircleArea/getCircleArea";
 
 /**
  * Get surface area of a cylinder.
@@ -25,4 +25,4 @@ export const getCylinderSurface = (
     excludeEnds = false,
 ): number =>
     Math.PI * (radius * 2) * height +
-    (excludeEnds ? 0 : 2 * getCircleSurface(radius));
+    (excludeEnds ? 0 : 2 * getCircleArea(radius));

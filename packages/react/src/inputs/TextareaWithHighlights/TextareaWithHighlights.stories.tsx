@@ -41,9 +41,6 @@ export default {
     },
 } as StoryType;
 
-/**
- * If the condition for showing the wrapper is `true`
- */
 export const Default: StoryType = {
     args: {},
 };

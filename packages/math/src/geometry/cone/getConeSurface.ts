@@ -1,4 +1,4 @@
-import { getCircleSurface } from "../circle/getCircleSurface";
+import { getCircleArea } from "../circle/getCircleArea/getCircleArea";
 
 /**
  * Get surface area of a cone.
@@ -24,4 +24,4 @@ export const getConeSurface = (
     height: number,
     excludeBottom = false,
 ): number =>
-    Math.PI * radius * height + (excludeBottom ? 0 : getCircleSurface(radius));
+    Math.PI * radius * height + (excludeBottom ? 0 : getCircleArea(radius));
