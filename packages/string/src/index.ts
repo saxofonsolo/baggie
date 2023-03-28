@@ -1,5 +1,4 @@
 /* Convert */
-export { uppercaseFirstLetter } from "./convert/uppercaseFirstLetter/uppercaseFirstLetter";
 export { convertEmailsToLinks } from "./convert/convertEmailsToLinks";
 export { convertNewLinesToBreaks } from "./convert/convertNewLinesToBreaks";
 export { convertToDate } from "./convert/convertToDate";
@@ -11,6 +10,7 @@ export { getYouTubeId } from "./convert/getYouTubeId";
 export { stripTagsFromString } from "./convert/stripTagsFromString";
 export { substringHtmlEntitySafe } from "./manipulation/substringHtmlEntitySafe/substringHtmlEntitySafe";
 export { substringHtmlSafe } from "./manipulation/substringHtmlSafe/substringHtmlSafe";
+export { uppercaseFirstLetter } from "./manipulation/uppercaseFirstLetter/uppercaseFirstLetter";
 
 /* Interfaces */
 export type { PasswordOptions } from "./_interfaces/passwordOptions.interface";
