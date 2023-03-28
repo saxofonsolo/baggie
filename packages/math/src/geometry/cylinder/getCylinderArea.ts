@@ -1,25 +1,25 @@
 import { getCircleArea } from "../circle/getCircleArea/getCircleArea";
 
 /**
- * Get surface area of a cylinder.
+ * Get the surface area of a cylinder.
  *
  * @example
  * **Basic usage:**
  * ```ts
- * import { getCylinderSurface } from "@baggie/math";
+ * import { getCylinderArea } from "@baggie/math";
  *
  * const radius = 10;
  * const height = 20;
- * const volume = getCylinderSurface(radius, height);
- * // volume = 1884.9555921538758
+ * const area = getCylinderArea(radius, height);
+ * // area = 1884.9555921538758
  *
- * const volumeWithoutEnds = getCylinderSurface(radius, height, true);
- * // volume = 1256.6370614359173
+ * const areaWithoutEnds = getCylinderArea(radius, height, true);
+ * // area = 1256.6370614359173
  * ```
  *
  * @category Geometry - Cylinder
  */
-export const getCylinderSurface = (
+export const getCylinderArea = (
     radius: number,
     height: number,
     excludeEnds = false,

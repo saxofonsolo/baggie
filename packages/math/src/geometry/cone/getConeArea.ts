@@ -1,25 +1,25 @@
 import { getCircleArea } from "../circle/getCircleArea/getCircleArea";
 
 /**
- * Get surface area of a cone.
+ * Get the surface area of a cone.
  *
  * @example
  * **Basic usage:**
  * ```ts
- * import { getConeSurface } from "@baggie/math";
+ * import { getConeArea } from "@baggie/math";
  *
  * const radius = 10;
  * const height = 20;
- * const surface = getConeSurface(radius, height);
- * // surface = 942.4777960769379
+ * const area = getConeArea(radius, height);
+ * // area = 942.4777960769379
  *
- * const surfaceWithoutBottom = getConeSurface(radius, height, true);
- * // surface = 628.3185307179587
+ * const areaWithoutBottom = getConeArea(radius, height, true);
+ * // areaWithoutBottom = 628.3185307179587
  * ```
  *
  * @category Geometry - Cone
  */
-export const getConeSurface = (
+export const getConeArea = (
     radius: number,
     height: number,
     excludeBottom = false,

@@ -1,5 +1,5 @@
 /**
- * Check if a number is rounded to the desired amount of decimal places.
+ * Check if a number is rounded to the maximum desired amount of decimal places.
  */
 export const isNumberRound = (
     number: number,

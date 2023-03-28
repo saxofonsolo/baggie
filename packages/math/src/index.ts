@@ -46,28 +46,28 @@ export { getCircleCircumference } from "./geometry/circle/getCircleCircumference
 export { getPointsOnCircle } from "./geometry/circle/getPointsOnCircle/getPointsOnCircle";
 
 /* Geometry - Cone */
-export { getConeSurface } from "./geometry/cone/getConeSurface";
+export { getConeArea } from "./geometry/cone/getConeArea";
 export { getConeVolume } from "./geometry/cone/getConeVolume";
 
 /* Geometry - Cuboid */
-export { getCuboidSurface } from "./geometry/cuboid/getCuboidSurface";
+export { getCuboidArea } from "./geometry/cuboid/getCuboidArea";
 export { getCuboidVolume } from "./geometry/cuboid/getCuboidVolume";
 
 /* Geometry - Cylinder */
-export { getCylinderSurface } from "./geometry/cylinder/getCylinderSurface";
+export { getCylinderArea } from "./geometry/cylinder/getCylinderArea";
 export { getCylinderVolume } from "./geometry/cylinder/getCylinderVolume";
 
 /* Geometry - Rectangle */
-export { getRectanglePerimeter } from "./geometry/rectangle/getRectanglePerimeter";
-export { getRectangleSurface } from "./geometry/rectangle/getRectangleSurface";
+export { getRectanglePerimeter } from "./geometry/rectangle/getRectanglePerimeter/getRectanglePerimeter";
+export { getRectangleArea } from "./geometry/rectangle/getRectangleArea/getRectangleArea";
 
 /* Geometry - Sphere */
-export { getSphereSurface } from "./geometry/sphere/getSphereSurface";
+export { getSphereArea } from "./geometry/sphere/getSphereArea";
 export { getSphereVolume } from "./geometry/sphere/getSphereVolume";
 
 /* Geometry - Triangle */
 export { getTrianglePerimeter } from "./geometry/triangle/getTrianglePerimeter";
-export { getTriangleSurface } from "./geometry/triangle/getTriangleSurface";
+export { getTriangleArea } from "./geometry/triangle/getTriangleArea";
 
 /* Helpers */
 export { zeroIfNotNumber } from "./helpers/zeroIfNotNumber/zeroIfNotNumber";
