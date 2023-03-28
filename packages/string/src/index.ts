@@ -1,5 +1,5 @@
 /* Convert */
-export { capitalizeFirstLetter } from "./convert/capitalizeFirstLetter";
+export { uppercaseFirstLetter } from "./convert/uppercaseFirstLetter/uppercaseFirstLetter";
 export { convertEmailsToLinks } from "./convert/convertEmailsToLinks";
 export { convertNewLinesToBreaks } from "./convert/convertNewLinesToBreaks";
 export { convertToDate } from "./convert/convertToDate";

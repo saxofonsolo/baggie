@@ -43,7 +43,7 @@ if (!match) {
     ]);
 } else if (
     message.length > maxLength &&
-    !acceptedStart[match[1]].ignoreMaxLength
+    !acceptedStart[match[1].replace(/\(.*?\)!?/, "")].ignoreMaxLength
 ) {
     log.error([
         `Commit message is too long at ${message.length} characters.`,
