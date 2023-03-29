@@ -1,4 +1,4 @@
-import { getScrollPosition } from "../getScrollPosition";
+import { getScrollPosition } from "./getScrollPosition";
 
 interface ScrollLockSettings {
     className?: string;

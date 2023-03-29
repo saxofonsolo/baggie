@@ -86,7 +86,7 @@
             "selector": "typeProperty",
             "format": ["camelCase"],
             "custom": {
-              "regex": "^(className|style)$",
+              "regex": "^style$",
               "match": false
             }
           },

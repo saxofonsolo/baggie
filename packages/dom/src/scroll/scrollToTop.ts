@@ -1,9 +1,4 @@
-import {
-    isBrowser,
-    prefersReducedMotion,
-    supportsSmoothScroll,
-} from "@baggie/detection";
-import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
+import { isBrowser, prefersReducedMotion } from "@baggie/detection";
 import { getScrollPosition } from "./getScrollPosition";
 
 /**
@@ -20,15 +15,11 @@ export const scrollToTop = (options?: {
         const targetY = options?.offset ? Math.abs(options.offset) : 0;
 
         if (options?.smooth !== false && !prefersReducedMotion) {
-            if (supportsSmoothScroll) {
-                window.scrollTo({
-                    behavior: "smooth",
-                    left: targetX,
-                    top: targetY,
-                });
-            } else {
-                void smoothScrollFallback(targetX, targetY);
-            }
+            window.scrollTo({
+                behavior: "smooth",
+                left: targetX,
+                top: targetY,
+            });
         } else {
             window.scrollTo(targetX, targetY);
         }
