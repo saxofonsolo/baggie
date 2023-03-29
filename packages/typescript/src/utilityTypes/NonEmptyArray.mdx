@@ -11,15 +11,14 @@ Require an array to have at least one value.
 <Source dark language="ts" code={`
 import { NonEmptyArray } from "@baggie/typescript";
 
-const addNumbers = (numbers: NonEmptyArray<number>): number =>
-    numbers.reduce((a, b) => a + b, 0);
+type ArrayWithNumbers = NonEmptyArray<number>;
 
 // ✅ Good
-addNumbers([1, 2, 3]);
+const arr: ArrayWithNumbers = [1, 2, 3];
 
 // ✅ Good
-addNumbers([1]);
+const arr: ArrayWithNumbers = [1];
 
 // ⛔️ TypeScript error
-addNumbers([]);
+const arr: ArrayWithNumbers = [];
 `} />

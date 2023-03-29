@@ -22,7 +22,6 @@ describe("convertEmailsToLinks", () => {
     });
 
     test("Convert a single email address with custom subject", () => {
-        document.title = "Page title";
         expect(
             convertEmailsToLinks(
                 `This text has a single email@address.com.`,
