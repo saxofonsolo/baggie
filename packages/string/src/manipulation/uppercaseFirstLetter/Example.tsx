@@ -48,7 +48,9 @@ import { uppercaseFirstLetter } from "@baggie/string";
 const input = \`${input.replace(/`/g, "\\`")}\`;
 
 const output = uppercaseFirstLetter(input${lowercaseRest ? ", { lowercaseRest: true }" : ""});
-// output = \`${output}\`
+/*
+output = \`${output}\`
+*/
 `}
             />
         </>

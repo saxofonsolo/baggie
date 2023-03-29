@@ -19,6 +19,18 @@ describe("getYouTubeId", () => {
         );
     });
 
+    test("Get YouTube ID from a text", () => {
+        expect(
+            getYouTubeId(
+                "Lorem ipsum dolor https://youtu.be/N7-7HJCXx10 sit amet",
+            ),
+        ).toBe("N7-7HJCXx10");
+    });
+
+    test("Get YouTube ID from a YouTube ID", () => {
+        expect(getYouTubeId("N7-7HJCXx10")).toBe("N7-7HJCXx10");
+    });
+
     test("Get YouTube ID from embed URL", () => {
         expect(getYouTubeId("https://www.youtube.com/embed/N7-7HJCXx10")).toBe(
             "N7-7HJCXx10",

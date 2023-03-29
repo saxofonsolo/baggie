@@ -18,4 +18,4 @@
  * @category Regex
  */
 export const getYouTubeIdRegex = (): RegExp =>
-    /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/+|.*[?&]v=)|youtu\.be\/)([^"&?/ ]{11})/i;
+    /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/+|.*[?&]v=)|youtu\.be\/|^)([^"&?/ ]{11})\b/i;

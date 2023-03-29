@@ -4,6 +4,8 @@ import { Source } from "@storybook/blocks";
 
 Replace one type with another - recursively.
 
+## Example
+
 <Source dark language="ts" code={`
 import { ReplaceType } from "@baggie/typescript";
 
@@ -20,7 +22,9 @@ interface Dictionary {
             quantity: number;
         };
     };
-};
+}
+
+// Valid object
 
 const dictionary: Dictionary = {
     title: "Headline",
@@ -40,6 +44,25 @@ const dictionary: Dictionary = {
 // Modify the Dictionary type to accept a function instead of strings
 
 type Translations = ReplaceType<Dictionary, string, (language: "en" | "da") => string>;
+
+// The type above matches the interface below
+
+interface Translations {
+    title: (language: "en" | "da") => string;
+    amount: number;
+    common: {
+        ok: (language: "en" | "da") => string;
+        cancel: (language: "en" | "da") => string;
+    };
+    screen1: {
+        header: {
+            text: (language: "en" | "da") => string;
+            quantity: number;
+        };
+    };
+}
+
+// Valid object
 
 const translations: Translations = {
     title: (language) => language === "da" ? "Overskrift" : "Headline",
