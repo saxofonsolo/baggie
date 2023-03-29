@@ -68,7 +68,7 @@ if (!match) {
 } else {
     const splitMessage = message.split(/: /s);
     const newMessage = `${splitMessage[0]}: ${
-        acceptedStart[match[1].replace(/\([a-z]+\)!?|!/, "")].emoji
+        acceptedStart[match[1].replace(/\(.*?\)!?|!/, "")].emoji
     } ${splitMessage[1].charAt(0).toLowerCase() + splitMessage[1].slice(1)}`;
 
     fs.writeFileSync(filePath, newMessage);
