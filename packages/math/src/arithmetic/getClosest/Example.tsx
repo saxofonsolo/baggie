@@ -41,7 +41,7 @@ export const Example = (props: Props) => {
                 </InputWrapper>
 
                 <InputWrapper label="Output" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{sorted.join(", ")}</div>
+                    <div style={{ padding: "5px" }}>[{sorted.join(", ")}]</div>
                 </InputWrapper>
             </div>
 
@@ -54,7 +54,7 @@ const target = ${target};
 const numbers = [${numbers.join(", ")}];
 
 const sorted = getClosest(target, numbers);
-// sorted = ${sorted.join(", ")}
+// sorted = [${sorted.join(", ")}]
 `}
             />
         </>

@@ -20,8 +20,6 @@ export { convertToCoordinates } from "./coordinates/convertToCoordinates";
 
 /* Coordinates - Angle */
 export { getAngle } from "./coordinates/angle/getAngle";
-export { getClosestAngles } from "./coordinates/angle/getClosestAngles";
-export { isAngleInRange } from "./coordinates/angle/isAngleInRange";
 
 /* Coordinates - Bounds */
 export { getBounds } from "./coordinates/bounds/getBounds";
@@ -39,6 +37,10 @@ export { keepInsideRadius } from "./coordinates/radius/keepInsideRadius";
 
 /* Coordinates - Slope */
 export { getSlope } from "./coordinates/slope/getSlope";
+
+/* Geometry - Angle */
+export { getClosestAngles } from "./geometry/angle/getClosestAngles";
+export { isAngleInRange } from "./geometry/angle/isAngleInRange";
 
 /* Geometry - Circle */
 export { getCircleArea } from "./geometry/circle/getCircleArea/getCircleArea";

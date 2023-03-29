@@ -52,5 +52,10 @@ describe("getNewLineRegex", () => {
                 "-",
             ),
         ).toBe("This is a-text with-a single-line break.");
+
+        expect(
+            `This is a
+text`.replace(getNewLineRegex(true), "-"),
+        ).toBe("This is a-text");
     });
 });

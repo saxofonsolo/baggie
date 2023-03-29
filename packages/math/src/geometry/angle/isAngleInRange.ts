@@ -19,7 +19,7 @@
  * // checkD = false
  * ```
  *
- * @category Coordinates - Angle
+ * @category Geometry - Angle
  */
 export const isAngleInRange = (
     angle: number,

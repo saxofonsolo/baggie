@@ -18,7 +18,7 @@
  * // sorted = [0, 10, 300, 100, 200]
  * ```
  *
- * @category Coordinates - Angle
+ * @category Geometry - Angle
  */
 export const getClosestAngles = (target: number, angles: number[]): number[] =>
     [...angles].sort((a, b) => {
