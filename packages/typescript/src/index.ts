@@ -1,6 +1,7 @@
 export type { DistinctProperties } from "./utilityTypes/DistinctProperties";
 export type { NonEmptyArray } from "./utilityTypes/NonEmptyArray";
 export type { RecursivePartial } from "./utilityTypes/RecursivePartial";
+export type { RenameProperties } from "./utilityTypes/RenameProperties";
 export type { ReplaceAllTypes } from "./utilityTypes/ReplaceAllTypes";
 export type { ReplaceType } from "./utilityTypes/ReplaceType";
 export type { RequireAtLeastOne } from "./utilityTypes/RequireAtLeastOne";

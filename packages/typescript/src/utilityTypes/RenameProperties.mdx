@@ -1,0 +1,33 @@
+import { Source } from "@storybook/blocks";
+
+# RenameProperties
+
+Rename properties in an interface.
+
+> This type comes from here: https://stackoverflow.com/q/59071058/1446188
+
+<Source dark language="ts" code={`
+import { RenameProperties } from "@baggie/typescript";
+
+interface Product {
+    name: string;
+    sale: boolean;
+    number: number;
+    amount?: number;
+}
+
+type NewProduct = RenameProperties<Product, {
+    sale: "isOnSale",
+    number: "productNumber",
+    amount: "quantity",
+}>;
+
+// The type above matches the interface below
+
+interface NewProduct {
+    name: string;
+    isOnSale: boolean;
+    productNumber: number;
+    quantity?: number;
+}
+`} />
