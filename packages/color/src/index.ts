@@ -9,6 +9,9 @@ export { getDarkness } from "./brightness/getDarkness";
 export { isColorBrighterThan } from "./brightness/isColorBrighterThan";
 export { isColorDarkerThan } from "./brightness/isColorDarkerThan";
 
+/* Check */
+export { isHexColor } from "./check/isHexColor";
+
 /* Combinations */
 export { getAnalogousColorScheme } from "./combinations/getAnalogousColorScheme";
 export { getComplementaryColorScheme } from "./combinations/getComplementaryColorScheme";
