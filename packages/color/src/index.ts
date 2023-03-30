@@ -10,7 +10,7 @@ export { isColorBrighterThan } from "./brightness/isColorBrighterThan";
 export { isColorDarkerThan } from "./brightness/isColorDarkerThan";
 
 /* Check */
-export { isHexColor } from "./check/isHexColor";
+export { isHexColor } from "./check/isHexColor/isHexColor";
 
 /* Combinations */
 export { getAnalogousColorScheme } from "./combinations/getAnalogousColorScheme";
@@ -29,6 +29,7 @@ export { convertHslToRgb } from "./convert/convertHslToRgb";
 export { convertRgbToHex } from "./convert/convertRgbToHex";
 export { convertRgbToHsl } from "./convert/convertRgbToHsl";
 export { convertRgbToLab } from "./convert/convertRgbToLab";
+export { normalizeHexColor } from "./convert/normalizeHexColor";
 export { parseColor } from "./convert/parseColor";
 
 /* Manipulate */

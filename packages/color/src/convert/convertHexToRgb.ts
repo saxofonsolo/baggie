@@ -1,5 +1,5 @@
 import { RGBA } from "../_interfaces/rgba.interface";
-import { isHexColor } from "../check/isHexColor";
+import { isHexColor } from "../check/isHexColor/isHexColor";
 
 /**
  * Convert an hex color to an RGB color value.
