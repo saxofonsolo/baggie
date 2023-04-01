@@ -1,6 +1,6 @@
 {
   "name": "@baggie/math",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "A library of math tools for JavaScript and TypeScript. Calculate percentages, angles, coordinates, time differences, geometry etc.",
   "license": "MIT",
   "main": "lib/index.js",

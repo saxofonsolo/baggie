@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/bag-of-tricks/baggie/compare/detection-v1.5.0...detection-v2.0.0) (2023-04-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🔥 remove functions for IE11
+
+### remove
+
+* 🔥 remove functions for IE11 ([bde6ef4](https://github.com/bag-of-tricks/baggie/commit/bde6ef4d734347b365a543cf334fae31e388f74f))
+
 ## [1.3.5](https://github.com/bag-of-tricks/baggie/compare/v1.3.5) (2021-08-24)
 
 ### Bug Fixes
