@@ -5,15 +5,15 @@ describe("screenColors", () => {
         expect(
             screenColors(
                 { red: 255, green: 0, blue: 0 },
-                { red: 0, green: 255, blue: 0 }
-            )
+                { red: 0, green: 255, blue: 0 },
+            ),
         ).toEqual(
             expect.objectContaining({
                 alpha: 1,
                 blue: 0,
                 green: 255,
                 red: 255,
-            })
+            }),
         );
     });
 });

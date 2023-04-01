@@ -3,29 +3,43 @@ import { getYouTubeId } from "./getYouTubeId";
 describe("getYouTubeId", () => {
     test("Get YouTube ID from standard URL", () => {
         expect(
-            getYouTubeId("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            getYouTubeId("https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
         ).toBe("dQw4w9WgXcQ");
 
         expect(
             getYouTubeId(
-                "https://www.youtube.com/watch?v=eDtGYygcPyw&ab_channel=Vincinator"
-            )
+                "https://www.youtube.com/watch?v=eDtGYygcPyw&ab_channel=Vincinator",
+            ),
         ).toBe("eDtGYygcPyw");
     });
 
     test("Get YouTube ID from short URL", () => {
         expect(getYouTubeId("https://youtu.be/N7-7HJCXx10")).toBe(
-            "N7-7HJCXx10"
+            "N7-7HJCXx10",
         );
+    });
+
+    test("Get YouTube ID from a text", () => {
+        expect(
+            getYouTubeId(
+                "Lorem ipsum dolor https://youtu.be/N7-7HJCXx10 sit amet",
+            ),
+        ).toBe("N7-7HJCXx10");
+    });
+
+    test("Get YouTube ID from a YouTube ID", () => {
+        expect(getYouTubeId("N7-7HJCXx10")).toBe("N7-7HJCXx10");
     });
 
     test("Get YouTube ID from embed URL", () => {
         expect(getYouTubeId("https://www.youtube.com/embed/N7-7HJCXx10")).toBe(
-            "N7-7HJCXx10"
+            "N7-7HJCXx10",
         );
 
         expect(
-            getYouTubeId("https://www.youtube.com/embed/N7-7HJCXx10?autoplay=1")
+            getYouTubeId(
+                "https://www.youtube.com/embed/N7-7HJCXx10?autoplay=1",
+            ),
         ).toBe("N7-7HJCXx10");
     });
 

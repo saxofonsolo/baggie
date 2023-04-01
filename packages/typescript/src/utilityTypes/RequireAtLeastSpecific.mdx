@@ -1,0 +1,57 @@
+import { Source } from "@storybook/blocks";
+
+# RequireAtLeastSpecific
+
+Require at least one specific property of an interface.
+
+> This type comes from here: https://stackoverflow.com/a/49725198
+
+## Examples
+
+Require at least **one specific property**
+
+<Source dark language="ts" code={`
+import { RequireAtLeastSpecific } from "@baggie/typescript";
+
+interface TestInterface {
+    propA: string;
+    propB: number;
+    propC: boolean;
+}
+
+type AtLeastPropA = RequireAtLeastSpecific<TestInterface, "propA">;
+
+// The type above matches the interface below
+
+interface AtLeastPropA {
+    propA: string;
+    propB?: number;
+    propC?: boolean;
+}
+`} />
+
+Require at least **multiple specific properties**
+
+<Source dark language="ts" code={`
+import { RequireAtLeastSpecific } from "@baggie/typescript";
+
+interface TestInterface {
+    propA: string;
+    propB: number;
+    propC: boolean;
+    propD: string;
+    propE?: number;
+}
+
+type AtLeastMultiple = RequireAtLeastSpecific<TestInterface, "propA" | "propC>;
+
+// The type above matches the interface below
+
+interface AtLeastMultiple {
+    propA: string;
+    propB?: number;
+    propC: boolean;
+    propD?: string;
+    propE?: number;
+}
+`} />

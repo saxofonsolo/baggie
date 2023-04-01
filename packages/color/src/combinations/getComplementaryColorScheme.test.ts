@@ -3,7 +3,7 @@ import { getComplementaryColorScheme } from "./getComplementaryColorScheme";
 describe("getComplementaryColorScheme", () => {
     test("Get colors", () => {
         expect(
-            getComplementaryColorScheme({ red: 255, green: 255, blue: 0 })
+            getComplementaryColorScheme({ red: 255, green: 255, blue: 0 }),
         ).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({
@@ -17,7 +17,7 @@ describe("getComplementaryColorScheme", () => {
                     blue: 255,
                     alpha: 1,
                 }),
-            ])
+            ]),
         );
     });
 });

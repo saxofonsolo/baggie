@@ -13,19 +13,19 @@ describe("isDateValid", () => {
         expect(
             isDateValid("01-31-2020", {
                 monthBeforeDay: true,
-            })
+            }),
         ).toBe(true);
 
         expect(
             isDateValid("01312020", {
                 monthBeforeDay: true,
-            })
+            }),
         ).toBe(true);
 
         expect(
             isDateValid("month: 01, day: 31, year: 2020", {
                 monthBeforeDay: true,
-            })
+            }),
         ).toBe(true);
     });
 
@@ -34,21 +34,21 @@ describe("isDateValid", () => {
             isDateValid("00-31-2020", {
                 monthBeforeDay: true,
                 zeroBasedMonth: true,
-            })
+            }),
         ).toBe(true);
 
         expect(
             isDateValid("00312020", {
                 monthBeforeDay: true,
                 zeroBasedMonth: true,
-            })
+            }),
         ).toBe(true);
 
         expect(
             isDateValid("month: 0, day: 31, year: 2020", {
                 monthBeforeDay: true,
                 zeroBasedMonth: true,
-            })
+            }),
         ).toBe(true);
     });
 
@@ -58,7 +58,7 @@ describe("isDateValid", () => {
                 day: 31,
                 month: 1,
                 year: 2020,
-            })
+            }),
         ).toBe(true);
 
         expect(
@@ -66,7 +66,7 @@ describe("isDateValid", () => {
                 day: "31",
                 month: "01",
                 year: "2020",
-            })
+            }),
         ).toBe(true);
 
         expect(
@@ -78,8 +78,8 @@ describe("isDateValid", () => {
                 },
                 {
                     zeroBasedMonth: true,
-                }
-            )
+                },
+            ),
         ).toBe(true);
     });
 });

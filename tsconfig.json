@@ -1,46 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ESNext",
     "declaration": true,
-    "downlevelIteration": true,
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
+    "strictBindCallApply": true,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "react-jsx",
+    "types": ["jest", "node"]
   },
-  "typedocOptions": {
-    "name": "baggie",
-    "readme": "./DOCS.md",
-    "media": "/media",
-    "out": "docs",
-    "entryPoints": [
-      "packages/color/src/index.ts",
-      "packages/detection/src/index.ts",
-      "packages/dom/src/index.ts",
-      "packages/functions/src/index.ts",
-      "packages/math/src/index.ts",
-      "packages/string/src/index.ts",
-      "packages/typescript/src/index.ts"
-    ],
-    "exclude": "**/src/index.ts",
-    "external-modulemap": ".*packages\/([^\/]+)\/.*",
-    "categorizeByGroup": false,
-    "excludeExternals": true,
-    "excludePrivate": true,
-    "excludeProtected": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

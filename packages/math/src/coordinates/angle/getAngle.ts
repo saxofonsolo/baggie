@@ -35,7 +35,7 @@ export const getAngle = (
     options?: {
         clockwise?: boolean;
         offset?: number;
-    }
+    },
 ): number => {
     const settings = {
         clockwise: false,

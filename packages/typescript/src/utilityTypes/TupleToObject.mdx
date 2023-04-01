@@ -1,0 +1,46 @@
+import { Source } from "@storybook/blocks";
+
+# TupleToObject
+
+Convert tuple to object.
+
+> A tuple is an array where the order and types are important.
+>
+> **Be aware:** In TypeScript, tuples may have names (like arguments in a function) but those cannot be extracted,
+> so you will have to supply them manually.
+
+> This type comes from here: https://stackoverflow.com/a/69713319/1446188
+
+## Examples
+
+<Source dark language="ts" code={`
+import { TupleToObject } from "@baggie/typescript";
+
+type Tuple = [a: string, b: number, c: boolean];
+
+type ObjectA = TupleToObject<Tuple, ["a", "b", "c"]>
+
+// The type above matches the type below
+
+type ObjectA {
+    a: string;
+    b: number;
+    c: boolean;
+}
+`} />
+
+<Source dark language="ts" code={`
+import { TupleToObject } from "@baggie/typescript";
+
+type Tuple = [a: string, b: number, c: boolean];
+
+type ObjectB = TupleToObject<Tuple, ["name", "age", "isAvailable"]>
+
+// The type above matches the type below
+
+type ObjectB {
+    name: string;
+    age: number;
+    isAvailable: boolean;
+}
+`} />

@@ -6,5 +6,5 @@ import { dontMatchMedia } from "./_helpers/dontMatchMedia.helper";
  * @category Media Features
  */
 export const prefersReducedMotion = dontMatchMedia(
-    "(prefers-reduced-motion: no-preference)"
+    "(prefers-reduced-motion: no-preference)",
 );

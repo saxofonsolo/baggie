@@ -8,5 +8,5 @@ import { isElementParentTo } from "./isElementParentTo";
 export const isElementChildOf = (
     child: Element,
     parent: Element,
-    immediateChild = false
+    immediateChild = false,
 ): boolean => isElementParentTo(parent, child, immediateChild);

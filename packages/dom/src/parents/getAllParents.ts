@@ -36,7 +36,7 @@ export const getAllParents = (
         matchSelector?: string;
         limit?: number;
         maxDistance?: number | string | HTMLElement;
-    }
+    },
 ): Element[] => {
     const matchSelector = options?.matchSelector || "*";
     const limit = options?.limit || Infinity;
@@ -63,7 +63,7 @@ export const getAllParents = (
         passedMaxDistance = maxDistanceIsNumber
             ? distance === maxDistance
             : maxDistanceIsString
-            ? currentElement.matches(maxDistance as string)
+            ? currentElement.matches(maxDistance)
             : currentElement === maxDistance;
     }
 

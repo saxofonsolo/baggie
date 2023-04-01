@@ -22,7 +22,7 @@ import { degreesToRadians } from "../../radians/degreesToRadians";
 export const getDistanceOnSphere = (
     from: CoordinatesLatLng,
     to: CoordinatesLatLng,
-    diameter: number
+    diameter: number,
 ): number => {
     const dLat = degreesToRadians(to.lat - from.lat);
     const dLon = degreesToRadians(to.lng - from.lng);

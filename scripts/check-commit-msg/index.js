@@ -1,25 +1,25 @@
 const fs = require("fs");
 const log = require("../_helpers/log.helper");
 
-const filePath = process.env.HUSKY_GIT_PARAMS;
+const filePath = process.argv[2];
 const textFromFile = fs.readFileSync(filePath, "utf-8");
 
 const minLength = 10;
 const maxLength = 70;
 
 const acceptedStart = {
-    Merge: { emoji: "🔀", ignoreMaxLength: true },
-    Revert: { emoji: "⏪", ignoreMaxLength: true },
-    "feat:": { emoji: "✨" },
-    "remove:": { emoji: "🔥" },
-    "fix:": { emoji: "🐛" },
-    "refactor:": { emoji: "♻" },
-    "test:": { emoji: "✅" },
-    "docs:": { emoji: "📝" },
-    "chore:": { emoji: "👷" },
-    "config:": { emoji: "🔧" },
-    "deploy:": { emoji: "🚀" },
-    "debug:": { emoji: "🩺" },
+    Merge: { ignoreMaxLength: true },
+    Revert: { ignoreMaxLength: true },
+    "feat:": {},
+    "remove:": {},
+    "fix:": {},
+    "refactor:": {},
+    "test:": {},
+    "docs:": {},
+    "chore:": {},
+    "config:": {},
+    "deploy:": {},
+    "debug:": {},
 };
 
 // Remove excessive whitespace and trailing dot
@@ -27,8 +27,8 @@ const message = textFromFile.trim().replace(/ +/, " ").replace(/\.$/, "");
 
 const test = new RegExp(
     `^(${Object.keys(acceptedStart)
-        .map((key) => key.replace(/^([a-z]+):$/, "$1(?:\\([a-z]+\\))?:"))
-        .join("|")})\\s+(.*)`
+        .map((key) => key.replace(/^([a-z]+):$/, "$1(?:\\([a-z]+\\))?!?:"))
+        .join("|")})\\s+(.*)`,
 );
 const match = message.match(test);
 
@@ -43,7 +43,7 @@ if (!match) {
     ]);
 } else if (
     message.length > maxLength &&
-    !acceptedStart[match[1]].ignoreMaxLength
+    !acceptedStart[match[1].replace(/\(.*?\)!?/, "")].ignoreMaxLength
 ) {
     log.error([
         `Commit message is too long at ${message.length} characters.`,
@@ -66,8 +66,10 @@ if (!match) {
         message,
     ]);
 } else {
-    const newMessage = `${
-        acceptedStart[match[1].replace(/\([a-z]+\)/, "")].emoji
-    } ${message.charAt(0).toLowerCase() + message.slice(1)}`;
+    const splitMessage = message.split(/: /s);
+    const newMessage = `${splitMessage[0]}: ${
+        splitMessage[1].charAt(0).toLowerCase() + splitMessage[1].slice(1)
+    }`;
+
     fs.writeFileSync(filePath, newMessage);
 }

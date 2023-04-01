@@ -1,0 +1,31 @@
+import { Source } from "@storybook/blocks";
+
+# RecursivePartial
+
+Make all properties of a type optional - recursively.
+
+## Example
+
+<Source dark language="ts" code={`
+import { RecursivePartial } from "@baggie/typescript";
+
+interface Styles {
+    fontSizes: {
+        small: number;
+        large: number;
+    };
+    lineHeight: number;
+}
+
+type OptionalStyles = RecursivePartial<Styles>;
+
+// The type above matches the interface below
+
+interface Styles {
+    fontSizes?: {
+        small?: number;
+        large?: number;
+    };
+    lineHeight?: number;
+}
+`} />

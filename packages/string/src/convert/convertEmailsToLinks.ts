@@ -1,25 +1,39 @@
 import { getEmailRegex } from "../regex/getEmailRegex";
 
+interface ReplacerArgs {
+    email: string;
+    href: string;
+}
+
 /**
  * Find email addresses in a string and convert them to links.
- *
- * @category Convert
  */
 export const convertEmailsToLinks = (
     string: string,
-    subject: boolean | string = false
+    options?: {
+        subject?: boolean | string;
+        replacer?: (args: ReplacerArgs) => string;
+    },
 ): string => {
-    const setSubject = !!subject;
-    const subjectString = `?subject=${
-        typeof subject === "string"
-            ? subject
-            : `${document.title} @ ${window.location.href}`
-    }`;
-    return string.replace(
-        getEmailRegex(true),
-        (match) =>
-            `<a href="mailto:${
-                match + (setSubject ? subjectString : "")
-            }">${match}</a>`
+    const getReplacerArgs = (email: string): ReplacerArgs => ({
+        email,
+        href: `mailto:${
+            email +
+            (options?.subject
+                ? `?subject=${
+                      typeof options.subject === "string"
+                          ? options.subject
+                          : `${document.title} @ ${window.location.href}`
+                  }`
+                : "")
+        }`,
+    });
+    const defaultReplacer = (args: ReplacerArgs) =>
+        `<a href="${args.href}">${args.email}</a>`;
+
+    return string.replace(getEmailRegex(true), (email) =>
+        options?.replacer
+            ? options.replacer(getReplacerArgs(email))
+            : defaultReplacer(getReplacerArgs(email)),
     );
 };

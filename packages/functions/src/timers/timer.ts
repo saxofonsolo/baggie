@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 /**
  * An alternative to `setTimeout` that can be paused, resumed and reset.
  *
@@ -62,7 +60,7 @@ export class Timer {
         this.timerId = window.setTimeout(
             () => this.done(),
             this.remainingMs,
-            ...this.parameters
+            ...this.parameters,
         );
     }
 

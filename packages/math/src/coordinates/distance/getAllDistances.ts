@@ -111,7 +111,7 @@ export const getAllDistances = (
     });
 
     allDistances.sort((a, b) =>
-        a.distance > b.distance ? 1 : b.distance > a.distance ? -1 : 0
+        a.distance > b.distance ? 1 : b.distance > a.distance ? -1 : 0,
     );
 
     return allDistances;

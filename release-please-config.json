@@ -1,0 +1,13 @@
+{
+  "packages": {
+    "packages/color": {},
+    "packages/detection": {},
+    "packages/dom": {},
+    "packages/functions": {},
+    "packages/math": {},
+    "packages/react": {},
+    "packages/string": {},
+    "packages/typescript": {}
+  },
+  "plugins": ["sentence-case"]
+}

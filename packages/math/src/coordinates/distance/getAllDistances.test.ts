@@ -7,8 +7,8 @@ describe("getAllDistances", () => {
                 { x: 9, y: 30 },
                 { x: 10, y: 2 },
                 { x: 20, y: 20 },
-                { x: -20, y: 20 }
-            )
+                { x: -20, y: 20 },
+            ),
         ).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({
@@ -32,7 +32,7 @@ describe("getAllDistances", () => {
                         to: expect.objectContaining({ x: -20, y: 20 }),
                     }),
                 }),
-            ])
+            ]),
         );
     });
 
@@ -43,8 +43,8 @@ describe("getAllDistances", () => {
                 { x: -10, y: -10, name: "a" },
                 { x: 1, y: 1, name: "b" },
                 { x: 2, y: 2, name: "c" },
-                { x: 30, y: 50, name: "d" }
-            )
+                { x: 30, y: 50, name: "d" },
+            ),
         ).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({
@@ -125,7 +125,7 @@ describe("getAllDistances", () => {
                         }),
                     }),
                 }),
-            ])
+            ]),
         );
     });
 });

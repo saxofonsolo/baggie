@@ -15,7 +15,7 @@ import { convertRgbToHsl } from "../convert/convertRgbToHsl";
 export const getAnalogousColorScheme = (
     color: RGBA,
     amount = 3,
-    steps = 12
+    steps = 12,
 ): RGBA[] => {
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(color);
     const colors = [color];

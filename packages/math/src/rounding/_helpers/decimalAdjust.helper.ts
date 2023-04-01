@@ -1,4 +1,4 @@
-import { isNumberRound } from "../isNumberRound";
+import { isNumberRound } from "../isNumberRound/isNumberRound";
 
 /**
  * @internal
@@ -6,7 +6,7 @@ import { isNumberRound } from "../isNumberRound";
 export const decimalAdjust = (
     number: number,
     decimalPlaces: number,
-    func: (number: number) => number
+    func: (number: number) => number,
 ): number => {
     if (isNumberRound(number, decimalPlaces || 0)) {
         return number;

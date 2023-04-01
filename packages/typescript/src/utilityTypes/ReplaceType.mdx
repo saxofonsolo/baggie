@@ -1,0 +1,81 @@
+import { Source } from "@storybook/blocks";
+
+# ReplaceType
+
+Replace one type with another - recursively.
+
+## Example
+
+<Source dark language="ts" code={`
+import { ReplaceType } from "@baggie/typescript";
+
+interface Dictionary {
+    title: string;
+    amount: number;
+    common: {
+        ok: string;
+        cancel: string;
+    };
+    screen1: {
+        header: {
+            text: string;
+            quantity: number;
+        };
+    };
+}
+
+// Valid object
+
+const dictionary: Dictionary = {
+    title: "Headline",
+    amount: 1,
+    common: {
+        ok: "Okay",
+        cancel: "Cancel",
+    },
+    screen1: {
+        header: {
+            text: "Just a text",
+            quantity: 9,
+        },
+    },
+};
+
+// Modify the Dictionary type to accept a function instead of strings
+
+type Translations = ReplaceType<Dictionary, string, (language: "en" | "da") => string>;
+
+// The type above matches the interface below
+
+interface Translations {
+    title: (language: "en" | "da") => string;
+    amount: number;
+    common: {
+        ok: (language: "en" | "da") => string;
+        cancel: (language: "en" | "da") => string;
+    };
+    screen1: {
+        header: {
+            text: (language: "en" | "da") => string;
+            quantity: number;
+        };
+    };
+}
+
+// Valid object
+
+const translations: Translations = {
+    title: (language) => language === "da" ? "Overskrift" : "Headline",
+    amount: 1,
+    common: {
+        ok: (language) => language === "da" ? "Fint" : "Okay",
+        cancel: (language) => language === "da" ? "Annuller" : "Cancel",
+    },
+    screen1: {
+        header: {
+            text: (language) => language === "da" ? "Bare en tekst" : "Just a text",
+            quantity: 9,
+        },
+    },
+};
+`} />

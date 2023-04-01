@@ -10,14 +10,20 @@ import { getTagsRegex } from "../regex/getTagsRegex";
  *
  * const markup = "<p><b>Bold move.</b><br/>Paragraph.</p><!-- comment -->:)";
  *
- * const stripped = stripTagsFromString(markup);
+ * const stripped = stripTagsFromString(markup, "");
  * // stripped = "Bold move.Paragraph.:)"
  *
- * const spacedAndTrimmed = stripTagsFromString(markup, " ").trim();
- * // spacedAndTrimmed = "Bold move. Paragraph. :)"
+ * const spacedAndNotTrimmed = stripTagsFromString(markup, " ", false);
+ * // spacedAndNotTrimmed = " Bold move. Paragraph. :)"
  * ```
  *
- * @category Convert
+ * @category Manipulation
  */
-export const stripTagsFromString = (markup: string, replaceWith = ""): string =>
-    markup.replace(getTagsRegex(true), replaceWith);
+export const stripTagsFromString = (
+    markup: string,
+    replaceWith = " ",
+    trim = true,
+): string => {
+    const newString = markup.replace(getTagsRegex(true), replaceWith);
+    return trim ? newString.trim() : newString;
+};

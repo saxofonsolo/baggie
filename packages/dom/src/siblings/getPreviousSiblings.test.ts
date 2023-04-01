@@ -13,7 +13,7 @@ describe("getPreviousSiblings", () => {
         expect(
             getPreviousSiblings(element3 as HTMLElement, {
                 includeOriginalElement: true,
-            }).length
+            }).length,
         ).toBe(3);
     });
 
@@ -35,7 +35,7 @@ describe("getPreviousSiblings", () => {
         expect(
             getPreviousSiblings(element1 as HTMLElement, {
                 includeOriginalElement: true,
-            }).length
+            }).length,
         ).toBe(1);
     });
 
@@ -46,7 +46,7 @@ describe("getPreviousSiblings", () => {
             getPreviousSiblings(target as HTMLElement, {
                 matchSelector: ".a",
                 includeOriginalElement: true,
-            }).length
+            }).length,
         ).toBe(2);
     });
 
@@ -57,7 +57,7 @@ describe("getPreviousSiblings", () => {
             getPreviousSiblings(target as HTMLElement, {
                 matchSelector: ".a",
                 includeOriginalElement: true,
-            }).length
+            }).length,
         ).toBe(3);
     });
 });

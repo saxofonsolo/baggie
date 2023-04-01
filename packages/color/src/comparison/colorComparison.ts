@@ -4,7 +4,7 @@ import { RGBA } from "../_interfaces/rgba.interface";
 import { convertRgbToLab } from "../convert/convertRgbToLab";
 
 interface ColorHaystack extends CIELAB {
-    source: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+    source: RGBA | CIELAB;
 }
 
 /**
@@ -59,7 +59,7 @@ export class ColorComparison {
     /**
      * Create a set of colors to search for the closest match in.
      */
-    constructor(colors?: RGBA | RGBA[] | CIELAB | CIELAB[]) {
+    constructor(colors: RGBA | RGBA[] | CIELAB | CIELAB[]) {
         if (colors) {
             this.add(colors);
         }
@@ -96,12 +96,15 @@ export class ColorComparison {
     compare(
         color: RGBA | CIELAB,
         amount = 1,
-        sortFarthestToNearest = false
-    ): RGBA[] | CIELAB[] | undefined {
+        sortFarthestToNearest = false,
+    ): (RGBA | CIELAB)[] | undefined {
         if (this.haystack.length) {
             const needle = ColorComparison.parseColorToLab(color);
             const iterations = Math.min(amount, this.haystack.length);
-            const results = new Array(iterations);
+            const results = new Array(iterations) as {
+                distance: number;
+                straw: ColorHaystack;
+            }[];
 
             const lightnessWeight = 0.01;
 
@@ -115,7 +118,7 @@ export class ColorComparison {
                 const strawBPow2 = Math.pow(straw.b, 2);
 
                 const strawChroma = Math.sqrt(
-                    Math.pow(straw.a, 2) + strawBPow2
+                    Math.pow(straw.a, 2) + strawBPow2,
                 );
                 const chromaBar = (strawChroma + needleChroma) / 2;
 
@@ -123,15 +126,15 @@ export class ColorComparison {
                     1 -
                     Math.sqrt(
                         Math.pow(chromaBar, 7) /
-                            (Math.pow(chromaBar, 7) + pow257)
+                            (Math.pow(chromaBar, 7) + pow257),
                     );
                 const strawPrimeA = straw.a + (straw.a / 2) * primeA;
                 const needlePrimeA = needle.a + (needle.a / 2) * primeA;
                 const strawChromaPrime = Math.sqrt(
-                    Math.pow(strawPrimeA, 2) + strawBPow2
+                    Math.pow(strawPrimeA, 2) + strawBPow2,
                 );
                 const needleChromaPrime = Math.sqrt(
-                    Math.pow(needlePrimeA, 2) + needleBPow2
+                    Math.pow(needlePrimeA, 2) + needleBPow2,
                 );
                 const chromaBarPrime =
                     (strawChromaPrime + needleChromaPrime) / 2;
@@ -180,12 +183,12 @@ export class ColorComparison {
                     -2 *
                     Math.sqrt(
                         Math.pow(chromaBarPrime, 7) /
-                            (Math.pow(chromaBarPrime, 7) + Math.pow(25, 7))
+                            (Math.pow(chromaBarPrime, 7) + Math.pow(25, 7)),
                     ) *
                     Math.sin(
                         degreesToRadians(
-                            60 * Math.exp(-Math.pow((HBarPrime - 275) / 25, 2))
-                        )
+                            60 * Math.exp(-Math.pow((HBarPrime - 275) / 25, 2)),
+                        ),
                     );
 
                 const lightness =
@@ -197,7 +200,7 @@ export class ColorComparison {
                     Math.pow(lightness, 2) +
                         Math.pow(chroma, 2) +
                         Math.pow(hue, 2) +
-                        RsubT * chroma * hue
+                        RsubT * chroma * hue,
                 );
 
                 for (let i = 0; i < iterations; i += 1) {
@@ -228,11 +231,11 @@ export class ColorComparison {
         return undefined;
     }
 
-    nearest(color: RGBA | CIELAB, amount = 1): RGBA[] | CIELAB[] | undefined {
+    nearest(color: RGBA | CIELAB, amount = 1): (RGBA | CIELAB)[] | undefined {
         return this.compare(color, amount);
     }
 
-    farthest(color: RGBA | CIELAB, amount = 1): RGBA[] | CIELAB[] | undefined {
+    farthest(color: RGBA | CIELAB, amount = 1): (RGBA | CIELAB)[] | undefined {
         return this.compare(color, amount, true);
     }
 }

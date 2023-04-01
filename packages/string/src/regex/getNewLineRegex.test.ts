@@ -5,29 +5,29 @@ describe("getNewLineRegex", () => {
         expect(
             "This is a text with a single  \r  line break.".replace(
                 getNewLineRegex(),
-                "-"
-            )
+                "-",
+            ),
         ).toBe("This is a text with a single  -  line break.");
 
         expect(
             "This is a text with a single\n  line break.".replace(
                 getNewLineRegex(),
-                "-"
-            )
+                "-",
+            ),
         ).toBe("This is a text with a single-  line break.");
 
         expect(
             "This is a text with a single  \r\nline break.".replace(
                 getNewLineRegex(),
-                "-"
-            )
+                "-",
+            ),
         ).toBe("This is a text with a single  -line break.");
 
         expect(
             "This is a\r text with\n a single  \r\nline break.".replace(
                 getNewLineRegex(),
-                "-"
-            )
+                "-",
+            ),
         ).toBe("This is a- text with- a single  -line break.");
     });
 
@@ -35,22 +35,27 @@ describe("getNewLineRegex", () => {
         expect(
             "This is a text with a single  \r  line break.".replace(
                 getNewLineRegex(true),
-                "-"
-            )
+                "-",
+            ),
         ).toBe("This is a text with a single-line break.");
 
         expect(
             "This is a text with a single\n  line break.".replace(
                 getNewLineRegex(true),
-                "-"
-            )
+                "-",
+            ),
         ).toBe("This is a text with a single-line break.");
 
         expect(
             "This is a\r text with\n a single  \r\nline break.".replace(
                 getNewLineRegex(true),
-                "-"
-            )
+                "-",
+            ),
         ).toBe("This is a-text with-a single-line break.");
+
+        expect(
+            `This is a
+text`.replace(getNewLineRegex(true), "-"),
+        ).toBe("This is a-text");
     });
 });

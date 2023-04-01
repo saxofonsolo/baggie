@@ -43,7 +43,7 @@ interface Options {
  */
 export const convertToDate = (
     date: string | DateObject,
-    options?: Options
+    options?: Options,
 ): Date | false => {
     const { zeroBasedMonth = false, monthBeforeDay = false } = { ...options };
     const dateObject: DateObject = {};
@@ -71,22 +71,22 @@ export const convertToDate = (
             ? monthBeforeDay
                 ? dateArray[1]
                 : dateArray[0]
-            : 0) || (date as DateObject).day
+            : 0) || (date as DateObject).day,
     );
     dateObject.month = Number(
         (dateArray.length
             ? monthBeforeDay
                 ? dateArray[0]
                 : dateArray[1]
-            : 0) || (date as DateObject).month
+            : 0) || (date as DateObject).month,
     );
     dateObject.year = Number(dateArray[2] || (date as DateObject).year);
 
     const trueMonth = dateObject.month - (zeroBasedMonth ? 0 : 1);
     const validDate = new Date(
         `${dateObject.year}-${String(trueMonth + 1).padStart(2, "0")}-${String(
-            dateObject.day
-        ).padStart(2, "0")}T00:00:00`
+            dateObject.day,
+        ).padStart(2, "0")}T00:00:00`,
     );
 
     if (

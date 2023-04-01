@@ -41,7 +41,7 @@ describe("ColorComparison", () => {
                 red: 255,
                 green: 60,
                 blue: 10,
-            })
+            }),
         ).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({
@@ -49,7 +49,7 @@ describe("ColorComparison", () => {
                     green: 50,
                     blue: 0,
                 }),
-            ])
+            ]),
         );
 
         expect(
@@ -59,8 +59,8 @@ describe("ColorComparison", () => {
                     green: 50,
                     blue: 50,
                 },
-                2
-            )
+                2,
+            ),
         ).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({
@@ -73,7 +73,7 @@ describe("ColorComparison", () => {
                     green: 255,
                     blue: 255,
                 }),
-            ])
+            ]),
         );
 
         colors.reset().add([
@@ -94,7 +94,7 @@ describe("ColorComparison", () => {
                 red: 255,
                 green: 0,
                 blue: 0,
-            })
+            }),
         ).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({
@@ -102,7 +102,7 @@ describe("ColorComparison", () => {
                     green: 50,
                     blue: 50,
                 }),
-            ])
+            ]),
         );
     });
 });

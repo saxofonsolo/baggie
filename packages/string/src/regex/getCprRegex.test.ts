@@ -11,7 +11,7 @@ describe("getCprRegex", () => {
         expect(getCprRegex().test("170686 2134")).toBe(true);
     });
 
-    test("No CPR", () => {
+    test("Not a CPR", () => {
         expect(getCprRegex().test("1170686-134")).toBe(false);
     });
 });

@@ -1,0 +1,39 @@
+import { Source } from "@storybook/blocks";
+
+# RequireOnlyOne
+
+Require only one of the properties of an interface.
+
+> This type comes from here: https://stackoverflow.com/a/49725198
+
+## Example
+
+<Source dark language="ts" code={`
+import { RequireOnlyOne } from "@baggie/typescript";
+
+interface TestInterface {
+    propA: string;
+    propB: number;
+}
+
+type OnlyOne = RequireOnlyOne<TestInterface>;
+
+// ✅ Good
+const testObjectA: OnlyOne = {
+    propA: "...",
+};
+
+// ✅ Good
+const testObjectC: OnlyOne = {
+    propB: 123,
+};
+
+// ⛔️ TypeScript error
+const testObjectD: OnlyOne = {
+    propA: "...",
+    propB: 123,
+};
+
+// ⛔️ TypeScript error
+const testObjectD: OnlyOne = {};
+`} />

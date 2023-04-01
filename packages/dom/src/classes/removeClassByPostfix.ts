@@ -7,8 +7,8 @@ import { getClassByPostfix } from "./getClassByPostfix";
  */
 export const removeClassByPostfix = (
     element: Element = document.body,
-    prefix: string
+    prefix: string,
 ): void =>
     getClassByPostfix(element, prefix).forEach((className) =>
-        element.classList.remove(className)
+        element.classList.remove(className),
     );

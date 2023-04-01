@@ -5,19 +5,19 @@ describe("getVimeoId", () => {
         expect(getVimeoId("https://vimeo.com/265700921")).toBe("265700921");
 
         expect(getVimeoId("https://vimeo.com/12434588?autoplay=1")).toBe(
-            "12434588"
+            "12434588",
         );
     });
 
     test("Get Vimeo ID from embed URL", () => {
         expect(getVimeoId("https://player.vimeo.com/video/12434588")).toBe(
-            "12434588"
+            "12434588",
         );
 
         expect(
             getVimeoId(
-                "https://player.vimeo.com/video/12434588?autoplay=true&background=0"
-            )
+                "https://player.vimeo.com/video/12434588?autoplay=true&background=0",
+            ),
         ).toBe("12434588");
     });
 

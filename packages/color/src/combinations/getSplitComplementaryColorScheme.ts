@@ -10,7 +10,7 @@ import { convertRgbToHsl } from "../convert/convertRgbToHsl";
  * @returns An array of three RGBA color objects.
  */
 export const getSplitComplementaryColorScheme = (
-    color: RGBA
+    color: RGBA,
 ): [RGBA, RGBA, RGBA] => {
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(color);
     return [

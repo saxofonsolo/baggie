@@ -1,38 +1,31 @@
-# ignore all folders in root except a few
-*/**/*
-!.github/**
-!media/**
-!packages/**
-!scripts/**
-
-# ignore everything under ".github" except YML-files
-.github/**/*.*
-!.github/**/*.yml
-
-# ignore everything under "media" except SVGs
-media/**/*.*
-!media/**/*.svg
-
-# ignore everything under "packages" except certain files
-packages/**/*.*
-!packages/*/src/**/*.ts
-!packages/*/src/**/*.tsx
-!packages/*/*.js
-!packages/*/*.json
-!packages/*/*.md
-
-# ignore everything under "scripts" except certain files
-scripts/**/*.*
-!scripts/**/*.js
-
-# ignore debugging files
+# Logs
+logs
 *.log
-.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# ignore editor folders and files
-.idea
-.vs
-.vscode
-
-# ignore node modules
 node_modules
+dist
+dist-ssr
+storybook-static
+packages/**/lib
+*.local
+.husky
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache
+.eslintcache
+.stylelintcache

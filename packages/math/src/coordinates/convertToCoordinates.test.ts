@@ -25,25 +25,21 @@ describe("convertToCoordinates", () => {
     });
 
     test("Invalid values", () => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         expect(convertToCoordinates({ x: "1", y: 2, m: 123 })).toStrictEqual({
             x: 1,
             y: 2,
         });
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         expect(convertToCoordinates([12, "30"])).toStrictEqual({
             x: 12,
             y: 30,
         });
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         expect(convertToCoordinates([12, "jens"])).toStrictEqual({
             x: 12,
             y: 0,
         });
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         expect(convertToCoordinates("yelp")).toStrictEqual({ x: 0, y: 0 });
     });

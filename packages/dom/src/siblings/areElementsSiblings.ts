@@ -11,7 +11,7 @@ import { getSiblings } from "./getSiblings";
 export const areElementsSiblings = (
     element1: Element,
     element2: Element,
-    adjacentOnly = false
+    adjacentOnly = false,
 ): boolean => {
     if (adjacentOnly) {
         return (

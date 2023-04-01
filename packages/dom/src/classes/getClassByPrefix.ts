@@ -5,7 +5,7 @@
  */
 export const getClassByPrefix = (
     element: Element = document.body,
-    prefix: string
+    prefix: string,
 ): string[] =>
     element.className
         .match(new RegExp(`(^|\\s)${prefix}\\S*`, "gi"))

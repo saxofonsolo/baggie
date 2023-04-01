@@ -1,4 +1,5 @@
 import { RGBA } from "../_interfaces/rgba.interface";
+import { isHexColor } from "../check/isHexColor/isHexColor";
 
 /**
  * Convert an hex color to an RGB color value.
@@ -6,12 +7,8 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * @category Convert
  */
 export const convertHexToRgb = (hex: string): RGBA | undefined => {
-    const hexMatch = hex.match(
-        /^#((([0-9a-f]{3}){1,2})|(([0-9a-f]{4}){1,2}))$/i
-    );
-
-    if (hexMatch && hexMatch.length > 1) {
-        const match = hexMatch[1];
+    if (isHexColor(hex)) {
+        const match = hex.slice(1);
 
         if (match.length === 3 || match.length === 4) {
             const rgb = [

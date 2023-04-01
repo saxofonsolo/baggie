@@ -8,33 +8,33 @@ describe("getAngle", () => {
 
     test("Get angle from one set of coordinates to another (clockwise)", () => {
         expect(
-            getAngle({ x: 0, y: 10 }, { x: 10, y: 0 }, { clockwise: true })
+            getAngle({ x: 0, y: 10 }, { x: 10, y: 0 }, { clockwise: true }),
         ).toBe(135);
         expect(
-            getAngle({ x: 0, y: 10 }, { x: 0, y: 0 }, { clockwise: true })
+            getAngle({ x: 0, y: 10 }, { x: 0, y: 0 }, { clockwise: true }),
         ).toBe(90);
     });
 
     test("Get angle from one set of coordinates to another (with an offset)", () => {
         expect(
-            getAngle({ x: 0, y: 10 }, { x: 10, y: 0 }, { offset: 100 })
+            getAngle({ x: 0, y: 10 }, { x: 10, y: 0 }, { offset: 100 }),
         ).toBe(325);
         expect(getAngle({ x: 0, y: 10 }, { x: 0, y: 0 }, { offset: -90 })).toBe(
-            180
+            180,
         );
         expect(
             getAngle(
                 { x: 0, y: 10 },
                 { x: 10, y: 0 },
-                { clockwise: true, offset: 100 }
-            )
+                { clockwise: true, offset: 100 },
+            ),
         ).toBe(235);
         expect(
             getAngle(
                 { x: 0, y: 10 },
                 { x: 0, y: 0 },
-                { clockwise: true, offset: -90 }
-            )
+                { clockwise: true, offset: -90 },
+            ),
         ).toBe(0);
     });
 });
