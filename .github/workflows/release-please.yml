@@ -18,6 +18,7 @@ jobs:
         with:
           command: manifest
           token: ${{secrets.ACCESS_TOKEN}}
+          default-branch: please
 
       - name: Release created - checkout files
         uses: actions/checkout@v3
