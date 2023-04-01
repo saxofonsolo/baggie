@@ -1,0 +1,219 @@
+name: release-please
+on:
+  push:
+    branches:
+      - please
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+
+      # --------------
+      # RELEASE PLEASE
+      # --------------
+
+      - name: Run Release Please
+        uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          command: manifest
+          token: ${{secrets.ACCESS_TOKEN}}
+
+      - name: Release created - checkout files
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+        if: ${{ steps.release.outputs.release_created }}
+
+      # ----
+      # ROOT
+      # ----
+
+      - name: Root - Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Root - Install dependencies
+        run: yarn install --frozen-lockfile
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Build packages
+        run: yarn build
+        working-directory: ./
+        if: ${{ steps.release.outputs.release_created }}
+
+      # --------------
+      # BAGGIE / COLOR
+      # --------------
+
+      - name: Color - Check for changes
+        id: changed-color
+        uses: tj-actions/changed-files@v34
+        with:
+          files: |
+            packages/color/**
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Color - Publish to NPM
+        run: yarn publish
+        working-directory: ./packages/color
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: 1 == 2 && steps.changed-color.outputs.any_changed == 'true'
+
+      # ------------------
+      # BAGGIE / DETECTION
+      # ------------------
+
+      - name: Detection - Check for changes
+        id: changed-detection
+        uses: tj-actions/changed-files@v34
+        with:
+          files: |
+            packages/detection/**
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Detection - Publish to NPM
+        run: yarn publish
+        working-directory: ./packages/detection
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: 1 == 2 && steps.changed-detection.outputs.any_changed == 'true'
+
+      # ------------
+      # BAGGIE / DOM
+      # ------------
+
+      - name: DOM - Check for changes
+        id: changed-dom
+        uses: tj-actions/changed-files@v34
+        with:
+          files: |
+            packages/dom/**
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: DOM - Publish to NPM
+        run: yarn publish
+        working-directory: ./packages/dom
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: 1 == 2 && steps.changed-dom.outputs.any_changed == 'true'
+
+      # ------------------
+      # BAGGIE / FUNCTIONS
+      # ------------------
+
+      - name: Functions - Check for changes
+        id: changed-functions
+        uses: tj-actions/changed-files@v34
+        with:
+          files: |
+            packages/functions/**
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Functions - Publish to NPM
+        run: yarn publish
+        working-directory: ./packages/functions
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: 1 == 2 && steps.changed-functions.outputs.any_changed == 'true'
+
+      # -------------
+      # BAGGIE / MATH
+      # -------------
+
+      - name: Math - Check for changes
+        id: changed-math
+        uses: tj-actions/changed-files@v34
+        with:
+          files: |
+            packages/math/**
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Math - Publish to NPM
+        run: yarn publish
+        working-directory: ./packages/math
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: 1 == 2 && steps.changed-math.outputs.any_changed == 'true'
+
+      # --------------
+      # BAGGIE / REACT
+      # --------------
+
+      - name: React - Check for changes
+        id: changed-react
+        uses: tj-actions/changed-files@v34
+        with:
+          files: |
+            packages/react/**
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: React - Publish to NPM
+        run: yarn publish
+        working-directory: ./packages/react
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: 1 == 2 && steps.changed-react.outputs.any_changed == 'true'
+
+      # ---------------
+      # BAGGIE / STRING
+      # ---------------
+
+      - name: String - Check for changes
+        id: changed-string
+        uses: tj-actions/changed-files@v34
+        with:
+          files: |
+            packages/string/**
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: String - Publish to NPM
+        run: yarn publish
+        working-directory: ./packages/string
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: 1 == 2 && steps.changed-string.outputs.any_changed == 'true'
+
+      # -------------------
+      # BAGGIE / TYPESCRIPT
+      # -------------------
+
+      - name: TypeScript - Check for changes
+        id: changed-typescript
+        uses: tj-actions/changed-files@v34
+        with:
+          files: |
+            packages/typescript/**
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: TypeScript - Publish to NPM
+        run: yarn publish
+        working-directory: ./packages/typescript
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: 1 == 2 && steps.changed-typescript.outputs.any_changed == 'true'
+
+      # -----------------
+      # BIBLO / STORYBOOK
+      # -----------------
+
+      - name: StoryBook - Build website
+        run: yarn build-storybook
+        working-directory: ./
+        if: steps.changed-color.outputs.any_changed == 'true' || steps.changed-detection.outputs.any_changed == 'true' || steps.changed-dom.outputs.any_changed == 'true' || steps.changed-functions.outputs.any_changed == 'true' || steps.changed-math.outputs.any_changed == 'true' || steps.changed-react.outputs.any_changed == 'true' || steps.changed-string.outputs.any_changed == 'true' || steps.changed-typescript.outputs.any_changed == 'true'
+
+      # Popular action to deploy to GitHub Pages:
+      # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
+      - name: StoryBook - Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Build output to publish to the `gh-pages` branch:
+          publish_dir: ./storybook-static
+          user_name: larsmunkholm
+          user_email: mail@larsersej.dk
+        if: steps.changed-color.outputs.any_changed == 'true' || steps.changed-detection.outputs.any_changed == 'true' || steps.changed-dom.outputs.any_changed == 'true' || steps.changed-functions.outputs.any_changed == 'true' || steps.changed-math.outputs.any_changed == 'true' || steps.changed-react.outputs.any_changed == 'true' || steps.changed-string.outputs.any_changed == 'true' || steps.changed-typescript.outputs.any_changed == 'true'
