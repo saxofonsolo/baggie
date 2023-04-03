@@ -6,7 +6,7 @@ export type { CoordinatesXY } from "./coordinates/_interfaces/coordinatesXY.inte
 /* Arithmetic */
 export { addNumbers } from "./arithmetic/addNumbers/addNumbers";
 export { countDecimals } from "./arithmetic/countDecimals/countDecimals";
-export { getClosest } from "./arithmetic/getClosest/getClosest";
+export { sortByClosest } from "./arithmetic/sortByClosest/sortByClosest";
 
 /* Average */
 export { getAntiMode } from "./average/getAntiMode/getAntiMode";
@@ -39,8 +39,8 @@ export { keepInsideRadius } from "./coordinates/radius/keepInsideRadius";
 export { getSlope } from "./coordinates/slope/getSlope";
 
 /* Geometry - Angle */
-export { getClosestAngles } from "./geometry/angle/getClosestAngles";
 export { isAngleInRange } from "./geometry/angle/isAngleInRange";
+export { sortByClosestAngle } from "./geometry/angle/sortByClosestAngle";
 
 /* Geometry - Circle */
 export { getCircleArea } from "./geometry/circle/getCircleArea/getCircleArea";

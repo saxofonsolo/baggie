@@ -1,11 +1,11 @@
 import { Meta } from "@storybook/react";
-import { faker } from "@faker-js/faker";
+import { randSentence } from "@ngneat/falso";
 import { TextareaWithHighlights } from "./TextareaWithHighlights";
 import { TextareaWithHighlightsProps } from "./TextareaWithHighlights.props";
 
 type StoryType = Meta<TextareaWithHighlightsProps>;
 
-const defaultValue = faker.lorem.paragraph(5);
+const defaultValue = randSentence({ length: 5 }).join("\n\n");
 
 /**
  * A textarea with highlights.

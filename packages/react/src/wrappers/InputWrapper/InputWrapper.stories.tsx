@@ -1,5 +1,5 @@
 import { Meta } from "@storybook/react";
-import { faker } from "@faker-js/faker";
+import { randSentence } from "@ngneat/falso";
 import { InputWrapper } from "./InputWrapper";
 import { InputWrapperProps } from "./InputWrapper.props";
 
@@ -46,36 +46,36 @@ export default {
 
 export const WithEverything: StoryType = {
     args: {
-        label: faker.lorem.sentence(2).replace(/\.$/, ""),
-        labelRight: faker.lorem.sentence(3).replace(/\.$/, ""),
-        helperText: faker.lorem.sentence(6).replace(/\.$/, ""),
+        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
+        labelRight: randSentence({ length: 3 }).join(" ").replace(/\.$/, ""),
+        helperText: randSentence({ length: 6 }).join(" ").replace(/\.$/, ""),
     },
 };
 
 export const WithLabel: StoryType = {
     args: {
-        label: faker.lorem.sentence(2).replace(/\.$/, ""),
+        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
     },
 };
 
 export const WithHelperText: StoryType = {
     args: {
-        label: faker.lorem.sentence(2).replace(/\.$/, ""),
-        helperText: faker.lorem.sentence(6).replace(/\.$/, ""),
+        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
+        helperText: randSentence({ length: 6 }).join(" ").replace(/\.$/, ""),
     },
 };
 
 export const Invalid: StoryType = {
     args: {
-        label: faker.lorem.sentence(2).replace(/\.$/, ""),
-        helperText: faker.lorem.sentence(6).replace(/\.$/, ""),
+        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
+        helperText: randSentence({ length: 6 }).join(" ").replace(/\.$/, ""),
         invalid: true,
     },
 };
 
 export const WithTooltip: StoryType = {
     args: {
-        label: faker.lorem.sentence(2).replace(/\.$/, ""),
-        labelRight: faker.lorem.sentence(3).replace(/\.$/, ""),
+        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
+        labelRight: randSentence({ length: 3 }).join(" ").replace(/\.$/, ""),
     },
 };

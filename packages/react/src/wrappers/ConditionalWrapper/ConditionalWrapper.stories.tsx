@@ -1,5 +1,5 @@
 import { Meta } from "@storybook/react";
-import { faker } from "@faker-js/faker";
+import { randSentence } from "@ngneat/falso";
 import { ConditionalWrapper } from "./ConditionalWrapper";
 import { ConditionalWrapperProps } from "./ConditionalWrapper.props";
 
@@ -26,7 +26,7 @@ export default {
         wrapperFallback: (children) => (
             <div style={{ border: "10px solid #25bd59" }}>{children}</div>
         ),
-        children: faker.lorem.lines(5),
+        children: randSentence({ length: 3 }).join(" "),
     },
     argTypes: {
         wrapper: {
