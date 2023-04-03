@@ -1,3 +1,6 @@
+// Charts
+export { ProgressCircle } from "./charts/ProgressCircle/ProgressCircle";
+
 // Inputs
 export { TextareaWithHighlights } from "./inputs/TextareaWithHighlights/TextareaWithHighlights";
 

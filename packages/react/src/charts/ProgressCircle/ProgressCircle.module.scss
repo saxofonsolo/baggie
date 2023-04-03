@@ -1,0 +1,65 @@
+@property --percentage {
+    inherits: true;
+    initial-value: 0;
+    syntax: "<number>";
+}
+
+.progressCircle {
+    --percentage: 0;
+    --width: var(--progress-circle-width, 10px);
+    --color: var(--progress-circle-color, #7f7f7f);
+    --bgcolor: var(--progress-circle-bgcolor, #7f7f7f33);
+    --size: var(--progress-circle-size, 150px);
+
+    animation: progress-circle 1s 0.5s both;
+    aspect-ratio: 1 / 1;
+    display: inline-grid;
+    place-content: center;
+    position: relative;
+    width: var(--size);
+
+    &::before,
+    &.rounded::after {
+        border-radius: 50%;
+        content: "";
+        position: absolute;
+    }
+
+    &::before {
+        background: radial-gradient(farthest-side, var(--color) 98%, #0000)
+                top/var(--width) var(--width) no-repeat,
+            conic-gradient(
+                    var(--color) #{calc(var(--percentage) * 100%)},
+                    #0000 0
+                )
+                var(--bgcolor);
+        inset: 0;
+        mask: radial-gradient(
+            farthest-side,
+            #0000 #{calc(99% - var(--width))},
+            #000 calc(100% - var(--width))
+        );
+        mask: radial-gradient(
+            farthest-side,
+            #0000 #{calc(99% - var(--width))},
+            #000 calc(100% - var(--width))
+        );
+    }
+
+    &.rounded::after {
+        background: var(--color);
+        inset: calc(50% - var(--width) / 2);
+        transform: rotate(calc(var(--percentage) * 360deg))
+            translateY(#{calc(50% - var(--size) / 2)});
+    }
+
+    &.notRounded::before {
+        background-size: 0 0, auto;
+    }
+}
+
+@keyframes progress-circle {
+    from {
+        --percentage: 0;
+    }
+}

@@ -1,5 +1,5 @@
 const fs = require("fs");
-const log = require("../_helpers/log.helper");
+const log = require("./_helpers/log.helper");
 
 const filePath = process.argv[2];
 const textFromFile = fs.readFileSync(filePath, "utf-8");

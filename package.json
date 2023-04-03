@@ -41,7 +41,7 @@
     "test": "yarn workspaces run jest --passWithNoTests",
     "  ": "exit",
     "#-- AUTOMATION": "exit",
-    "commit-msg": "node scripts/check-commit-msg",
+    "commit-msg": "node scripts/check-commit-msg.js",
     "postinstall": "syncpack fix-mismatches",
     "prepare": "rimraf .husky && husky uninstall && husky install .husky && npx husky add .husky/pre-commit \"npm run pre-commit\" && npx husky add .husky/commit-msg \"npm run commit-msg \\$1\"",
     "prepublishOnly": "syncpack fix-mismatches && yarn run lint && yarn run prettier && yarn run test",

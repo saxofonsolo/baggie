@@ -60,6 +60,7 @@
         }
       },
       "rules": {
+        "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-unsafe-argument": "off",
         "@typescript-eslint/no-unsafe-assignment": "off",
@@ -134,12 +135,6 @@
       }
     },
     {
-      "files": ["Example.tsx"],
-      "rules": {
-        "@typescript-eslint/ban-ts-comment": "off"
-      }
-    },
-    {
       // Only test-files
       // ---------------
       "files": ["*.test.ts"],
@@ -152,7 +147,6 @@
         "jest/globals": true
       },
       "rules": {
-        "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/no-unsafe-call": "off",
         "@typescript-eslint/no-unsafe-member-access": "off"
       }
