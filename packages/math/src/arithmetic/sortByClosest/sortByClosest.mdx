@@ -1,0 +1,61 @@
+import { Source } from "@storybook/blocks";
+import { Example } from "./Example";
+
+# sortByClosest
+
+Sort an array of numbers by their distance to a target number.
+
+## Parameters
+
+If you are only working with numbers
+
+| Parameter  | Type       |
+| :--------- | :--------- |
+| **target** | `number`   |
+| **array**  | `number[]` |
+
+or if you are working with more complex data types
+
+| Parameter     | Type                  |
+| :------------ | :-------------------- |
+| **target**    | `T` or `number`       |
+| **array**     | `T[]`                 |
+| **getNumber** | `(item: T) => number` |
+
+## Example
+
+Sort an array of **numbers**
+
+<Example target={8} numbers={[5, 10, 15, 20]} />
+
+You can also sort things like an array of **objects**
+
+<Source
+    dark
+    code={`
+import { sortByClosest } from "@baggie/math";
+
+const target = { price: 5 };
+const objects = [{ price: 1 }, { price: 9 }, { price: 4 }];
+const getNumber = (obj) => obj.price;
+
+const sorted = sortByClosest(target, objects, getNumber);
+// sorted = [{ price: 4 }, { price: 9 }, { price: 1 }]
+`}
+/>
+
+... or an array of **arrays**
+
+<Source
+    dark
+    code={`
+import { sortByClosest } from "@baggie/math";
+
+const target = 10;
+const arrays = [[1, 99, "8z"], [20, 4, "7a"], [6, 6, "6b"]];
+const getNumber = (arr) => arr[1];
+
+const sorted = sortByClosest(target, arrays, getNumber);
+// sorted = [[6, 6, "6b"], [20, 4, "7a"], [1, 99, "8z"]]
+`}
+/>

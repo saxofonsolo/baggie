@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { InputWrapper } from "@baggie/react";
-import { getClosest } from "./getClosest";
+import { sortByClosest } from "./sortByClosest";
 
 interface Props {
     target: number;
@@ -17,7 +17,7 @@ export const Example = (props: Props) => {
             .split(/\s*,\s*/)
             .filter((value) => value.length)
             .map((string) => (string.match(/^-?[0-9]*\.?[0-9]*$/) ? parseFloat(string) : NaN));
-        return { numbers, sorted: getClosest(target, numbers) };
+        return { numbers, sorted: sortByClosest(target, numbers) };
     }, [target, inputNumbers]);
 
     return (
@@ -40,7 +40,7 @@ export const Example = (props: Props) => {
                     />
                 </InputWrapper>
 
-                <InputWrapper label="Output" labelForId={undefined}>
+                <InputWrapper label="Sorted" labelForId={undefined}>
                     <div style={{ padding: "5px" }}>[{sorted.join(", ")}]</div>
                 </InputWrapper>
             </div>
@@ -48,12 +48,12 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { getClosest } from "@baggie/math";
+import { sortByClosest } from "@baggie/math";
 
 const target = ${target};
 const numbers = [${numbers.join(", ")}];
 
-const sorted = getClosest(target, numbers);
+const sorted = sortByClosest(target, numbers);
 // sorted = [${sorted.join(", ")}]
 `}
             />

@@ -4,7 +4,7 @@
  * @example
  * **Basic usage:**
  * ```ts
- * import { getClosestAngles } from "@baggie/math";
+ * import { sortByClosestAngle } from "@baggie/math";
  *
  * const target = 350;
  * const angles = [
@@ -14,13 +14,16 @@
  *     200,
  *     300,
  * ];
- * const sorted = getClosestAngles(target, angles);
+ * const sorted = sortByClosestAngle(target, angles);
  * // sorted = [0, 10, 300, 100, 200]
  * ```
  *
  * @category Geometry - Angle
  */
-export const getClosestAngles = (target: number, angles: number[]): number[] =>
+export const sortByClosestAngle = (
+    target: number,
+    angles: number[],
+): number[] =>
     [...angles].sort((a, b) => {
         const aRawDiff = a > target ? a - target : target - a;
         const aModulusDiff = aRawDiff % 360;
