@@ -34,11 +34,13 @@
                 )
                 var(--bgcolor);
         inset: 0;
-        mask: radial-gradient(
+        /* stylelint-disable */
+        -webkit-mask: radial-gradient(
             farthest-side,
             #0000 #{calc(99% - var(--width))},
             #000 calc(100% - var(--width))
         );
+        /* stylelint-enable */
         mask: radial-gradient(
             farthest-side,
             #0000 #{calc(99% - var(--width))},

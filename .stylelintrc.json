@@ -118,7 +118,7 @@
     "value-no-vendor-prefix": [
       true,
       {
-        "ignoreValues": ["box"]
+        "ignoreValues": ["box", "mask"]
       }
     ]
   }
