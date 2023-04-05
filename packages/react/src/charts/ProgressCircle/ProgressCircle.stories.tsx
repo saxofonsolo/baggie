@@ -16,7 +16,7 @@ export default {
         color: "#900",
         bgColor: "#FC0",
         roundedEdges: true,
-        centerComponent: ({ value }) => <b>{value * 100}%</b>,
+        centerComponent: ({ value }) => <b>{Math.round(value * 100)}%</b>,
     } as ProgressCircleProps,
     argTypes: {
         value: {

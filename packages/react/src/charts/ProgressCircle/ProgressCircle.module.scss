@@ -11,7 +11,7 @@
     --bgcolor: var(--progress-circle-bgcolor, #7f7f7f33);
     --size: var(--progress-circle-size, 150px);
 
-    animation: progress-circle 1s 0.5s both;
+    // animation: progress-circle 1s 0.5s both;
     aspect-ratio: 1 / 1;
     display: inline-grid;
     place-content: center;
@@ -29,10 +29,9 @@
         background: radial-gradient(farthest-side, var(--color) 98%, #0000)
                 top/var(--width) var(--width) no-repeat,
             conic-gradient(
-                    var(--color) #{calc(var(--percentage) * 100%)},
-                    #0000 0
-                )
-                var(--bgcolor);
+                var(--color) #{calc(var(--percentage) * 100%)},
+                var(--bgcolor) 0
+            );
         inset: 0;
         /* stylelint-disable */
         -webkit-mask: radial-gradient(
@@ -60,8 +59,10 @@
     }
 }
 
+/*
 @keyframes progress-circle {
     from {
         --percentage: 0;
     }
 }
+ */
