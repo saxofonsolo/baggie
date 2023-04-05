@@ -6,8 +6,8 @@ export type { RGBA } from "./_interfaces/rgba.interface";
 /* Brightness */
 export { getBrightness } from "./brightness/getBrightness";
 export { getDarkness } from "./brightness/getDarkness";
-export { isColorBrighterThan } from "./brightness/isColorBrighterThan";
-export { isColorDarkerThan } from "./brightness/isColorDarkerThan";
+export { isColorBrighterThan } from "./brightness/isColorBrighterThan/isColorBrighterThan";
+export { isColorDarkerThan } from "./brightness/isColorDarkerThan/isColorDarkerThan";
 
 /* Check */
 export { isHexColor } from "./check/isHexColor/isHexColor";

@@ -68,7 +68,7 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { isHexColor } from "@baggie/math";
+import { isHexColor } from "@baggie/color";
 
 const input = "${input}";
 

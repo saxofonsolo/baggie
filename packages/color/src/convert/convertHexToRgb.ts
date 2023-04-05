@@ -6,7 +6,7 @@ import { isHexColor } from "../check/isHexColor/isHexColor";
  *
  * @category Convert
  */
-export const convertHexToRgb = (hex: string): RGBA | undefined => {
+export const convertHexToRgb = (hex: string): RGBA => {
     if (isHexColor(hex)) {
         const match = hex.slice(1);
 
@@ -41,5 +41,5 @@ export const convertHexToRgb = (hex: string): RGBA | undefined => {
         }
     }
 
-    return undefined;
+    throw "Not a hex color";
 };
