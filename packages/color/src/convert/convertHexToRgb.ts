@@ -41,5 +41,5 @@ export const convertHexToRgb = (hex: string): RGBA => {
         }
     }
 
-    throw "Not a hex color";
+    throw "Not a valid hex color";
 };
