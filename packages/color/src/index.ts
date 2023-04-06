@@ -4,7 +4,7 @@ export type { HSLA } from "./_interfaces/hsla.interface";
 export type { RGBA } from "./_interfaces/rgba.interface";
 
 /* Brightness */
-export { getBrightness } from "./brightness/getBrightness";
+export { getBrightness } from "./brightness/getBrightness/getBrightness";
 export { getDarkness } from "./brightness/getDarkness";
 export { isColorBrighterThan } from "./brightness/isColorBrighterThan/isColorBrighterThan";
 export { isColorDarkerThan } from "./brightness/isColorDarkerThan/isColorDarkerThan";

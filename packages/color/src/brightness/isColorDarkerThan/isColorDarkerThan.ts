@@ -1,5 +1,5 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
-import { getBrightness } from "../getBrightness";
+import { getBrightness } from "../getBrightness/getBrightness";
 
 /**
  * Compare the darkness of two colors.
