@@ -17,7 +17,7 @@ export const convertRgbToHex = (
         `0${blue.toString(16)}`.slice(-2),
         includeAlpha === false
             ? ""
-            : includeAlpha || typeof alpha === "number"
+            : includeAlpha || (hasAlpha && alpha < 1)
             ? `0${Math.round(alphaValue * 255).toString(16)}`.slice(-2)
             : "",
     ];

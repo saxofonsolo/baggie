@@ -1,10 +1,10 @@
 /**
- * An object with W3S' list of color names supported by all browsers
+ * An object with W3S's list of color names supported by all browsers
  *
  * @see https://www.w3schools.com/colors/colors_names.asp
  * @internal
  */
-const colorNames: { [colorName: string]: string } = {
+const colorNames: Record<string, string> = {
     aliceblue: "#f0f8ff",
     antiquewhite: "#faebd7",
     aqua: "#00ffff",

@@ -13,11 +13,11 @@ export { isColorDarkerThan } from "./brightness/isColorDarkerThan/isColorDarkerT
 export { isHexColor } from "./check/isHexColor/isHexColor";
 
 /* Combinations */
-export { getAnalogousColorScheme } from "./combinations/getAnalogousColorScheme";
-export { getComplementaryColorScheme } from "./combinations/getComplementaryColorScheme";
-export { getSplitComplementaryColorScheme } from "./combinations/getSplitComplementaryColorScheme";
-export { getTetradicColorScheme } from "./combinations/getTetradicColorScheme";
-export { getTriadicColorScheme } from "./combinations/getTriadicColorScheme";
+export { getAnalogousColorScheme } from "./combinations/getAnalogousColorScheme/getAnalogousColorScheme";
+export { getComplementaryColorScheme } from "./combinations/getComplementaryColorScheme/getComplementaryColorScheme";
+export { getSplitComplementaryColorScheme } from "./combinations/getSplitComplementaryColorScheme/getSplitComplementaryColorScheme";
+export { getTetradicColorScheme } from "./combinations/getTetradicColorScheme/getTetradicColorScheme";
+export { getTriadicColorScheme } from "./combinations/getTriadicColorScheme/getTriadicColorScheme";
 
 /* Comparison */
 export { ColorComparison } from "./comparison/colorComparison";
