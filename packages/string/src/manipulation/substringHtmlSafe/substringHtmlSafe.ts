@@ -8,11 +8,6 @@ type VerboseOutput = {
  * Get part of a string between the start and end indexes, or to the end of the
  * string. HTML entities are each counted as one character, and HTML tags are
  * ignored.
- *
- * HTML entities begin with an ampersand (&) and ends with a semicolon (;).
- *
- * They are frequently used to display characters that reserved by HTML,
- * invisible or difficult to type.
  */
 export const substringHtmlSafe = <Verbose extends boolean = false>(
     string: string,

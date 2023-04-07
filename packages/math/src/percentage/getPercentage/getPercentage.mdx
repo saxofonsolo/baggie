@@ -4,6 +4,19 @@ import { Example } from "./Example";
 
 Perform calculations with percentage.
 
+## Parameters
+
+| Parameter               | Type      | Required | Default value | Description                                                                |
+| :---------------------- | :-------- | :------: | :------------ | :------------------------------------------------------------------------- |
+| **properties**          | `object`  |    ✔     |               | Two of the three properties must be defined. The third will be calculated. |
+| **percentageAsDecimal** | `boolean` |          | `true`        |                                                                            |
+
+| Property       | Type     |
+| :------------- | :------- |
+| **part**       | `number` |
+| **whole**      | `number` |
+| **percentage** | `number` |
+
 ## Examples
 
 Calculate Z when **X is Y% of Z**
@@ -12,7 +25,7 @@ Calculate Z when **X is Y% of Z**
 
 Calculate Z when **X% of Y is Z**
 
-<Example percentage={0.1} whole={50  } />
+<Example percentage={0.1} whole={50} />
 
 Calculate Z when **X of Y is Z%**
 

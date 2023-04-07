@@ -1,5 +1,5 @@
 import { Meta } from "@storybook/react";
-import { randSentence } from "@ngneat/falso";
+import { randDatabase, randDatabaseType, randSentence } from "@ngneat/falso";
 import { InputWrapper } from "./InputWrapper";
 import { InputWrapperProps } from "./InputWrapper.props";
 
@@ -46,36 +46,36 @@ export default {
 
 export const WithEverything: StoryType = {
     args: {
-        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
-        labelRight: randSentence({ length: 3 }).join(" ").replace(/\.$/, ""),
-        helperText: randSentence({ length: 6 }).join(" ").replace(/\.$/, ""),
+        label: randDatabase(),
+        labelRight: randDatabaseType(),
+        helperText: randSentence(),
     },
 };
 
 export const WithLabel: StoryType = {
     args: {
-        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
+        label: randDatabase(),
     },
 };
 
 export const WithHelperText: StoryType = {
     args: {
-        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
-        helperText: randSentence({ length: 6 }).join(" ").replace(/\.$/, ""),
+        label: randDatabase(),
+        helperText: randSentence(),
     },
 };
 
 export const Invalid: StoryType = {
     args: {
-        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
-        helperText: randSentence({ length: 6 }).join(" ").replace(/\.$/, ""),
+        label: randDatabase(),
+        helperText: randSentence(),
         invalid: true,
     },
 };
 
-export const WithTooltip: StoryType = {
+export const WithLabelRight: StoryType = {
     args: {
-        label: randSentence({ length: 2 }).join(" ").replace(/\.$/, ""),
-        labelRight: randSentence({ length: 3 }).join(" ").replace(/\.$/, ""),
+        label: randDatabase(),
+        labelRight: randDatabaseType(),
     },
 };

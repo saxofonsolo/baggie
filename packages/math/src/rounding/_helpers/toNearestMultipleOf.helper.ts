@@ -5,14 +5,14 @@ import { countDecimals } from "../../arithmetic/countDecimals/countDecimals";
  */
 export const toNearestMultipleOf = (
     number: number,
-    nearest: number,
+    multipleOf: number,
     func: (number: number) => number,
     self: (number: number, nearest: number) => number,
 ): number => {
-    const decimalCount = countDecimals(nearest);
+    const decimalCount = countDecimals(multipleOf);
     const decimalMultiplier = decimalCount * 10;
     return !decimalCount
-        ? func(number / nearest) * nearest
-        : self(number * decimalMultiplier, nearest * decimalMultiplier) /
+        ? func(number / multipleOf) * multipleOf
+        : self(number * decimalMultiplier, multipleOf * decimalMultiplier) /
               decimalMultiplier;
 };

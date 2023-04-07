@@ -17,11 +17,33 @@ ignored.**
 If you're using this in an environment without a document (like **NodeJS**),
 [see this example](#nodejs).
 
+## Parameters
+
+| Parameter      | Type                | Required | Description                              |
+| :------------- | :------------------ | :------: | :--------------------------------------- |
+| **string**     | `string`            |    ✔     | The string to shorten.                   |
+| **indexStart** | `number`            |    ✔     | Where the substring starts.              |
+| **indexEnd**   | `number\|undefined` |          | Where the substring ends (not included). |
+| **options**    | `object`            |          |                                          |
+
+| Option       | Type       | Default value     | Description                  |
+| :----------- | :--------- | :---------------- | :--------------------------- |
+| **document** | `Document` | `window.document` |                              |
+| **verbose**  | `boolean`  | `false`           | Enable verbose return value. |
+
 ## Examples
 
-<Example defaultInput="lorem &amp;amp; <b>ipsum</b> dolor sit amet" start={0} end={12} />
+<Example
+    defaultInput="lorem &amp;amp; <b>ipsum</b> dolor sit amet"
+    start={0}
+    end={12}
+/>
 
-<Example defaultInput="lorem &amp;amp; <b>ipsum</b> dolor sit amet" start={7} end={-2} />
+<Example
+    defaultInput="lorem &amp;amp; <b>ipsum</b> dolor sit amet"
+    start={7}
+    end={-2}
+/>
 
 <Example defaultInput="<b>sit</b> &amp; amet" start={1} end={5} />
 

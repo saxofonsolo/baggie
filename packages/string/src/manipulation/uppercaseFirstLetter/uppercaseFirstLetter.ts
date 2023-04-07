@@ -3,7 +3,7 @@
  */
 export const uppercaseFirstLetter = (
     [first, ...rest]: string,
-    options?: { lowercaseRest?: boolean; locale?: string },
+    options?: { lowercaseRest?: boolean; locale?: string | string[] },
 ): string =>
     [
         first.toLocaleUpperCase(options?.locale),

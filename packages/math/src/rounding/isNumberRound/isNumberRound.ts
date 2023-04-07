@@ -3,7 +3,7 @@
  */
 export const isNumberRound = (
     number: number,
-    maxDecimalPlaces: number,
+    maxDecimalPlaces = 0,
 ): boolean => {
     const p = Math.pow(10, maxDecimalPlaces);
     return Math.round(number * p) / p === number;

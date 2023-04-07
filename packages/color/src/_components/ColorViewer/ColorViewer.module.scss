@@ -1,0 +1,38 @@
+.wrapper {
+    border: 2px dashed #aaa;
+    display: inline-block;
+    padding: 2px;
+    vertical-align: bottom;
+}
+
+.insideWrapper {
+    background-image: conic-gradient(
+        #eee 0 25%,
+        transparent 0 50%,
+        #eee 0 75%,
+        transparent 0
+    );
+    background-size: 20px 20px;
+    height: 100px;
+    position: relative;
+    width: 100px;
+}
+
+.crossSvg {
+    inset: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.colorA {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.colorB {
+    border: 50px solid transparent;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}

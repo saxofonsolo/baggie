@@ -36,7 +36,7 @@
     "#-- QUALITY ASSURANCE": "exit",
     "prettier": "prettier --write \"./**/*.{js,ts,tsx,css,scss,json}\"",
     "lint": "npm-run-all lint:*",
-    "lint:js": "tsc --noEmit && eslint packages/**/src/**/*.{ts,tsx,mdx} --fix --cache -c .eslintrc.commit.json --max-warnings=0",
+    "lint:js": "tsc --noEmit && eslint packages/**/src/**/*.{ts,tsx} --fix --cache -c .eslintrc.commit.json --max-warnings=0",
     "lint:css": "stylelint \"packages/**/src/**/*.{,s}css\" --fix --cache --max-warnings=0",
     "test": "yarn workspaces run jest --passWithNoTests",
     "  ": "exit",

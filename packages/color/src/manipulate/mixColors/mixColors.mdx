@@ -1,0 +1,17 @@
+import { Example } from "./Example";
+
+# mixColors
+
+Mix two colors together.
+
+## Parameters
+
+| Parameter  | Type     | Required | Default value | Description                                                                                                                                                               |
+| :--------- | :------- | :------: | :------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **colorA** | `string` |    ✔     |               | The base color.                                                                                                                                                           |
+| **colorB** | `string` |    ✔     |               | The other base color.                                                                                                                                                     |
+| **weight** | `number` |          | `0.5`         | The weight as a decimal number.<br />A larger weight indicates that more of `colorA` should be used, and a smaller weight indicates that more of `colorB` should be used. |
+
+## Example
+
+<Example colorA="#ff0000" colorB="#ffff00" weight={0.5} />

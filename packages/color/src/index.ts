@@ -12,12 +12,12 @@ export { isColorDarkerThan } from "./brightness/isColorDarkerThan/isColorDarkerT
 /* Check */
 export { isHexColor } from "./check/isHexColor/isHexColor";
 
-/* Combinations */
-export { getAnalogousColorScheme } from "./combinations/getAnalogousColorScheme/getAnalogousColorScheme";
-export { getComplementaryColorScheme } from "./combinations/getComplementaryColorScheme/getComplementaryColorScheme";
-export { getSplitComplementaryColorScheme } from "./combinations/getSplitComplementaryColorScheme/getSplitComplementaryColorScheme";
-export { getTetradicColorScheme } from "./combinations/getTetradicColorScheme/getTetradicColorScheme";
-export { getTriadicColorScheme } from "./combinations/getTriadicColorScheme/getTriadicColorScheme";
+/* Color schemes */
+export { getAnalogousColorScheme } from "./colorSchemes/getAnalogousColorScheme/getAnalogousColorScheme";
+export { getComplementaryColorScheme } from "./colorSchemes/getComplementaryColorScheme/getComplementaryColorScheme";
+export { getSplitComplementaryColorScheme } from "./colorSchemes/getSplitComplementaryColorScheme/getSplitComplementaryColorScheme";
+export { getTetradicColorScheme } from "./colorSchemes/getTetradicColorScheme/getTetradicColorScheme";
+export { getTriadicColorScheme } from "./colorSchemes/getTriadicColorScheme/getTriadicColorScheme";
 
 /* Comparison */
 export { ColorComparison } from "./comparison/colorComparison";
@@ -33,6 +33,6 @@ export { normalizeHexColor } from "./convert/normalizeHexColor";
 export { parseColor } from "./convert/parseColor";
 
 /* Manipulate */
-export { mixColors } from "./manipulate/mixColors";
+export { mixColors } from "./manipulate/mixColors/mixColors";
 export { multiplyColors } from "./manipulate/multiplyColors";
 export { screenColors } from "./manipulate/screenColors";

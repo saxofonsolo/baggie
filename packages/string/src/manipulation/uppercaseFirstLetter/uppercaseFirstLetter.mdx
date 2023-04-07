@@ -4,6 +4,18 @@ import { Example } from "./Example";
 
 Convert the first letter in a string to uppercase.
 
+## Parameters
+
+| Parameter   | Type     | Required | Description                                                  |
+| :---------- | :------- | :------: | :----------------------------------------------------------- |
+| **string**  | `string` |    ✔     | The string to manipulate.                                    |
+| **options** | `object` |          | The default locale is the host environment's current locale. |
+
+| Option            | Type               | Default value | Description                                      |
+| :---------------- | :----------------- | :------------ | :----------------------------------------------- |
+| **lowercaseRest** | `boolean`          | `false`       | Convert the rest of the characters to lowercase. |
+| **locale**        | `string\|string[]` |               | Where the substring starts.                      |
+
 ## Example
 
 <Example defaultInput="odit atque TEMPORA veritatis" />

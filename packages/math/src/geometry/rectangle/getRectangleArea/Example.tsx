@@ -83,7 +83,7 @@ import { getRectangleArea } from "@baggie/math";
 const x = ${x || 0};
 const y = ${y || 0};
 
-const surfaceArea = getRectangleArea(radius);
+const surfaceArea = getRectangleArea(x, y);
 // surfaceArea = ${area}
 `}
             />

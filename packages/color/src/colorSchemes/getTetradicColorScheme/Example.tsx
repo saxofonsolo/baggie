@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
-import { InputWrapper } from "@baggie/react";
-import { normalizeHexColor } from "../../convert/normalizeHexColor";
+import { ColorViewer } from "../../_components/ColorViewer/ColorViewer";
+import { ColorInput } from "../../_components/ColorInput/ColorInput";
 import { getTetradicColorScheme } from "./getTetradicColorScheme";
 
 interface Props {
@@ -21,20 +21,7 @@ export const Example = (props: Props) => {
 
     return (
         <>
-            <div style={{ display: "flex", gap: "10px" }}>
-                <InputWrapper label="Color" labelForId="color-input">
-                    <input
-                        type="color"
-                        value={normalizeHexColor(color).substring(0, 7)}
-                        onChange={({ target }) => setColor(target.value)}
-                    />
-                    <input
-                        id="color-input"
-                        value={color}
-                        onChange={({ target }) => setColor(target.value)}
-                    />
-                </InputWrapper>
-            </div>
+            <ColorInput label="Color" value={color} onChange={setColor} />
 
             <div
                 key={color}
@@ -46,16 +33,7 @@ export const Example = (props: Props) => {
                 }}
             >
                 {scheme.map((c) => (
-                    <div
-                        key={c}
-                        style={{
-                            position: "relative",
-                            zIndex: 1,
-                            width: "100px",
-                            height: "100px",
-                            backgroundColor: c,
-                        }}
-                    />
+                    <ColorViewer key={c} color={c} />
                 ))}
             </div>
 

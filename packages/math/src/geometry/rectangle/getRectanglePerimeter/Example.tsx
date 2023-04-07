@@ -77,7 +77,7 @@ import { getRectanglePerimeter } from "@baggie/math";
 const x = ${x || 0};
 const y = ${y || 0};
 
-const perimeter = getRectanglePerimeter(radius);
+const perimeter = getRectanglePerimeter(x, y);
 // perimeter = ${perimeter}
 `}
             />

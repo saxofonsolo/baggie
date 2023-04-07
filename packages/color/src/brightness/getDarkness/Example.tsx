@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { InputWrapper } from "@baggie/react";
-import { normalizeHexColor } from "../../convert/normalizeHexColor";
+import { ColorInput } from "../../_components/ColorInput/ColorInput";
 import { getDarkness } from "./getDarkness";
 
 interface Props {
@@ -16,18 +16,7 @@ export const Example = (props: Props) => {
     return (
         <>
             <div style={{ display: "flex", gap: "10px" }}>
-                <InputWrapper label="Color" labelForId="color-input">
-                    <input
-                        type="color"
-                        value={normalizeHexColor(color).substring(0, 7)}
-                        onChange={({ target }) => setColor(target.value)}
-                    />
-                    <input
-                        id="color-input"
-                        value={color}
-                        onChange={({ target }) => setColor(target.value)}
-                    />
-                </InputWrapper>
+                <ColorInput label="Color" value={color} onChange={setColor} />
 
                 <InputWrapper label="Darkness" labelForId={undefined}>
                     <div style={{ padding: "5px" }}>{darkness}</div>

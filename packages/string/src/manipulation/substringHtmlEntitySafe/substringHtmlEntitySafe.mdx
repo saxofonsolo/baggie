@@ -10,9 +10,26 @@ string. **HTML entities are each counted as one character.**
 > They are frequently used to display characters that reserved by HTML,
 > invisible or difficult to type.
 
+## Parameters
+
+| Parameter      | Type                | Required | Description                              |
+| :------------- | :------------------ | :------: | :--------------------------------------- |
+| **string**     | `string`            |    ✔     | The string to shorten.                   |
+| **indexStart** | `number`            |    ✔     | Where the substring starts.              |
+| **indexEnd**   | `number\|undefined` |          | Where the substring ends (not included). |
+| **options**    | `object`            |          |                                          |
+
+| Option      | Type      | Default value | Description                  |
+| :---------- | :-------- | :------------ | :--------------------------- |
+| **verbose** | `boolean` | `false`       | Enable verbose return value. |
+
 ## Examples
 
-<Example defaultInput="lorem &amp;aelig;&amp;oslash;&amp;aring; ipsum" start={0} end={12} />
+<Example
+    defaultInput="lorem &amp;aelig;&amp;oslash;&amp;aring; ipsum"
+    start={0}
+    end={12}
+/>
 
 <Example defaultInput="&amp;aelig;&amp;oslash;&amp;aring;" start={1} end={2} />
 
