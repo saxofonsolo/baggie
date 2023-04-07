@@ -1,5 +1,5 @@
 /* Convert */
-export { convertEmailsToLinks } from "./convert/convertEmailsToLinks";
+export { convertEmailsToLinks } from "./convert/convertEmailsToLinks/convertEmailsToLinks";
 export { convertNewLinesToBreaks } from "./convert/convertNewLinesToBreaks";
 export { convertToDate } from "./convert/convertToDate";
 export { getEmailsFromString } from "./convert/getEmailsFromString";
@@ -7,7 +7,8 @@ export { getVimeoId } from "./convert/getVimeoId";
 export { getYouTubeId } from "./convert/getYouTubeId";
 
 /* Manipulation */
-export { stripTagsFromString } from "./convert/stripTagsFromString";
+export { splitAtSpace } from "./manipulation/splitAtSpace/splitAtSpace";
+export { stripTagsFromString } from "./manipulation/stripTagsFromString";
 export { substringHtmlEntitySafe } from "./manipulation/substringHtmlEntitySafe/substringHtmlEntitySafe";
 export { substringHtmlSafe } from "./manipulation/substringHtmlSafe/substringHtmlSafe";
 export { uppercaseFirstLetter } from "./manipulation/uppercaseFirstLetter/uppercaseFirstLetter";

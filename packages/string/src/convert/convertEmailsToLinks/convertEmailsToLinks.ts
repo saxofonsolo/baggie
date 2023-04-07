@@ -1,4 +1,4 @@
-import { getEmailRegex } from "../regex/getEmailRegex";
+import { getEmailRegex } from "../../regex/getEmailRegex";
 
 interface ReplacerArgs {
     email: string;
@@ -11,7 +11,7 @@ interface ReplacerArgs {
 export const convertEmailsToLinks = (
     string: string,
     options?: {
-        subject?: boolean | string;
+        subject?: string | boolean;
         replacer?: (args: ReplacerArgs) => string;
     },
 ): string => {

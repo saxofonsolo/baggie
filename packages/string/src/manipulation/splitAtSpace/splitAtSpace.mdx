@@ -1,0 +1,26 @@
+import { Example } from "./Example";
+
+# splitAtSpace
+
+Split a string at the nearest previous whitespace to a given a index.
+
+Words will not get split.
+
+## Parameters
+
+| Parameter        | Type     | Required | Description                                             |
+| :--------------- | :------- | :------: | :------------------------------------------------------ |
+| **string**       | `string` |    ✔     | The string to split.                                    |
+| **nearestIndex** | `number` |    ✔     | Split at the nearest previous whitespace to this index. |
+
+## Examples
+
+<Example
+    string="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur turpis sapien, pellentesque pulvinar scelerisque sit amet, iaculis ac sem. Pellentesque lacus nisi, sagittis eget felis at, elementum accumsan tortor."
+    nearestIndex={80}
+/>
+
+<Example
+    string="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur turpis sapien, pellentesque pulvinar scelerisque sit amet, iaculis ac sem. Pellentesque lacus nisi, sagittis eget felis at, elementum accumsan tortor."
+    nearestIndex={10}
+/>
