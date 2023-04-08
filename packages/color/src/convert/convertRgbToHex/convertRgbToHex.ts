@@ -1,23 +1,16 @@
-import { RGBA } from "../_interfaces/rgba.interface";
+import { RGBA } from "../../_interfaces/rgba.interface";
 
 /**
- * Convert an RGB color value to a hexadecimal color.
- *
- * @category Convert
+ * Convert an object with RGB color values to a hexadecimal color.
  */
-export const convertRgbToHex = (
-    { red, green, blue, alpha }: RGBA,
-    includeAlpha?: boolean,
-): string => {
+export const convertRgbToHex = ({ red, green, blue, alpha }: RGBA): string => {
     const hasAlpha = typeof alpha === "number";
     const alphaValue = hasAlpha ? alpha : 1;
     const hexColor = [
         `0${red.toString(16)}`.slice(-2),
         `0${green.toString(16)}`.slice(-2),
         `0${blue.toString(16)}`.slice(-2),
-        includeAlpha === false
-            ? ""
-            : includeAlpha || (hasAlpha && alpha < 1)
+        hasAlpha && alpha < 1
             ? `0${Math.round(alphaValue * 255).toString(16)}`.slice(-2)
             : "",
     ];

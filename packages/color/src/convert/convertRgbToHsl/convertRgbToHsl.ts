@@ -1,5 +1,5 @@
-import { HSLA } from "../_interfaces/hsla.interface";
-import { RGBA } from "../_interfaces/rgba.interface";
+import { HSLA } from "../../_interfaces/hsla.interface";
+import { RGBA } from "../../_interfaces/rgba.interface";
 
 /**
  * Convert an RGB color to an HSL color value.

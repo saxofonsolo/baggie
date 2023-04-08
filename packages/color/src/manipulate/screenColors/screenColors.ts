@@ -1,7 +1,7 @@
 import { getMean } from "@baggie/math";
 import { RGBA } from "../../_interfaces/rgba.interface";
 import { convertHexToRgb } from "../../convert/convertHexToRgb";
-import { convertRgbToHex } from "../../convert/convertRgbToHex";
+import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 
 /**
  * Blend two colors together with the screen mode.

@@ -1,6 +1,6 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
 import { convertHexToRgb } from "../../convert/convertHexToRgb";
-import { convertRgbToHex } from "../../convert/convertRgbToHex";
+import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 
 /**
  * Mix two colors together.

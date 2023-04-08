@@ -1,8 +1,8 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
 import { convertHslToRgb } from "../../convert/convertHslToRgb";
-import { convertRgbToHsl } from "../../convert/convertRgbToHsl";
+import { convertRgbToHsl } from "../../convert/convertRgbToHsl/convertRgbToHsl";
 import { convertHexToRgb } from "../../convert/convertHexToRgb";
-import { convertRgbToHex } from "../../convert/convertRgbToHex";
+import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 
 /**
  * Get a complementary color scheme.

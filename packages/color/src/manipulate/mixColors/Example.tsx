@@ -31,7 +31,7 @@ export const Example = (props: Props) => {
                         value={weight}
                         min={0}
                         max={1}
-                        step={0.05}
+                        step={0.01}
                         onChange={({ target }) => setWeight(target.valueAsNumber)}
                     />{" "}
                     {weight.toFixed(2)}

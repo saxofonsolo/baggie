@@ -41,31 +41,4 @@ describe("convertRgbToHex", () => {
             }),
         ).toBe("#0000ff80");
     });
-
-    test("No alpha", () => {
-        expect(
-            convertRgbToHex(
-                {
-                    red: 0,
-                    green: 0,
-                    blue: 255,
-                    alpha: 0.5,
-                },
-                false,
-            ),
-        ).toBe("#0000ff");
-    });
-
-    test("Force alpha", () => {
-        expect(
-            convertRgbToHex(
-                {
-                    red: 0,
-                    green: 0,
-                    blue: 255,
-                },
-                true,
-            ),
-        ).toBe("#0000ffff");
-    });
 });

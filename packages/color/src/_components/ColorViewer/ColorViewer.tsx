@@ -62,10 +62,7 @@ export const ColorViewer = ({ color, splitColor }: Props) => {
                     />
                 ) : null}
             </div>
-            <div className={S.text}>
-                {color}
-                {isSplit ? ` / ${splitColor as string}` : ""}
-            </div>
+            {isSplit || <div className={S.text}>{color}</div>}
         </div>
     );
 };
