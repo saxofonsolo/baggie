@@ -1,0 +1,27 @@
+import { Example } from "./Example";
+
+# convertRgbToLab
+
+Convert an object with RGB color values to Lab (CIELAB CIE76).
+
+Assumes red, green and blue are contained in the set 0 to 255, and returns l (lightness) in the set 0 to 1,
+and a and b (green–red and blue–yellow color components) in the set -128 to 128. Alpha is always 0 to 1.
+
+> See https://github.com/antimatter15/rgb-lab/blob/master/color.js
+
+## Parameters
+
+| Parameter | Type     | Required |
+| :-------- | :------- | :------: |
+| **color** | `object` |    ✔     |
+
+| Color property | Type     | Required | Description                   |
+| :------------- | :------- | :------: | :---------------------------- |
+| **red**        | `number` |    ✔     | The red color value (0-255)   |
+| **green**      | `number` |    ✔     | The green color value (0-255) |
+| **blue**       | `number` |    ✔     | The blue color value (0-255)  |
+| **alpha**      | `number` |          | The alpha value (0-1)         |
+
+## Example
+
+<Example red={128} green={128} blue={128} alpha={1} />

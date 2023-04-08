@@ -1,15 +1,8 @@
-import { roundDecimals } from "@baggie/math";
-import { CIELAB } from "../_interfaces/cielab.interface";
-import { RGBA } from "../_interfaces/rgba.interface";
+import { CIELAB } from "../../_interfaces/cielab.interface";
+import { RGBA } from "../../_interfaces/rgba.interface";
 
 /**
- * Convert an RGB color value to Lab (CIELAB CIE76).
- *
- * Assumes red, green and blue are contained in the set 0 to 255, and returns l (lightness) in the set 0 to 1,
- * and a and b (green–red and blue–yellow color components) in the set -128 to 128. Alpha is always 0 to 1.
- *
- * @see https://github.com/antimatter15/rgb-lab/blob/master/color.js
- * @category Convert
+ * Convert an object with RGB color values to Lab (CIELAB CIE76).
  */
 export const convertRgbToLab = ({
     red,
@@ -37,9 +30,9 @@ export const convertRgbToLab = ({
     z = z > 0.008856 ? Math.pow(z, 1 / 3) : 7.787 * z + 16 / 116;
 
     return {
-        l: roundDecimals((116 * y - 16) / 100, 3),
-        a: roundDecimals(500 * (x - y), 3),
-        b: roundDecimals(200 * (y - z), 3),
+        l: (116 * y - 16) / 100,
+        a: 500 * (x - y),
+        b: 200 * (y - z),
         alpha,
     };
 };

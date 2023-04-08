@@ -28,7 +28,7 @@ export { convertHexToRgb } from "./convert/convertHexToRgb/convertHexToRgb";
 export { convertHslToRgb } from "./convert/convertHslToRgb";
 export { convertRgbToHex } from "./convert/convertRgbToHex/convertRgbToHex";
 export { convertRgbToHsl } from "./convert/convertRgbToHsl/convertRgbToHsl";
-export { convertRgbToLab } from "./convert/convertRgbToLab";
+export { convertRgbToLab } from "./convert/convertRgbToLab/convertRgbToLab";
 export { normalizeHexColor } from "./convert/normalizeHexColor";
 export { parseColor } from "./convert/parseColor";
 
