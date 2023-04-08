@@ -1,5 +1,5 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
-import { convertHexToRgb } from "../../convert/convertHexToRgb";
+import { convertHexToRgb } from "../../convert/convertHexToRgb/convertHexToRgb";
 
 /**
  * Get the perceived brightness of a color as percentage in decimal form.

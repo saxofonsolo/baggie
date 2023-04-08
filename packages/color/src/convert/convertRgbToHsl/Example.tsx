@@ -89,31 +89,34 @@ export const Example = (props: Props) => {
                 }}
             >
                 <ColorViewer color={hex} />
+
                 <table style={{ margin: 0 }}>
-                    <tr>
-                        <td>
-                            <b>Hue:</b>
-                        </td>
-                        <td>{hsl.hue}</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Saturation:</b>
-                        </td>
-                        <td>{hsl.saturation}</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Lightness:</b>
-                        </td>
-                        <td>{hsl.lightness}</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <b>Alpha:</b>
-                        </td>
-                        <td>{hsl.alpha}</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <b>Hue:</b>
+                            </td>
+                            <td>{hsl.hue}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Saturation:</b>
+                            </td>
+                            <td>{hsl.saturation}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Lightness:</b>
+                            </td>
+                            <td>{hsl.lightness}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Alpha:</b>
+                            </td>
+                            <td>{hsl.alpha}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
@@ -126,7 +129,8 @@ const data = {
    red: ${red},
    green: ${green},
    blue: ${blue},
-${alpha < 1 ? `   alpha: ${alpha},\n` : ""}};
+   alpha: ${alpha},
+};
 
 const hsl = convertRgbToHsl(data);
 /*

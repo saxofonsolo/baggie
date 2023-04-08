@@ -1,7 +1,7 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
 
 /**
- * Convert an object with RGB color values to a hexadecimal color.
+ * Convert an object with RGB color values to a hex color.
  */
 export const convertRgbToHex = ({ red, green, blue, alpha }: RGBA): string => {
     const hasAlpha = typeof alpha === "number";

@@ -1,6 +1,6 @@
 import { getMean } from "@baggie/math";
 import { RGBA } from "../../_interfaces/rgba.interface";
-import { convertHexToRgb } from "../../convert/convertHexToRgb";
+import { convertHexToRgb } from "../../convert/convertHexToRgb/convertHexToRgb";
 import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 
 /**

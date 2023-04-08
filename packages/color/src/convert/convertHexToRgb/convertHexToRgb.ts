@@ -1,10 +1,8 @@
-import { RGBA } from "../_interfaces/rgba.interface";
-import { isHexColor } from "../check/isHexColor/isHexColor";
+import { RGBA } from "../../_interfaces/rgba.interface";
+import { isHexColor } from "../../check/isHexColor/isHexColor";
 
 /**
- * Convert an hex color to an RGB color value.
- *
- * @category Convert
+ * Convert a hex color to an object with RGB color values.
  */
 export const convertHexToRgb = (hex: string): RGBA => {
     if (isHexColor(hex)) {

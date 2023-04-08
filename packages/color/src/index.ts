@@ -24,7 +24,7 @@ export { ColorComparison } from "./comparison/colorComparison";
 
 /* Convert */
 export { convertColorNameToHex } from "./convert/convertColorNameToHex";
-export { convertHexToRgb } from "./convert/convertHexToRgb";
+export { convertHexToRgb } from "./convert/convertHexToRgb/convertHexToRgb";
 export { convertHslToRgb } from "./convert/convertHslToRgb";
 export { convertRgbToHex } from "./convert/convertRgbToHex/convertRgbToHex";
 export { convertRgbToHsl } from "./convert/convertRgbToHsl/convertRgbToHsl";

@@ -1,7 +1,7 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
 import { convertHslToRgb } from "../../convert/convertHslToRgb";
 import { convertRgbToHsl } from "../../convert/convertRgbToHsl/convertRgbToHsl";
-import { convertHexToRgb } from "../../convert/convertHexToRgb";
+import { convertHexToRgb } from "../../convert/convertHexToRgb/convertHexToRgb";
 import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 
 /**
