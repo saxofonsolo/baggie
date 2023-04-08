@@ -34,5 +34,5 @@ export { parseColor } from "./convert/parseColor";
 
 /* Manipulate */
 export { mixColors } from "./manipulate/mixColors/mixColors";
-export { multiplyColors } from "./manipulate/multiplyColors";
-export { screenColors } from "./manipulate/screenColors";
+export { multiplyColors } from "./manipulate/multiplyColors/multiplyColors";
+export { screenColors } from "./manipulate/screenColors/screenColors";

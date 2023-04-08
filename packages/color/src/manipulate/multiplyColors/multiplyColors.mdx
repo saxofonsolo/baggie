@@ -1,0 +1,21 @@
+import { Example } from "./Example";
+
+# multiplyColors
+
+Blend two colors together with the multiply mode.
+
+The result will be darker, since we're working with an additive color model (RGB).
+This function is the opposite of `screenColors()`.
+
+> See https://en.wikipedia.org/wiki/Blend_modes
+
+## Parameters
+
+| Parameter  | Type     | Required | Description           |
+| :--------- | :------- | :------: | --------------------- |
+| **colorA** | `string` |    ✔     | The base color.       |
+| **colorB** | `string` |    ✔     | The other base color. |
+
+## Example
+
+<Example colorA="#ff0000" colorB="#808080" />
