@@ -4,8 +4,8 @@ import { convertToDate } from "../convert/convertToDate";
 /**
  * Check if a CPR number is valid.
  *
- * Works with the birth date and the four control digits combined or separated
- * by a anything that isn't a number.
+ * Works with the birthdate and the four control digits combined or separated
+ * by anything that isn't a number.
  *
  * Gender can be provided as
  * - `"f"`
