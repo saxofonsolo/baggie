@@ -17,19 +17,17 @@ export const Example = (props: Props) => {
         <>
             <div style={{ display: "flex", gap: "10px" }}>
                 <InputWrapper label="Color name" labelForId="color-name-input">
-                    <select
+                    <input
                         id="color-name-input"
                         value={colorName}
                         onChange={({ target }) => setColorName(target.value)}
-                    >
+                        list="color-names"
+                    />
+                    <datalist id="color-names">
                         {Object.keys(COLOR_NAMES).map((name) => (
                             <option key={name}>{name}</option>
                         ))}
-                    </select>
-                </InputWrapper>
-
-                <InputWrapper label="Hex" labelForId={undefined}>
-                    {hex ? hex : "undefined"}
+                    </datalist>
                 </InputWrapper>
             </div>
 

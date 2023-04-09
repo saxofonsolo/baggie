@@ -1,6 +1,6 @@
 import React, { useCallback, useId, useState } from "react";
 import { InputWrapper } from "@baggie/react";
-import { normalizeHexColor } from "../../convert/normalizeHexColor";
+import { normalizeHexColor } from "../../convert/normalizeHexColor/normalizeHexColor";
 import { convertColorNameToHex } from "../../convert/convertColorNameToHex/convertColorNameToHex";
 import { isHexColor } from "../../check/isHexColor/isHexColor";
 import S from "./ColorInput.module.scss";

@@ -1,5 +1,8 @@
-import { isHexColor } from "../check/isHexColor/isHexColor";
+import { isHexColor } from "../../check/isHexColor/isHexColor";
 
+/**
+ * Make sure a hex color is in lowercase with 6 to 8 hexadecimals.
+ */
 export const normalizeHexColor = (hex: string) =>
     isHexColor(hex)
         ? (hex.length < 7
