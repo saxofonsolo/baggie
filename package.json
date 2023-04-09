@@ -2,11 +2,6 @@
   "name": "baggie",
   "version": "2.0.0",
   "private": true,
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "lib/**/*"
-  ],
   "workspaces": [
     "packages/*"
   ],
@@ -31,7 +26,7 @@
     "#-- BUILD": "exit",
     "build": "yarn workspaces run build",
     "build:workspace": "node scripts/build-workspace.mjs",
-    "build-storybook": "sb build",
+    "build-storybook": "sb build --docs",
     " ": "exit",
     "#-- QUALITY ASSURANCE": "exit",
     "prettier": "prettier --write \"./**/*.{js,ts,tsx,css,scss,json}\"",
@@ -48,11 +43,11 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
-    "@ngneat/falso": "^6.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@ngneat/falso": "^6.4.0",
     "@storybook/addon-a11y": "^7.0.2",
     "@storybook/addon-docs": "^7.0.2",
     "@storybook/addon-essentials": "^7.0.2",
@@ -85,7 +80,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "generate-template-files": "^3.2.1",
     "husky": "^8.0.3",
     "inquirer": "^9.1.5",
     "inquirer-autocomplete-prompt": "^3.0.0",

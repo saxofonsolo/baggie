@@ -32,20 +32,36 @@ export const passwordSpecialCharactersDefault =
 export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
     const passwordSettings: PasswordOptions = {
         ...options,
-        minLength:
-            typeof options?.minLength === "number" ? options.minLength : 8,
-        minDigits:
+        minLength: Math.max(
+            0,
+            typeof options?.minLength === "number"
+                ? options.minLength
+                : Math.min(8, options?.maxLength || Infinity),
+        ),
+        minDigits: Math.max(
+            0,
             typeof options?.minDigits === "number" ? options.minDigits : 1,
-        minLowercase:
+            0,
+        ),
+        minLowercase: Math.max(
+            0,
             typeof options?.minLowercase === "number"
                 ? options.minLowercase
                 : 1,
-        minUppercase:
+            0,
+        ),
+        minUppercase: Math.max(
+            0,
             typeof options?.minUppercase === "number"
                 ? options.minUppercase
                 : 1,
-        minSpecial:
+            0,
+        ),
+        minSpecial: Math.max(
+            0,
             typeof options?.minSpecial === "number" ? options.minSpecial : 1,
+            0,
+        ),
         specialCharacters:
             options?.specialCharacters || passwordSpecialCharactersDefault,
         forbiddenCharacters:
@@ -81,7 +97,10 @@ export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
         }${!hasMaxLowercase ? "," : ""}})${
             hasMaxLowercase
                 ? `(?!(?:.*${lowercaseLetters}.*){${
-                      (passwordSettings.maxLowercase as number) + 1
+                      Math.max(
+                          passwordSettings.minLowercase as number,
+                          passwordSettings.maxLowercase as number,
+                      ) + 1
                   },})`
                 : ""
         }(?=(.*${uppercaseLetters}.*){${
@@ -89,7 +108,10 @@ export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
         }${!hasMaxUppercase ? "," : ""}})${
             hasMaxUppercase
                 ? `(?!(?:.*${uppercaseLetters}.*){${
-                      (passwordSettings.maxUppercase as number) + 1
+                      Math.max(
+                          passwordSettings.minUppercase as number,
+                          passwordSettings.maxUppercase as number,
+                      ) + 1
                   },})`
                 : ""
         }(?=(.*\\d.*){${passwordSettings.minDigits as number}${
@@ -97,7 +119,10 @@ export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
         }})${
             hasMaxDigits
                 ? `(?!(?:.*\\d.*){${
-                      (passwordSettings.maxDigits as number) + 1
+                      Math.max(
+                          passwordSettings.minDigits as number,
+                          passwordSettings.maxDigits as number,
+                      ) + 1
                   },})`
                 : ""
         }(?=(.*[${specialChars}].*){${passwordSettings.minSpecial as number}${
@@ -105,11 +130,19 @@ export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
         }})${
             hasMaxSpecial
                 ? `(?!(?:.*[${specialChars}].*){${
-                      (passwordSettings.maxSpecial as number) + 1
+                      Math.max(
+                          passwordSettings.minSpecial as number,
+                          passwordSettings.maxSpecial as number,
+                      ) + 1
                   },})`
                 : ""
         }.{${passwordSettings.minLength as number},${
-            hasMaxLength ? (passwordSettings.maxLength as number) : ""
+            hasMaxLength
+                ? Math.max(
+                      passwordSettings.minLength as number,
+                      passwordSettings.maxLength as number,
+                  )
+                : ""
         }}$`,
         passwordSettings.allowUnicode ? "u" : "",
     );
