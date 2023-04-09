@@ -26,7 +26,7 @@
   "sideEffects": false,
   "devDependencies": {
     "rimraf": "^4.4.1",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"
 }

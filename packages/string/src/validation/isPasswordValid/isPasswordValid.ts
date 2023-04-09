@@ -1,5 +1,5 @@
-import { getPasswordRegex } from "../regex/getPasswordRegex";
-import { PasswordOptions } from "../_interfaces/passwordOptions.interface";
+import { getPasswordRegex } from "../../regex/getPasswordRegex";
+import { PasswordOptions } from "../../_interfaces/passwordOptions.interface";
 
 /**
  * Check if a password is valid.

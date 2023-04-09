@@ -30,7 +30,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^3.1.0",
     "rimraf": "^4.4.1",
-    "typescript": "^5.0.3",
+    "typescript": "^5.0.4",
     "vite-plugin-css-injected-by-js": "^3.1.0",
     "vite-plugin-dts": "^2.2.0"
   },
