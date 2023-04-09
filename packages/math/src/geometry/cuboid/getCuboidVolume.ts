@@ -12,8 +12,6 @@
  * const volume = getCuboidVolume(x, y, z);
  * // volume = 6000
  * ```
- *
- * @category Geometry - Cuboid
  */
 export const getCuboidVolume = (x: number, y: number, z: number): number =>
     x * y * z;

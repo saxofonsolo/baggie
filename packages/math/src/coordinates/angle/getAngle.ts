@@ -26,8 +26,6 @@ import { radiansToDegrees } from "../../radians/radiansToDegrees";
  * const angleClockwise = getAngle(from, to, { clockwise: true });
  * // angle = 225
  * ```
- *
- * @category Coordinates - Angle
  */
 export const getAngle = (
     from: CoordinatesXY,

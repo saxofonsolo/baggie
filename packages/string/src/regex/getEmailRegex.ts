@@ -11,8 +11,6 @@
  * const emails = string.match(getEmailRegex());
  * // emails = ["mail@private.com", "mail@business.com"]
  * ```
- *
- * @category Regex
  */
 export const getEmailRegex = (global = true): RegExp => {
     const letters =

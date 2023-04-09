@@ -16,8 +16,6 @@ import { getCircleArea } from "../circle/getCircleArea/getCircleArea";
  * const areaWithoutEnds = getCylinderArea(radius, height, true);
  * // area = 1256.6370614359173
  * ```
- *
- * @category Geometry - Cylinder
  */
 export const getCylinderArea = (
     radius: number,

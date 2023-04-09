@@ -38,8 +38,6 @@ interface Options {
  * const zeroBasedMonth = convertToDate("31/00/2020", { zeroBasedMonth: true });
  * // zeroBasedMonth = Fri Jan 31 2020 00:00:00 GMT+0100 (Central European Standard Time)
  * ```
- *
- * @category Convert
  */
 export const convertToDate = (
     date: string | DateObject,

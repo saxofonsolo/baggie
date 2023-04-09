@@ -26,8 +26,6 @@
  *
  * // After 5 seconds the function will output "Hello, friend" to the console.
  * ```
- *
- * @category Timers
  */
 export class Timer {
     protected startMs: number;

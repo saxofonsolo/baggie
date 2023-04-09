@@ -18,8 +18,6 @@ import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
  * const bounds = getBounds(coordinates);
  * // bounds = { min: { x: -10, y: -10 }, max: { x: 10, y: 10 }}
  * ```
- *
- * @category Coordinates - Bounds
  */
 export const getBounds = (coordinates: CoordinatesXY[]): Bounds => {
     return coordinates.reduce(

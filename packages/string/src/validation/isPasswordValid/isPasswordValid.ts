@@ -22,8 +22,6 @@ import { PasswordOptions } from "../../_interfaces/passwordOptions.interface";
  *     // The entered password is valid
  * }
  * ```
- *
- * @category Validation
  */
 export const isPasswordValid = (
     password: string | HTMLInputElement,

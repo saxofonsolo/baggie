@@ -6,8 +6,6 @@ import { decodeCookieParts } from "./_helpers/decodeCookiePart.helper";
  * Be default the value will be parsed using `JSON.parse()`, but if you want to
  * keep it a string (even though it might look like a number, an array or an
  * object), set the parameter `dontParseCookie` to `true`.
- *
- * @category Cookie
  */
 export const getCookie = (name: string, dontParseCookie = false): any => {
     // Object for storing cookies

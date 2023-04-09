@@ -15,8 +15,6 @@ import { getVimeoIdRegex } from "../regex/getVimeoIdRegex";
  * const noVimeoId = getVimeoId("http://google.com");
  * // noYouTubeId = ""
  * ```
- *
- * @category Convert
  */
 export const getVimeoId = (url: string): string | undefined => {
     const match = url.match(getVimeoIdRegex());

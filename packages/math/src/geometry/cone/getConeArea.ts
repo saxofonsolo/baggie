@@ -16,8 +16,6 @@ import { getCircleArea } from "../circle/getCircleArea/getCircleArea";
  * const areaWithoutBottom = getConeArea(radius, height, true);
  * // areaWithoutBottom = 628.3185307179587
  * ```
- *
- * @category Geometry - Cone
  */
 export const getConeArea = (
     radius: number,

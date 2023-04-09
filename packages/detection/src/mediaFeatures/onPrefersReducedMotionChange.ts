@@ -21,8 +21,6 @@ import { OnMatchMediaChange } from "./_helpers/onMatchMediaChange.helper";
  * // Destroy the instance when you no longer need it
  * reducedMotion.destroy();
  * ```
- *
- * @category Media Features
  */
 export class OnPrefersReducedMotionChange extends OnMatchMediaChange {
     constructor(callback: (state: boolean) => void) {

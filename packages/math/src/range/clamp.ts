@@ -18,8 +18,6 @@
  * const mediumNumber = clamp(50, 25, 75);
  * // mediumNumber = 50
  * ```
- *
- * @category Range
  */
 export const clamp = (input: number, min: number, max: number): number =>
     Math.min(max, Math.max(min, input));

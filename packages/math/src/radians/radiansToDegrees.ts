@@ -10,8 +10,6 @@
  * const degrees = radiansToDegrees(degrees);
  * // degrees = 5729.5779513082325
  * ```
- *
- * @category Radians
  */
 export const radiansToDegrees = (radians: number): number =>
     (radians * 180) / Math.PI;

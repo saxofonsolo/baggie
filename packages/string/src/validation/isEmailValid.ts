@@ -18,8 +18,6 @@ import { getEmailRegex } from "../regex/getEmailRegex";
  *     // The entered email address is valid
  * }
  * ```
- *
- * @category Validation
  */
 export const isEmailValid = (email: string | HTMLInputElement): boolean =>
     getEmailRegex(false).test(typeof email === "string" ? email : email.value);

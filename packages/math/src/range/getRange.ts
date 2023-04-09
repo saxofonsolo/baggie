@@ -11,8 +11,6 @@
  * const range = getRange(numbers);
  * // range = 38
  * ```
- *
- * @category Range
  */
 export const getRange = (numbers: number[]): number => {
     // Put the array of numbers in ascending order (small to large)

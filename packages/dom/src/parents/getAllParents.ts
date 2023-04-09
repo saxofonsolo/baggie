@@ -27,8 +27,6 @@
  * // parentsUntilMain = all the parents of childElement until (and including)
  * // a parent matching the selector ".main"
  * ```
- *
- * @category Parents
  */
 export const getAllParents = (
     element: HTMLElement,

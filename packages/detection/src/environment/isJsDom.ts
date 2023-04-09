@@ -1,7 +1,5 @@
 /**
  * If the current environment is **JSDOM**, this will be `true`.
- *
- * @category Environment
  */
 export const isJsDom: boolean =
     typeof window !== "undefined" &&

@@ -33,8 +33,6 @@
  * const roundDown = keepOutsideRange(5, 0, 10, true);
  * // roundDown = 0
  * ```
- *
- * @category Range
  */
 export const keepOutsideRange = (
     input: number,

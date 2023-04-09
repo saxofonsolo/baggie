@@ -14,16 +14,12 @@ let scrollTop = 0;
 
 /**
  * Get to know if scroll is locked.
- *
- * @category Scroll - Scroll Lock
  */
 export const isScrollLocked = (): boolean => scrollLockState;
 
 /**
  * Set scroll lock settings.
  * Probably just the class name that is set on the HTML element.
- *
- * @category Scroll - Scroll Lock
  */
 export const setScrollLockSettings = (options: ScrollLockSettings): void => {
     settings = {
@@ -34,8 +30,6 @@ export const setScrollLockSettings = (options: ScrollLockSettings): void => {
 
 /**
  * Enable scroll lock.
- *
- * @category Scroll - Scroll Lock
  */
 export const enableScrollLock = (): void => {
     if (!scrollLockState) {
@@ -65,8 +59,6 @@ export const enableScrollLock = (): void => {
 
 /**
  * Disable scroll lock.
- *
- * @category Scroll - Scroll Lock
  */
 export const disableScrollLock = (): void => {
     if (scrollLockState) {
@@ -94,8 +86,6 @@ export const disableScrollLock = (): void => {
 
 /**
  * Toggle scroll lock.
- *
- * @category Scroll - Scroll Lock
  */
 export const toggleScrollLock = (): void => {
     if (scrollLockState) {

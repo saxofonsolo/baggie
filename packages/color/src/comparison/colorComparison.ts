@@ -50,8 +50,6 @@ interface ColorHaystack extends CIELAB {
  *         { red: 0, green: 255, blue: 0 }
  *     ]);
  * ```
- *
- * @category Comparison
  */
 export class ColorComparison {
     private haystack: ColorHaystack[] = [];

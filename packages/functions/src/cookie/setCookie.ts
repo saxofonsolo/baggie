@@ -8,8 +8,6 @@ import { encodeCookieName } from "./_helpers/encodeCookieName.helper";
  * @remarks
  * Using `maxAge` is preferred over `expires`. If both `expires` and `maxAge`
  * are set, `maxAge` has precedence.
- *
- * @category Cookie
  */
 export interface CookieAttributes {
     path?: string;
@@ -22,8 +20,6 @@ export interface CookieAttributes {
 
 /**
  * Set a cookie with a name, value and optional attributes.
- *
- * @category Cookie
  */
 export const setCookie = (
     name: string,

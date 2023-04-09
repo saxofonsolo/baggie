@@ -10,8 +10,6 @@
  * const stripped = markup.replace(getTagsRegex(), "");
  * // stripped = "Bold move.Paragraph. :)"
  * ```
- *
- * @category Regex
  */
 export const getTagsRegex = (groupSequentialTags = false): RegExp =>
     new RegExp(`(<\\/?[a-z!?][^>]*>)${groupSequentialTags ? "+" : ""}`, "ig");

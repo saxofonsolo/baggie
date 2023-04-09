@@ -17,8 +17,6 @@ import { getNewLineRegex } from "../regex/getNewLineRegex";
  * const keepWhitespace = convertNewLinesToBreaks(original, true);
  * // keepWhitespace = "hello<br />    friend";
  * ```
- *
- * @category Replace
  */
 export const convertNewLinesToBreaks = (
     text: string,

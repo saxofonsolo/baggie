@@ -15,8 +15,6 @@ import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
  * const point = getPointBetween(from, to, progress);
  * // point = { x: 15, y: 15 }
  * ```
- *
- * @category Coordinate - Distance
  */
 export const getPointBetween = (
     from: CoordinatesXY,

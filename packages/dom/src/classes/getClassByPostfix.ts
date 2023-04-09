@@ -1,7 +1,5 @@
 /**
  * Get all classes of an element that ends with a specified string.
- *
- * @category Classes
  */
 export const getClassByPostfix = (
     element: Element = document.body,

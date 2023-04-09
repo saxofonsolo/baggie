@@ -11,8 +11,6 @@
  * const volume = getCylinderVolume(radius, height);
  * // volume = 6283.185307179587
  * ```
- *
- * @category Geometry - Cylinder
  */
 export const getCylinderVolume = (radius: number, height: number): number =>
     Math.PI * radius * radius * height;

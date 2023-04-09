@@ -12,8 +12,6 @@
  * const surfaceArea = getCuboidArea(x, y, z);
  * // surfaceArea = 2200
  * ```
- *
- * @category Geometry - Cuboid
  */
 export const getCuboidArea = (x: number, y: number, z: number): number =>
     (x * y + x * z + y * z) * 2;

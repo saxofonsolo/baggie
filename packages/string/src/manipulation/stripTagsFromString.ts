@@ -16,8 +16,6 @@ import { getTagsRegex } from "../regex/getTagsRegex";
  * const spacedAndNotTrimmed = stripTagsFromString(markup, " ", false);
  * // spacedAndNotTrimmed = " Bold move. Paragraph. :)"
  * ```
- *
- * @category Manipulation
  */
 export const stripTagsFromString = (
     markup: string,

@@ -7,8 +7,6 @@ interface OffsetObject {
 
 /**
  * Get the position of an element on the page.
- *
- * @category Properties
  */
 export const getElementPosition = (
     element: Element,

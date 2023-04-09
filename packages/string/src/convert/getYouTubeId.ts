@@ -15,8 +15,6 @@ import { getYouTubeIdRegex } from "../regex/getYouTubeIdRegex";
  * const noYouTubeId = getYouTubeId("http://google.com");
  * // noYouTubeId = ""
  * ```
- *
- * @category Convert
  */
 export const getYouTubeId = (input: string): string | undefined => {
     const match = input.match(getYouTubeIdRegex());

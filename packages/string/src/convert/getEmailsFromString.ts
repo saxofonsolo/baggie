@@ -13,8 +13,6 @@ import { getEmailRegex } from "../regex/getEmailRegex";
  * const foundEmails = getEmailsFromString(string);
  * // foundEmails = ["mail@private.com", "mail@business.com"]
  * ```
- *
- * @category Convert
  */
 export const getEmailsFromString = (string: string): string[] =>
     string.match(getEmailRegex(true)) || [];

@@ -16,8 +16,6 @@ import { degreesToRadians } from "../../radians/degreesToRadians";
  * const distance = getDistanceOnSphere(from, to, 12742);
  * // distance = 100.70265108699398
  * ```
- *
- * @category Coordinate - Distance
  */
 export const getDistanceOnSphere = (
     from: CoordinatesLatLng,

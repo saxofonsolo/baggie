@@ -1,7 +1,5 @@
 /**
  * Get all classes of an element that starts with a specified string.
- *
- * @category Classes
  */
 export const getClassByPrefix = (
     element: Element = document.body,

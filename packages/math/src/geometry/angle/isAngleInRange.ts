@@ -18,8 +18,6 @@
  * const checkD = isAngleInRange(360, [100, -1]);
  * // checkD = false
  * ```
- *
- * @category Geometry - Angle
  */
 export const isAngleInRange = (
     angle: number,

@@ -3,8 +3,6 @@ import { PasswordOptions } from "../_interfaces/passwordOptions.interface";
 /**
  * A string with the default accepted special character used by
  * `getPasswordRegex`.
- *
- * @category Regex
  */
 export const passwordSpecialCharactersDefault =
     "!#$%&'()*+,./:;<=>?@[]\\^_`{|}~¨-";
@@ -26,8 +24,6 @@ export const passwordSpecialCharactersDefault =
  * - specialCharacters - defaults to {@link passwordSpecialCharactersDefault}
  * - forbiddenCharacters - default to `" "`
  * - allowUnicode - defaults to `false`
- *
- * @category Regex
  */
 export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
     const passwordSettings: PasswordOptions = {

@@ -18,8 +18,6 @@ import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
  * const checkB = isInsideRadius(position, radiusB);
  * // checkB = false
  * ```
- *
- * @category Coordinates - Radius
  */
 export const isInsideRadius = (
     position: CoordinatesXY,

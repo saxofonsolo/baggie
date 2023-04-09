@@ -3,8 +3,6 @@ import { getScrollPosition } from "./getScrollPosition";
 
 /**
  * Scroll to the top of the page.
- *
- * @category Scroll
  */
 export const scrollToTop = (options?: {
     offset?: number;

@@ -83,8 +83,6 @@ interface GetAllDistancesReturn {
  * ]
  * *\/
  * ```
- *
- * @category Coordinate - Distance
  */
 export const getAllDistances = (
     fromCoordinates: CoordinatesXY | null,

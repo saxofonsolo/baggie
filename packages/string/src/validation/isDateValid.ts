@@ -38,8 +38,6 @@ interface Options {
  * const zeroBasedMonth = isDateValid("31/00/2020", { zeroBasedMonth: true });
  * // zeroBasedMonth = true
  * ```
- *
- * @category Validation
  */
 export const isDateValid = (
     date: string | DateObject,

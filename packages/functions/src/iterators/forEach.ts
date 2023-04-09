@@ -35,9 +35,7 @@ import { isBrowser } from "@baggie/detection";
  *     // "element" is a reference to the current DOM-element.
  * });
  * ```
- *
- * @category Iterators
- * @author [\@DonGissel](https://github.com/DonGissel)
+## Examples * @author [\@DonGissel](https://github.com/DonGissel)
  */
 export const forEach = (
     collection:

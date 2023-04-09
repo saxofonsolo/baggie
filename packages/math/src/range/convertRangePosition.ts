@@ -23,8 +23,6 @@ import { getPercentageBetween } from "../percentage/getPercentageBetween/getPerc
  * const newPosition = convertRangePosition(inputRange, outputRange);
  * // newPosition = -5
  * ```
- *
- * @category Range
  */
 export const convertRangePosition = (
     input: { from: number; to: number; position: number },

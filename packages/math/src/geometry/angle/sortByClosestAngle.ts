@@ -17,8 +17,6 @@
  * const sorted = sortByClosestAngle(target, angles);
  * // sorted = [0, 10, 300, 100, 200]
  * ```
- *
- * @category Geometry - Angle
  */
 export const sortByClosestAngle = (
     target: number,

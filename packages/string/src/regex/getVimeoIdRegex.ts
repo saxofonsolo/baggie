@@ -10,8 +10,6 @@
  * const vimeoId = vimeoUrl.match(getVimeoIdRegex())[1];
  * // vimeoId = "265700921"
  * ```
- *
- * @category Regex
  */
 export const getVimeoIdRegex = (): RegExp =>
     /(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)(?:[a-zA-Z0-9_-]+)?/i;

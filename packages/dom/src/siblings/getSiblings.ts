@@ -1,7 +1,5 @@
 /**
  * Get all siblings of an element.
- *
- * @category Siblings
  */
 export const getSiblings = (
     element: Element,

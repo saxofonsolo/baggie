@@ -5,8 +5,6 @@ interface ScrollPosition {
 
 /**
  * Get the scroll position.
- *
- * @category Scroll
  */
 export const getScrollPosition = (): ScrollPosition => ({
     x: window.pageXOffset || document.documentElement.scrollLeft,

@@ -5,8 +5,6 @@ import { CookieAttributes, setCookie } from "./setCookie";
  *
  * @remarks
  * The expiration date will be set to yesterday, which will unset the cookie.
- *
- * @category Cookie
  */
 export const deleteCookie = (
     name: string,

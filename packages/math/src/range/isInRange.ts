@@ -24,8 +24,6 @@
  * const multiRangeNumber2 = isInRange(10, [5, 15], [20, 30]);
  * // multiRangeNumber2 = true
  * ```
- *
- * @category Range
  */
 export const isInRange = (
     number: number,

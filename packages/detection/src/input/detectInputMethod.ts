@@ -18,8 +18,6 @@ export interface DetectInputMethodOptions {
 
 /**
  * Detect if the user is using **touch** or a **mouse** as an input device.
- *
- * @category Input - Detect Input Method
  */
 export class DetectInputMethod {
     private mouseMoveCount: number;

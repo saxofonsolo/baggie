@@ -49,8 +49,6 @@
  * const newNumbers = intersperse(numbers, insertion);
  * // newNumbers = [10, 15, 20, 25, 30, 35, 40]
  * ```
- *
- * @category Arrays
  */
 export const intersperse = (input: any[], ...insertion: any[]): any[] =>
     input.reduce((accumulator: any[], element, index, array) => {

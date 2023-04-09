@@ -1,7 +1,5 @@
 /**
  * Find out if an element is a parent to another element.
- *
- * @category Parents
  */
 export const isElementParentTo = (
     parent: Element,

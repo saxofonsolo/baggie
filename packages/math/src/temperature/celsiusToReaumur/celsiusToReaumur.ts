@@ -9,7 +9,5 @@
  * const reaumur = celsiusToReaumur(100);
  * // reaumur = 80
  * ```
- *
- * @category Temperature
  */
 export const celsiusToReaumur = (celsius: number): number => (celsius * 4) / 5;

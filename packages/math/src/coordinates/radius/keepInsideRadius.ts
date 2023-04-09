@@ -20,8 +20,6 @@ import { isInsideRadius } from "./isInsideRadius";
  * const newPositionB = keepInsideRadius(position, radiusB);
  * // newPositionB = { x: 10, y: 0 }
  * ```
- *
- * @category Coordinates - Radius
  */
 export const keepInsideRadius = (
     position: CoordinatesXY,

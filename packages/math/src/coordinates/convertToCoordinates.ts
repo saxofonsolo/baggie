@@ -21,8 +21,6 @@ import { CoordinatesXY } from "./_interfaces/coordinatesXY.interface";
  * const nothing = convertToCoordinates();
  * // nothing = { x: 0, y: 0 }
  * ```
- *
- * @category Coordinates
  */
 export const convertToCoordinates = (
     coordinates?: number | [number, number] | CoordinatesXY,

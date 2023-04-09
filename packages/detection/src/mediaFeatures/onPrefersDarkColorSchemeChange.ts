@@ -21,8 +21,6 @@ import { OnMatchMediaChange } from "./_helpers/onMatchMediaChange.helper";
  * // Destroy the instance when you no longer need it
  * darkMode.destroy();
  * ```
- *
- * @category Media Features
  */
 export class OnPrefersDarkColorSchemeChange extends OnMatchMediaChange {
     constructor(callback: (state: boolean) => void) {

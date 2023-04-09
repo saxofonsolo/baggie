@@ -4,8 +4,6 @@ import { getElementPosition } from "../properties/getElementPosition";
 
 /**
  * Scroll to an element.
- *
- * @category Scroll
  */
 export const scrollToElement = (
     element: Element | string,

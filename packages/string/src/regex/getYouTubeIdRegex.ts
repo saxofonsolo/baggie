@@ -14,8 +14,6 @@
  * const youTubeId = youTubeUrl.match(getYouTubeIdRegex())[1];
  * // youTubeId = "dQw4w9WgXcQ"
  * ```
- *
- * @category Regex
  */
 export const getYouTubeIdRegex = (): RegExp =>
     /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/+|.*[?&]v=)|youtu\.be\/|^)([^"&?/ ]{11})\b/i;

@@ -2,8 +2,6 @@ import { getClassByPrefix } from "./getClassByPrefix";
 
 /**
  * Remove all classes of an element that starts with a specified string.
- *
- * @category Classes
  */
 export const removeClassByPrefix = (
     element: Element = document.body,
