@@ -1,5 +1,5 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
-import { convertHslToRgb } from "../../convert/convertHslToRgb";
+import { convertHslToRgb } from "../../convert/convertHslToRgb/convertHslToRgb";
 import { convertRgbToHsl } from "../../convert/convertRgbToHsl/convertRgbToHsl";
 import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 import { convertHexToRgb } from "../../convert/convertHexToRgb/convertHexToRgb";

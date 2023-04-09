@@ -3,7 +3,7 @@ import { create } from "@storybook/theming/create";
 export default create({
     base: "light",
     brandTitle: "baggie",
-    brandImage: "./baggie.svg",
+    brandImage: "./baggie-title.svg",
 
     colorPrimary: "#FC0",
     colorSecondary: "#C90",

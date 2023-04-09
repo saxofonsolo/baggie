@@ -3,7 +3,7 @@ import { NonEmptyArray } from "@baggie/typescript";
 import { HSLA } from "../_interfaces/hsla.interface";
 import { RGBA } from "../_interfaces/rgba.interface";
 import { convertHexToRgb } from "./convertHexToRgb/convertHexToRgb";
-import { convertHslToRgb } from "./convertHslToRgb";
+import { convertHslToRgb } from "./convertHslToRgb/convertHslToRgb";
 import { convertColorNameToHex } from "./convertColorNameToHex";
 
 /**

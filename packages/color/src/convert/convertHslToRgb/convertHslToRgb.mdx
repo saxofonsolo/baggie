@@ -1,0 +1,22 @@
+import { Example } from "./Example";
+
+# convertHslToRgb
+
+Convert an object with HSL color values to RGB color values.
+
+## Parameters
+
+| Parameter | Type     | Required |
+| :-------- | :------- | :------: |
+| **color** | `object` |    ✔     |
+
+| Color property | Type     | Required | Description                |
+| :------------- | :------- | :------: | :------------------------- |
+| **hue**        | `number` |    ✔     | The hue value (0-360)      |
+| **saturation** | `number` |    ✔     | The saturation value (0-1) |
+| **lightness**  | `number` |    ✔     | The lightness value (0-1)  |
+| **alpha**      | `number` |          | The alpha value (0-1)      |
+
+## Example
+
+<Example hue={180} saturation={0.5} lightness={0.5} alpha={1} />
