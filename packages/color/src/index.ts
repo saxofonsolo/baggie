@@ -30,7 +30,6 @@ export { convertRgbToHex } from "./convert/convertRgbToHex/convertRgbToHex";
 export { convertRgbToHsl } from "./convert/convertRgbToHsl/convertRgbToHsl";
 export { convertRgbToLab } from "./convert/convertRgbToLab/convertRgbToLab";
 export { normalizeHexColor } from "./convert/normalizeHexColor/normalizeHexColor";
-export { parseColor } from "./convert/parseColor";
 
 /* Manipulate */
 export { mixColors } from "./manipulate/mixColors/mixColors";
