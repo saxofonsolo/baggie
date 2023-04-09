@@ -4,7 +4,7 @@ import { HSLA } from "../_interfaces/hsla.interface";
 import { RGBA } from "../_interfaces/rgba.interface";
 import { convertHexToRgb } from "./convertHexToRgb/convertHexToRgb";
 import { convertHslToRgb } from "./convertHslToRgb/convertHslToRgb";
-import { convertColorNameToHex } from "./convertColorNameToHex";
+import { convertColorNameToHex } from "./convertColorNameToHex/convertColorNameToHex";
 
 /**
  * Parse a string (like `#fff`, `#f0dd6a`, `violet`, `rgb(255, 100, 50)` or `rgba(255,255,255,.5)`) to an object

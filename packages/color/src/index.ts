@@ -23,7 +23,7 @@ export { getTriadicColorScheme } from "./colorSchemes/getTriadicColorScheme/getT
 export { ColorComparison } from "./comparison/colorComparison";
 
 /* Convert */
-export { convertColorNameToHex } from "./convert/convertColorNameToHex";
+export { convertColorNameToHex } from "./convert/convertColorNameToHex/convertColorNameToHex";
 export { convertHexToRgb } from "./convert/convertHexToRgb/convertHexToRgb";
 export { convertHslToRgb } from "./convert/convertHslToRgb/convertHslToRgb";
 export { convertRgbToHex } from "./convert/convertRgbToHex/convertRgbToHex";

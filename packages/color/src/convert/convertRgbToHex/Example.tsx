@@ -83,13 +83,14 @@ export const Example = (props: Props) => {
                 code={`
 import { convertRgbToHex } from "@baggie/color";
 
-const data = {
+const rgb = {
    red: ${red},
    green: ${green},
    blue: ${blue},
-${alpha < 1 ? `   alpha: ${alpha},\n` : ""}};
+   alpha: ${alpha},
+};
 
-const hex = convertRgbToHex(data);
+const hex = convertRgbToHex(rgb);
 // hex = ${hex ? `"${hex}"` : "undefined"}
 `}
             />

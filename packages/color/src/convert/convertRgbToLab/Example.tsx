@@ -125,14 +125,14 @@ export const Example = (props: Props) => {
                 code={`
 import { convertRgbToLab } from "@baggie/color";
 
-const data = {
+const rgb = {
    red: ${red},
    green: ${green},
    blue: ${blue},
    alpha: ${alpha},
 };
 
-const lab = convertRgbToLab(data);
+const lab = convertRgbToLab(rgb);
 /*
 lab = ${JSON.stringify(lab, null, 4)}
 */

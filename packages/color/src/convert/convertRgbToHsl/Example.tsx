@@ -125,14 +125,14 @@ export const Example = (props: Props) => {
                 code={`
 import { convertRgbToHsl } from "@baggie/color";
 
-const data = {
+const rgb = {
    red: ${red},
    green: ${green},
    blue: ${blue},
    alpha: ${alpha},
 };
 
-const hsl = convertRgbToHsl(data);
+const hsl = convertRgbToHsl(rgb);
 /*
 hsl = ${JSON.stringify(hsl, null, 4)}
 */

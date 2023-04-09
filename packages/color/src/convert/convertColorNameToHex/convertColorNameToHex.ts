@@ -4,7 +4,7 @@
  * @see https://www.w3schools.com/colors/colors_names.asp
  * @internal
  */
-const colorNames: Record<string, string> = {
+export const COLOR_NAMES = {
     aliceblue: "#f0f8ff",
     antiquewhite: "#faebd7",
     aqua: "#00ffff",
@@ -157,9 +157,12 @@ const colorNames: Record<string, string> = {
 
 /**
  * Convert a color name to a hex color.
- *
- * @see https://www.w3schools.com/colors/colors_names.asp
- * @category Convert
  */
-export const convertColorNameToHex = (input: string): string | undefined =>
-    input in colorNames ? colorNames[input] : undefined;
+export const convertColorNameToHex = <
+    T extends keyof typeof COLOR_NAMES | string,
+>(
+    colorName: T,
+) =>
+    COLOR_NAMES[
+        colorName as keyof typeof COLOR_NAMES
+    ] as T extends keyof typeof COLOR_NAMES ? string : undefined;
