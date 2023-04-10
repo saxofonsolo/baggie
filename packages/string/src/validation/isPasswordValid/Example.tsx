@@ -80,6 +80,11 @@ export const Example = (props: Props) => {
                     />
                 </InputWrapper>
 
+                <InputWrapper label="Is valid" labelForId={undefined}>
+                    {isValid ? "true" : "false"}
+                </InputWrapper>
+            </div>
+            <div style={{ marginTop: "10px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
                 <InputWrapper label="Min length" labelForId="minLength">
                     <input
                         id="minLength"
@@ -254,10 +259,6 @@ export const Example = (props: Props) => {
                         checked={allowUnicode}
                         onChange={() => setAllowUnicode((current) => !current)}
                     />
-                </InputWrapper>
-
-                <InputWrapper label="Is valid" labelForId={undefined}>
-                    {isValid ? "true" : "false"}
                 </InputWrapper>
             </div>
 

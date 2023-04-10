@@ -10,9 +10,9 @@ describe("convertRgbToLab", () => {
             }),
         ).toEqual(
             expect.objectContaining({
-                l: 0.532,
-                a: 80.109,
-                b: 67.22,
+                l: 0.5323288178584246,
+                a: 80.10930952982204,
+                b: 67.22006831026425,
                 alpha: 1,
             }),
         );
@@ -27,9 +27,9 @@ describe("convertRgbToLab", () => {
             }),
         ).toEqual(
             expect.objectContaining({
-                l: 0.877,
-                a: -86.185,
-                b: 83.181,
+                l: 0.8773703347354421,
+                a: -86.1846364976253,
+                b: 83.18116474777854,
                 alpha: 1,
             }),
         );
@@ -44,9 +44,9 @@ describe("convertRgbToLab", () => {
             }),
         ).toEqual(
             expect.objectContaining({
-                l: 0.323,
-                a: 79.197,
-                b: -107.864,
+                l: 0.32302586667249483,
+                a: 79.19666178930935,
+                b: -107.8636810449517,
                 alpha: 1,
             }),
         );
@@ -62,9 +62,9 @@ describe("convertRgbToLab", () => {
             }),
         ).toEqual(
             expect.objectContaining({
-                l: 0.323,
-                a: 79.197,
-                b: -107.864,
+                l: 0.32302586667249483,
+                a: 79.19666178930935,
+                b: -107.8636810449517,
                 alpha: 0.5,
             }),
         );
