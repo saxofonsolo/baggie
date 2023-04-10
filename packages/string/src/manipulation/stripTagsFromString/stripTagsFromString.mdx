@@ -1,0 +1,23 @@
+import { Example } from "./Example";
+
+# stripTagsFromString
+
+Strip HTML and XML tags from a string. Tags are replaced with a space by default.
+
+## Parameters
+
+| Parameter       | Type     | Required | Description                                              |
+| :-------------- | :------- | :------: | :------------------------------------------------------- |
+| **string**      | `string` |    ✔     | The string to strip for tags.                            |
+| **replaceWith** | `string` |          | What to replace the tags with. Defaults to a space `" "` |
+
+## Examples
+
+<Example
+    string="<p><b>Bold move.</b><br/>Paragraph.</p><!-- comment -->:)"
+/>
+
+<Example
+    string="<p><b>Bold move.</b><br/>Paragraph.</p><!-- comment -->:)"
+    replaceWith="---"
+/>

@@ -3,34 +3,6 @@ import { convertToDate } from "../../convert/convertToDate";
 
 /**
  * Check if a CPR number is valid.
- *
- * Works with the birthdate and the four control digits combined or separated
- * by anything that isn't a number.
- *
- * Gender can be provided as
- * - `"f"`
- * - `"female"`
- * - `"m"`
- * - `"male"`
- *
- * @remarks
- * **This also checks if the date is valid,** using JavaScript's Date object.
- *
- * @example
- * **Basic usage:**
- * ```ts
- * import { isCprValid } from "@baggie/string";
- *
- * const cprWithValidDate = "300186-2134";
- * const cprWithInvalidDate = "300286-2134";
- * const gender = "female";
- *
- * const validCpr = isCprValid(cprWithValidDate, gender);
- * // validCpr = false
- *
- * const invalidCpr = isCprValid(cprWithInvalidDate, gender);
- * // invalidCpr = false
- * ```
  */
 export const isCprValid = (
     cprNumber: string | number | HTMLInputElement,

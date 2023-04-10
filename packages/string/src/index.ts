@@ -8,7 +8,7 @@ export { getYouTubeId } from "./convert/getYouTubeId";
 
 /* Manipulation */
 export { splitAtSpace } from "./manipulation/splitAtSpace/splitAtSpace";
-export { stripTagsFromString } from "./manipulation/stripTagsFromString";
+export { stripTagsFromString } from "./manipulation/stripTagsFromString/stripTagsFromString";
 export { substringHtmlEntitySafe } from "./manipulation/substringHtmlEntitySafe/substringHtmlEntitySafe";
 export { substringHtmlSafe } from "./manipulation/substringHtmlSafe/substringHtmlSafe";
 export { uppercaseFirstLetter } from "./manipulation/uppercaseFirstLetter/uppercaseFirstLetter";
