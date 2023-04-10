@@ -30,6 +30,6 @@ export { getYouTubeIdRegex } from "./regex/getYouTubeIdRegex";
 
 /* Validation */
 export { isCprValid } from "./validation/isCprValid/isCprValid";
-export { isDateValid } from "./validation/isDateValid";
+export { isDateValid } from "./validation/isDateValid/isDateValid";
 export { isEmailValid } from "./validation/isEmailValid";
 export { isPasswordValid } from "./validation/isPasswordValid/isPasswordValid";

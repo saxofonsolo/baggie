@@ -25,7 +25,7 @@
   "module": "lib/",
   "sideEffects": false,
   "devDependencies": {
-    "rimraf": "^4.4.1",
+    "rimraf": "^5.0.0",
     "typescript": "^5.0.4"
   },
   "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"

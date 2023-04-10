@@ -60,7 +60,7 @@ export const convertToDate = (
                 dateArray[0].substring(4),
             ];
         } else if (dateArray.length !== 3) {
-            throw "Invalid date format";
+            return false;
         }
     }
 
@@ -82,9 +82,12 @@ export const convertToDate = (
 
     const trueMonth = dateObject.month - (zeroBasedMonth ? 0 : 1);
     const validDate = new Date(
-        `${dateObject.year}-${String(trueMonth + 1).padStart(2, "0")}-${String(
-            dateObject.day,
-        ).padStart(2, "0")}T00:00:00`,
+        `${String(dateObject.year).padStart(4, "0")}-${String(
+            trueMonth + 1,
+        ).padStart(2, "0")}-${String(dateObject.day).padStart(
+            2,
+            "0",
+        )}T00:00:00`,
     );
 
     if (
