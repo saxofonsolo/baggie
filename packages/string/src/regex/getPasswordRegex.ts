@@ -5,7 +5,7 @@ import { PasswordOptions } from "../_interfaces/passwordOptions.interface";
  * `getPasswordRegex`.
  */
 export const passwordSpecialCharactersDefault =
-    "!#$%&'()*+,./:;<=>?@[]\\^_`{|}~¨-";
+    "!#$€%&§'()*+,./:;<=>?@[]\\^_`´{|}~¨-";
 
 /**
  * Returns a regular expression to validate passwords with.
@@ -18,7 +18,7 @@ export const passwordSpecialCharactersDefault =
  * - minUppercase - defaults to `1`
  * - minSpecial - defaults to `1`
  * - specialCharacters - defaults to {@link passwordSpecialCharactersDefault}
- * - forbiddenCharacters - default to `" "`
+ * - forbiddenCharacters
  * - allowUnicode - defaults to `false`
  */
 export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
@@ -59,7 +59,7 @@ export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
         forbiddenCharacters:
             typeof options?.forbiddenCharacters === "string"
                 ? options.forbiddenCharacters
-                : " ",
+                : "",
         allowUnicode: options?.allowUnicode || false,
     };
 
