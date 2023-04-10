@@ -27,13 +27,9 @@ describe("getPasswordRegex", () => {
                 minLength: 12,
                 maxLength: 12,
                 minDigits: 3,
-                maxDigits: 3,
                 minSpecial: 3,
-                maxSpecial: 3,
                 minLowercase: 3,
-                maxLowercase: 3,
                 minUppercase: 3,
-                maxUppercase: 3,
             }).test(`abcABC_~!012`),
         ).toBe(true);
     });
@@ -71,32 +67,8 @@ describe("getPasswordRegex", () => {
 
         expect(
             getPasswordRegex({
-                maxDigits: 2,
-            }).test(`abcABC_123`),
-        ).toBe(false);
-
-        expect(
-            getPasswordRegex({
                 maxLength: 12,
             }).test(`abcABC_123456`),
-        ).toBe(false);
-
-        expect(
-            getPasswordRegex({
-                maxSpecial: 2,
-            }).test(`abcABC___1`),
-        ).toBe(false);
-
-        expect(
-            getPasswordRegex({
-                maxUppercase: 2,
-            }).test(`abcABC_1`),
-        ).toBe(false);
-
-        expect(
-            getPasswordRegex({
-                maxLowercase: 2,
-            }).test(`abcABC_1`),
         ).toBe(false);
 
         expect(
@@ -116,13 +88,9 @@ describe("getPasswordRegex", () => {
                 minLength: 12,
                 maxLength: 12,
                 minDigits: 3,
-                maxDigits: 3,
                 minSpecial: 3,
-                maxSpecial: 3,
                 minLowercase: 3,
-                maxLowercase: 3,
                 minUppercase: 3,
-                maxUppercase: 3,
             }).test(`oabcABC_~!012`),
         ).toBe(false);
     });

@@ -27,13 +27,9 @@ describe("isPasswordValid", () => {
                 minLength: 12,
                 maxLength: 12,
                 minDigits: 3,
-                maxDigits: 3,
                 minSpecial: 3,
-                maxSpecial: 3,
                 minLowercase: 3,
-                maxLowercase: 3,
                 minUppercase: 3,
-                maxUppercase: 3,
             }),
         ).toBe(true);
     });
@@ -70,32 +66,8 @@ describe("isPasswordValid", () => {
         ).toBe(false);
 
         expect(
-            isPasswordValid(`abcABC_123`, {
-                maxDigits: 2,
-            }),
-        ).toBe(false);
-
-        expect(
             isPasswordValid(`abcABC_123456`, {
                 maxLength: 12,
-            }),
-        ).toBe(false);
-
-        expect(
-            isPasswordValid(`abcABC___1`, {
-                maxSpecial: 2,
-            }),
-        ).toBe(false);
-
-        expect(
-            isPasswordValid(`abcABC_1`, {
-                maxUppercase: 2,
-            }),
-        ).toBe(false);
-
-        expect(
-            isPasswordValid(`abcABC_1`, {
-                maxLowercase: 2,
             }),
         ).toBe(false);
 
@@ -116,13 +88,9 @@ describe("isPasswordValid", () => {
                 minLength: 12,
                 maxLength: 12,
                 minDigits: 3,
-                maxDigits: 3,
                 minSpecial: 3,
-                maxSpecial: 3,
                 minLowercase: 3,
-                maxLowercase: 3,
                 minUppercase: 3,
-                maxUppercase: 3,
             }),
         ).toBe(false);
     });
