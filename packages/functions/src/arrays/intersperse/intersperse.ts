@@ -50,8 +50,8 @@
  * // newNumbers = [10, 15, 20, 25, 30, 35, 40]
  * ```
  */
-export const intersperse = (input: any[], ...insertion: any[]): any[] =>
-    input.reduce((accumulator: any[], element, index, array) => {
+export const intersperse = (array: any[], ...insertion: any[]): any[] =>
+    array.reduce((accumulator: any[], element, index, array) => {
         accumulator.push(element);
         if (index < array.length - 1) {
             insertion.forEach((insert: any) =>

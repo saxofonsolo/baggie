@@ -1,5 +1,5 @@
 /* Arrays */
-export { intersperse } from "./arrays/intersperse";
+export { intersperse } from "./arrays/intersperse/intersperse";
 
 /* Cookie */
 export type { CookieAttributes } from "./cookie/setCookie";

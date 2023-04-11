@@ -1,0 +1,22 @@
+import { Example } from "./Example";
+
+# intersperse
+
+Insert new values between all values in an array.
+
+## Parameters
+
+| Parameter     | Type       | Required |
+| :------------ | :--------- | :------: |
+| **array**     | `any[]`    |    ✔     |
+| **insertion** | `...any[]` |    ✔     |
+
+## Example
+
+With a single insertion:
+
+<Example array="a, b, c, d" insertion="+" />
+
+With multiple insertions:
+
+<Example array="a, b, c, d" insertion="+, -" />

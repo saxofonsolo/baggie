@@ -26,11 +26,12 @@ export const Example = (props: Props) => {
                         id="input-input"
                         value={input}
                         onChange={({ target }) => setInput(target.value)}
+                        spellCheck={false}
                     />
                 </InputWrapper>
 
                 <InputWrapper label="Output" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{isNaN(total) ? "Error" : total}</div>
+                    <div style={{ padding: "5px 0" }}>{isNaN(total) ? "Error" : total}</div>
                 </InputWrapper>
             </div>
 
