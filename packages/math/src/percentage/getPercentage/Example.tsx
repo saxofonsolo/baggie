@@ -79,6 +79,7 @@ const whole = getPercentage({ percentage, part }${percentageAsDecimalString});
                         <input
                             id="percentage-input"
                             type="number"
+                            step={0.01}
                             value={percentage}
                             onChange={({ target }) => setPercentage(target.valueAsNumber || 0)}
                         />
