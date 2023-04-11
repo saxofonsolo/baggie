@@ -1,9 +1,8 @@
-<img alt="Baggie logo" src="https://github.com/bag-of-tricks/baggie/raw/master/public/baggie.svg" height="100" />
+<center>
+<img alt="baggie" src="https://github.com/bag-of-tricks/baggie/raw/main/public/baggie-title.svg" height="100" />
 
-<h1>baggie</h1>
-
-The little bag-of-tricks
-
+The little bag-of-tricks 🐱‍👤
+</center>
 <hr>
 <br>
 
