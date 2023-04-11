@@ -1,4 +1,5 @@
 import { Example } from "./Example";
+import { Source } from "@storybook/blocks";
 
 # intersperse
 
@@ -20,3 +21,15 @@ With a single insertion:
 With multiple insertions:
 
 <Example array="a, b, c, d" insertion="+, -" />
+
+With a function:
+
+<Source dark code={`
+import { intersperse } from "@baggie/functions";
+
+const numbers = [10, 20, 30, 40];
+const insertion = ({ previous, next }) => previous + (next - previous) / 2;
+
+const newNumbers = intersperse(numbers, insertion);
+// newNumbers = [10, 15, 20, 25, 30, 35, 40]
+`} />
