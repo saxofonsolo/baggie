@@ -1,7 +1,8 @@
 const fs = require("fs");
+const path = require("path");
 const log = require("./_helpers/log.helper");
 
-const filePath = process.argv[2];
+const filePath = path.join(__dirname, "../", process.argv[2]);
 const textFromFile = fs.readFileSync(filePath, "utf-8");
 
 const minLength = 10;
