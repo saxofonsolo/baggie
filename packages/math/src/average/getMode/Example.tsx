@@ -30,7 +30,7 @@ export const Example = (props: Props) => {
                 </InputWrapper>
 
                 <InputWrapper label="Output" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>
+                    <div style={{ padding: "5px 0" }}>
                         {result ? `[${result.numbers.join(", ")}]` : "Error"}
                     </div>
                 </InputWrapper>

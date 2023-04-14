@@ -20,7 +20,7 @@ export const Example = (props: Props) => {
                 <ColorInput label="Input" value={input} onChange={setInput} />
 
                 <InputWrapper label="Is hex color" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{checkResult ? "true" : "false"}</div>
+                    <div style={{ padding: "5px 0" }}>{checkResult ? "true" : "false"}</div>
                 </InputWrapper>
             </div>
 

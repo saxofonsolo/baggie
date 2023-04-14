@@ -47,7 +47,7 @@ export const Example = (props: Props) => {
                 </InputWrapper>
 
                 <InputWrapper label="Position" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{result}</div>
+                    <div style={{ padding: "5px 0" }}>{result}</div>
                 </InputWrapper>
             </div>
 

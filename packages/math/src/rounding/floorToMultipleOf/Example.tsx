@@ -36,7 +36,7 @@ export const Example = (props: Props) => {
                 </InputWrapper>
 
                 <InputWrapper label="Result" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{isNaN(result) ? "Error" : result}</div>
+                    <div style={{ padding: "5px 0" }}>{isNaN(result) ? "Error" : result}</div>
                 </InputWrapper>
             </div>
 

@@ -2,7 +2,7 @@
 export { convertNewLinesToBreaks } from "./convert/convertNewLinesToBreaks";
 export { convertToDate } from "./convert/convertToDate";
 export { getVimeoId } from "./convert/getVimeoId";
-export { getYouTubeId } from "./convert/getYouTubeId";
+export { getYouTubeId } from "./convert/getYouTubeId/getYouTubeId";
 
 /* Manipulation */
 export { splitAtSpace } from "./manipulation/splitAtSpace/splitAtSpace";

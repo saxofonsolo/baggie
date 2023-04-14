@@ -1,0 +1,31 @@
+import { Example } from "./Example";
+
+# getYouTubeId
+
+Get the YouTube ID from a URL.
+
+## Parameters
+
+| Parameter | Type     | Required | Description                            |
+| :-------- | :------- | :------: | :------------------------------------- |
+| **input** | `string` |    ✔     | The string to get the YouTube ID from. |
+
+## Examples
+
+The standard YouTube URL:
+
+<Example input="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+
+With other parameters:
+
+<Example input="https://www.youtube.com/watch?v=eDtGYygcPyw&ab_channel=Vincinator" />
+
+The shortened URL:
+
+<Example input="https://youtu.be/N7-7HJCXx10" />
+
+
+The URL from embedded videos:
+
+<Example input="https://www.youtube.com/embed/N7-7HJCXx10" />
+

@@ -39,7 +39,7 @@ export const Example = (props: Props) => {
                 </InputWrapper>
 
                 <InputWrapper label="Result" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{result ? "true" : "false"}</div>
+                    <div style={{ padding: "5px 0" }}>{result ? "true" : "false"}</div>
                 </InputWrapper>
             </div>
 

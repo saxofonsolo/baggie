@@ -41,7 +41,7 @@ export const Example = (props: Props) => {
                 </InputWrapper>
 
                 <InputWrapper label="Sorted" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>[{sorted.join(", ")}]</div>
+                    <div style={{ padding: "5px 0" }}>[{sorted.join(", ")}]</div>
                 </InputWrapper>
             </div>
 

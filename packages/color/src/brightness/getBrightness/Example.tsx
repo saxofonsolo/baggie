@@ -19,7 +19,7 @@ export const Example = (props: Props) => {
                 <ColorInput label="Color" value={color} onChange={setColor} />
 
                 <InputWrapper label="Brightness" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{brightness}</div>
+                    <div style={{ padding: "5px 0" }}>{brightness}</div>
                 </InputWrapper>
             </div>
 

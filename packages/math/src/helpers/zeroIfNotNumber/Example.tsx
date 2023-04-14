@@ -24,7 +24,7 @@ export const Example = (props: Props) => {
                 </InputWrapper>
 
                 <InputWrapper label="Output" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{output}</div>
+                    <div style={{ padding: "5px 0" }}>{output}</div>
                 </InputWrapper>
             </div>
 

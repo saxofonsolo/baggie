@@ -1,4 +1,4 @@
-import { getYouTubeIdRegex } from "../regex/getYouTubeIdRegex";
+import { getYouTubeIdRegex } from "../../regex/getYouTubeIdRegex";
 
 /**
  * Convert a YouTube URL to a video ID.

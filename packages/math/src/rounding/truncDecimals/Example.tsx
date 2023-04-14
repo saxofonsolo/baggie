@@ -39,7 +39,7 @@ export const Example = (props: Props) => {
                 </InputWrapper>
 
                 <InputWrapper label="Truncated" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{isNaN(truncated) ? "Error" : truncated}</div>
+                    <div style={{ padding: "5px 0" }}>{isNaN(truncated) ? "Error" : truncated}</div>
                 </InputWrapper>
             </div>
 

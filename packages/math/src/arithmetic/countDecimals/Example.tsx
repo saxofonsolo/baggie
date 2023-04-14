@@ -25,7 +25,7 @@ export const Example = (props: Props) => {
                 </InputWrapper>
 
                 <InputWrapper label="Decimals" labelForId={undefined}>
-                    <div style={{ padding: "5px" }}>{isNaN(decimals) ? "Error" : decimals}</div>
+                    <div style={{ padding: "5px 0" }}>{isNaN(decimals) ? "Error" : decimals}</div>
                 </InputWrapper>
             </div>
 
