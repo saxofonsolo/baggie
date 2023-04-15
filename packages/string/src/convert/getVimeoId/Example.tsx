@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { InputWrapper } from "@baggie/react";
-import { getYouTubeId } from "./getYouTubeId";
+import { getVimeoId } from "./getVimeoId";
 
 interface Props {
     input: string;
@@ -10,7 +10,7 @@ interface Props {
 export const Example = (props: Props) => {
     const [input, setInput] = useState(props.input);
 
-    const id = useMemo(() => getYouTubeId(input), [input]);
+    const id = useMemo(() => getVimeoId(input), [input]);
 
     return (
         <>
@@ -34,11 +34,11 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { getYouTubeId } from "@baggie/string";
+import { getVimeoId } from "@baggie/string";
 
 const input = \`${input}\`;
 
-const id = getYouTubeId(input);
+const id = getVimeoId(input);
 // id = ${id ? `"${id}"` : "undefined"}
 `}
             />
