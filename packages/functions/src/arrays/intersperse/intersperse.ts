@@ -1,11 +1,10 @@
-type Insertion =
-    | Omit<any, "function">
-    | ((args: { previous: any; next: any; index: number }) => any);
-
 /**
- * Insert new values between all values in an array.
+ * Insert new values between all existing values in an array.
  */
-export const intersperse = (array: any[], ...insertion: Insertion[]): any[] =>
+export const intersperse = <A, I>(
+    array: A[],
+    ...insertion: I[]
+): (A | (I extends () => any ? ReturnType<I> : I))[] =>
     array.reduce((accumulator: any[], element, index, array) => {
         accumulator.push(element);
         if (index < array.length - 1) {
