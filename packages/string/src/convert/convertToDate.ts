@@ -87,7 +87,7 @@ export const convertToDate = (
         ).padStart(2, "0")}-${String(dateObject.day).padStart(
             2,
             "0",
-        )}T00:00:00`,
+        )}T00:00:00+00:00`,
     );
 
     if (

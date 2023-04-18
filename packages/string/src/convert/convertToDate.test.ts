@@ -5,16 +5,16 @@ jest.useFakeTimers().setSystemTime(new Date("2022-01-31").getTime());
 describe("convertToDate", () => {
     test("String to a date", () => {
         expect((convertToDate("17-06-1986") as Date).getTime()).toBe(
-            519343200000,
+            519350400000,
         );
 
         expect((convertToDate("31012020") as Date).getTime()).toBe(
-            1580425200000,
+            1580428800000,
         );
 
         expect(
             (convertToDate("day: 31, month: 01, year: 2020") as Date).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
     });
 
     test("String to a date (month before day)", () => {
@@ -24,7 +24,7 @@ describe("convertToDate", () => {
                     monthBeforeDay: true,
                 }) as Date
             ).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
 
         expect(
             (
@@ -32,7 +32,7 @@ describe("convertToDate", () => {
                     monthBeforeDay: true,
                 }) as Date
             ).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
 
         expect(
             (
@@ -40,7 +40,7 @@ describe("convertToDate", () => {
                     monthBeforeDay: true,
                 }) as Date
             ).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
     });
 
     test("String to a date (zero based month)", () => {
@@ -51,7 +51,7 @@ describe("convertToDate", () => {
                     zeroBasedMonth: true,
                 }) as Date
             ).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
 
         expect(
             (
@@ -60,7 +60,7 @@ describe("convertToDate", () => {
                     zeroBasedMonth: true,
                 }) as Date
             ).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
 
         expect(
             (
@@ -69,7 +69,7 @@ describe("convertToDate", () => {
                     zeroBasedMonth: true,
                 }) as Date
             ).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
     });
 
     test("Object to a date", () => {
@@ -81,7 +81,7 @@ describe("convertToDate", () => {
                     year: 2020,
                 }) as Date
             ).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
 
         expect(
             (
@@ -91,7 +91,7 @@ describe("convertToDate", () => {
                     year: "2020",
                 }) as Date
             ).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
 
         expect(
             (
@@ -106,6 +106,6 @@ describe("convertToDate", () => {
                     },
                 ) as Date
             ).getTime(),
-        ).toBe(1580425200000);
+        ).toBe(1580428800000);
     });
 });
