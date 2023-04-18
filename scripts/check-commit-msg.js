@@ -67,10 +67,5 @@ if (!match) {
         message,
     ]);
 } else {
-    const splitMessage = message.split(/: /s);
-    const newMessage = `${splitMessage[0]}: ${
-        splitMessage[1].charAt(0).toLowerCase() + splitMessage[1].slice(1)
-    }`;
-
-    fs.writeFileSync(filePath, newMessage);
+    fs.writeFileSync(filePath, message);
 }

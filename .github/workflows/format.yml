@@ -1,4 +1,4 @@
-name: format
+name: Lint and format
 on:
     pull_request:
         branches:
@@ -18,8 +18,10 @@ jobs:
                   registry-url: 'https://registry.npmjs.org'
             - name: Install dependencies
               run: yarn install --frozen-lockfile
-            - name: Run linter and formatter
-              run: npm run prepublishOnly
+            - name: Build packages
+              run: yarn build
+            - name: Run linters, prettier and tests
+              run: yarn prepublishOnly
             - name: Commit changes
               uses: stefanzweifel/git-auto-commit-action@v4
               with:

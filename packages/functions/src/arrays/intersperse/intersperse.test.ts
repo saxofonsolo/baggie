@@ -38,9 +38,11 @@ describe("intersperse", () => {
         expect(
             intersperse(
                 [1, 2, 3, 4],
-                ({ previous, next }: { previous: number; next: number }) =>
-                    previous + (next - previous) / 2,
-                "hello",
+                ...[
+                    ({ previous, next }: { previous: number; next: number }) =>
+                        previous + (next - previous) / 2,
+                    "hello",
+                ],
             ),
         ).toStrictEqual([1, 1.5, "hello", 2, 2.5, "hello", 3, 3.5, "hello", 4]);
     });
