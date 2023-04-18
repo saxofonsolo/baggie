@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "private": true,
   "workspaces": [
+    "packages/typescript",
+    "packages/math",
+    "packages/string",
     "packages/*"
   ],
   "repository": {
@@ -48,7 +51,7 @@
   },
   "devDependencies": {
     "@ngneat/falso": "^6.4.0",
-    "@storybook/addon-a11y": "^7.0.4",
+    "@storybook/addon-a11y": "^7.0.5",
     "@storybook/addon-docs": "^7.0.4",
     "@storybook/addon-essentials": "^7.0.4",
     "@storybook/addon-links": "^7.0.4",
