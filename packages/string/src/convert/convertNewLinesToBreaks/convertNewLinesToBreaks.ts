@@ -1,4 +1,4 @@
-import { getNewLineRegex } from "../regex/getNewLineRegex";
+import { getNewLineRegex } from "../../regex/getNewLineRegex";
 
 /**
  * Replace new lines with break elements.
@@ -19,6 +19,6 @@ import { getNewLineRegex } from "../regex/getNewLineRegex";
  * ```
  */
 export const convertNewLinesToBreaks = (
-    text: string,
+    string: string,
     keepWhitespace = false,
-): string => text.replace(getNewLineRegex(!keepWhitespace), "<br />");
+): string => string.replace(getNewLineRegex(!keepWhitespace), "<br />");

@@ -1,5 +1,5 @@
 /* Convert */
-export { convertNewLinesToBreaks } from "./convert/convertNewLinesToBreaks";
+export { convertNewLinesToBreaks } from "./convert/convertNewLinesToBreaks/convertNewLinesToBreaks";
 export { convertToDate } from "./convert/convertToDate";
 export { getVimeoId } from "./convert/getVimeoId/getVimeoId";
 export { getYouTubeId } from "./convert/getYouTubeId/getYouTubeId";
