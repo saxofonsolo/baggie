@@ -1,4 +1,4 @@
-import { getCprRegex } from "../../regex/getCprRegex";
+import { getCprRegex } from "../../regex/getCprRegex/getCprRegex";
 import { convertToDate } from "../../convert/convertToDate/convertToDate";
 
 /**

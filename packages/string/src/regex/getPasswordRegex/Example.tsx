@@ -1,8 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { InputWrapper } from "@baggie/react";
-import { passwordSpecialCharactersDefault } from "../../regex/getPasswordRegex/getPasswordRegex";
-import { isPasswordValid } from "./isPasswordValid";
+import { getPasswordRegex, passwordSpecialCharactersDefault } from "./getPasswordRegex";
 
 interface Props {
     password?: string;
@@ -39,7 +38,7 @@ export const Example = (props: Props) => {
                     (entry) => typeof entry[1] !== "undefined" && entry[1] !== false,
                 ),
             ),
-            isValid: isPasswordValid(password, optionsObj),
+            isValid: getPasswordRegex(optionsObj).test(password),
         };
     }, [
         password,
@@ -189,13 +188,22 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { isPasswordValid } from "@baggie/string";
+import { getPasswordRegex } from "@baggie/string";
 
 const password = \`${password.replace(/`/g, "\\`")}\`;
 ${hasOptionSet ? `const options = ${JSON.stringify(options, null, 4)};\n` : ""}
-const isValid = isPasswordValid(password${hasOptionSet ? ", options" : ""});
+const isValid = getPasswordRegex(${hasOptionSet ? "options" : ""}).test(password);
 // isValid = ${isValid ? "true" : "false"}
 `}
+            />
+
+            <b>The returned regex:</b>
+
+            <Source
+                dark
+                code={`new RegExp("${getPasswordRegex(options).source}", "${
+                    getPasswordRegex(options).flags
+                }")`}
             />
         </>
     );

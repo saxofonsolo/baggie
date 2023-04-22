@@ -15,12 +15,12 @@ export { uppercaseFirstLetter } from "./manipulation/uppercaseFirstLetter/upperc
 export type { PasswordOptions } from "./_interfaces/passwordOptions.interface";
 
 /* Regex */
-export { getCprRegex } from "./regex/getCprRegex";
+export { getCprRegex } from "./regex/getCprRegex/getCprRegex";
 export { getNewLineRegex } from "./regex/getNewLineRegex";
 export {
     getPasswordRegex,
     passwordSpecialCharactersDefault,
-} from "./regex/getPasswordRegex";
+} from "./regex/getPasswordRegex/getPasswordRegex";
 export { getTagsRegex } from "./regex/getTagsRegex";
 export { getVimeoIdRegex } from "./regex/getVimeoIdRegex";
 export { getYouTubeIdRegex } from "./regex/getYouTubeIdRegex";

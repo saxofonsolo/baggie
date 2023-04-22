@@ -1,4 +1,4 @@
-import { PasswordOptions } from "../_interfaces/passwordOptions.interface";
+import { PasswordOptions } from "../../_interfaces/passwordOptions.interface";
 
 /**
  * A string with the default accepted special character used by

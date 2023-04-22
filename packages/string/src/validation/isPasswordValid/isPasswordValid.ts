@@ -1,4 +1,4 @@
-import { getPasswordRegex } from "../../regex/getPasswordRegex";
+import { getPasswordRegex } from "../../regex/getPasswordRegex/getPasswordRegex";
 import { PasswordOptions } from "../../_interfaces/passwordOptions.interface";
 
 /**
