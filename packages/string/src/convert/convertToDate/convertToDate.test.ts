@@ -108,4 +108,23 @@ describe("convertToDate", () => {
             ).getTime(),
         ).toBe(1580428800000);
     });
+
+    test("Invalid", () => {
+        expect(
+            convertToDate({
+                day: 31,
+                year: 2020,
+            }),
+        ).toBe(undefined);
+
+        expect(
+            convertToDate({
+                day: "131",
+                month: "01",
+                year: "2020",
+            }),
+        ).toBe(undefined);
+
+        expect(convertToDate("1100")).toBe(undefined);
+    });
 });

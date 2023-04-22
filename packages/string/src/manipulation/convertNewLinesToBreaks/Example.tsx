@@ -18,7 +18,7 @@ export const Example = (props: Props) => {
 
     return (
         <>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                 <InputWrapper label="Input" labelForId="input-input">
                     <textarea
                         id="input-input"

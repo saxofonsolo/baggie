@@ -42,7 +42,7 @@ interface Options {
 export const convertToDate = (
     date: string | DateObject,
     options?: Options,
-): Date | false => {
+): Date | undefined => {
     const { zeroBasedMonth = false, monthBeforeDay = false } = { ...options };
     const dateObject: DateObject = {};
     let dateArray: string[] = [];
@@ -60,7 +60,7 @@ export const convertToDate = (
                 dateArray[0].substring(4),
             ];
         } else if (dateArray.length !== 3) {
-            return false;
+            return undefined;
         }
     }
 
@@ -97,6 +97,6 @@ export const convertToDate = (
     ) {
         return validDate;
     } else {
-        return false;
+        return undefined;
     }
 };

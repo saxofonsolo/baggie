@@ -1,0 +1,26 @@
+import { Example } from "./Example";
+
+# convertToDate
+
+Convert a string (or an object) to a date.
+
+Returns `undefined` if given an invalid date.
+
+## Parameters
+
+| Parameter   | Type                                                     | Required |
+| :---------- | :------------------------------------------------------- | :------: |
+| **date**    | `string \| { day: number; month: number; year: number }` |    ✔     |
+| **options** | `object`                                                 |          |
+
+| Option             | Type      | Default value |
+| :----------------- | :-------- | :------------ |
+| **zeroBasedMonth** | `boolean` | `false`       |
+| **monthBeforeDay** | `boolean` | `false`       |
+
+## Example
+
+<Example date="17. 6. 1986" />
+<Example date={{ day: 17, month: 6, year: 1986 }} />
+<Example date="31-12-1986" zeroBasedMonth />
+<Example date="06/17/1986" monthBeforeDay />

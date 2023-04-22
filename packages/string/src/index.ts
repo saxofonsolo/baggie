@@ -1,10 +1,10 @@
 /* Convert */
-export { convertNewLinesToBreaks } from "./convert/convertNewLinesToBreaks/convertNewLinesToBreaks";
-export { convertToDate } from "./convert/convertToDate";
+export { convertToDate } from "./convert/convertToDate/convertToDate";
 export { getVimeoId } from "./convert/getVimeoId/getVimeoId";
 export { getYouTubeId } from "./convert/getYouTubeId/getYouTubeId";
 
 /* Manipulation */
+export { convertNewLinesToBreaks } from "./manipulation/convertNewLinesToBreaks/convertNewLinesToBreaks";
 export { splitAtSpace } from "./manipulation/splitAtSpace/splitAtSpace";
 export { stripTagsFromString } from "./manipulation/stripTagsFromString/stripTagsFromString";
 export { substringHtmlEntitySafe } from "./manipulation/substringHtmlEntitySafe/substringHtmlEntitySafe";
