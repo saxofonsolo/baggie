@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { InputWrapper } from "@baggie/react";
-import { isDateValid } from "./isDateValid";
+import { convertToDate } from "./convertToDate";
 
 type DateObj = { day: number; month: number; year: number };
 
@@ -16,8 +16,8 @@ export const Example = (props: Props) => {
     const [zeroBasedMonth, setZeroBasedMonth] = useState(props.zeroBasedMonth || false);
     const [monthBeforeDay, setMonthBeforeDay] = useState(props.monthBeforeDay || false);
 
-    const isValid = useMemo(
-        () => isDateValid(date, { zeroBasedMonth, monthBeforeDay }),
+    const returnedDate = useMemo(
+        () => convertToDate(date, { zeroBasedMonth, monthBeforeDay }),
         [date, zeroBasedMonth, monthBeforeDay],
     );
 
@@ -101,7 +101,7 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { isDateValid } from "@baggie/string";
+import { convertToDate } from "@baggie/string";
 
 const date = ${typeof date === "string" ? `"${date}"` : JSON.stringify(date, null, 4)};
 ${
@@ -112,8 +112,12 @@ ${monthBeforeDay ? "    monthBeforeDay: true,\n" : ""}${
           }};\n`
         : ""
 }
-const isValid = isDateValid(date${monthBeforeDay || zeroBasedMonth ? ", options" : ""});
-// isValid = ${isValid ? "true" : "false"}
+const returnedDate = convertToDate(date${monthBeforeDay || zeroBasedMonth ? ", options" : ""});
+// ${
+                    returnedDate
+                        ? `returnedDate.toISOString() = "${returnedDate.toISOString()}"`
+                        : "returnedDate = undefined"
+                }
 `}
             />
         </>

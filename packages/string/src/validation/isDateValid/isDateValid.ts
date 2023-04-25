@@ -1,4 +1,4 @@
-import { convertToDate } from "../../convert/convertToDate";
+import { convertToDate } from "../../convert/convertToDate/convertToDate";
 
 interface DateObject {
     day: number | string;

@@ -1,0 +1,18 @@
+import { Example } from "./Example";
+
+# getCprRegex
+
+A regular expression for validating the format of a Danish CPR number
+(personal identification number).
+
+Works with the birthdate and the four control digits combined or separated
+by a dash or whitespace.
+
+> **Be aware** that this does not check if the CPR number is valid.
+> **It only checks if the format is correct.**
+>
+> This makes it useful for the pattern attribute in an input field.
+
+## Example
+
+<Example cprNumber="1706862134" />

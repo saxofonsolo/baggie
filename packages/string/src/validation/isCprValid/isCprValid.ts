@@ -1,5 +1,5 @@
-import { getCprRegex } from "../../regex/getCprRegex";
-import { convertToDate } from "../../convert/convertToDate";
+import { getCprRegex } from "../../regex/getCprRegex/getCprRegex";
+import { convertToDate } from "../../convert/convertToDate/convertToDate";
 
 /**
  * Check if a CPR number is valid.
