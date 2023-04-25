@@ -23,7 +23,7 @@ export {
 } from "./regex/getPasswordRegex/getPasswordRegex";
 export { getTagsRegex } from "./regex/getTagsRegex";
 export { getVimeoIdRegex } from "./regex/getVimeoIdRegex/getVimeoIdRegex";
-export { getYouTubeIdRegex } from "./regex/getYouTubeIdRegex";
+export { getYouTubeIdRegex } from "./regex/getYouTubeIdRegex/getYouTubeIdRegex";
 
 /* Validation */
 export { isCprValid } from "./validation/isCprValid/isCprValid";

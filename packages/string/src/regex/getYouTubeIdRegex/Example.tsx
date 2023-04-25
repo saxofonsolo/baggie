@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { InputWrapper } from "@baggie/react";
-import { getVimeoIdRegex } from "./getVimeoIdRegex";
+import { getYouTubeIdRegex } from "./getYouTubeIdRegex";
 
 interface Props {
     string: string;
@@ -9,7 +9,7 @@ interface Props {
 
 export const Example = (props: Props) => {
     const [string, setString] = useState(props.string);
-    const match = useMemo(() => string.match(getVimeoIdRegex()), [string]);
+    const match = useMemo(() => string.match(getYouTubeIdRegex()), [string]);
 
     return (
         <>
@@ -27,12 +27,12 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { getVimeoIdRegex } from "@baggie/string";
+import { getYouTubeIdRegex } from "@baggie/string";
 
 const string = "${string}";
 
-const matchVimeoId = string.match(getVimeoIdRegex());
-// matchVimeoId = ${JSON.stringify(match)}
+const matchYouTubeId = string.match(getYouTubeIdRegex());
+// matchYouTubeId = ${JSON.stringify(match)}
 `}
             />
 
@@ -40,7 +40,7 @@ const matchVimeoId = string.match(getVimeoIdRegex());
 
             <Source
                 dark
-                code={`new RegExp("${getVimeoIdRegex().source}", "${getVimeoIdRegex().flags}")`}
+                code={`new RegExp("${getYouTubeIdRegex().source}", "${getYouTubeIdRegex().flags}")`}
             />
         </>
     );
