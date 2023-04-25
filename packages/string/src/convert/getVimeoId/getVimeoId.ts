@@ -1,4 +1,4 @@
-import { getVimeoIdRegex } from "../../regex/getVimeoIdRegex";
+import { getVimeoIdRegex } from "../../regex/getVimeoIdRegex/getVimeoIdRegex";
 
 /**
  * Get the Vimeo ID from a URL.

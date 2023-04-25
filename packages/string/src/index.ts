@@ -22,7 +22,7 @@ export {
     passwordSpecialCharactersDefault,
 } from "./regex/getPasswordRegex/getPasswordRegex";
 export { getTagsRegex } from "./regex/getTagsRegex";
-export { getVimeoIdRegex } from "./regex/getVimeoIdRegex";
+export { getVimeoIdRegex } from "./regex/getVimeoIdRegex/getVimeoIdRegex";
 export { getYouTubeIdRegex } from "./regex/getYouTubeIdRegex";
 
 /* Validation */
