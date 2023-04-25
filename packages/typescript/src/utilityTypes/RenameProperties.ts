@@ -3,9 +3,12 @@
  */
 export type RenameProperties<
     T,
-    R extends {
-        [K in keyof R]: K extends keyof T ? PropertyKey : "Error: key not in T";
-    },
+    R extends
+        {
+            [K in keyof R]: K extends keyof T
+                ? PropertyKey
+                : "Error: key not in T";
+        },
 > = Omit<T, keyof R> &
     UnionToIntersection<
         {
