@@ -1,4 +1,4 @@
-import { getTagsRegex } from "../../regex/getTagsRegex";
+import { getTagsRegex } from "../../regex/getTagsRegex/getTagsRegex";
 
 /**
  * Strip HTML and XML tags from a string. Tags are replaced with a space unless .

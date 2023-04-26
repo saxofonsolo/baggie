@@ -21,7 +21,7 @@ export {
     getPasswordRegex,
     passwordSpecialCharactersDefault,
 } from "./regex/getPasswordRegex/getPasswordRegex";
-export { getTagsRegex } from "./regex/getTagsRegex";
+export { getTagsRegex } from "./regex/getTagsRegex/getTagsRegex";
 export { getVimeoIdRegex } from "./regex/getVimeoIdRegex/getVimeoIdRegex";
 export { getYouTubeIdRegex } from "./regex/getYouTubeIdRegex/getYouTubeIdRegex";
 
