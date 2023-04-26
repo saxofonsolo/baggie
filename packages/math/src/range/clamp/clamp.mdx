@@ -1,0 +1,30 @@
+import { Example } from "./Example";
+
+# clamp
+
+Make sure a number is within the range of a minimum and maximum value.
+
+If the number is smaller or larger, the nearest accepted value will be
+returned.
+
+## Parameters
+
+| Parameter | Type     | Required |
+| :-------- | :------- | :------: |
+| **input** | `number` |    ✔     |
+| **min**   | `number` |    ✔     |
+| **max**   | `number` |    ✔     |
+
+## Examples
+
+Small number
+
+<Example input={1} min={25} max={75} />
+
+Small number
+
+<Example input={100} min={25} max={75} />
+
+Medium number
+
+<Example input={50} min={25} max={75} />
