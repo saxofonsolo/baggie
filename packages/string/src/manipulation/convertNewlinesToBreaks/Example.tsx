@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { InputWrapper } from "@baggie/react";
-import { convertNewLinesToBreaks } from "./convertNewLinesToBreaks";
+import { convertNewlinesToBreaks } from "./convertNewlinesToBreaks";
 
 interface Props {
     input: string;
@@ -12,7 +12,7 @@ export const Example = (props: Props) => {
     const [keepWhitespace, setKeepWhitespace] = useState(false);
 
     const output = useMemo(
-        () => convertNewLinesToBreaks(input, keepWhitespace),
+        () => convertNewlinesToBreaks(input, keepWhitespace),
         [input, keepWhitespace],
     );
 
@@ -43,11 +43,11 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { convertNewLinesToBreaks } from "@baggie/string";
+import { convertNewlinesToBreaks } from "@baggie/string";
 
 const string = \`${input}\`;
 ${keepWhitespace ? "const keepWhitespace = true;\n" : ""}
-const output = convertNewLinesToBreaks(string${keepWhitespace ? ", keepWhitespace" : ""});
+const output = convertNewlinesToBreaks(string${keepWhitespace ? ", keepWhitespace" : ""});
 // output = ${output}
 `}
             />
