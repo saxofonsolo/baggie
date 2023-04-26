@@ -1,31 +1,31 @@
-import { getNewLineRegex } from "./getNewLineRegex";
+import { getNewlineRegex } from "./getNewlineRegex";
 
-describe("getNewLineRegex", () => {
+describe("getNewlineRegex", () => {
     test("Replace new lines", () => {
         expect(
             "This is a text with a single  \r  line break.".replace(
-                getNewLineRegex(),
+                getNewlineRegex(),
                 "-",
             ),
         ).toBe("This is a text with a single  -  line break.");
 
         expect(
             "This is a text with a single\n  line break.".replace(
-                getNewLineRegex(),
+                getNewlineRegex(),
                 "-",
             ),
         ).toBe("This is a text with a single-  line break.");
 
         expect(
             "This is a text with a single  \r\nline break.".replace(
-                getNewLineRegex(),
+                getNewlineRegex(),
                 "-",
             ),
         ).toBe("This is a text with a single  -line break.");
 
         expect(
             "This is a\r text with\n a single  \r\nline break.".replace(
-                getNewLineRegex(),
+                getNewlineRegex(),
                 "-",
             ),
         ).toBe("This is a- text with- a single  -line break.");
@@ -34,28 +34,28 @@ describe("getNewLineRegex", () => {
     test("Replace new lines and whitespace", () => {
         expect(
             "This is a text with a single  \r  line break.".replace(
-                getNewLineRegex(true),
+                getNewlineRegex(true),
                 "-",
             ),
         ).toBe("This is a text with a single-line break.");
 
         expect(
             "This is a text with a single\n  line break.".replace(
-                getNewLineRegex(true),
+                getNewlineRegex(true),
                 "-",
             ),
         ).toBe("This is a text with a single-line break.");
 
         expect(
             "This is a\r text with\n a single  \r\nline break.".replace(
-                getNewLineRegex(true),
+                getNewlineRegex(true),
                 "-",
             ),
         ).toBe("This is a-text with-a single-line break.");
 
         expect(
             `This is a
-text`.replace(getNewLineRegex(true), "-"),
+text`.replace(getNewlineRegex(true), "-"),
         ).toBe("This is a-text");
     });
 });

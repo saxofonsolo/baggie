@@ -16,7 +16,7 @@ export type { PasswordOptions } from "./_interfaces/passwordOptions.interface";
 
 /* Regex */
 export { getCprRegex } from "./regex/getCprRegex/getCprRegex";
-export { getNewLineRegex } from "./regex/getNewLineRegex";
+export { getNewlineRegex } from "./regex/getNewlineRegex/getNewlineRegex";
 export {
     getPasswordRegex,
     passwordSpecialCharactersDefault,
