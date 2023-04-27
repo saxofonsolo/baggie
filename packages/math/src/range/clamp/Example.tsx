@@ -14,7 +14,7 @@ export const Example = (props: Props) => {
     const [min, setMin] = useState(props.min);
     const [max, setMax] = useState(props.max);
 
-    const result = useMemo(() => clamp(input, min, max), [input, min, max]);
+    const result = useMemo(() => clamp(input, { min, max }), [input, min, max]);
 
     return (
         <>
@@ -59,11 +59,7 @@ export const Example = (props: Props) => {
                 code={`
 import { clamp } from "@baggie/math";
 
-const input = ${input};
-const min = ${min};
-const max = ${max};
-
-const result = clamp(input, min, max);
+const result = clamp(${input}, { min: ${min}, max: ${max} });
 // result = ${result}
 `}
             />
