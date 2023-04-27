@@ -11,10 +11,17 @@ interface Props {
 
 export const Example = (props: Props) => {
     const [input, setInput] = useState(props.input);
-    const [min, setMin] = useState(props.min);
-    const [max, setMax] = useState(props.max);
+    const [min, setMin] = useState<number | undefined>(props.min);
+    const [max, setMax] = useState<number | undefined>(props.max);
 
     const result = useMemo(() => clamp(input, { min, max }), [input, min, max]);
+
+    const settings = [
+        typeof min === "number" ? `min: ${min}` : "",
+        typeof max === "number" ? `max: ${max}` : "",
+    ]
+        .filter((x) => x)
+        .join(", ");
 
     return (
         <>
@@ -34,7 +41,9 @@ export const Example = (props: Props) => {
                         id="min-input"
                         type="number"
                         value={min}
-                        onChange={({ target }) => setMin(target.valueAsNumber || 0)}
+                        onChange={({ target }) =>
+                            setMin(isNaN(target.valueAsNumber) ? undefined : target.valueAsNumber)
+                        }
                         autoComplete="off"
                     />
                 </InputWrapper>
@@ -44,7 +53,9 @@ export const Example = (props: Props) => {
                         id="max-input"
                         type="number"
                         value={max}
-                        onChange={({ target }) => setMax(target.valueAsNumber || 0)}
+                        onChange={({ target }) =>
+                            setMax(isNaN(target.valueAsNumber) ? undefined : target.valueAsNumber)
+                        }
                         autoComplete="off"
                     />
                 </InputWrapper>
@@ -59,7 +70,7 @@ export const Example = (props: Props) => {
                 code={`
 import { clamp } from "@baggie/math";
 
-const result = clamp(${input}, { min: ${min}, max: ${max} });
+const result = clamp(${input}, { ${settings} });
 // result = ${result}
 `}
             />

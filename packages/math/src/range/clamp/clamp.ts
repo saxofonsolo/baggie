@@ -4,7 +4,8 @@
 export const clamp = (
     input: number,
     minMax: {
-        min: number;
-        max: number;
+        min?: number;
+        max?: number;
     },
-): number => Math.min(minMax.max, Math.max(minMax.min, input));
+): number =>
+    Math.min(minMax.max ?? Infinity, Math.max(minMax.min ?? -Infinity, input));
