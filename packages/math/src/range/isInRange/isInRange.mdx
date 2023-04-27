@@ -1,0 +1,26 @@
+import { Example } from "./Example";
+
+# isInRange
+
+Check if a number is within the range of a minimum and maximum value.
+
+The function accepts multiple ranges to check the number against, and
+returns `true` if the number is within the bounds of at least one of
+the ranges.
+
+## Parameters
+
+| Parameter  | Type                                                       | Required |
+| :--------- | :--------------------------------------------------------- | :------: |
+| **number** | `number`                                                   |    ✔     |
+| **ranges** | `...{ from: number; to: number }` or `...[number, number]` |    ✔     |
+
+## Examples
+
+Check against a single range
+
+<Example number={30} ranges={"{ from: 25, to: 75 }"} />
+
+Check against multiple ranges
+
+<Example number={1} ranges={"[1, 2]\n[10, 20]\n{ from: 25, to: 75 }"} />

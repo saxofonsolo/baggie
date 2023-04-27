@@ -88,7 +88,7 @@ export { radiansToDegrees } from "./radians/radiansToDegrees";
 export { clamp } from "./range/clamp/clamp";
 export { convertRangePosition } from "./range/convertRangePosition/convertRangePosition";
 export { getRange } from "./range/getRange/getRange";
-export { isInRange } from "./range/isInRange";
+export { isInRange } from "./range/isInRange/isInRange";
 export { keepOutsideRange } from "./range/keepOutsideRange";
 
 /* Rounding */
