@@ -31,5 +31,8 @@ export const convertRangePosition = (
     getPositionBetween(
         output.from,
         output.to,
-        getPercentageBetween(input.from, input.to, input.position),
+        getPercentageBetween(input.position, {
+            from: input.from,
+            to: input.to,
+        }),
     );

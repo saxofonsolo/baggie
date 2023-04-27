@@ -116,7 +116,7 @@ const whole = getPercentage({ percentage, part }${percentageAsDecimalString});
                     type="checkbox"
                     checked={percentageAsDecimal}
                     onChange={() => setPercentageAsDecimal((current) => !current)}
-                />
+                />{" "}
                 Percentage as decimal
             </label>
 

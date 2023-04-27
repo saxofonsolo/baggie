@@ -14,11 +14,23 @@ export const Example = (props: Props) => {
     const [to, setTo] = useState(props.to);
     const [position, setPosition] = useState(props.position);
 
-    const result = useMemo(() => getPercentageBetween(from, to, position), [from, to, position]);
+    const result = useMemo(
+        () => getPercentageBetween(position, { from, to }),
+        [from, to, position],
+    );
 
     return (
         <>
             <div style={{ display: "flex", gap: "10px" }}>
+                <InputWrapper label="Position" labelForId="position-input">
+                    <input
+                        id="position-input"
+                        type="number"
+                        value={position}
+                        onChange={({ target }) => setPosition(target.valueAsNumber || 0)}
+                    />
+                </InputWrapper>
+
                 <InputWrapper label="From" labelForId="from-input">
                     <input
                         id="from-input"
@@ -37,15 +49,6 @@ export const Example = (props: Props) => {
                     />
                 </InputWrapper>
 
-                <InputWrapper label="Position" labelForId="position-input">
-                    <input
-                        id="position-input"
-                        type="number"
-                        value={position}
-                        onChange={({ target }) => setPosition(target.valueAsNumber || 0)}
-                    />
-                </InputWrapper>
-
                 <InputWrapper label="Percentage" labelForId={undefined}>
                     <div style={{ padding: "5px 0" }}>{result}</div>
                 </InputWrapper>
@@ -56,11 +59,7 @@ export const Example = (props: Props) => {
                 code={`
 import { getPercentageBetween } from "@baggie/math";
 
-const from = ${from};
-const to = ${to};
-const position = ${position};
-
-const percentage = getPercentageBetween(from, to, position);
+const percentage = getPercentageBetween(${position}, { from: ${from}, to: ${to} });
 // percentage = ${result}
 `}
             />
