@@ -86,7 +86,7 @@ export { radiansToDegrees } from "./radians/radiansToDegrees";
 
 /* Range */
 export { clamp } from "./range/clamp/clamp";
-export { convertRangePosition } from "./range/convertRangePosition";
+export { convertRangePosition } from "./range/convertRangePosition/convertRangePosition";
 export { getRange } from "./range/getRange";
 export { isInRange } from "./range/isInRange";
 export { keepOutsideRange } from "./range/keepOutsideRange";
