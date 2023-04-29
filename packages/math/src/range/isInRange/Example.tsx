@@ -32,7 +32,7 @@ export const Example = (props: Props) => {
                             typeof x.from === "number" &&
                             typeof x.to === "number")),
             );
-        const result = isInRange(input, ...realRanges);
+        const result = isInRange(input, realRanges);
 
         return { realRanges, result };
     }, [input, ranges]);
@@ -71,10 +71,13 @@ export const Example = (props: Props) => {
                 code={`
 import { isInRange } from "@baggie/math";
 
-const number = ${input};
-const ranges = ${JSON.stringify(realRanges, null, 4)};
+const range${realRanges.length === 1 ? "" : "s"} = ${
+                    realRanges.length === 1
+                        ? JSON.stringify(realRanges[0], null, 4)
+                        : JSON.stringify(realRanges, null, 4)
+                };
 
-const result = isInRange(number, ranges);
+const result = isInRange(${input}, range${realRanges.length === 1 ? "" : "s"});
 // result = ${result ? "true" : "false"}
 `}
             />
