@@ -99,11 +99,10 @@ export const Example = (props: Props) => {
                 code={`
 import { convertRangePosition } from "@baggie/math";
 
-const position = ${position};
 const fromRange = { from: ${fromFrom}, to: ${fromTo} };
 const toRange = { from: ${toFrom}, to: ${toTo} };
 
-const newPosition = convertRangePosition(position, fromRange, toRange);
+const newPosition = convertRangePosition(${position}, fromRange, toRange);
 // newPosition = ${result}
 `}
             />

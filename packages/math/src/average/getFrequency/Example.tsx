@@ -48,7 +48,7 @@ export const Example = (props: Props) => {
                     type="checkbox"
                     checked={returnMap}
                     onChange={() => setReturnMap((current) => !current)}
-                />
+                />{" "}
                 Return as Map object
             </label>
 

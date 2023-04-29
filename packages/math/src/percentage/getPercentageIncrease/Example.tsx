@@ -49,7 +49,7 @@ export const Example = (props: Props) => {
                     type="checkbox"
                     checked={percentageAsDecimal}
                     onChange={() => setPercentageAsDecimal((current) => !current)}
-                />
+                />{" "}
                 Percentage as decimal
             </label>
 
