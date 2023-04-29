@@ -1,0 +1,22 @@
+import { Example } from "./Example";
+
+# mergeIntervals
+
+Merge and combine overlapping intervals.
+
+## Parameters
+
+| Parameter         | Type                                                                               | Required | Default value |
+| :---------------- | :--------------------------------------------------------------------------------- | :------: | :------------ |
+| **ranges**        | An `Array` or single value of `{ from: number; to: number }` or `[number, number]` |    ✔     |               |
+| **combineEquals** | `boolean`                                                                          |          | `true`        |
+
+## Examples
+
+Keep number outside a single range
+
+<Example number={30} ranges={"{ from: 25, to: 75 }"} />
+
+Keep number outside multiple ranges
+
+<Example number={10} ranges={"[0, 10]\n[10, 20]\n{ from: 25, to: 75 }"} />
