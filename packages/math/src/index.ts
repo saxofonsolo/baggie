@@ -89,7 +89,8 @@ export { clamp } from "./range/clamp/clamp";
 export { convertRangePosition } from "./range/convertRangePosition/convertRangePosition";
 export { getRange } from "./range/getRange/getRange";
 export { isInRange } from "./range/isInRange/isInRange";
-export { keepOutsideRange } from "./range/keepOutsideRange";
+export { keepOutsideRange } from "./range/keepOutsideRange/keepOutsideRange";
+export { mergeIntervals } from "./range/mergeIntervals/mergeIntervals";
 
 /* Rounding */
 export { ceilDecimals } from "./rounding/ceilDecimals/ceilDecimals";

@@ -1,3 +1,6 @@
+import { mergeIntervals } from "../mergeIntervals/mergeIntervals";
+import { Range } from "../_interfaces/range.interface";
+
 /**
  * Make sure a number is outside the range of a minimum and maximum value.
  *
@@ -35,18 +38,18 @@
  * ```
  */
 export const keepOutsideRange = (
-    input: number,
-    rangeStart: number,
-    rangeStop: number,
-    roundDownMidpoint = false,
+    number: number,
+    ranges: Range | Range[],
+    combineEquals = true,
 ): number =>
-    input < rangeStop && input > rangeStart
-        ? [rangeStart, rangeStop].reduce(
-              (previous: number, current: number) => {
-                  const a = Math.abs(current - input);
-                  const b = Math.abs(previous - input);
-                  const comparison = roundDownMidpoint ? a < b : a <= b;
-                  return comparison ? current : previous;
-              },
-          )
-        : input;
+    mergeIntervals(ranges, combineEquals).reduce(
+        (returnNumber, { from, to }) =>
+            returnNumber > from && returnNumber < to
+                ? [from, to].reduce((previous: number, current: number) => {
+                      const a = Math.abs(current - returnNumber);
+                      const b = Math.abs(previous - returnNumber);
+                      return a <= b ? current : previous;
+                  })
+                : returnNumber,
+        number,
+    );

@@ -1,0 +1,26 @@
+import { Example } from "./Example";
+
+# keepOutsideRange
+
+Make sure a number is outside the range of a minimum and maximum value.
+
+If the number is inside the range, the nearest accepted value will be
+returned.
+
+## Parameters
+
+| Parameter         | Type                                                                               | Required | Default value |
+| :---------------- | :--------------------------------------------------------------------------------- | :------: | :------------ |
+| **number**        | `number`                                                                           |    ✔     |               |
+| **ranges**        | An `Array` or single value of `{ from: number; to: number }` or `[number, number]` |    ✔     |               |
+| **combineEquals** | `boolean`                                                                          |          | `true`        |
+
+## Examples
+
+Keep number outside a single range
+
+<Example number={30} ranges={"{ from: 25, to: 75 }"} />
+
+Keep number outside multiple ranges
+
+<Example number={10} ranges={"[0, 10]\n[10, 20]\n{ from: 25, to: 75 }"} />
