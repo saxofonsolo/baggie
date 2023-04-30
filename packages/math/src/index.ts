@@ -19,7 +19,7 @@ export { getMode } from "./average/getMode/getMode";
 export { convertToCoordinates } from "./coordinates/convertToCoordinates";
 
 /* Coordinates - Angle */
-export { getAngle } from "./coordinates/angle/getAngle";
+export { getAngle } from "./coordinates/angle/getAngle/getAngle";
 
 /* Coordinates - Bounds */
 export { getBounds } from "./coordinates/bounds/getBounds";
