@@ -21,7 +21,7 @@ export const Example = (props: Props) => {
     const [toX, setToX] = useState(props.to.x);
     const [toY, setToY] = useState(props.to.y);
     const [offset, setOffset] = useState(0);
-    const [clockwise, setClockwise] = useState(true);
+    const [clockwise, setClockwise] = useState(false);
 
     const angle = useMemo(
         () => getAngle({ x: fromX, y: fromY }, { x: toX, y: toY }, { offset, clockwise }),
