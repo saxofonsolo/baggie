@@ -6,7 +6,7 @@ const filePath = path.join(__dirname, "../", process.argv[2]);
 const textFromFile = fs.readFileSync(filePath, "utf-8");
 
 const minLength = 10;
-const maxLength = 70;
+const maxLength = 80;
 
 const acceptedStart = {
     Merge: { ignoreMaxLength: true },
@@ -20,7 +20,6 @@ const acceptedStart = {
     "chore:": {},
     "config:": {},
     "deploy:": {},
-    "debug:": {},
 };
 
 // Remove excessive whitespace and trailing dot
@@ -43,7 +42,7 @@ if (!match) {
         message,
     ]);
 } else if (
-    message.length > maxLength &&
+    match[2].length > maxLength &&
     !acceptedStart[match[1].replace(/\(.*?\)!?/, "")].ignoreMaxLength
 ) {
     log.error([

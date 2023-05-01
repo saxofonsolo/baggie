@@ -12,7 +12,7 @@ const preview = {
         },
         options: {
             storySort: {
-                order: ["Overview", "Guidelines", "components", "utilities"],
+                order: ["Overview", ["Introduction", "Commit messages"]],
             },
         },
     },

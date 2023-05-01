@@ -1,0 +1,45 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Overview/Commit messages" />
+
+# Commit messages
+
+Commit messages consist of a **type**, optional **scope**, an optional **exclamation point**, and a **message** written in the imperative mood.
+
+Write in all lowercase and don't end in punctuation. Min 10 character, max 80. Be concise.
+
+**⛔ Bad:** `docs(color): Added new docs for convertRgbToLab.`
+
+**✅ Good:** `docs(color): add docs for convertRgbToLab`
+
+## Accepted types
+
+| Type prefix | Description                                                             |
+| :---------- | :---------------------------------------------------------------------- |
+| feat        | New feature                                                             |
+| fix         | Bug fix                                                                 |
+| chore       | Adding or changing configurations, build scripts, updating dependencies |
+| docs        | Documentation only                                                      |
+| refactor    | Code changes that neither adds a new feature or fixes a bug             |
+| test        | Adding or correcting tests                                              |
+| remove      | Remove a feature                                                        |
+| deploy      | Deploying (publishing) a new version to npm                             |
+
+## Accepted scopes
+
+- color
+- detection
+- dom
+- functions
+- math
+- react
+- string
+- typescript
+
+## Breaking changes
+
+To signal a breaking change, use the exclamation point (**!**) like so: `type(scope)!: message`
+
+**Example:** `remove(math)!: remove calculateDistance`
+
+> ⏰ **Be aware** that this will bump up the major version of the entire package.
