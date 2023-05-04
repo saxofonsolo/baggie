@@ -1877,7 +1877,7 @@
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
 
-"@storybook/blocks@7.0.7", "@storybook/blocks@^7.0.7":
+"@storybook/blocks@7.0.7":
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@storybook/blocks/-/blocks-7.0.7.tgz#42a9271ab05e98e871f2c68cb7775af122a753a6"
   integrity sha512-ehR0hAFWNHHqmrmbwYPKhLpgbIBKtyMbeoGClTRSnrVBGONciYJdmxegkCTReUklCY+HBJjtlwNowT+7+5sSaw==
@@ -1893,6 +1893,34 @@
     "@storybook/preview-api" "7.0.7"
     "@storybook/theming" "7.0.7"
     "@storybook/types" "7.0.7"
+    "@types/lodash" "^4.14.167"
+    color-convert "^2.0.1"
+    dequal "^2.0.2"
+    lodash "^4.17.21"
+    markdown-to-jsx "^7.1.8"
+    memoizerific "^1.11.3"
+    polished "^4.2.2"
+    react-colorful "^5.1.2"
+    telejson "^7.0.3"
+    ts-dedent "^2.0.0"
+    util-deprecate "^1.0.2"
+
+"@storybook/blocks@^7.0.8":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@storybook/blocks/-/blocks-7.0.8.tgz#9a006cd4e2c1d834891f9d48bd12c10bca62fddd"
+  integrity sha512-VAzlMf5DRm0ZX6/9W/4Izv3j9n87i4MthBmN+rnUG+cmPumBm3xtETJqZbSIAWAM4ucKHrgrKQhZPg1QX1U66w==
+  dependencies:
+    "@storybook/channels" "7.0.8"
+    "@storybook/client-logger" "7.0.8"
+    "@storybook/components" "7.0.8"
+    "@storybook/core-events" "7.0.8"
+    "@storybook/csf" "^0.1.0"
+    "@storybook/docs-tools" "7.0.8"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.0.8"
+    "@storybook/preview-api" "7.0.8"
+    "@storybook/theming" "7.0.8"
+    "@storybook/types" "7.0.8"
     "@types/lodash" "^4.14.167"
     color-convert "^2.0.1"
     dequal "^2.0.2"
@@ -2143,6 +2171,31 @@
     resolve-from "^5.0.0"
     ts-dedent "^2.0.0"
 
+"@storybook/core-common@7.0.8":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@storybook/core-common/-/core-common-7.0.8.tgz#05c87cc48b1ae748ce43193171de06db195e44e5"
+  integrity sha512-W0/jtHndO4GO98g9bWnkMB9rZrH+aZCefEGZcUrTpgOa+Ws/b6l8YDEoR1V1hGPROT5cn82+9zU4s5y1d462Sg==
+  dependencies:
+    "@storybook/node-logger" "7.0.8"
+    "@storybook/types" "7.0.8"
+    "@types/node" "^16.0.0"
+    "@types/pretty-hrtime" "^1.0.0"
+    chalk "^4.1.0"
+    esbuild "^0.17.0"
+    esbuild-register "^3.4.0"
+    file-system-cache "^2.0.0"
+    find-up "^5.0.0"
+    fs-extra "^11.1.0"
+    glob "^8.1.0"
+    glob-promise "^6.0.2"
+    handlebars "^4.7.7"
+    lazy-universal-dotenv "^4.0.0"
+    picomatch "^2.3.0"
+    pkg-dir "^5.0.0"
+    pretty-hrtime "^1.0.3"
+    resolve-from "^5.0.0"
+    ts-dedent "^2.0.0"
+
 "@storybook/core-events@7.0.7":
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.0.7.tgz#9acb6425d0a2a3d25becc21980c2c678c6c5548e"
@@ -2256,6 +2309,19 @@
     doctrine "^3.0.0"
     lodash "^4.17.21"
 
+"@storybook/docs-tools@7.0.8":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@storybook/docs-tools/-/docs-tools-7.0.8.tgz#94bc16619dda33d94b8ee281b6e7d45e642d91a2"
+  integrity sha512-Lg/Cnhh3OURzCamWUNFLm0IqolzId6w+n1NCwSTEdPJ1PFKAYvuewRoul9gbaAfzg4pzWITGpltyzRmFH/G6Xw==
+  dependencies:
+    "@babel/core" "^7.12.10"
+    "@storybook/core-common" "7.0.8"
+    "@storybook/preview-api" "7.0.8"
+    "@storybook/types" "7.0.8"
+    "@types/doctrine" "^0.0.3"
+    doctrine "^3.0.0"
+    lodash "^4.17.21"
+
 "@storybook/global@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/global/-/global-5.0.0.tgz#b793d34b94f572c1d7d9e0f44fac4e0dbc9572ed"
@@ -2317,6 +2383,16 @@
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-7.0.7.tgz#114e6d1994e0445dd9e579768bdb89adbf1055cd"
   integrity sha512-5Y4LLgKeCStq1ktCKZ5eNPzQQSQ+CYZAlkEdzQ3Pp//0KXaZvVxEvGtaYhAymP2HatLpI8Oneo4lHrJioRfgww==
+  dependencies:
+    "@types/npmlog" "^4.1.2"
+    chalk "^4.1.0"
+    npmlog "^5.0.1"
+    pretty-hrtime "^1.0.3"
+
+"@storybook/node-logger@7.0.8":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-7.0.8.tgz#bd917919aa1af93f7d1f7c43536bdd620c80c35d"
+  integrity sha512-POO1iXohTJbkQidp76GZR+HoVeFIuRBHlwWNtHZOgR1PnwocGvf43NJ/GMZLvxiwf/d2wyObXy4n1/R1jPw5Ew==
   dependencies:
     "@types/npmlog" "^4.1.2"
     chalk "^4.1.0"
