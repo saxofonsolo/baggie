@@ -2060,13 +2060,13 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/client-api@^7.0.8":
-  version "7.0.8"
-  resolved "https://registry.yarnpkg.com/@storybook/client-api/-/client-api-7.0.8.tgz#6f6becdf7037827fbae84d6161a8b2bd9922b384"
-  integrity sha512-xNUWica8T8H9BWBclw+lpiwq0nYjQg3T8MD22uXAA3e72ps1aTEUS0EzD1R/KHZjDoUXo13LtakZrf/MR0e3yg==
+"@storybook/client-api@^7.0.9":
+  version "7.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/client-api/-/client-api-7.0.9.tgz#7a280c7f858f5e0c6496e9e87474b2007794154c"
+  integrity sha512-H1tmFi/zmrZIwHTMlt/LkyPSbNXkWDSBKkxLBSo3FIhH2vdTVM1v8M5Jf9Pq/Tc2ARq9Vpl1R7b25xxAGSQ/lQ==
   dependencies:
-    "@storybook/client-logger" "7.0.8"
-    "@storybook/preview-api" "7.0.8"
+    "@storybook/client-logger" "7.0.9"
+    "@storybook/preview-api" "7.0.9"
 
 "@storybook/client-logger@7.0.8":
   version "7.0.8"
