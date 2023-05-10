@@ -57,7 +57,7 @@
     "@storybook/addon-links": "^7.0.9",
     "@storybook/blocks": "^7.0.9",
     "@storybook/cli": "^7.0.9",
-    "@storybook/client-api": "^7.0.9",
+    "@storybook/client-api": "^7.0.10",
     "@storybook/preview-web": "^7.0.9",
     "@storybook/react": "^7.0.9",
     "@storybook/react-vite": "^7.0.9",
