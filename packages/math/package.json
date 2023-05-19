@@ -32,7 +32,7 @@
   "sideEffects": false,
   "devDependencies": {
     "jest": "^29.5.0",
-    "rimraf": "^5.0.0",
+    "rimraf": "^5.0.1",
     "typescript": "^5.0.4"
   },
   "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"
