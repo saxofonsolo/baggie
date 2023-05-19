@@ -2,21 +2,14 @@ import { degreesToRadians, radiansToDegrees } from "@baggie/math";
 import { CIELAB } from "../_interfaces/cielab.interface";
 import { RGBA } from "../_interfaces/rgba.interface";
 import { convertRgbToLab } from "../convert/convertRgbToLab/convertRgbToLab";
+import { convertHexToRgb } from "../convert/convertHexToRgb/convertHexToRgb";
 
 interface ColorHaystack extends CIELAB {
-    source: RGBA | CIELAB;
+    source: string;
 }
 
 /**
  * Find the nearest or farthest matching colors.
- *
- * Create a set of available or accepted colors, and in this set find the closest or farthest match to any other color.
- *
- * @remarks
- * **Nerd alert:** Colors are converted to the [CIELAB color space](https://en.wikipedia.org/wiki/CIELAB_color_space)
- * (Lab), which is designed to be "perceptually uniform" with respect to human vision, meaning that the same amount of
- * numerical change in these values corresponds to about the same amount of visually perceived change. Colors are then
- * matched using the [Euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance) formula.
  *
  * @example
  * **Basic usage:**
@@ -57,7 +50,7 @@ export class ColorComparison {
     /**
      * Create a set of colors to search for the closest match in.
      */
-    constructor(colors: RGBA | RGBA[] | CIELAB | CIELAB[]) {
+    constructor(colors: string[]) {
         if (colors) {
             this.add(colors);
         }
@@ -79,9 +72,11 @@ export class ColorComparison {
         return this;
     }
 
-    add(colors: RGBA | RGBA[] | CIELAB | CIELAB[]): this {
+    add(colors: string | string[]): this {
         (Array.isArray(colors) ? colors : [colors]).forEach((color) => {
-            const parsedColor = ColorComparison.parseColorToLab(color);
+            const parsedColor = ColorComparison.parseColorToLab(
+                convertHexToRgb(color),
+            );
             this.haystack.push({
                 ...parsedColor,
                 source: color,
@@ -91,14 +86,19 @@ export class ColorComparison {
         return this;
     }
 
-    compare(
-        color: RGBA | CIELAB,
-        amount = 1,
+    private compare(
+        color: string,
+        amount?: number,
         sortFarthestToNearest = false,
-    ): (RGBA | CIELAB)[] | undefined {
+    ): string[] | undefined {
         if (this.haystack.length) {
-            const needle = ColorComparison.parseColorToLab(color);
-            const iterations = Math.min(amount, this.haystack.length);
+            const needle = ColorComparison.parseColorToLab(
+                convertHexToRgb(color),
+            );
+            const iterations = Math.min(
+                amount || this.haystack.length,
+                this.haystack.length,
+            );
             const results = new Array(iterations) as {
                 distance: number;
                 straw: ColorHaystack;
@@ -229,11 +229,11 @@ export class ColorComparison {
         return undefined;
     }
 
-    nearest(color: RGBA | CIELAB, amount = 1): (RGBA | CIELAB)[] | undefined {
+    nearest(color: string, amount?: number): string[] | undefined {
         return this.compare(color, amount);
     }
 
-    farthest(color: RGBA | CIELAB, amount = 1): (RGBA | CIELAB)[] | undefined {
+    farthest(color: string, amount?: number): string[] | undefined {
         return this.compare(color, amount, true);
     }
 }

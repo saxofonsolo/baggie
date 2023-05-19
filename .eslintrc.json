@@ -66,6 +66,14 @@
         "@typescript-eslint/no-unsafe-assignment": "off",
         "@typescript-eslint/no-unsafe-member-access": "off",
         "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unused-vars": [
+          "warn", // or "error"
+          {
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_"
+          }
+        ],
         "@typescript-eslint/ban-types": [
           "error",
           {
@@ -74,7 +82,8 @@
               "{}": false
             }
           }
-        ]
+        ],
+        "no-unused-vars": "off"
       }
     },
     {
@@ -164,7 +173,6 @@
     "import/no-mutable-exports": 1,
     "linebreak-style": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
-    "no-unused-vars": "off",
     "object-shorthand": "error",
     "react/jsx-uses-react": "error",
     "react-hooks/rules-of-hooks": "error",
