@@ -60,7 +60,7 @@
     "@storybook/client-api": "^7.0.12",
     "@storybook/preview-web": "^7.0.12",
     "@storybook/react": "^7.0.12",
-    "@storybook/react-vite": "^7.0.1",
+    "@storybook/react-vite": "^7.0.12",
     "@types/jest": "^29.5.1",
     "@types/mdx": "^2.0.5",
     "@types/react": "^18.2.6",
