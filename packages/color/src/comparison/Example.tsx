@@ -47,6 +47,7 @@ export const Example = (props: Props) => {
                     />
                 </InputWrapper>
             </div>
+
             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                 {colors.map((color, index) => (
                     <ColorInput
@@ -64,28 +65,42 @@ export const Example = (props: Props) => {
                 ))}
             </div>
 
-            <div
-                style={{
-                    display: "grid",
-                    gridAutoColumns: "minmax(0, 1fr)",
-                    gridAutoFlow: "column",
-                }}
-            >
-                {nearest?.map((x, index) => (
-                    <div key={`nearest-${index}-${x}`} style={{ height: "50px", background: x }} />
-                ))}
+            <div style={{ marginTop: 20 }}>
+                <InputWrapper label="Nearest" labelForId={undefined}>
+                    <div
+                        style={{
+                            display: "grid",
+                            gridAutoColumns: "minmax(0, 1fr)",
+                            gridAutoFlow: "column",
+                        }}
+                    >
+                        {nearest?.map((x, index) => (
+                            <div
+                                key={`nearest-${index}-${x}`}
+                                style={{ height: "50px", background: x }}
+                            />
+                        ))}
+                    </div>
+                </InputWrapper>
             </div>
 
-            <div
-                style={{
-                    display: "grid",
-                    gridAutoColumns: "minmax(0, 1fr)",
-                    gridAutoFlow: "column",
-                }}
-            >
-                {farthest?.map((x, index) => (
-                    <div key={`nearest-${index}-${x}`} style={{ height: "50px", background: x }} />
-                ))}
+            <div style={{ marginTop: 20 }}>
+                <InputWrapper label="Farthest" labelForId={undefined}>
+                    <div
+                        style={{
+                            display: "grid",
+                            gridAutoColumns: "minmax(0, 1fr)",
+                            gridAutoFlow: "column",
+                        }}
+                    >
+                        {farthest?.map((x, index) => (
+                            <div
+                                key={`nearest-${index}-${x}`}
+                                style={{ height: "50px", background: x }}
+                            />
+                        ))}
+                    </div>
+                </InputWrapper>
             </div>
 
             <Source
