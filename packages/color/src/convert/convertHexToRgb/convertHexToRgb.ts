@@ -1,12 +1,17 @@
+import { convertRangePosition } from "@baggie/math";
 import { RGBA } from "../../_interfaces/rgba.interface";
 import { isHexColor } from "../../check/isHexColor/isHexColor";
+
+const rgbRegExp =
+    /rgba?\(\s*([.e0-9]+%?)\s*,\s*([.e0-9]+%?)\s*,\s*([.e0-9]+%?)\s*(?:,\s*([.e0-9]+)\s*)?\)/;
+const isRgbColor = (input: string) => rgbRegExp.test(input);
 
 /**
  * Convert a hex color to an object with RGB color values.
  */
-export const convertHexToRgb = (hex: string): RGBA => {
-    if (isHexColor(hex)) {
-        const match = hex.slice(1);
+export const convertHexToRgb = (input: string): RGBA => {
+    if (isHexColor(input)) {
+        const match = input.slice(1);
 
         if (match.length === 3 || match.length === 4) {
             const rgb = [
@@ -37,7 +42,39 @@ export const convertHexToRgb = (hex: string): RGBA => {
                 alpha: parseInt(rgb[3], 16) / 255,
             };
         }
+    } else if (isRgbColor(input)) {
+        const [_match, red, green, blue, alpha] = input.match(rgbRegExp)!;
+        return {
+            red: red.endsWith("%")
+                ? Math.round(
+                      convertRangePosition(
+                          parseInt(red.slice(0, -1)),
+                          { from: 0, to: 100 },
+                          { from: 0, to: 255 },
+                      ),
+                  )
+                : parseInt(red),
+            green: green.endsWith("%")
+                ? Math.round(
+                      convertRangePosition(
+                          parseInt(green.slice(0, -1)),
+                          { from: 0, to: 100 },
+                          { from: 0, to: 255 },
+                      ),
+                  )
+                : parseInt(green),
+            blue: blue.endsWith("%")
+                ? Math.round(
+                      convertRangePosition(
+                          parseInt(blue.slice(0, -1)),
+                          { from: 0, to: 100 },
+                          { from: 0, to: 255 },
+                      ),
+                  )
+                : parseInt(blue),
+            alpha: alpha ? parseFloat(alpha) : 0,
+        };
     }
 
-    throw "Not a valid hex color";
+    throw "Not a valid color string";
 };

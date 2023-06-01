@@ -4,8 +4,8 @@ export type { HSLA } from "./_interfaces/hsla.interface";
 export type { RGBA } from "./_interfaces/rgba.interface";
 
 /* Brightness */
-export { getBrightness } from "./brightness/getBrightness/getBrightness";
-export { getDarkness } from "./brightness/getDarkness/getDarkness";
+export { getColorBrightness } from "./brightness/getColorBrightness/getColorBrightness";
+export { getColorDarkness } from "./brightness/getColorDarkness/getColorDarkness";
 export { isColorBrighterThan } from "./brightness/isColorBrighterThan/isColorBrighterThan";
 export { isColorDarkerThan } from "./brightness/isColorDarkerThan/isColorDarkerThan";
 
@@ -13,11 +13,11 @@ export { isColorDarkerThan } from "./brightness/isColorDarkerThan/isColorDarkerT
 export { isHexColor } from "./check/isHexColor/isHexColor";
 
 /* Color schemes */
-export { getAnalogousColorScheme } from "./colorSchemes/getAnalogousColorScheme/getAnalogousColorScheme";
-export { getComplementaryColorScheme } from "./colorSchemes/getComplementaryColorScheme/getComplementaryColorScheme";
-export { getSplitComplementaryColorScheme } from "./colorSchemes/getSplitComplementaryColorScheme/getSplitComplementaryColorScheme";
-export { getTetradicColorScheme } from "./colorSchemes/getTetradicColorScheme/getTetradicColorScheme";
-export { getTriadicColorScheme } from "./colorSchemes/getTriadicColorScheme/getTriadicColorScheme";
+export { getColorSchemeAnalogous } from "./colorSchemes/getColorSchemeAnalogous/getColorSchemeAnalogous";
+export { getColorSchemeComplementary } from "./colorSchemes/getColorSchemeComplementary/getColorSchemeComplementary";
+export { getColorSchemeSplitComplementary } from "./colorSchemes/getColorSchemeSplitComplementary/getColorSchemeSplitComplementary";
+export { getColorSchemeTetradic } from "./colorSchemes/getColorSchemeTetradic/getColorSchemeTetradic";
+export { getColorSchemeTriadic } from "./colorSchemes/getColorSchemeTriadic/getColorSchemeTriadic";
 
 /* Comparison */
 export { ColorComparison } from "./comparison/colorComparison";

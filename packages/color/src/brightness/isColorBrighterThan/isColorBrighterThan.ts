@@ -1,5 +1,5 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
-import { getBrightness } from "../getBrightness/getBrightness";
+import { getColorBrightness } from "../getColorBrightness/getColorBrightness";
 
 /**
  * Compare the brightness of two colors.
@@ -7,4 +7,4 @@ import { getBrightness } from "../getBrightness/getBrightness";
 export const isColorBrighterThan = (
     colorA: string | RGBA,
     colorB: string | RGBA,
-): boolean => getBrightness(colorA) > getBrightness(colorB);
+): boolean => getColorBrightness(colorA) > getColorBrightness(colorB);
