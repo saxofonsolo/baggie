@@ -2,7 +2,7 @@ import { getSiblings } from "./getSiblings";
 
 /**
  * Check if two elements are siblings.
-## Examples * @param element1 - An element to check
+ * @param element1 - An element to check
  * @param element2 - Another element to check
  * @param adjacentOnly - Set to `true` if elements have to be right next to each other
  */
