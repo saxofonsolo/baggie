@@ -12,23 +12,19 @@ interface Props {
 
 export const Example = (props: Props) => {
     const [compareColor, setCompareColor] = useState(props.compareColor);
-    const [amount, setAmount] = useState<number>();
     const [colors, setColors] = useState(props.colors);
     const comparisonRef = useRef(new ColorComparison(colors));
 
     const realColors = useMemo(() => colors.filter((color) => isHexColor(color)), [colors]);
-    const { nearest, farthest } = useMemo(() => {
+    const comparison = useMemo(() => {
         try {
             comparisonRef.current.reset();
             comparisonRef.current.add(realColors);
-            return {
-                nearest: comparisonRef.current.nearest(compareColor, amount),
-                farthest: comparisonRef.current.farthest(compareColor, amount),
-            };
+            return comparisonRef.current.compare(compareColor);
         } catch (err) {
-            return { nearest: undefined, farthest: undefined };
+            return [];
         }
-    }, [realColors, compareColor, amount]);
+    }, [realColors, compareColor]);
 
     return (
         <>
@@ -38,35 +34,31 @@ export const Example = (props: Props) => {
                     value={compareColor}
                     onChange={(x) => setCompareColor(x)}
                 />
-                <InputWrapper label="Amount" labelForId="amount-input">
-                    <input
-                        id="amount-input"
-                        type="number"
-                        value={amount}
-                        onChange={({ target }) => setAmount(target.valueAsNumber)}
-                    />
-                </InputWrapper>
             </div>
 
-            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-                {colors.map((color, index) => (
-                    <ColorInput
-                        key={`${index}--${color}`}
-                        label={`Color ${index + 1}`}
-                        value={color}
-                        onChange={(nc) =>
-                            setColors((x) => {
-                                const newColors = [...x];
-                                newColors[index] = nc;
-                                return newColors;
-                            })
-                        }
-                    />
-                ))}
-            </div>
+            <fieldset>
+                <legend>Palette</legend>
+
+                <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                    {colors.map((color, index) => (
+                        <ColorInput
+                            key={`${index}--${color}`}
+                            label={`Color ${index + 1}`}
+                            value={color}
+                            onChange={(nc) =>
+                                setColors((x) => {
+                                    const newColors = [...x];
+                                    newColors[index] = nc;
+                                    return newColors;
+                                })
+                            }
+                        />
+                    ))}
+                </div>
+            </fieldset>
 
             <div style={{ marginTop: 20 }}>
-                <InputWrapper label="Nearest" labelForId={undefined}>
+                <InputWrapper label="Sorted" labelForId={undefined}>
                     <div
                         style={{
                             display: "grid",
@@ -74,26 +66,7 @@ export const Example = (props: Props) => {
                             gridAutoFlow: "column",
                         }}
                     >
-                        {nearest?.map((x, index) => (
-                            <div
-                                key={`nearest-${index}-${x}`}
-                                style={{ height: "50px", background: x }}
-                            />
-                        ))}
-                    </div>
-                </InputWrapper>
-            </div>
-
-            <div style={{ marginTop: 20 }}>
-                <InputWrapper label="Farthest" labelForId={undefined}>
-                    <div
-                        style={{
-                            display: "grid",
-                            gridAutoColumns: "minmax(0, 1fr)",
-                            gridAutoFlow: "column",
-                        }}
-                    >
-                        {farthest?.map((x, index) => (
+                        {comparison.map((x, index) => (
                             <div
                                 key={`nearest-${index}-${x}`}
                                 style={{ height: "50px", background: x }}
@@ -110,16 +83,11 @@ import { ColorComparison } from "@baggie/color";
 
 const colors = ${JSON.stringify(realColors, null, 4)};
 
-const compare = new ColorComparison(colors);
+const comparison = new ColorComparison(colors);
 
-const nearest = compare.nearest("${compareColor}"${amount ? `, ${amount}` : ""});
+const sorted = comparison.compare("${compareColor}");
 /*
-nearest = ${JSON.stringify(nearest, null, 4)}
-*/
-
-const farthest = compare.farthest("${compareColor}"${amount ? `, ${amount}` : ""});
-/*
-farthest = ${JSON.stringify(farthest, null, 4)}
+sorted = ${JSON.stringify(comparison, null, 4)}
 */
 `}
             />

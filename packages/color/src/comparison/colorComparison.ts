@@ -10,39 +10,6 @@ interface ColorHaystack extends CIELAB {
 
 /**
  * Find the nearest or farthest matching colors.
- *
- * @example
- * **Basic usage:**
- * ```ts
- * import { ColorComparison } from "@baggie/colors";
- *
- * const colors = new ColorComparison([
- *     { red: 255, green: 0, blue: 0 },
- *     { red: 255, green: 255, blue: 0 },
- *     { red: 255, green: 0, blue: 255 },
- *     { red: 0, green: 255, blue: 255 },
- *     { red: 0, green: 255, blue: 0 },
- * ]);
- *
- * colors.nearest({ red: 255, green: 60, blue: 10 });
- * // = [{ red: 255, green: 0, blue: 0 }]
- *
- * colors.add({ red: 255, green: 50, blue: 0 });
- *
- * colors.near({ red: 255, green: 60, blue: 10 });
- * // = { red: 255, green: 50, blue: 0 }
- *
- * colors.farthest({ red: 255, green: 50, blue: 50 }, 2);
- * // = [{ red: 0, green: 255, blue: 0 }, { red: 0, green: 255, blue: 255 }]
- *
- * // We can also remove all the colors and add new ones to it.
- * colors
- *     .reset()
- *     .add([
- *         { red: 255, green: 50, blue: 50 },
- *         { red: 0, green: 255, blue: 0 }
- *     ]);
- * ```
  */
 export class ColorComparison {
     private haystack: ColorHaystack[] = [];
@@ -86,23 +53,16 @@ export class ColorComparison {
         return this;
     }
 
-    private compare(
-        color: string,
-        amount?: number,
-        sortFarthestToNearest = false,
-    ): string[] | undefined {
+    compare(color: string) {
         if (this.haystack.length) {
             const needle = ColorComparison.parseColorToLab(
                 convertHexToRgb(color),
             );
-            const iterations = Math.min(
-                amount || this.haystack.length,
-                this.haystack.length,
-            );
-            const results = new Array(iterations) as {
+            const iterations = this.haystack.length;
+            const results: {
                 distance: number;
                 straw: ColorHaystack;
-            }[];
+            }[] = new Array(iterations);
 
             const lightnessWeight = 0.01;
 
@@ -208,11 +168,7 @@ export class ColorComparison {
                             straw,
                         };
                         break;
-                    } else if (
-                        sortFarthestToNearest
-                            ? distance > results[i].distance
-                            : distance < results[i].distance
-                    ) {
+                    } else if (distance < results[i].distance) {
                         results.splice(i, 0, {
                             distance,
                             straw,
@@ -226,14 +182,6 @@ export class ColorComparison {
             return results.map((result) => result.straw.source);
         }
 
-        return undefined;
-    }
-
-    nearest(color: string, amount?: number): string[] | undefined {
-        return this.compare(color, amount);
-    }
-
-    farthest(color: string, amount?: number): string[] | undefined {
-        return this.compare(color, amount, true);
+        return [];
     }
 }
