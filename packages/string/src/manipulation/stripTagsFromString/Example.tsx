@@ -13,7 +13,10 @@ export const Example = (props: Props) => {
     const [replaceWith, setReplaceWith] = useState(props.replaceWith || " ");
     const [trim, setTrim] = useState(true);
 
-    const output = useMemo(() => stripTagsFromString(string, replaceWith), [string, replaceWith]);
+    const output = useMemo(
+        () => stripTagsFromString(string, replaceWith, trim),
+        [string, replaceWith, trim],
+    );
 
     return (
         <>
@@ -55,12 +58,10 @@ export const Example = (props: Props) => {
 import { stripTagsFromString } from "@baggie/string";
 
 const string = \`${string.replace(/`/g, "\\`")}\`;
-${replaceWith === " " ? "" : `const replaceWith = "${replaceWith}";\n`}${
-                    trim ? "" : `const trim = false;\n`
-                }
+${replaceWith === " " ? "" : `const replaceWith = "${replaceWith}";\n`}
 const output = stripTagsFromString(input${
                     replaceWith === " " ? (trim ? "" : ", undefined") : ", replaceWith"
-                }${trim ? "" : ", trim"});
+                }${trim ? "" : ", false"});
 /*
 output = ${JSON.stringify(output, null, 4)}
 */
