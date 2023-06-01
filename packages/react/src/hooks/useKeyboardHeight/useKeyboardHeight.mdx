@@ -1,0 +1,51 @@
+import { Source } from "@storybook/blocks";
+
+# useKeyboardHeight
+
+A hook that returns the height of the virtual/soft keyboard (on iOS and Android).
+
+## Parameters
+
+| Parameter          | Type                | Default value | Description                                                                                                          |
+| :----------------- | :------------------ | :------------ | :------------------------------------------------------------------------------------------------------------------- |
+| **customProperty** | `boolean \| string` | `false`       | Set to `true` or a string to add a CSS custom property (CSS variable) |
+
+## Example
+
+Using the keyboard height in React:
+
+<Source dark code={`
+import React from "react";
+import { useKeyboardHeight } from "@baggie/react";
+
+export const App = () => {
+    const keyboardHeight = useKeyboardHeight();
+
+    return (
+        <div style={{ position: "fixed", top: 0, bottom: \`\${keyboardHeight}px\` }}>
+            ...
+        </div>
+    );
+
+});
+
+`} />
+
+Using the keyboard height in CSS:
+
+<Source dark code={`
+import React from "react";
+import { useKeyboardHeight } from "@baggie/react";
+
+export const App = () => {
+    useKeyboardHeight(true);
+
+    return (
+        <div style={{ position: "fixed", top: 0, bottom: "var(--keyboard-height)" }}>
+            ...
+        </div>
+    );
+
+});
+
+`} />
