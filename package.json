@@ -99,7 +99,7 @@
     "stylelint-config-css-modules": "^4.2.0",
     "stylelint-config-standard-scss": "^9.0.0",
     "stylelint-order": "^6.0.3",
-    "syncpack": "^10.1.0",
+    "syncpack": "^10.6.1",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4",
     "vite": "^4.3.9"
