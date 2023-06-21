@@ -12,7 +12,7 @@ describe("ColorComparison", () => {
 
         colors.add("#ff8000");
 
-        expect(colors.nearest("#ff9010")).toStrictEqual([
+        expect(colors.compare("#ff9010")).toStrictEqual([
             "#ff8000",
             "#ff0000",
             "#ffff00",
@@ -21,12 +21,8 @@ describe("ColorComparison", () => {
             "#ff00ff",
         ]);
 
-        expect(colors.farthest("#ff4040", 2)).toEqual(
-            expect.arrayContaining(["#00ff00", "#00ffff"]),
-        );
-
         colors.reset().add(["#ff0000", "#907ff0"]);
 
-        expect(colors.nearest("#ff4040")).toStrictEqual(["#ff0000", "#907ff0"]);
+        expect(colors.compare("#ff4040")).toStrictEqual(["#ff0000", "#907ff0"]);
     });
 });
