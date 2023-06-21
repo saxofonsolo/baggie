@@ -3,7 +3,9 @@
  */
 export const intersperse = <A, I>(
     array: A[],
-    ...insertion: I[]
+    ...insertion: (I extends () => any
+        ? (args: { previous: A; next: A; index: number }) => any
+        : any)[]
 ): (A | (I extends () => any ? ReturnType<I> : I))[] =>
     array.reduce((accumulator: any[], element, index, array) => {
         accumulator.push(element);

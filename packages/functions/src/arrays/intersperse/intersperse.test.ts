@@ -10,14 +10,12 @@ describe("intersperse", () => {
         expect(intersperse([10, 15], 11, 12, 13, 14)).toStrictEqual([
             10, 11, 12, 13, 14, 15,
         ]);
-        expect(intersperse([10, 15], ...["11", 12, "13", 14])).toStrictEqual([
-            10,
-            "11",
-            12,
-            "13",
-            14,
-            15,
-        ]);
+        expect(
+            intersperse<number, number | string>(
+                [10, 15],
+                ...["11", 12, "13", 14],
+            ),
+        ).toStrictEqual([10, "11", 12, "13", 14, 15]);
     });
 
     test("Insert value with function", () => {
