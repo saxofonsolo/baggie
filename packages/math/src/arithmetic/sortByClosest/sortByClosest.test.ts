@@ -10,7 +10,7 @@ describe("sortByClosest", () => {
             -15, 5, 10, 20,
         ]);
 
-        expect(sortByClosest(-8, [])).toStrictEqual([]);
+        expect(sortByClosest(-8, [0])).toStrictEqual([0]);
     });
 
     test("Sort objects by closest numbers", () => {
