@@ -94,7 +94,7 @@
     "prettier": "2.8.8",
     "remark-gfm": "^3.0.1",
     "rimraf": "^5.0.1",
-    "sass": "^1.63.5",
+    "sass": "^1.63.6",
     "stylelint": "^15.8.0",
     "stylelint-config-css-modules": "^4.2.0",
     "stylelint-config-standard-scss": "^9.0.0",
