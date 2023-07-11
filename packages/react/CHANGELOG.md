@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/bag-of-tricks/baggie/compare/react-v1.0.1...react-v1.0.2) (2023-07-11)
+
+
+### Bug Fixes
+
+* **react:** Export useRefreshedToday ([88cdbdf](https://github.com/bag-of-tricks/baggie/commit/88cdbdf3be24e42f2ff2a850ba13b6b6d88362de))
+
 ## [1.0.1](https://github.com/bag-of-tricks/baggie/compare/react-v1.0.0...react-v1.0.1) (2023-07-11)
 
 
