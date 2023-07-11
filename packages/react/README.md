@@ -2,23 +2,21 @@
 
 <h1>@baggie/react</h1>
 
-TypeScript tools from [the little bag-of-tricks](https://github.com/bag-of-tricks/baggie#readme).
-
-Just a few helpers for defining more specific types.
+React tools from [the little bag-of-tricks](https://github.com/bag-of-tricks/baggie#readme).
 
 <hr>
 <br>
 
 ## 🧾 Documentation
 
-Visit [bag-of-tricks.github.io](https://bag-of-tricks.github.io/) for more complete documentation and examples.
+Visit [bag-of-tricks.github.io](https://bag-of-tricks.github.io/) for documentation and examples.
 
 ## 🚀 Installation
 
 ```bash
 #npm
-npm install @baggie/core --save
+npm install @baggie/react
 
 #yarn
-yarn add @baggie/core
+yarn add @baggie/react
 ```
