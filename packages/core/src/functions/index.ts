@@ -1,5 +1,6 @@
 /* Arrays */
 export { intersperse } from "./arrays/intersperse/intersperse";
+export { shuffleArray } from "./arrays/shuffleArray/shuffleArray";
 
 /* Cookie */
 export type { CookieAttributes } from "./cookie/setCookie";
