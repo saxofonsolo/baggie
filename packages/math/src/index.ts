@@ -120,4 +120,5 @@ export { roemerToCelsius } from "./temperature/roemerToCelsius/roemerToCelsius";
 
 /* Time */
 export { getDuration } from "./time/getDuration/getDuration";
+export { getHalfLifeDecay } from "./time/getHalfLifeDecay/getHalfLifeDecay";
 export { getTimeDifference } from "./time/getTimeDifference/getTimeDifference";
