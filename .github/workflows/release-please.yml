@@ -62,7 +62,7 @@ jobs:
         working-directory: ./packages/core
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: 1 == 2 && steps.changed-core.outputs.any_changed == 'true'
+        if: steps.changed-core.outputs.any_changed == 'true'
 
       # --------------
       # BAGGIE / REACT
@@ -81,7 +81,7 @@ jobs:
         working-directory: ./packages/react
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: 1 == 2 && steps.changed-react.outputs.any_changed == 'true'
+        if: steps.changed-react.outputs.any_changed == 'true'
 
       # -----------------
       # BIBLO / STORYBOOK
