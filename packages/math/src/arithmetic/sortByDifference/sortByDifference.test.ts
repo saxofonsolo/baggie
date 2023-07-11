@@ -1,21 +1,21 @@
-import { sortByClosest } from "./sortByClosest";
+import { sortByDifference } from "./sortByDifference";
 
-describe("sortByClosest", () => {
+describe("sortByDifference", () => {
     test("Sort numbers by closest numbers", () => {
-        expect(sortByClosest(8, [5, 10, 15, 20])).toStrictEqual([
+        expect(sortByDifference(8, [5, 10, 15, 20])).toStrictEqual([
             10, 5, 15, 20,
         ]);
 
-        expect(sortByClosest(-8, [5, 10, -15, 20])).toStrictEqual([
+        expect(sortByDifference(-8, [5, 10, -15, 20])).toStrictEqual([
             -15, 5, 10, 20,
         ]);
 
-        expect(sortByClosest(-8, [0])).toStrictEqual([0]);
+        expect(sortByDifference(-8, [0])).toStrictEqual([0]);
     });
 
     test("Sort objects by closest numbers", () => {
         expect(
-            sortByClosest(
+            sortByDifference(
                 8,
                 [{ amount: 5 }, { amount: 10 }, { amount: 15 }, { amount: 20 }],
                 ({ amount }) => amount,
@@ -28,7 +28,7 @@ describe("sortByClosest", () => {
         ]);
 
         expect(
-            sortByClosest(
+            sortByDifference(
                 -8,
                 [
                     { amount: 5 },
@@ -48,7 +48,7 @@ describe("sortByClosest", () => {
 
     test("Sort arrays by closest numbers", () => {
         expect(
-            sortByClosest(
+            sortByDifference(
                 8,
                 [
                     [1, 5, 100],

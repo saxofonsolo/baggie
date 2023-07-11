@@ -6,7 +6,7 @@ export type { CoordinatesXY } from "./coordinates/_interfaces/coordinatesXY.inte
 /* Arithmetic */
 export { addNumbers } from "./arithmetic/addNumbers/addNumbers";
 export { countDecimals } from "./arithmetic/countDecimals/countDecimals";
-export { sortByClosest } from "./arithmetic/sortByClosest/sortByClosest";
+export { sortByDifference } from "./arithmetic/sortByDifference/sortByDifference";
 
 /* Average */
 export { getAntiMode } from "./average/getAntiMode/getAntiMode";

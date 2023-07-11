@@ -1,16 +1,14 @@
 /**
  * Sort an array of numbers by their distance to a target number.
  */
-export const sortByClosest = <T>(
+export const sortByDifference = <T>(
     target: number | T,
     array: T[],
-    ...rest: T extends number ? [rest?: undefined] : [rest: (item: T) => number]
+    getDifference?: T extends number ? undefined : (item: T) => number,
 ): T[] => {
-    const [getNumber] = rest;
-
     const getSortingValue =
-        typeof getNumber === "function"
-            ? getNumber
+        typeof getDifference === "function"
+            ? getDifference
             : (input: T) => input as unknown as number;
 
     const realTarget =
