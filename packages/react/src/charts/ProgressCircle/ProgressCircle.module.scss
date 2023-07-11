@@ -26,7 +26,8 @@
     }
 
     &::before {
-        background: radial-gradient(farthest-side, var(--color) 98%, #0000)
+        background:
+            radial-gradient(farthest-side, var(--color) 98%, #0000)
                 top/var(--width) var(--width) no-repeat,
             conic-gradient(
                 var(--color) #{calc(var(--percentage) * 100%)},
@@ -55,7 +56,9 @@
     }
 
     &.notRounded::before {
-        background-size: 0 0, auto;
+        background-size:
+            0 0,
+            auto;
     }
 }
 
