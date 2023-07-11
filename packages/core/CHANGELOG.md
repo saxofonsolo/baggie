@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/bag-of-tricks/baggie/compare/core-v1.1.1...core-v1.2.0) (2023-07-11)
+
+
+### Features
+
+* **core:** Add function shuffleArray ([87bc028](https://github.com/bag-of-tricks/baggie/commit/87bc02873e51fd0845af4f5ae4531724b8c2e301))
+
 ## [1.1.1](https://github.com/bag-of-tricks/baggie/compare/core-v1.1.0...core-v1.1.1) (2023-07-11)
 
 
