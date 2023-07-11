@@ -8,9 +8,9 @@ Commit messages consist of a **type**, optional **scope**, an optional **exclama
 
 Write in all lowercase and don't end in punctuation. Min 10 character, max 80. Be concise.
 
-**⛔ Bad:** `docs(color): Added new docs for convertRgbToLab.`
+**⛔ Bad:** `docs(core): Added new docs for convertRgbToLab.`
 
-**✅ Good:** `docs(color): add docs for convertRgbToLab`
+**✅ Good:** `docs(core): add docs for convertRgbToLab`
 
 ## Accepted types
 
@@ -27,19 +27,13 @@ Write in all lowercase and don't end in punctuation. Min 10 character, max 80. B
 
 ## Accepted scopes
 
-- color
-- detection
-- dom
-- functions
-- math
+- core
 - react
-- string
-- typescript
 
 ## Breaking changes
 
 To signal a breaking change, use the exclamation point (**!**) like so: `type(scope)!: message`
 
-**Example:** `remove(math)!: remove calculateDistance`
+**Example:** `remove(core)!: remove calculateDistance`
 
 > ⏰ **Be aware** that this will bump up the major version of the entire package.

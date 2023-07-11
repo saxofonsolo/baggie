@@ -1,0 +1,45 @@
+{
+  "name": "@baggie/core",
+  "version": "1.5.0",
+  "description": "A library of helper functions for TypeScript.",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./lib && bob build",
+    "test": "jest --verbose --runInBand",
+    "deploy": "npm publish"
+  },
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "javascript-library",
+    "typescript-library",
+    "library",
+    "toolbox",
+    "tools"
+  ],
+  "sideEffects": false,
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6"
+  },
+  "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"
+}

@@ -1,0 +1,61 @@
+import { Source } from "@storybook/blocks";
+import { Example } from "./Example";
+
+# sortByDifference
+
+Sort an array of numbers by their difference to a target number.
+
+## Parameters
+
+If you are only working with numbers
+
+| Parameter  | Type       | Required |
+| :--------- | :--------- | :------: |
+| **target** | `number`   |    ✔    |
+| **array**  | `number[]` |    ✔    |
+
+or if you are working with more complex data types
+
+| Parameter         | Type                  | Required |
+| :---------------- | :-------------------- | :------: |
+| **target**        | `T` or `number`       |    ✔    |
+| **array**         | `T[]`                 |    ✔    |
+| **getDifference** | `(item: T) => number` |    ✔    |
+
+## Example
+
+Sort an array of **numbers**
+
+<Example target={8} numbers={[5, 10, 15, 20]} />
+
+You can also sort things like an array of **objects**
+
+<Source
+    dark
+    code={`
+import { sortByDifference } from "@baggie/core";
+
+const target = { price: 5 };
+const objects = [{ price: 1 }, { price: 9 }, { price: 4 }];
+const getDifference = (obj) => obj.price;
+
+const sorted = sortByDifference(target, objects, getDifference);
+// sorted = [{ price: 4 }, { price: 9 }, { price: 1 }]
+`}
+/>
+
+... or an array of **arrays**
+
+<Source
+    dark
+    code={`
+import { sortByDifference } from "@baggie/core";
+
+const target = 10;
+const arrays = [[1, 99, "8z"], [20, 4, "7a"], [6, 6, "6b"]];
+const getDifference = (arr) => arr[1];
+
+const sorted = sortByDifference(target, arrays, getDifference);
+// sorted = [[6, 6, "6b"], [20, 4, "7a"], [1, 99, "8z"]]
+`}
+/>

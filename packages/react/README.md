@@ -17,8 +17,8 @@ Visit [bag-of-tricks.github.io](https://bag-of-tricks.github.io/) for more compl
 
 ```bash
 #npm
-npm install @baggie/typescript --save
+npm install @baggie/core --save
 
 #yarn
-yarn add @baggie/typescript
+yarn add @baggie/core
 ```
