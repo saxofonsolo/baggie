@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/bag-of-tricks/baggie/compare/core-v1.2.1...core-v1.2.2) (2023-07-11)
+
+
+### Bug Fixes
+
+* **core:** Improve typescript for shuffleArray ([06c75e1](https://github.com/bag-of-tricks/baggie/commit/06c75e161e47ac04caa2373a0f8eff4fec4d9e09))
+
 ## [1.2.1](https://github.com/bag-of-tricks/baggie/compare/core-v1.2.0...core-v1.2.1) (2023-07-11)
 
 
