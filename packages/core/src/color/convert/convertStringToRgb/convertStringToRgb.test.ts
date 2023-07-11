@@ -1,8 +1,8 @@
-import { convertHexToRgb } from "./convertHexToRgb";
+import { convertStringToRgb } from "./convertStringToRgb";
 
-describe("convertHexToRgb", () => {
+describe("convertStringToRgb", () => {
     test("Red", () => {
-        expect(convertHexToRgb("#ff0000")).toEqual(
+        expect(convertStringToRgb("#ff0000")).toEqual(
             expect.objectContaining({
                 alpha: 1,
                 blue: 0,
@@ -13,7 +13,7 @@ describe("convertHexToRgb", () => {
     });
 
     test("Lime", () => {
-        expect(convertHexToRgb("#00ff00")).toEqual(
+        expect(convertStringToRgb("#00ff00")).toEqual(
             expect.objectContaining({
                 alpha: 1,
                 blue: 0,
@@ -24,7 +24,7 @@ describe("convertHexToRgb", () => {
     });
 
     test("Blue", () => {
-        expect(convertHexToRgb("#0000ff")).toEqual(
+        expect(convertStringToRgb("#0000ff")).toEqual(
             expect.objectContaining({
                 alpha: 1,
                 blue: 255,
@@ -35,7 +35,7 @@ describe("convertHexToRgb", () => {
     });
 
     test("Alpha", () => {
-        expect(convertHexToRgb("#0000ff00")).toEqual(
+        expect(convertStringToRgb("#0000ff00")).toEqual(
             expect.objectContaining({
                 alpha: 0,
                 blue: 255,

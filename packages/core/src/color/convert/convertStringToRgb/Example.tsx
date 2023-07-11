@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Source } from "@storybook/blocks";
 import { ColorInput } from "../../_components/ColorInput/ColorInput";
-import { convertHexToRgb } from "./convertHexToRgb";
+import { convertStringToRgb } from "./convertStringToRgb";
 
 interface Props {
     hex: string;
@@ -12,7 +12,7 @@ export const Example = (props: Props) => {
 
     const rgb = useMemo(() => {
         try {
-            return convertHexToRgb(hex);
+            return convertStringToRgb(hex);
         } catch (err) {
             return undefined;
         }
@@ -58,11 +58,11 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { convertHexToRgb } from "@baggie/core";
+import { convertStringToRgb } from "@baggie/core";
 
 const hex = ${hex ? `"${hex}"` : "undefined"};
 
-const rgb = convertHexToRgb(hex);
+const rgb = convertStringToRgb(hex);
 /*
 rgb = ${JSON.stringify(rgb, null, 4)}
 */

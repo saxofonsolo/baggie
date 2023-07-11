@@ -1,6 +1,6 @@
 import { getMean } from "../../../math";
 import { RGBA } from "../../_interfaces/rgba.interface";
-import { convertHexToRgb } from "../../convert/convertHexToRgb/convertHexToRgb";
+import { convertStringToRgb } from "../../convert/convertStringToRgb/convertStringToRgb";
 import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 
 /**
@@ -9,9 +9,9 @@ import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 export const screenColors = (colorA: string | RGBA, colorB: string | RGBA) => {
     try {
         const rgb1 =
-            typeof colorA === "string" ? convertHexToRgb(colorA) : colorA;
+            typeof colorA === "string" ? convertStringToRgb(colorA) : colorA;
         const rgb2 =
-            typeof colorB === "string" ? convertHexToRgb(colorB) : colorB;
+            typeof colorB === "string" ? convertStringToRgb(colorB) : colorB;
         return convertRgbToHex({
             red: Math.round(1 - (1 - rgb1.red) * (1 - rgb2.red)),
             green: Math.round(1 - (1 - rgb1.green) * (1 - rgb2.green)),

@@ -1,5 +1,5 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
-import { convertHexToRgb } from "../../convert/convertHexToRgb/convertHexToRgb";
+import { convertStringToRgb } from "../../convert/convertStringToRgb/convertStringToRgb";
 
 /**
  * Get the perceived brightness of a color as percentage in decimal form.
@@ -7,7 +7,7 @@ import { convertHexToRgb } from "../../convert/convertHexToRgb/convertHexToRgb";
 export const getColorBrightness = (color: string | RGBA): number => {
     try {
         const { red, green, blue } =
-            typeof color === "string" ? convertHexToRgb(color) : color;
+            typeof color === "string" ? convertStringToRgb(color) : color;
         const perceivedBrightness = Math.sqrt(
             0.299 * (red * red) +
                 0.587 * (green * green) +

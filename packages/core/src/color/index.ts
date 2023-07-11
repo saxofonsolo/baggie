@@ -19,7 +19,7 @@ export { ColorComparison } from "./comparison/colorComparison";
 
 /* Convert */
 export { convertColorNameToHex } from "./convert/convertColorNameToHex/convertColorNameToHex";
-export { convertHexToRgb } from "./convert/convertHexToRgb/convertHexToRgb";
+export { convertStringToRgb } from "./convert/convertStringToRgb/convertStringToRgb";
 export { convertHslToRgb } from "./convert/convertHslToRgb/convertHslToRgb";
 export { convertRgbToHex } from "./convert/convertRgbToHex/convertRgbToHex";
 export { convertRgbToHsl } from "./convert/convertRgbToHsl/convertRgbToHsl";

@@ -1,7 +1,7 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
 import { convertHslToRgb } from "../../convert/convertHslToRgb/convertHslToRgb";
 import { convertRgbToHsl } from "../../convert/convertRgbToHsl/convertRgbToHsl";
-import { convertHexToRgb } from "../../convert/convertHexToRgb/convertHexToRgb";
+import { convertStringToRgb } from "../../convert/convertStringToRgb/convertStringToRgb";
 import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 
 /**
@@ -13,7 +13,7 @@ export const getColorSchemeAnalogous = (
     steps = 12,
 ): string[] => {
     const hex = typeof color === "string" ? color : convertRgbToHex(color);
-    const rgb = typeof color === "string" ? convertHexToRgb(color) : color;
+    const rgb = typeof color === "string" ? convertStringToRgb(color) : color;
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(rgb);
     const colors = [hex];
     const step = 360 / steps;

@@ -1,5 +1,5 @@
 import { RGBA } from "../../_interfaces/rgba.interface";
-import { convertHexToRgb } from "../../convert/convertHexToRgb/convertHexToRgb";
+import { convertStringToRgb } from "../../convert/convertStringToRgb/convertStringToRgb";
 import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 
 /**
@@ -12,9 +12,9 @@ export const mixColors = (
 ): string | undefined => {
     try {
         const rgb1 =
-            typeof colorA === "string" ? convertHexToRgb(colorA) : colorA;
+            typeof colorA === "string" ? convertStringToRgb(colorA) : colorA;
         const rgb2 =
-            typeof colorB === "string" ? convertHexToRgb(colorB) : colorB;
+            typeof colorB === "string" ? convertStringToRgb(colorB) : colorB;
         const red1 = rgb1.red / 255;
         const red2 = rgb2.red / 255;
         const green1 = rgb1.green / 255;

@@ -2,7 +2,7 @@ import { degreesToRadians, radiansToDegrees } from "../../math";
 import { CIELAB } from "../_interfaces/cielab.interface";
 import { RGBA } from "../_interfaces/rgba.interface";
 import { convertRgbToLab } from "../convert/convertRgbToLab/convertRgbToLab";
-import { convertHexToRgb } from "../convert/convertHexToRgb/convertHexToRgb";
+import { convertStringToRgb } from "../convert/convertStringToRgb/convertStringToRgb";
 
 interface ColorHaystack extends CIELAB {
     source: string;
@@ -42,7 +42,7 @@ export class ColorComparison {
     add(colors: string | string[]): this {
         (Array.isArray(colors) ? colors : [colors]).forEach((color) => {
             const parsedColor = ColorComparison.parseColorToLab(
-                convertHexToRgb(color),
+                convertStringToRgb(color),
             );
             this.haystack.push({
                 ...parsedColor,
@@ -56,7 +56,7 @@ export class ColorComparison {
     compare(color: string) {
         if (this.haystack.length) {
             const needle = ColorComparison.parseColorToLab(
-                convertHexToRgb(color),
+                convertStringToRgb(color),
             );
             const iterations = this.haystack.length;
             const results: {
