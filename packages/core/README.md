@@ -1,10 +1,8 @@
 <img alt="baggie" src="https://github.com/bag-of-tricks/baggie/raw/main/public/baggie-title.svg" height="100" />
 
-<h1>@baggie/react</h1>
+<h1>@baggie/core</h1>
 
-TypeScript tools from [the little bag-of-tricks](https://github.com/bag-of-tricks/baggie#readme).
-
-Just a few helpers for defining more specific types.
+Core tools from [the little bag-of-tricks](https://github.com/bag-of-tricks/baggie#readme).
 
 <hr>
 <br>

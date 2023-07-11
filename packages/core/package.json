@@ -1,0 +1,31 @@
+{
+  "name": "@baggie/core",
+  "version": "1.5.0",
+  "description": "A library of helper functions for TypeScript.",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "../string/node_modules/.bin/rimraf lib && tsc --project tsconfig.build.json",
+    "test": "../string/node_modules/.bin/jest --verbose --runInBand",
+    "deploy": "npm publish"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "javascript-library",
+    "typescript-library",
+    "library",
+    "toolbox",
+    "tools"
+  ],
+  "module": "lib/",
+  "sideEffects": false,
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6"
+  },
+  "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"
+}
