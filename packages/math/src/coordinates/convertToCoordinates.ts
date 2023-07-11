@@ -23,7 +23,7 @@ import { CoordinatesXY } from "./_interfaces/coordinatesXY.interface";
  * ```
  */
 export const convertToCoordinates = (
-    coordinates?: number | [number, number] | CoordinatesXY,
+    coordinates?: number | [x: number, y: number] | CoordinatesXY,
 ): CoordinatesXY =>
     typeof coordinates === "object" &&
     Object.prototype.hasOwnProperty.call(coordinates, "x") &&

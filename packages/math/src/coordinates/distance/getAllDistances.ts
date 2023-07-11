@@ -13,11 +13,11 @@ interface GetAllDistancesReturn {
  * Get the all the distances between multiple sets of coordinates sorted from shortest to longest.
  *
  * The coordinates are given as objects like `{ x: 100, y: 100 }`.
- * You can add other values and properties as long as the the
- * objects have the properties `x` and `y`.
+ * You can add other values and properties as long as the objects
+ * have the properties `x` and `y`.
  *
  * The first argument `fromCoordinates` is the base from where the distances are
- * measured. If this is set to `null`, distances will be measured between all of
+ * measured. If this is set to `null`, distances will be measured between all
  * the following coordinates.
  *
  * @example
