@@ -50,6 +50,7 @@ export const setCookie = (
         cookieAttributes["Max-Age"] = options.maxAge.toString();
     } else if (options.expires) {
         if (typeof options.expires === "number") {
+            // Convert number of days into milliseconds
             cookieAttributes.Expires = new Date(
                 Date.now() + options.expires * 864e5,
             ).toUTCString();
