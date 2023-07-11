@@ -43,7 +43,9 @@ export const convertHexToRgb = (input: string): RGBA => {
             };
         }
     } else if (isRgbColor(input)) {
-        const [_match, red, green, blue, alpha] = input.match(rgbRegExp)!;
+        const [_match, red, green, blue, alpha] = input.match(
+            rgbRegExp,
+        ) as RegExpMatchArray;
         return {
             red: red.endsWith("%")
                 ? Math.round(
