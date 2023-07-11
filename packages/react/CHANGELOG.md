@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/bag-of-tricks/baggie/compare/react-v1.0.0...react-v1.0.1) (2023-07-11)
+
+
+### Bug Fixes
+
+* **react:** Export useKeyboardHeight ([29dd35f](https://github.com/bag-of-tricks/baggie/commit/29dd35f10a1f240609e721fb530f266cd633914f))
+
 ## 1.0.0 (2023-07-11)
 
 ### Features
