@@ -103,6 +103,7 @@ export { truncDecimals } from "./rounding/truncDecimals/truncDecimals";
 export { isNumberRound } from "./rounding/isNumberRound/isNumberRound";
 
 /* Time */
+export { getAge } from "./time/getAge/getAge";
 export { getDuration } from "./time/getDuration/getDuration";
 export { getHalfLifeDecay } from "./time/getHalfLifeDecay/getHalfLifeDecay";
 export { getTimeDifference } from "./time/getTimeDifference/getTimeDifference";
