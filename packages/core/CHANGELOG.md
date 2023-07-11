@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/bag-of-tricks/baggie/compare/core-v1.2.2...core-v1.3.0) (2023-07-11)
+
+
+### Features
+
+* **core:** Rename convertHexToRgb to convertStringToRgb ([6211459](https://github.com/bag-of-tricks/baggie/commit/62114599e79d0a42b2b2389ec6af9dbac0afdccf))
+
 ## [1.2.2](https://github.com/bag-of-tricks/baggie/compare/core-v1.2.1...core-v1.2.2) (2023-07-11)
 
 
