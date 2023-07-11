@@ -83,9 +83,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: steps.changed-react.outputs.any_changed == 'true'
 
-      # -----------------
-      # BIBLO / STORYBOOK
-      # -----------------
+      # ------------------
+      # BAGGIE / STORYBOOK
+      # ------------------
 
       - name: StoryBook - Build website
         run: yarn build-storybook

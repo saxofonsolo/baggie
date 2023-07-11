@@ -1,5 +1,4 @@
 {
-  "last-release-sha": "c5a216adfae724338665ed28a94c447697952947",
   "packages": {
     "packages/core": {},
     "packages/react": {}
