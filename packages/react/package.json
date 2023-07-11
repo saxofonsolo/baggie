@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "A library of React component.",
   "license": "MIT",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
   "scripts": {
     "build": "vite build",
     "deploy": "npm publish"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],

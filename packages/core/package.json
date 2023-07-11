@@ -8,9 +8,15 @@
     "test": "jest --verbose --runInBand",
     "deploy": "npm publish"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
@@ -25,9 +31,6 @@
       ]
     ]
   },
-  "files": [
-    "lib"
-  ],
   "keywords": [
     "javascript-library",
     "typescript-library",
