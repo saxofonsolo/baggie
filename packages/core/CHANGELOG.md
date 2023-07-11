@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/bag-of-tricks/baggie/compare/core-v1.3.0...core-v1.3.1) (2023-07-11)
+
+
+### Bug Fixes
+
+* **core:** Replace @baggie/functions with @baggie/core ([7b481f5](https://github.com/bag-of-tricks/baggie/commit/7b481f5848467225889b105e65b2415fa41be15c))
+
 ## [1.3.0](https://github.com/bag-of-tricks/baggie/compare/core-v1.2.2...core-v1.3.0) (2023-07-11)
 
 
