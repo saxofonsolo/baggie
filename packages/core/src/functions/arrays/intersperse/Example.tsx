@@ -50,7 +50,7 @@ export const Example = (props: Props) => {
             <Source
                 dark
                 code={`
-import { intersperse } from "@baggie/functions";
+import { intersperse } from "@baggie/core";
 
 const array = ${JSON.stringify(splitArray)};
 const insertion = ${JSON.stringify(

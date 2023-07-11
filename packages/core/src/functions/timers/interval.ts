@@ -6,7 +6,7 @@ import { Timer } from "./timer";
  * @example
  * **Basic usage:**
  * ```ts
- * import { Interval } from "@baggie/functions";
+ * import { Interval } from "@baggie/core";
  *
  * // Create an interval timer that executes a function after 2 seconds
  * const interval = new Interval((a, b) => {

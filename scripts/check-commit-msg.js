@@ -14,7 +14,6 @@ const acceptedStart = {
     "feat:": {},
     "remove:": {},
     "fix:": {},
-    "deps:": {},
     "refactor:": {},
     "test:": {},
     "docs:": {},

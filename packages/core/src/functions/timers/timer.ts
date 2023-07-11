@@ -4,7 +4,7 @@
  * @example
  * **Basic usage:**
  * ```ts
- * import { Timer } from "@baggie/functions";
+ * import { Timer } from "@baggie/core";
  *
  * // Create a timer that executes a function after 2 seconds
  * const timer = new Timer((a, b) => {
