@@ -1,0 +1,24 @@
+import { Example } from "./Example";
+
+# getAge
+
+Calculate someone's age given a date of birth and an optional date of death.
+
+> **Notice** that the time of day will be ignored.
+
+## Parameters
+
+| Parameter | Type   | Required | Description                  |
+| :-------- | :----- | :------: | :--------------------------- |
+| **birth** | `Date` |    ✔    | A timestamp in milliseconds. |
+| **death** | `Date` |          | A timestamp in milliseconds. |
+
+## Examples
+
+Only date of birth
+
+<Example birth={new Date("1986-06-17")} />
+
+... also date of death
+
+<Example birth={new Date("1986-06-17")} death={new Date("2023-06-17")} />
