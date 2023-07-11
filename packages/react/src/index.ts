@@ -10,3 +10,4 @@ export { InputWrapper } from "./wrappers/InputWrapper/InputWrapper";
 
 // Hooks
 export { useForwardedRef } from "./hooks/useForwardedRef/useForwardedRef";
+export { useKeyboardHeight } from "./hooks/useKeyboardHeight/useKeyboardHeight";
