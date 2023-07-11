@@ -45,100 +45,24 @@ jobs:
         working-directory: ./
         if: ${{ steps.release.outputs.release_created }}
 
-      # --------------
-      # BAGGIE / COLOR
-      # --------------
-
-      - name: Color - Check for changes
-        id: changed-color
-        uses: tj-actions/changed-files@v34
-        with:
-          files: |
-            packages/color/**
-        if: ${{ steps.release.outputs.release_created }}
-
-      - name: Color - Publish to NPM
-        run: yarn publish
-        working-directory: ./packages/color
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: 1 == 2 && steps.changed-color.outputs.any_changed == 'true'
-
-      # ------------------
-      # BAGGIE / DETECTION
-      # ------------------
-
-      - name: Detection - Check for changes
-        id: changed-detection
-        uses: tj-actions/changed-files@v34
-        with:
-          files: |
-            packages/detection/**
-        if: ${{ steps.release.outputs.release_created }}
-
-      - name: Detection - Publish to NPM
-        run: yarn publish
-        working-directory: ./packages/detection
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: 1 == 2 && steps.changed-detection.outputs.any_changed == 'true'
-
-      # ------------
-      # BAGGIE / DOM
-      # ------------
-
-      - name: DOM - Check for changes
-        id: changed-dom
-        uses: tj-actions/changed-files@v34
-        with:
-          files: |
-            packages/dom/**
-        if: ${{ steps.release.outputs.release_created }}
-
-      - name: DOM - Publish to NPM
-        run: yarn publish
-        working-directory: ./packages/dom
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: 1 == 2 && steps.changed-dom.outputs.any_changed == 'true'
-
-      # ------------------
-      # BAGGIE / FUNCTIONS
-      # ------------------
-
-      - name: Functions - Check for changes
-        id: changed-functions
-        uses: tj-actions/changed-files@v34
-        with:
-          files: |
-            packages/functions/**
-        if: ${{ steps.release.outputs.release_created }}
-
-      - name: Functions - Publish to NPM
-        run: yarn publish
-        working-directory: ./packages/functions
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: 1 == 2 && steps.changed-functions.outputs.any_changed == 'true'
-
       # -------------
-      # BAGGIE / MATH
+      # BAGGIE / CORE
       # -------------
 
-      - name: Math - Check for changes
-        id: changed-math
+      - name: Core - Check for changes
+        id: changed-core
         uses: tj-actions/changed-files@v34
         with:
           files: |
-            packages/math/**
+            packages/core/**
         if: ${{ steps.release.outputs.release_created }}
 
-      - name: Math - Publish to NPM
+      - name: Core - Publish to NPM
         run: yarn publish
-        working-directory: ./packages/math
+        working-directory: ./packages/core
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: 1 == 2 && steps.changed-math.outputs.any_changed == 'true'
+        if: 1 == 2 && steps.changed-core.outputs.any_changed == 'true'
 
       # --------------
       # BAGGIE / REACT
@@ -159,44 +83,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: 1 == 2 && steps.changed-react.outputs.any_changed == 'true'
 
-      # ---------------
-      # BAGGIE / STRING
-      # ---------------
-
-      - name: String - Check for changes
-        id: changed-string
-        uses: tj-actions/changed-files@v34
-        with:
-          files: |
-            packages/string/**
-        if: ${{ steps.release.outputs.release_created }}
-
-      - name: String - Publish to NPM
-        run: yarn publish
-        working-directory: ./packages/string
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: 1 == 2 && steps.changed-string.outputs.any_changed == 'true'
-
-      # -------------------
-      # BAGGIE / TYPESCRIPT
-      # -------------------
-
-      - name: TypeScript - Check for changes
-        id: changed-typescript
-        uses: tj-actions/changed-files@v34
-        with:
-          files: |
-            packages/typescript/**
-        if: ${{ steps.release.outputs.release_created }}
-
-      - name: TypeScript - Publish to NPM
-        run: yarn publish
-        working-directory: ./packages/typescript
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: 1 == 2 && steps.changed-typescript.outputs.any_changed == 'true'
-
       # -----------------
       # BIBLO / STORYBOOK
       # -----------------
@@ -204,7 +90,7 @@ jobs:
       - name: StoryBook - Build website
         run: yarn build-storybook
         working-directory: ./
-        if: steps.changed-color.outputs.any_changed == 'true' || steps.changed-detection.outputs.any_changed == 'true' || steps.changed-dom.outputs.any_changed == 'true' || steps.changed-functions.outputs.any_changed == 'true' || steps.changed-math.outputs.any_changed == 'true' || steps.changed-react.outputs.any_changed == 'true' || steps.changed-string.outputs.any_changed == 'true' || steps.changed-typescript.outputs.any_changed == 'true'
+        if: steps.changed-core.outputs.any_changed == 'true' || steps.changed-react.outputs.any_changed == 'true'
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
@@ -216,4 +102,4 @@ jobs:
           publish_dir: ./storybook-static
           user_name: larsmunkholm
           user_email: mail@larsersej.dk
-        if: steps.changed-color.outputs.any_changed == 'true' || steps.changed-detection.outputs.any_changed == 'true' || steps.changed-dom.outputs.any_changed == 'true' || steps.changed-functions.outputs.any_changed == 'true' || steps.changed-math.outputs.any_changed == 'true' || steps.changed-react.outputs.any_changed == 'true' || steps.changed-string.outputs.any_changed == 'true' || steps.changed-typescript.outputs.any_changed == 'true'
+        if: steps.changed-core.outputs.any_changed == 'true' || steps.changed-react.outputs.any_changed == 'true'
