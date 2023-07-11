@@ -6,7 +6,7 @@ The little bag-of-tricks
 
 ## 🧾 Documentation
 
-Visit [bag-of-tricks.github.io](https://bag-of-tricks.github.io/) for documentation and examples.
+Visit [bag-of-tricks.github.io/baggie](https://bag-of-tricks.github.io/baggie) for documentation and examples.
 
 ## 🎁 NPM Packages
 

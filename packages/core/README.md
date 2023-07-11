@@ -9,7 +9,7 @@ Core tools from [the little bag-of-tricks](https://github.com/bag-of-tricks/bagg
 
 ## 🧾 Documentation
 
-Visit [bag-of-tricks.github.io](https://bag-of-tricks.github.io/) for documentation and examples.
+Visit [bag-of-tricks.github.io/baggie](https://bag-of-tricks.github.io/baggie) for documentation and examples.
 
 ## 🚀 Installation
 
