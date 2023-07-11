@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/bag-of-tricks/baggie/compare/core-v1.2.0...core-v1.2.1) (2023-07-11)
+
+
+### Bug Fixes
+
+* **core:** Change shuffleArray to arrow function ([6a48dcb](https://github.com/bag-of-tricks/baggie/commit/6a48dcb39d481e6a5acbf7c1381caeef3db9b855))
+
 ## [1.2.0](https://github.com/bag-of-tricks/baggie/compare/core-v1.1.1...core-v1.2.0) (2023-07-11)
 
 
