@@ -19,7 +19,7 @@ export { getMode } from "./average/getMode/getMode";
 export { convertToCoordinates } from "./coordinates/convertToCoordinates";
 
 /* Coordinates - Angle */
-export { getAngle } from "./coordinates/angle/getAngle/getAngle";
+export { getCoordinatesAngle } from "./coordinates/angle/getCoordinatesAngle/getCoordinatesAngle";
 
 /* Coordinates - Bounds */
 export { getBounds } from "./coordinates/bounds/getBounds";
@@ -101,22 +101,6 @@ export { roundDecimals } from "./rounding/roundDecimals/roundDecimals";
 export { roundToMultipleOf } from "./rounding/roundToMultipleOf/roundToMultipleOf";
 export { truncDecimals } from "./rounding/truncDecimals/truncDecimals";
 export { isNumberRound } from "./rounding/isNumberRound/isNumberRound";
-
-/* Temperature */
-export { celsiusToDelisle } from "./temperature/celsiusToDelisle/celsiusToDelisle";
-export { celsiusToFahrenheit } from "./temperature/celsiusToFahrenheit/celsiusToFahrenheit";
-export { celsiusToKelvin } from "./temperature/celsiusToKelvin/celsiusToKelvin";
-export { celsiusToNewton } from "./temperature/celsiusToNewton/celsiusToNewton";
-export { celsiusToRankine } from "./temperature/celsiusToRankine/celsiusToRankine";
-export { celsiusToReaumur } from "./temperature/celsiusToReaumur/celsiusToReaumur";
-export { celsiusToRoemer } from "./temperature/celsiusToRoemer/celsiusToRoemer";
-export { delisleToCelsius } from "./temperature/delisleToCelsius/delisleToCelsius";
-export { fahrenheitToCelsius } from "./temperature/fahrenheitToCelsius/fahrenheitToCelsius";
-export { kelvinToCelsius } from "./temperature/kelvinToCelsius/kelvinToCelsius";
-export { newtonToCelsius } from "./temperature/newtonToCelsius/newtonToCelsius";
-export { rankineToCelsius } from "./temperature/rankineToCelsius/rankineToCelsius";
-export { reaumurToCelsius } from "./temperature/reaumurToCelsius/reaumurToCelsius";
-export { roemerToCelsius } from "./temperature/roemerToCelsius/roemerToCelsius";
 
 /* Time */
 export { getDuration } from "./time/getDuration/getDuration";

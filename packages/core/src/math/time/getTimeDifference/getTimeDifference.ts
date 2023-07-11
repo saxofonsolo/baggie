@@ -4,13 +4,6 @@ interface GetTimeDifferenceReturn {
     minutes: number;
     seconds: number;
     milliseconds: number;
-    singleUnit: {
-        onlyDays: number;
-        onlyHours: number;
-        onlyMinutes: number;
-        onlySeconds: number;
-        onlyMilliseconds: number;
-    };
 }
 
 /**
@@ -23,10 +16,6 @@ export const getTimeDifference = (
     let difference = Math.abs(fromTimestampMs - toTimestampMs);
 
     const onlyMilliseconds = difference;
-    const onlySeconds = onlyMilliseconds / 1000;
-    const onlyMinutes = onlySeconds / 60;
-    const onlyHours = onlyMinutes / 60;
-    const onlyDays = onlyHours / 24;
 
     difference = Math.floor(difference / 1000);
     const milliseconds = onlyMilliseconds - difference * 1000;
@@ -44,12 +33,5 @@ export const getTimeDifference = (
         minutes,
         seconds,
         milliseconds,
-        singleUnit: {
-            onlyDays,
-            onlyHours,
-            onlyMinutes,
-            onlySeconds,
-            onlyMilliseconds,
-        },
     };
 };

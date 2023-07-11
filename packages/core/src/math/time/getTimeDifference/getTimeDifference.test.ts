@@ -9,13 +9,6 @@ describe("getTimeDifference", () => {
                 minutes: 57,
                 seconds: 36,
                 milliseconds: 412,
-                singleUnit: {
-                    onlyDays: 119.20667143518519,
-                    onlyHours: 2860.9601144444446,
-                    onlyMinutes: 171657.60686666667,
-                    onlySeconds: 10299456.412,
-                    onlyMilliseconds: 10299456412,
-                },
             }),
         );
     });

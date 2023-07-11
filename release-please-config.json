@@ -1,13 +1,7 @@
 {
   "packages": {
-    "packages/color": {},
-    "packages/detection": {},
-    "packages/dom": {},
-    "packages/functions": {},
-    "packages/math": {},
-    "packages/react": {},
-    "packages/string": {},
-    "packages/typescript": {}
+    "packages/core": {},
+    "packages/react": {}
   },
   "plugins": ["sentence-case"]
 }

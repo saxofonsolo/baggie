@@ -8,27 +8,27 @@ const config: StorybookConfig = {
         "../docs/**/*.mdx",
         {
             titlePrefix: "Color",
-            directory: "../packages/color/src",
+            directory: "../packages/core/src/color",
             files: "**/*.mdx",
         },
         {
             titlePrefix: "Detection",
-            directory: "../packages/detection/src",
+            directory: "../packages/core/src/detection",
             files: "**/*.mdx",
         },
         {
             titlePrefix: "DOM",
-            directory: "../packages/dom/src",
+            directory: "../packages/core/src/dom",
             files: "**/*.mdx",
         },
         {
             titlePrefix: "Functions",
-            directory: "../packages/functions/src",
+            directory: "../packages/core/src/functions",
             files: "**/*.mdx",
         },
         {
             titlePrefix: "Math",
-            directory: "../packages/math/src",
+            directory: "../packages/core/src/math",
             files: "**/*.mdx",
         },
         {
@@ -38,12 +38,12 @@ const config: StorybookConfig = {
         },
         {
             titlePrefix: "String",
-            directory: "../packages/string/src",
+            directory: "../packages/core/src/string",
             files: "**/*.mdx",
         },
         {
             titlePrefix: "TypeScript",
-            directory: "../packages/typescript/src",
+            directory: "../packages/core/src/typescript",
             files: "**/*.mdx",
         },
     ],

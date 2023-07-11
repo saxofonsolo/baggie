@@ -3,12 +3,22 @@
   "version": "1.5.0",
   "description": "A library of helper functions for TypeScript.",
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "../string/node_modules/.bin/rimraf lib && tsc --project tsconfig.build.json",
-    "test": "../string/node_modules/.bin/jest --verbose --runInBand",
+    "build": "rimraf ./lib && bob build",
+    "test": "jest --verbose --runInBand",
     "deploy": "npm publish"
+  },
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      ["typescript", { "project": "tsconfig.build.json" }]
+    ]
   },
   "files": [
     "lib"
@@ -20,7 +30,6 @@
     "toolbox",
     "tools"
   ],
-  "module": "lib/",
   "sideEffects": false,
   "devDependencies": {
     "jest": "^29.6.1",
