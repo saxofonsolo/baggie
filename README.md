@@ -2,15 +2,11 @@
 
 The little bag-of-tricks
 
----
-
-## 🧾 Documentation
-
-Visit [bag-of-tricks.github.io/baggie](https://bag-of-tricks.github.io/baggie) for documentation and examples.
+See **[bag-of-tricks.github.io/baggie](https://bag-of-tricks.github.io/baggie)** for documentation and examples.
 
 ## 🎁 NPM Packages
 
 | Name                                                                    | Description                          |
-| ----------------------------------------------------------------------- | ------------------------------------ |
+|:------------------------------------------------------------------------|:-------------------------------------|
 | **[@baggie/core](https://www.npmjs.com/package/@baggie/core#readme)**   | Functions for math, colors, dom etc. |
 | **[@baggie/react](https://www.npmjs.com/package/@baggie/react#readme)** | React specific tools.                |
