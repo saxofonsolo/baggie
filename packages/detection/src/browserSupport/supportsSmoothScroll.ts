@@ -1,4 +1,4 @@
-import { isBrowser } from "../environment/isBrowser";
+import { isBrowser } from "@baggie/core";
 
 /**
  * If the browser supports smooth scroll, this will be `true`.

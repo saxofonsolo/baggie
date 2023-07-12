@@ -1,4 +1,4 @@
-import { roundDecimals } from "@baggie/math";
+import { roundDecimals } from "@baggie/core";
 import { CIELAB } from "../_interfaces/cielab.interface";
 import { RGBA } from "../_interfaces/rgba.interface";
 

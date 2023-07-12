@@ -1,11 +1,10 @@
 import {
     isBrowser,
     prefersReducedMotion,
-    supportsSmoothScroll,
-} from "@baggie/detection";
-import { convertToCoordinates, CoordinatesXY } from "@baggie/math";
+    convertToCoordinates,
+    CoordinatesXY,
+} from "@baggie/core";
 import { getElementPosition } from "../properties/getElementPosition";
-import { smoothScrollFallback } from "./_helpers/smoothScrollFallback.helper";
 
 /**
  * Scroll to an element.
@@ -35,15 +34,11 @@ export const scrollToElement = (
             const targetY = elementPosition.y - offset.y;
 
             if (options?.smooth !== false && !prefersReducedMotion) {
-                if (supportsSmoothScroll) {
-                    window.scrollTo({
-                        behavior: "smooth",
-                        left: targetX,
-                        top: targetY,
-                    });
-                } else {
-                    void smoothScrollFallback(targetX, targetY);
-                }
+                window.scrollTo({
+                    behavior: "smooth",
+                    left: targetX,
+                    top: targetY,
+                });
             } else {
                 window.scrollTo(targetX, targetY);
             }

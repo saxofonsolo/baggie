@@ -1,4 +1,4 @@
-import { CookieAttributes, setCookie } from "./setCookie";
+import { CookieAttributes, setCookie } from "@baggie/core";
 
 /**
  * Delete a cookie matching a certain name and attributes.

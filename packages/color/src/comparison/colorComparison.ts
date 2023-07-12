@@ -1,4 +1,4 @@
-import { degreesToRadians, radiansToDegrees } from "@baggie/math";
+import { degreesToRadians, radiansToDegrees } from "@baggie/core";
 import { CIELAB } from "../_interfaces/cielab.interface";
 import { RGBA } from "../_interfaces/rgba.interface";
 import { convertRgbToLab } from "../convert/convertRgbToLab";

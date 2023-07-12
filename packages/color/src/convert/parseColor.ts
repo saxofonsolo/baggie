@@ -1,5 +1,4 @@
-import { getPercentage } from "@baggie/math";
-import { NonEmptyArray } from "@baggie/typescript";
+import { getPercentage, NonEmptyArray } from "@baggie/core";
 import { HSLA } from "../_interfaces/hsla.interface";
 import { RGBA } from "../_interfaces/rgba.interface";
 import { convertHexToRgb } from "./convertHexToRgb";

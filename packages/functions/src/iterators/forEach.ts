@@ -1,6 +1,6 @@
 /* globals Document, HTMLCollection, Node, NodeList, Window */
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types */
-import { isBrowser } from "@baggie/detection";
+import { isBrowser } from "@baggie/core";
 
 /**
  * **Iterate over just about any iterable object type** - primarily for node lists, arrays and objects, but will also

@@ -1,4 +1,4 @@
-import { getMean } from "@baggie/math";
+import { getMean } from "@baggie/core";
 import { RGBA } from "../_interfaces/rgba.interface";
 
 /**

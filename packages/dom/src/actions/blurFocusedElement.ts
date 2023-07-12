@@ -1,4 +1,4 @@
-import { getFocusedElement } from "./getFocusedElement";
+import { getFocusedElement } from "@baggie/core";
 
 /**
  * If an element is focused, this will blur it.

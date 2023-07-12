@@ -1,4 +1,4 @@
-import { NonEmptyArray } from "@baggie/typescript";
+import { NonEmptyArray } from "@baggie/core";
 
 /**
  * Check if a number is within the range of a minimum and maximum value.

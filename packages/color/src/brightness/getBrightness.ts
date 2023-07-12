@@ -9,5 +9,5 @@ import { RGBA } from "../_interfaces/rgba.interface";
  * @category Brightness
  * @returns A number from 0 to 1, 1 being the brightest and 0 being not bright at all.
  */
-export const getBrightness = (rgb: RGBA) =>
-    getColorBrightness(convertRgbToHex(rgb));
+export const getBrightness = (color: RGBA): number =>
+    getColorBrightness(convertRgbToHex(color));

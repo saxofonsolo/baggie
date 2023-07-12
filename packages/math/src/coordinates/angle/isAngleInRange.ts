@@ -1,4 +1,4 @@
-import { NonEmptyArray } from "@baggie/typescript";
+import { NonEmptyArray } from "@baggie/core";
 
 /**
  * Check if an angle is within one or multiple ranges of angles.

@@ -1,4 +1,4 @@
-import { isBrowser } from "@baggie/detection";
+import { isBrowser } from "@baggie/core";
 
 /**
  * If an element is focused, return it.

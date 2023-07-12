@@ -1,5 +1,5 @@
+import { convertToDate } from "@baggie/core";
 import { getCprRegex } from "../regex/getCprRegex";
-import { convertToDate } from "../convert/convertToDate";
 
 /**
  * Check if a CPR number is valid.
