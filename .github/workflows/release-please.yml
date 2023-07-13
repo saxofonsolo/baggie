@@ -46,7 +46,7 @@ jobs:
         run: yarn install --frozen-lockfile
         if: ${{ steps.release.outputs.release_created }}
 
-      - name: Build packages
+      - name: Root - Build packages
         run: yarn build
         working-directory: ./
         if: ${{ steps.release.outputs.release_created }}

@@ -23,6 +23,10 @@ jobs:
       - name: Root - Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Root - Build packages
+        run: yarn build
+        working-directory: ./
+
         # ------------------
         # BAGGIE / STORYBOOK
         # ------------------
