@@ -1,29 +1,49 @@
 name: Lint and format
+
 on:
     pull_request:
         branches:
             - main
-        branches-ignore:
-            - release-please--branches--*
+
 jobs:
-    format:
+    setup:
         runs-on: ubuntu-latest
+        outputs:
+            condition: ${{ steps.condition.outputs.condition }}
+        steps:
+            - id: condition
+              run: |
+                  if [[ ${{ github.head_ref }} == "release-please--"* ]]; then
+                     echo "condition=true" >> $GITHUB_OUTPUT
+                  else
+                     echo "condition=false" >> $GITHUB_OUTPUT
+                  fi
+
+    format:
+        needs: [setup]
+        runs-on: ubuntu-latest
+        if: ${{ needs.setup.outputs.condition }} == 'true'
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
               with:
                   ref: ${{ github.head_ref }}
+
             - name: Setup Node.js
               uses: actions/setup-node@v3
               with:
                   node-version: 18
                   registry-url: 'https://registry.npmjs.org'
+
             - name: Install dependencies
               run: yarn install --frozen-lockfile
+
             - name: Build packages
               run: yarn build
+
             - name: Run linters, prettier and tests
               run: yarn prepublishOnly
+
             - name: Commit changes
               uses: stefanzweifel/git-auto-commit-action@v4
               with:
