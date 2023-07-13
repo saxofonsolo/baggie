@@ -1,8 +1,6 @@
 module.exports = {
     preset: "ts-jest",
     testEnvironment: "jsdom",
-    moduleNameMapper: {
-        "@baggie/(.+)": "<rootDir>../$1/src",
-    },
+    moduleDirectories: ["node_modules", "src", __dirname],
     testPathIgnorePatterns: ["/node_modules/", "/lib/"],
 };

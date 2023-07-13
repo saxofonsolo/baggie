@@ -15,7 +15,8 @@
   "module": "lib/module/index.js",
   "types": "lib/typescript/index.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "react-native-builder-bob": {
     "source": "src",
