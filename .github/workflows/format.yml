@@ -22,7 +22,7 @@ jobs:
     format:
         needs: [setup]
         runs-on: ubuntu-latest
-        if: ${{ needs.setup.outputs.condition }} == 'true'
+        if: ${{ needs.setup.outputs.condition }} == 'false'
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
