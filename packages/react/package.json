@@ -1,6 +1,6 @@
 {
   "name": "@baggie/react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A library of tools for your React project",
   "license": "MIT",
   "scripts": {

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/saxofonsolo/baggie/compare/react-v1.0.3...react-v1.0.4) (2023-07-13)
+
+
+### Bug Fixes
+
+* **react:** Change owner of project ([a686df7](https://github.com/saxofonsolo/baggie/commit/a686df72135f40fbf4f313cf5b67416d5338da62))
+
 ## [1.0.3](https://github.com/saxofonsolo/baggie/compare/react-v1.0.2...react-v1.0.3) (2023-07-13)
 
 
