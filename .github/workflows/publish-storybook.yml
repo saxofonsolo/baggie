@@ -19,11 +19,9 @@ jobs:
         with:
             node-version: 18
             registry-url: 'https://registry.npmjs.org'
-        if: ${{ steps.release.outputs.release_created }}
 
       - name: Root - Install dependencies
         run: yarn install --frozen-lockfile
-        if: ${{ steps.release.outputs.release_created }}
 
         # ------------------
         # BAGGIE / STORYBOOK
