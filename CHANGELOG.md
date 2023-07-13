@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.3](https://github.com/saxofonsolo/baggie/compare/baggie-v2.0.2...baggie-v2.0.3) (2023-07-13)
+
+
+### Bug Fixes
+
+* **core:** Change owner of project ([9b8fd7b](https://github.com/saxofonsolo/baggie/commit/9b8fd7b6a6294c0de85475c2f6caa429303bd3e3))
+* **react:** Change owner of project ([a686df7](https://github.com/saxofonsolo/baggie/commit/a686df72135f40fbf4f313cf5b67416d5338da62))
+
 ## [2.0.2](https://github.com/saxofonsolo/baggie/compare/baggie-v2.0.1...baggie-v2.0.2) (2023-07-13)
 
 
