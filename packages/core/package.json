@@ -18,6 +18,7 @@
     "lib",
     "src"
   ],
+  "homepage": "https://saxofonsolo.github.io/baggie",
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",

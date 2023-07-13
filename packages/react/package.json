@@ -17,6 +17,7 @@
     "lib",
     "src"
   ],
+  "homepage": "https://saxofonsolo.github.io/baggie",
   "keywords": [
     "javascript-library",
     "typescript-library",

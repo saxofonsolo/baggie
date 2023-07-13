@@ -1,8 +1,11 @@
-<img alt="baggie" src="https://github.com/bag-of-tricks/baggie/raw/main/public/baggie-title.svg" height="100" />
+<img alt="baggie" src="https://github.com/saxofonsolo/baggie/raw/main/public/baggie-title.svg" height="100" />
 
 The little bag-of-tricks
 
-See **[bag-of-tricks.github.io/baggie](https://bag-of-tricks.github.io/baggie)** for documentation and examples.
+See **[saxofonsolo.github.io/baggie](https://saxofonsolo.github.io/baggie)** for documentation and examples.
+
+<hr>
+<br>
 
 ## 🎁 NPM Packages
 
