@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.2](https://github.com/bag-of-tricks/baggie/compare/baggie-v2.0.1...baggie-v2.0.2) (2023-07-13)
+
+
+### Bug Fixes
+
+* **core:** Add src files to npm package ([9f80019](https://github.com/bag-of-tricks/baggie/commit/9f80019f0091997536dcc40a5a30e7b7573f5b42))
+* **react:** Add src files to npm package ([4162903](https://github.com/bag-of-tricks/baggie/commit/416290383abf2682f28d4dfbe60e7a0b1dcd0d1f))
+
 ## [2.0.1] (2023-07-11)
 
 
