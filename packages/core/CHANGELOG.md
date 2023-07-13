@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/bag-of-tricks/baggie/compare/core-v1.3.1...core-v1.3.2) (2023-07-13)
+
+
+### Bug Fixes
+
+* **core:** Add src files to npm package ([9f80019](https://github.com/bag-of-tricks/baggie/commit/9f80019f0091997536dcc40a5a30e7b7573f5b42))
+
 ## [1.3.1](https://github.com/bag-of-tricks/baggie/compare/core-v1.3.0...core-v1.3.1) (2023-07-11)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/bag-of-tricks/baggie/compare/react-v1.0.2...react-v1.0.3) (2023-07-13)
+
+
+### Bug Fixes
+
+* **react:** Add src files to npm package ([4162903](https://github.com/bag-of-tricks/baggie/commit/416290383abf2682f28d4dfbe60e7a0b1dcd0d1f))
+
 ## [1.0.2](https://github.com/bag-of-tricks/baggie/compare/react-v1.0.1...react-v1.0.2) (2023-07-11)
 
 
