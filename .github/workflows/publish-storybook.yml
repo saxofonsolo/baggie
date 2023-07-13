@@ -10,6 +10,25 @@ jobs:
         with:
           fetch-depth: 0
 
+        # ----
+        # ROOT
+        # ----
+
+      - name: Root - Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+            node-version: 18
+            registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Root - Install dependencies
+        run: yarn install --frozen-lockfile
+        if: ${{ steps.release.outputs.release_created }}
+
+        # ------------------
+        # BAGGIE / STORYBOOK
+        # ------------------
+
       - name: StoryBook - Build website
         run: yarn build-storybook
         working-directory: ./
