@@ -1,11 +1,11 @@
 /**
  * Require only one of the properties of an interface.
  */
-export type RequireOnlyOne<T, Keys extends keyof T = keyof T> = Pick<
+export type RequireOnlyOne<T, TKey extends keyof T = keyof T> = Pick<
     T,
-    Exclude<keyof T, Keys>
+    Exclude<keyof T, TKey>
 > &
     {
-        [K in Keys]-?: Required<Pick<T, K>> &
-            Partial<Record<Exclude<Keys, K>, undefined>>;
-    }[Keys];
+        [K in TKey]-?: Required<Pick<T, K>> &
+            Partial<Record<Exclude<TKey, K>, undefined>>;
+    }[TKey];

@@ -1,11 +1,11 @@
 /**
  * Require at least one of the properties of an interface.
  */
-export type RequireAtLeastOne<T, Keys extends keyof T = keyof T> = Pick<
+export type RequireAtLeastOne<T, TKey extends keyof T = keyof T> = Pick<
     T,
-    Exclude<keyof T, Keys>
+    Exclude<keyof T, TKey>
 > &
     {
-        [K in Keys]-?: Required<Pick<T, K>> &
-            Partial<Pick<T, Exclude<Keys, K>>>;
-    }[Keys];
+        [K in TKey]-?: Required<Pick<T, K>> &
+            Partial<Pick<T, Exclude<TKey, K>>>;
+    }[TKey];
