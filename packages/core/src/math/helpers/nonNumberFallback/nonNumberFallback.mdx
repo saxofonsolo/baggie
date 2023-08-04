@@ -1,0 +1,22 @@
+import { Example } from "./Example";
+
+# nonNumberFallback
+
+Return 0 if input is not and can't be converted into a number.
+
+## Parameters
+
+| Parameter | Type  | Required |
+| :-------- | :---- | :------: |
+| **value** | `any` |    ✔     |
+| **fallback** | `number` |    ✔     |
+
+## Examples
+
+<Example defaultInput="100" defaultFallback={-1} />
+
+<Example defaultInput="lorem ipsum" defaultFallback={-1} />
+
+<Example defaultInput="" defaultFallback={-1} />
+
+<Example defaultInput="123abc" defaultFallback={-1} />
