@@ -1,4 +1,4 @@
-name: Lint and format
+name: Lint, format and test
 
 on:
     pull_request:
@@ -19,7 +19,7 @@ jobs:
                      echo "condition=false" >> $GITHUB_OUTPUT
                   fi
 
-    format:
+    action:
         needs: [setup]
         runs-on: ubuntu-latest
         if: ${{ needs.setup.outputs.condition }} == 'false'

@@ -72,6 +72,7 @@ export { getTrianglePerimeter } from "./geometry/triangle/getTrianglePerimeter";
 export { getTriangleArea } from "./geometry/triangle/getTriangleArea";
 
 /* Helpers */
+export { nonNumberFallback } from "./helpers/nonNumberFallback/nonNumberFallback";
 export { zeroIfNotNumber } from "./helpers/zeroIfNotNumber/zeroIfNotNumber";
 
 /* Percentage */
