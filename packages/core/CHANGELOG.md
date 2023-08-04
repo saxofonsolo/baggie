@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/saxofonsolo/baggie/compare/core-v1.3.3...core-v1.4.0) (2023-08-04)
+
+
+### Features
+
+* **core:** Add nonNumberFallback ([5c72f5a](https://github.com/saxofonsolo/baggie/commit/5c72f5ac972b7066756b129c07412c582db79935))
+
 ## [1.3.3](https://github.com/saxofonsolo/baggie/compare/core-v1.3.2...core-v1.3.3) (2023-07-13)
 
 
