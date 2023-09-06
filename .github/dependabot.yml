@@ -8,7 +8,6 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-      storybook-dependencies:
-        patterns: "@storybook/*"
-      ts-eslint-dependencies:
-        patterns: "@typescript-eslint/*"
+      dev-dependencies:
+        patterns:
+        - "*"
