@@ -1,5 +1,6 @@
 /* Actions */
 export { blurFocusedElement } from "./actions/blurFocusedElement";
+export { downloadData } from "./actions/downloadData";
 export { getFocusedElement } from "./actions/getFocusedElement";
 
 /* Parents */
