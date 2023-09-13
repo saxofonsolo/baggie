@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/saxofonsolo/baggie/compare/react-v1.0.4...react-v1.1.0) (2023-09-13)
+
+
+### Features
+
+* Add useQueryState ([b37cdfb](https://github.com/saxofonsolo/baggie/commit/b37cdfb7e326cba005b8144fa297988b71c0cc8c))
+
+
+### Bug Fixes
+
+* Add resolution ([dc43593](https://github.com/saxofonsolo/baggie/commit/dc435930d3a6bc67ebd4d86053bc80c2058e5c04))
+* Change dependencies to peerDependencies ([31ac99e](https://github.com/saxofonsolo/baggie/commit/31ac99e4358cf40a4a1f372418ab593c1d982697))
+* I hope this will do it ([6d4a672](https://github.com/saxofonsolo/baggie/commit/6d4a672c29af75c0324eaf60ca00eedb1388c7da))
+
 ## [1.0.4](https://github.com/saxofonsolo/baggie/compare/react-v1.0.3...react-v1.0.4) (2023-07-13)
 
 
