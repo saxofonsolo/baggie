@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.2.0](https://github.com/saxofonsolo/baggie/compare/baggie-v2.1.2...baggie-v2.2.0) (2023-09-13)
+
+
+### Features
+
+* Add useQueryState ([b37cdfb](https://github.com/saxofonsolo/baggie/commit/b37cdfb7e326cba005b8144fa297988b71c0cc8c))
+* **core:** Add function downloadData ([53c6616](https://github.com/saxofonsolo/baggie/commit/53c66162048e4932d6569af80c14162b54015f75))
+
+
+### Bug Fixes
+
+* Add resolution ([dc43593](https://github.com/saxofonsolo/baggie/commit/dc435930d3a6bc67ebd4d86053bc80c2058e5c04))
+* Change dependencies to peerDependencies ([31ac99e](https://github.com/saxofonsolo/baggie/commit/31ac99e4358cf40a4a1f372418ab593c1d982697))
+* I hope this will do it ([6d4a672](https://github.com/saxofonsolo/baggie/commit/6d4a672c29af75c0324eaf60ca00eedb1388c7da))
+* Revert peerDependencies to dependencies ([62becd4](https://github.com/saxofonsolo/baggie/commit/62becd47ae75460da1c03399d1cf447c91237a3d))
+
 ## [2.1.2](https://github.com/saxofonsolo/baggie/compare/baggie-v2.1.1...baggie-v2.1.2) (2023-08-04)
 
 

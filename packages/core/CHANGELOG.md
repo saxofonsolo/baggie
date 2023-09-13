@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/saxofonsolo/baggie/compare/core-v1.4.2...core-v1.5.0) (2023-09-13)
+
+
+### Features
+
+* **core:** Add function downloadData ([53c6616](https://github.com/saxofonsolo/baggie/commit/53c66162048e4932d6569af80c14162b54015f75))
+
+
+### Bug Fixes
+
+* Add resolution ([dc43593](https://github.com/saxofonsolo/baggie/commit/dc435930d3a6bc67ebd4d86053bc80c2058e5c04))
+* I hope this will do it ([6d4a672](https://github.com/saxofonsolo/baggie/commit/6d4a672c29af75c0324eaf60ca00eedb1388c7da))
+
 ## [1.4.2](https://github.com/saxofonsolo/baggie/compare/core-v1.4.1...core-v1.4.2) (2023-08-04)
 
 
