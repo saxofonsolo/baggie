@@ -43,7 +43,7 @@
     "prepublishOnly": "syncpack fix-mismatches && yarn run lint && yarn run prettier && yarn run test",
     "pre-commit": "lint-staged"
   },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0"
