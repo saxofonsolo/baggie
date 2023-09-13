@@ -1,0 +1,143 @@
+import { Source } from "@storybook/blocks";
+
+# useQueryState
+
+A hook like `useState`, but stored in the URL query string.
+
+Storing the state in the URL query makes it possible to bookmark and share
+links while keeping the state.
+
+## Parameters
+
+| Parameter        | Type               | Required |
+| :--------------- | :----------------- | :------: |
+| **key**          | `string`           |    ✔    |
+| **defaultValue** | `string  \|  null` |          |
+| **options**      | `object`           |          |
+
+| Option      | Type                  | Default value |
+| :---------- | :-------------------- | :------------ |
+| **toggle**  | `boolean`             | `false`       |
+| **history** | `"push" \| "replace"` | `"replace"`   |
+
+## Examples
+
+Basic usage
+
+<Source dark code={`
+import React from "react";
+import { useQueryState } from "@baggie/react";
+
+export const App = () => {
+    const [size, setSize] = useQueryState("size");
+
+    return (
+        <article>
+            <h2>Product name</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            <h3>Size</h3>
+            <button
+                className={size === "small" ? "active" : "inactive"}
+                onClick={() => setSize("small")}
+            >
+                Small
+            </button>
+            <button
+                className={size === "medium" ? "active" : "inactive"}
+                onClick={() => setSize("medium")}
+            >
+                Medium
+            </button>
+            <button
+                className={size === "large" ? "active" : "inactive"}
+                onClick={() => setSize("large")}
+            >
+                Large
+            </button>
+        </article>
+    );
+};
+
+`} />
+
+Advanced usage
+
+<Source dark code={`
+import React, { useCallback } from "react";
+import { useQueryState } from "@baggie/react";
+
+export const App = () => {
+    const [size, setSize] = useQueryState("size", "small", { history: "push", toggle: true });
+    const [color, setColor] = useQueryState("color", { history: "push" });
+    const [amount, setAmount] = useQueryState("amount");
+
+    const amountMinusOne = useCallback(() => {
+        setAmount((prev) => {
+            const previousAmount = parseInt(prev || "0");
+            return Math.max(0, previousAmount - 1).toString();
+        });
+    }, [setAmount]);
+
+    const amountPlusOne = useCallback(() => {
+        setAmount((prev) => {
+            const previousAmount = parseInt(prev || "0");
+            return (previousAmount + 1).toString();
+        });
+    }, [setAmount]);
+
+    return (
+        <article>
+            <h2>Product name</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            <h3>Size</h3>
+            <button
+                className={size === "small" ? "active" : "inactive"}
+                onClick={() => setSize("small")}
+            >
+                Small
+            </button>
+            <button
+                className={size === "medium" ? "active" : "inactive"}
+                onClick={() => setSize("medium")}
+            >
+                Medium
+            </button>
+            <button
+                className={size === "large" ? "active" : "inactive"}
+                onClick={() => setSize("large")}
+            >
+                Large
+            </button>
+
+            <h3>Color</h3>
+            <button
+                className={color === "red" ? "active" : "inactive"}
+                onClick={() => setColor("red", { toggle: true })}
+            >
+                Red
+            </button>
+            <button
+                className={color === "green" ? "active" : "inactive"}
+                onClick={() => setColor("green", { toggle: true })}
+            >
+                Green
+            </button>
+
+            <h3>Amount</h3>
+            <button onClick={amountMinusOne}>
+                -
+            </button>
+            <input
+                value={amount || "0"}
+                onChange={(event) => setAmount(event.target.value.trim())}
+            />
+            <button onClick={amountPlusOne}>
+                +
+            </button>
+        </article>
+    );
+};
+
+`} />
