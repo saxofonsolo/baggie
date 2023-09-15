@@ -27,12 +27,14 @@ export default defineConfig({
         lib: {
             entry: path.resolve(__dirname, "src/index.ts"),
             name: "@baggie/react",
-            formats: ["es"],
-            fileName: (format, entryName) => `${entryName}.js`,
+            formats: ["es", "cjs"],
+            fileName: (format, entryName) =>
+                `${entryName}.${format === "es" ? "js" : "cjs"}`,
         },
         rollupOptions: {
             external: [...Object.keys(packageJson.peerDependencies)],
             output: {
+                exports: "named",
                 inlineDynamicImports: false,
                 preserveModules: true,
                 globals: {

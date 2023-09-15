@@ -187,5 +187,5 @@
       }
     ]
   },
-  "ignorePatterns": ["/generate/"]
+  "ignorePatterns": ["packages/*/lib/**/*.*"]
 }
