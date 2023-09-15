@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/saxofonsolo/baggie/compare/baggie-v2.2.0...baggie-v2.2.1) (2023-09-15)
+
+
+### Bug Fixes
+
+* **react:** Build esm and commonjs ([0190b46](https://github.com/saxofonsolo/baggie/commit/0190b469e9726b15d8a6384fe4a5460ddd49d83e))
+
 ## [2.2.0](https://github.com/saxofonsolo/baggie/compare/baggie-v2.1.2...baggie-v2.2.0) (2023-09-13)
 
 
