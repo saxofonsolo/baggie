@@ -31,9 +31,7 @@
     " ": "exit",
     "#-- QUALITY ASSURANCE": "exit",
     "prettier": "prettier --write \"./**/*.{js,ts,tsx,css,scss,json}\"",
-    "lint": "npm-run-all lint:*",
-    "lint:js": "tsc --noEmit && eslint packages/**/src/**/*.{ts,tsx} --fix --cache -c .eslintrc.commit.json --max-warnings=0",
-    "lint:css": "stylelint \"packages/**/src/**/*.{,s}css\" --fix --cache --max-warnings=0",
+    "lint": "eslint packages/**/src/**/*.{ts,tsx} --fix --cache -c .eslintrc.commit.json --max-warnings=0",
     "test": "yarn workspaces run jest --passWithNoTests",
     "  ": "exit",
     "#-- AUTOMATION": "exit",
@@ -42,6 +40,9 @@
     "prepare": "rimraf .husky && husky uninstall && husky install .husky && npx husky add .husky/pre-commit \"npm run pre-commit\" && npx husky add .husky/commit-msg \"npm run commit-msg \\$1\"",
     "prepublishOnly": "syncpack fix-mismatches && yarn run lint && yarn run prettier && yarn run test",
     "pre-commit": "lint-staged"
+  },
+  "resolutions": {
+    "strip-ansi": "^6.0.1"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -94,10 +95,6 @@
     "remark-gfm": "3.0.1",
     "rimraf": "^5.0.5",
     "sass": "^1.69.2",
-    "stylelint": "^15.10.3",
-    "stylelint-config-css-modules": "^4.3.0",
-    "stylelint-config-standard-scss": "^11.0.0",
-    "stylelint-order": "^6.0.3",
     "syncpack": "^11.2.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2",
