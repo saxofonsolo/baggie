@@ -1,0 +1,125 @@
+{
+  "extends": ["stylelint-config-css-modules", "stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-blockless", "first-nested"],
+        "ignore": ["after-comment"],
+        "ignoreAtRules": ["else"]
+      }
+    ],
+    "comment-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment", "stylelint-commands"]
+      }
+    ],
+    "declaration-block-no-duplicate-properties": true,
+    "font-family-no-duplicate-names": true,
+    "font-family-no-missing-generic-family-keyword": true,
+    "function-calc-no-unspaced-operator": true,
+    "function-name-case": [
+      "lower",
+      {
+        "ignoreFunctions": ["/DXImageTransform/"]
+      }
+    ],
+    "length-zero-no-unit": true,
+    "no-descending-specificity": null,
+    "number-max-precision": 3,
+    "order/order": [
+      "dollar-variables",
+      "custom-properties",
+      {
+        "type": "at-rule",
+        "hasBlock": false
+      },
+      "declarations",
+      {
+        "type": "at-rule",
+        "hasBlock": true
+      },
+      {
+        "type": "rule",
+        "selector": "/^&:\\w+$/"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": true
+      },
+      {
+        "type": "rule",
+        "selector": "/&:\\w+$/"
+      },
+      {
+        "type": "at-rule",
+        "name": "content"
+      },
+      {
+        "type": "at-rule",
+        "name": "return"
+      }
+    ],
+    "order/properties-alphabetical-order": true,
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": [
+          "background-clip",
+          "box-orient",
+          "padding-end",
+          "padding-start"
+        ]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
+    "scss/at-import-partial-extension": null,
+    "scss/function-no-unknown": null,
+    "scss/operator-no-newline-before": null,
+    "scss/operator-no-newline-after": null,
+    "selector-class-pattern": "[a-z][a-zA-Z0-9]*",
+    "selector-max-id": [
+      0,
+      {
+        "message": "Avoid styling from IDs - use classes instead.",
+        "severity": "error"
+      }
+    ],
+    "selector-max-type": 4,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global", "local"]
+      }
+    ],
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-type-case": [
+      "lower",
+      {
+        "severity": "warning"
+      }
+    ],
+    "value-keyword-case": [
+      "lower",
+      {
+        "severity": "warning"
+      }
+    ],
+    "value-no-vendor-prefix": [
+      true,
+      {
+        "ignoreValues": ["box", "mask"]
+      }
+    ]
+  }
+}
