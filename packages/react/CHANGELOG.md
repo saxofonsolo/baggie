@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/saxofonsolo/baggie/compare/react-v1.1.1...react-v1.1.2) (2023-10-11)
+
+
+### Bug Fixes
+
+* **react:** Only set params in useQueryState if value has changed ([7bb7feb](https://github.com/saxofonsolo/baggie/commit/7bb7feb8be04f0f4126e65ba74d20999176129e1))
+
 ## [1.1.1](https://github.com/saxofonsolo/baggie/compare/react-v1.1.0...react-v1.1.1) (2023-09-15)
 
 
