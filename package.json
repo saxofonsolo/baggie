@@ -43,9 +43,6 @@
     "prepublishOnly": "syncpack fix-mismatches && yarn run lint && yarn run prettier && yarn run test",
     "pre-commit": "lint-staged"
   },
-  "resolutions": {
-    "cliui": "^6.0.0"
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -94,7 +91,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.31",
     "prettier": "3.0.3",
-    "remark-gfm": "^4.0.0",
+    "remark-gfm": "3.0.1",
     "rimraf": "^5.0.5",
     "sass": "^1.69.2",
     "stylelint": "^15.10.3",

@@ -26,9 +26,6 @@
     "tools"
   ],
   "sideEffects": false,
-  "resolutions": {
-    "jackspeak": "2.1.1"
-  },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
