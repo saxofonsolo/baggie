@@ -81,8 +81,12 @@ function useQueryState(
                     : value;
             const newValue =
                 toggle && actualValue === stateRef.current ? null : actualValue;
-            setParams(newValue);
-            stateRef.current = newValue;
+
+            // Only update if value has changed
+            if (stateRef.current !== newValue) {
+                setParams(newValue);
+                stateRef.current = newValue;
+            }
         },
         [opts?.toggle, setParams],
     );
