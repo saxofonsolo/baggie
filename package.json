@@ -54,7 +54,7 @@
   "devDependencies": {
     "@ngneat/falso": "^7.1.0",
     "@storybook/addon-a11y": "^7.4.6",
-    "@storybook/addon-docs": "^7.4.6",
+    "@storybook/addon-docs": "^7.5.1",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-links": "^7.4.6",
     "@storybook/blocks": "^7.4.6",
