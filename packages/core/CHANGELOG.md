@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/saxofonsolo/baggie/compare/core-v1.5.0...core-v1.5.1) (2023-11-03)
+
+
+### Bug Fixes
+
+* Make sure mixing colors only return string ([6d3f2a5](https://github.com/saxofonsolo/baggie/commit/6d3f2a5d2fc1ad6e051339caa0331fca597eb52f))
+
 ## [1.5.0](https://github.com/saxofonsolo/baggie/compare/core-v1.4.2...core-v1.5.0) (2023-09-13)
 
 
