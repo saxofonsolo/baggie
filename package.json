@@ -55,7 +55,7 @@
     "@storybook/addon-docs": "^7.4.6",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-links": "^7.4.6",
-    "@storybook/blocks": "^7.4.6",
+    "@storybook/blocks": "^7.5.3",
     "@storybook/cli": "^7.4.6",
     "@storybook/client-api": "^7.4.6",
     "@storybook/preview-web": "^7.4.6",
