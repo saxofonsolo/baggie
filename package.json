@@ -32,9 +32,8 @@
     "  ": "exit",
     "#-- AUTOMATION": "exit",
     "commit-msg": "node scripts/check-commit-msg.js",
-    "postinstall": "syncpack fix-mismatches",
     "prepare": "rimraf .husky && husky uninstall && husky install .husky && npx husky add .husky/pre-commit \"npm run pre-commit\" && npx husky add .husky/commit-msg \"npm run commit-msg \\$1\"",
-    "prepublishOnly": "syncpack fix-mismatches && pnpm run lint && pnpm run prettier && pnpm run test",
+    "prepublishOnly": "pnpm run lint && pnpm run prettier && pnpm run test",
     "pre-commit": "lint-staged"
   },
   "resolutions": {
@@ -91,7 +90,6 @@
     "remark-gfm": "4.0.0",
     "rimraf": "^5.0.5",
     "sass": "^1.69.5",
-    "syncpack": "^11.2.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
