@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.4](https://github.com/saxofonsolo/baggie/compare/baggie-v2.2.3...baggie-v2.2.4) (2023-11-16)
+
+
+### Bug Fixes
+
+* Add missing devdependencies ([abde0fc](https://github.com/saxofonsolo/baggie/commit/abde0fc51900c403c3f2ff5c0a8bd75ad0df7d08))
+
 ## [2.2.3](https://github.com/saxofonsolo/baggie/compare/baggie-v2.2.2...baggie-v2.2.3) (2023-11-03)
 
 

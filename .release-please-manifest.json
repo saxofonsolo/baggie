@@ -1,5 +1,5 @@
 {
-  ".": "2.2.3",
-  "packages/core": "1.5.1",
+  ".": "2.2.4",
+  "packages/core": "1.5.2",
   "packages/react": "1.1.2"
 }
