@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/saxofonsolo/baggie/compare/core-v1.5.1...core-v1.5.2) (2023-11-16)
+
+
+### Bug Fixes
+
+* Add missing devdependencies ([abde0fc](https://github.com/saxofonsolo/baggie/commit/abde0fc51900c403c3f2ff5c0a8bd75ad0df7d08))
+
 ## [1.5.1](https://github.com/saxofonsolo/baggie/compare/core-v1.5.0...core-v1.5.1) (2023-11-03)
 
 
