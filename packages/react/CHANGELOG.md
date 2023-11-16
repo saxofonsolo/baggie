@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/saxofonsolo/baggie/compare/react-v1.1.2...react-v1.2.0) (2023-11-16)
+
+
+### Features
+
+* Add defaultValue as option property for useQueryState ([d6a658f](https://github.com/saxofonsolo/baggie/commit/d6a658f49edabccfc102f405bad00b3ce812c33e))
+* Add useQueryMapper ([1663d31](https://github.com/saxofonsolo/baggie/commit/1663d31141a05c7a14f9b2868c88efcf62a77bca))
+
+
+### Bug Fixes
+
+* Make react package type module ([98838f1](https://github.com/saxofonsolo/baggie/commit/98838f114492d0b1b44d372f097a271a551dedb6))
+* Storybook exports typescript errors ([8a9eaf5](https://github.com/saxofonsolo/baggie/commit/8a9eaf5f952c05f96e94836255e24258315ac34b))
+
 ## [1.1.2](https://github.com/saxofonsolo/baggie/compare/react-v1.1.1...react-v1.1.2) (2023-10-11)
 
 
