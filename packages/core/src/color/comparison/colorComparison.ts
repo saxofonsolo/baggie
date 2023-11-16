@@ -118,10 +118,10 @@ export class ColorComparison {
                     strawChroma === 0 || needleChroma === 0
                         ? 0
                         : Math.abs(strawPrimeHue - needlePrimeHue) <= 180
-                        ? needlePrimeHue - strawPrimeHue
-                        : needlePrimeHue <= strawPrimeHue
-                        ? needlePrimeHue - strawPrimeHue + 360
-                        : needlePrimeHue - strawPrimeHue - 360;
+                          ? needlePrimeHue - strawPrimeHue
+                          : needlePrimeHue <= strawPrimeHue
+                            ? needlePrimeHue - strawPrimeHue + 360
+                            : needlePrimeHue - strawPrimeHue - 360;
                 const deltaHPrime =
                     2 *
                     Math.sqrt(strawChromaPrime * needleChromaPrime) *

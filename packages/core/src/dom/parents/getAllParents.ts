@@ -61,8 +61,8 @@ export const getAllParents = (
         passedMaxDistance = maxDistanceIsNumber
             ? distance === maxDistance
             : maxDistanceIsString
-            ? currentElement.matches(maxDistance)
-            : currentElement === maxDistance;
+              ? currentElement.matches(maxDistance)
+              : currentElement === maxDistance;
     }
 
     return parents;

@@ -33,11 +33,11 @@ export const convertToCoordinates = (
               y: zeroIfNotNumber((coordinates as CoordinatesXY).y),
           }
         : Array.isArray(coordinates)
-        ? {
-              x: zeroIfNotNumber(coordinates[0]),
-              y: zeroIfNotNumber(coordinates[1]),
-          }
-        : {
-              x: zeroIfNotNumber(coordinates),
-              y: zeroIfNotNumber(coordinates),
-          };
+          ? {
+                x: zeroIfNotNumber(coordinates[0]),
+                y: zeroIfNotNumber(coordinates[1]),
+            }
+          : {
+                x: zeroIfNotNumber(coordinates),
+                y: zeroIfNotNumber(coordinates),
+            };

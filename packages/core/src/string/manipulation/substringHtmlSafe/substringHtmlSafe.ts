@@ -22,8 +22,8 @@ export const substringHtmlSafe = <Verbose extends boolean = false>(
         typeof indexEnd === "undefined"
             ? undefined
             : indexEnd < 1
-            ? indexEnd - 1
-            : indexEnd;
+              ? indexEnd - 1
+              : indexEnd;
     const regex = new RegExp(
         `&#?[a-z0-9]+;|<[a-z]+[^>]*\\/>|<[a-z]+[^>]*>.?|.<\\/[a-z]+>|.?`,
         "gi",

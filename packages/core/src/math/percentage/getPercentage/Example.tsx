@@ -100,10 +100,10 @@ const whole = getPercentage({ percentage, part }${percentageAsDecimalString});
                         typeof part !== "number"
                             ? "Part"
                             : typeof percentage !== "number"
-                            ? "Percentage"
-                            : typeof whole !== "number"
-                            ? "Whole"
-                            : ""
+                              ? "Percentage"
+                              : typeof whole !== "number"
+                                ? "Whole"
+                                : ""
                     }
                     labelForId={undefined}
                 >
