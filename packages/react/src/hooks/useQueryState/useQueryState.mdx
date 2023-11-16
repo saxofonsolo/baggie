@@ -7,18 +7,25 @@ A hook like `useState`, but stored in the URL query string.
 Storing the state in the URL query makes it possible to bookmark and share
 links while keeping the state.
 
+> **Be aware** that you may experience problems, if you are running multiple
+> setter functions from different instances of this hook during the same
+> lifecycle. --- The last setter function to run in a lifecycle will overwrite
+> query params set by the previous setters.
+>
+> **If you need something more flexible**, take a look at `useQueryMapper` [here](http://localhost:6006/?path=/docs/react-hooks-usequerymapper--docs)
+
 ## Parameters
 
 | Parameter        | Type               | Required |
 | :--------------- | :----------------- | :------: |
 | **key**          | `string`           |    ✔    |
-| **defaultValue** | `string  \|  null` |          |
 | **options**      | `object`           |          |
 
-| Option      | Type                  | Default value |
-| :---------- | :-------------------- | :------------ |
-| **toggle**  | `boolean`             | `false`       |
-| **history** | `"push" \| "replace"` | `"replace"`   |
+| Option           | Type                  | Default value |
+| :--------------- | :-------------------- | :------------ |
+| **defaultValue** | `string  \|  null`    |               |
+| **toggle**       | `boolean`             | `false`       |
+| **history**      | `"push" \| "replace"` | `"replace"`   |
 
 ## Examples
 

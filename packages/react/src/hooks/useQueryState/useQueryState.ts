@@ -3,20 +3,21 @@ import { useSearchParams } from "react-router-dom";
 
 interface Options {
     toggle?: boolean;
+    defaultValue?: string | null;
     history?: "push" | "replace";
 }
 interface SetterOptions {
     toggle?: boolean;
 }
 
-type ParamType = string | null;
 type ReturnType = [
-    ParamType,
+    string | null,
     (
-        value: ParamType | ((prev: ParamType) => ParamType),
+        value: string | null | ((prev: string | null) => string | null),
         options?: SetterOptions,
     ) => void,
 ];
+type ParamType = string | null;
 
 function useQueryState(key: string): ReturnType;
 function useQueryState(key: string, options: Options): ReturnType;
@@ -24,7 +25,7 @@ function useQueryState(key: string, defaultValue: ParamType): ReturnType;
 function useQueryState(
     key: string,
     defaultValue: ParamType,
-    options: Options,
+    options: Omit<Options, "defaultValue">,
 ): ReturnType;
 function useQueryState(
     key: string,
@@ -92,7 +93,12 @@ function useQueryState(
     );
 
     useEffect(() => {
-        const defVal = typeof defaultValue === "string" ? defaultValue : null;
+        const defVal =
+            typeof defaultValue === "string"
+                ? defaultValue
+                : typeof options?.defaultValue === "string"
+                  ? options.defaultValue
+                  : null;
         if (
             isInitialRun.current &&
             defVal !== null &&
@@ -101,7 +107,7 @@ function useQueryState(
             setState(defVal);
         }
         isInitialRun.current = false;
-    }, [defaultValue, setState]);
+    }, [defaultValue, options, setState]);
 
     return [state, setState];
 }
