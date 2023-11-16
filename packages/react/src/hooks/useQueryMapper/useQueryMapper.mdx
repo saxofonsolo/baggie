@@ -1,0 +1,127 @@
+import { Source } from "@storybook/blocks";
+
+# useQueryMapper
+
+A hook like `useState`, but stored in the URL query string.
+
+Storing the state in the URL query makes it possible to bookmark and share
+links while keeping the state.
+
+## Parameters
+
+> `T` is a generic type - it can be whatever you want
+
+| Parameter         | Type                                            | Required |
+| :---------------- | :---------------------------------------------- | :------: |
+| **valueToParams** | `(value: T) => [key: string, value: string][]`  |    ✔    |
+| **paramsToValue** | `(params: [key: string, value: string][]) => T` |    ✔    |
+| **options**       | `object`                                        |          |
+
+| Option           | Type                  | Default value |
+| :--------------- | :-------------------- | :------------ |
+| **defaultValue** | `T`                   |               |
+| **history**      | `"push" \| "replace"` | `"replace"`   |
+
+## Example
+
+<Source dark code={`
+import React, { useCallback } from "react";
+import { QueryMapperParams, useQueryMapper } from "@baggie/react";
+
+type Selections = {
+    size: "small" | "medium" | "large";
+    color: string;
+    amount: number;
+}
+
+function valueToParams(value: Selections): QueryMapperParams {
+    return Object.entries(value);
+}
+
+function paramsToValue(params: QueryMapperParams): Selections {
+    return {
+      size: params.find(([key, value]) => key === "size")?.[1] as Selections["size"],
+      color: params.find(([key, value]) => key === "color")?.[1],
+      amount: parseInt(params.find(([key, value]) => key === "amount")?.[1]) || 0,
+    };
+}
+
+export const App = () => {
+    const [selections, setSelections] = useQueryMapper(valueToParams, paramsToValue);
+
+    const amountMinusOne = useCallback(() => {
+        setSelections((prev) => {
+            const previousAmount = prev.amount || 0;
+            const newAmount = Math.max(0, previousAmount - 1);
+            return { ...prev, amount: newAmount };
+        });
+    }, [setSelections]);
+
+    const amountPlusOne = useCallback(() => {
+        setSelections((prev) => {
+          const previousAmount = prev.amount || 0;
+          const newAmount = previousAmount + 1;
+          return { ...prev, amount: newAmount };
+      });
+    }, [setSelections]);
+
+    return (
+        <article>
+            <h2>Product name</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            <h3>Size</h3>
+            <button
+                style={{ fontWeight: selections.size === "small" ? "bold" : "normal" }}
+                onClick={() => setSelections((prev) => ({ ...prev, size: "small" }))}
+            >
+                Small
+            </button>
+            <button
+                style={{ fontWeight: selections.size === "medium" ? "bold" : "normal" }}
+                onClick={() => setSelections((prev) => ({ ...prev, size: "medium" }))}
+            >
+                Medium
+            </button>
+            <button
+                style={{ fontWeight: selections.size === "large" ? "bold" : "normal" }}
+                onClick={() => setSelections((prev) => ({ ...prev, size: "large" }))}
+            >
+                Large
+            </button>
+
+            <h3>Color</h3>
+            <button
+                style={{ fontWeight: selections.color === "red" ? "bold" : "normal" }}
+                onClick={() => setSelections((prev) => ({ ...prev, color: "red" }))}
+            >
+                Red
+            </button>
+            <button
+                style={{ fontWeight: selections.color === "green" ? "bold" : "normal" }}
+                onClick={() => setSelections((prev) => ({ ...prev, color: "green" }))}
+            >
+                Green
+            </button>
+
+            <h3>Amount</h3>
+            <button onClick={amountMinusOne}>
+                -
+            </button>
+            <input
+                value={selections.amount}
+                onChange={(event) => setSelections((prev) => ({ ...prev, amount: parseInt(event.target.value) }))}
+            />
+            <button onClick={amountPlusOne}>
+                +
+            </button>
+
+            <h3>Reset</h3>
+            <button onClick={() => setSelections({ size: null, color: null, amount: null })}>
+                Reset selections
+            </button>
+        </article>
+    );
+};
+
+`} />
