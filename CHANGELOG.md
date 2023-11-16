@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.3](https://github.com/saxofonsolo/baggie/compare/baggie-v2.2.2...baggie-v2.2.3) (2023-11-03)
+
+
+### Bug Fixes
+
+* Make sure mixing colors only return string ([6d3f2a5](https://github.com/saxofonsolo/baggie/commit/6d3f2a5d2fc1ad6e051339caa0331fca597eb52f))
+
 ## [2.2.2](https://github.com/saxofonsolo/baggie/compare/baggie-v2.2.1...baggie-v2.2.2) (2023-10-11)
 
 

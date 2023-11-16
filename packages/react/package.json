@@ -29,14 +29,14 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.16.0"
+    "react-router-dom": "^6.18.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.1.0",
+    "@vitejs/plugin-react": "^4.1.1",
     "rimraf": "^5.0.5",
     "typescript": "^5.2.2",
     "vite-plugin-css-injected-by-js": "^3.3.0",
-    "vite-plugin-dts": "^3.6.0"
+    "vite-plugin-dts": "^3.6.3"
   },
   "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"
 }
