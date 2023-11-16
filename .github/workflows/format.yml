@@ -24,6 +24,10 @@ jobs:
         runs-on: ubuntu-latest
         if: ${{ needs.setup.outputs.condition }} == 'false'
         steps:
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8.10.5
+
             - name: Checkout code
               uses: actions/checkout@v3
               with:
