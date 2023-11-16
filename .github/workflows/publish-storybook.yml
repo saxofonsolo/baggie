@@ -4,6 +4,9 @@ jobs:
   publish-storybook:
     runs-on: ubuntu-latest
     steps:
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.10.5
 
       - name: Checkout files
         uses: actions/checkout@v3
@@ -21,10 +24,10 @@ jobs:
             registry-url: 'https://registry.npmjs.org'
 
       - name: Root - Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Root - Build packages
-        run: yarn build
+        run: pnpm build
         working-directory: ./
 
         # ------------------
@@ -32,7 +35,7 @@ jobs:
         # ------------------
 
       - name: StoryBook - Build website
-        run: yarn build-storybook
+        run: pnpm build-storybook
         working-directory: ./
 
         # Popular action to deploy to GitHub Pages:

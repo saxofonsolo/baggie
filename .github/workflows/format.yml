@@ -24,6 +24,10 @@ jobs:
         runs-on: ubuntu-latest
         if: ${{ needs.setup.outputs.condition }} == 'false'
         steps:
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8.10.5
+
             - name: Checkout code
               uses: actions/checkout@v3
               with:
@@ -36,13 +40,13 @@ jobs:
                   registry-url: 'https://registry.npmjs.org'
 
             - name: Install dependencies
-              run: yarn install --frozen-lockfile
+              run: pnpm install --frozen-lockfile
 
             - name: Build packages
-              run: yarn build
+              run: pnpm build
 
             - name: Run linters, prettier and tests
-              run: yarn prepublishOnly
+              run: pnpm prepublishOnly
 
             - name: Commit changes
               uses: stefanzweifel/git-auto-commit-action@v4

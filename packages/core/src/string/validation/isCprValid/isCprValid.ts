@@ -12,8 +12,8 @@ export const isCprValid = (
         typeof cprNumber === "string"
             ? cprNumber
             : typeof cprNumber === "number"
-            ? String(cprNumber)
-            : cprNumber.value;
+              ? String(cprNumber)
+              : cprNumber.value;
 
     // Check that the format is correct and that the date is valid
     if (

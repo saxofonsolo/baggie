@@ -28,8 +28,8 @@ export const getCoordinatesAngle = (
     return settings.offset === 0
         ? angle
         : angle >= 360
-        ? angle - 360
-        : angle < 0
-        ? angle + 360
-        : angle;
+          ? angle - 360
+          : angle < 0
+            ? angle + 360
+            : angle;
 };

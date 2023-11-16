@@ -46,10 +46,10 @@ export const convertHslToRgb = ({
                 currentHue < oneSixth
                     ? p + (q - p) * 6 * currentHue
                     : currentHue < 0.5
-                    ? q
-                    : currentHue < twoThirds
-                    ? p + (q - p) * (twoThirds - currentHue) * 6
-                    : p;
+                      ? q
+                      : currentHue < twoThirds
+                        ? p + (q - p) * (twoThirds - currentHue) * 6
+                        : p;
 
             if (i < 0) {
                 red = currentHue;

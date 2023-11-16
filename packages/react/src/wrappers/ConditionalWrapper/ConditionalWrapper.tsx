@@ -9,5 +9,5 @@ export const ConditionalWrapper = ({
     condition
         ? wrapper(children)
         : wrapperFallback
-        ? wrapperFallback(children)
-        : children;
+          ? wrapperFallback(children)
+          : children;

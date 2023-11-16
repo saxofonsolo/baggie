@@ -20,8 +20,8 @@ export const substringHtmlEntitySafe = <Verbose extends boolean = false>(
         typeof indexEnd === "undefined"
             ? undefined
             : indexEnd < 1
-            ? indexEnd - 1
-            : indexEnd;
+              ? indexEnd - 1
+              : indexEnd;
 
     const splitString = string.match(/&#?[a-z0-9]+;|.?/gi) as string[];
     const output = splitString.slice(indexStart, end).join("");

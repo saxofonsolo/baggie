@@ -19,8 +19,8 @@ export const getFrequency = <T, R extends boolean = false>(
                   a.frequency < b.frequency
                       ? -1
                       : a.frequency > b.frequency
-                      ? 1
-                      : 0,
+                        ? 1
+                        : 0,
               )
     ) as R extends true ? Map<T, number> : { value: T; frequency: number }[];
 };
