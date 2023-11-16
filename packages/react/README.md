@@ -13,6 +13,9 @@ See **[saxofonsolo.github.io/baggie](https://saxofonsolo.github.io/baggie)** for
 #npm
 npm install @baggie/core @baggie/react
 
+#pnpm
+pnpm install @baggie/core @baggie/react
+
 #yarn
 yarn add @baggie/core @baggie/react
 ```

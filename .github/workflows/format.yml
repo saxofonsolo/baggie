@@ -36,13 +36,13 @@ jobs:
                   registry-url: 'https://registry.npmjs.org'
 
             - name: Install dependencies
-              run: yarn install --frozen-lockfile
+              run: pnpm install --frozen-lockfile
 
             - name: Build packages
-              run: yarn build
+              run: pnpm build
 
             - name: Run linters, prettier and tests
-              run: yarn prepublishOnly
+              run: pnpm prepublishOnly
 
             - name: Commit changes
               uses: stefanzweifel/git-auto-commit-action@v4

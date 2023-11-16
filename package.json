@@ -2,10 +2,6 @@
   "name": "baggie",
   "version": "2.2.2",
   "private": true,
-  "workspaces": [
-    "packages/core",
-    "packages/react"
-  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:saxofonsolo/baggie.git"
@@ -22,23 +18,23 @@
   ],
   "scripts": {
     "#-- DEV": "exit",
-    "storybook": "sb dev -p 6006",
+    "storybook": "pnpm sb dev -p 6006",
     "": "exit",
     "#-- BUILD": "exit",
-    "build": "yarn workspaces run build",
+    "build": "pnpm --recursive run build",
     "build:workspace": "node scripts/build-workspace.mjs",
-    "build-storybook": "sb build --docs",
+    "build-storybook": "pnpm sb build --docs",
     " ": "exit",
     "#-- QUALITY ASSURANCE": "exit",
     "prettier": "prettier --write \"./**/*.{js,ts,tsx,css,scss,json}\"",
     "lint": "tsc --noEmit && eslint packages/**/src/**/*.{ts,tsx} --fix --cache -c .eslintrc.commit.json --max-warnings=0",
-    "test": "yarn workspaces run jest --passWithNoTests",
+    "test": "pnpm --recursive run jest --passWithNoTests",
     "  ": "exit",
     "#-- AUTOMATION": "exit",
     "commit-msg": "node scripts/check-commit-msg.js",
     "postinstall": "syncpack fix-mismatches",
     "prepare": "rimraf .husky && husky uninstall && husky install .husky && npx husky add .husky/pre-commit \"npm run pre-commit\" && npx husky add .husky/commit-msg \"npm run commit-msg \\$1\"",
-    "prepublishOnly": "syncpack fix-mismatches && yarn run lint && yarn run prettier && yarn run test",
+    "prepublishOnly": "syncpack fix-mismatches && pnpm run lint && pnpm run prettier && pnpm run test",
     "pre-commit": "lint-staged"
   },
   "resolutions": {

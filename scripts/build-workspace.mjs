@@ -35,7 +35,7 @@ const buildPackagePrompt = {
 
 inquirer.prompt(buildPackagePrompt).then(({ buildPackage }) => {
     const cwd = path.join(__dirname, `../packages/${buildPackage}`);
-    spawn("yarn", ["build"], {
+    spawn("pnpm", ["build"], {
         cwd,
         detached: true,
         stdio: "inherit",
