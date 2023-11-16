@@ -8,7 +8,7 @@ type StoryType = Meta<InputWrapperProps>;
 /**
  * Wrap this around inputs and select boxes to give them a label and a helper text.
  */
-export default {
+const def: StoryType = {
     component: InputWrapper,
     args: {
         label: "",
@@ -42,7 +42,8 @@ export default {
             control: "none",
         },
     },
-} as StoryType;
+};
+export default def;
 
 export const WithEverything: StoryType = {
     args: {
