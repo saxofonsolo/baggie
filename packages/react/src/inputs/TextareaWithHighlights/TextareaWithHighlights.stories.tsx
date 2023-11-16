@@ -10,7 +10,8 @@ const defaultValue = randSentence({ length: 5 }).join("\n\n");
 /**
  * A textarea with highlights.
  */
-export default {
+const def: StoryType = {
+    // @ts-ignore
     component: TextareaWithHighlights,
     args: {
         defaultValue,
@@ -39,7 +40,8 @@ export default {
             },
         },
     },
-} as StoryType;
+};
+export default def;
 
 export const Default: StoryType = {
     args: {},

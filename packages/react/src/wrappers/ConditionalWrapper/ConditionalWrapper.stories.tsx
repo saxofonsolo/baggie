@@ -8,7 +8,7 @@ type StoryType = Meta<ConditionalWrapperProps>;
 /**
  * A component that wraps your content in another component, but only if a condition is met.
  */
-export default {
+const def: StoryType = {
     component: ConditionalWrapper,
     args: {
         condition: false,
@@ -36,7 +36,8 @@ export default {
             description: "Used if `condition` is **false**",
         },
     },
-} as StoryType;
+};
+export default def;
 
 /**
  * If the condition for showing the wrapper is `true`
