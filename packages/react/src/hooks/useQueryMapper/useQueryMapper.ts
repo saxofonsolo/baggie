@@ -13,7 +13,9 @@ export function useQueryMapper<T>(
     paramsToValue: (params: QueryMapperParams) => T,
     options?: Options<T>,
 ): [T, (value: T | ((prev: T) => T)) => void] {
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams, setSearchParams] = useSearchParams(
+        options?.defaultValue ? valueToParams(options.defaultValue) : undefined,
+    );
 
     const state = useMemo(() => {
         const entries = Array.from(searchParams.entries());
