@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/saxofonsolo/baggie/compare/react-v1.2.0...react-v1.2.1) (2023-11-17)
+
+
+### Bug Fixes
+
+* Set default value of useQueryMapper during init ([b35c8ae](https://github.com/saxofonsolo/baggie/commit/b35c8aebb59da0c8aa20910709305f2f79f15200))
+
 ## [1.2.0](https://github.com/saxofonsolo/baggie/compare/react-v1.1.2...react-v1.2.0) (2023-11-16)
 
 

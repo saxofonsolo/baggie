@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/saxofonsolo/baggie/compare/baggie-v2.3.0...baggie-v2.3.1) (2023-11-17)
+
+
+### Bug Fixes
+
+* Set default value of useQueryMapper during init ([b35c8ae](https://github.com/saxofonsolo/baggie/commit/b35c8aebb59da0c8aa20910709305f2f79f15200))
+
 ## [2.3.0](https://github.com/saxofonsolo/baggie/compare/baggie-v2.2.4...baggie-v2.3.0) (2023-11-16)
 
 
