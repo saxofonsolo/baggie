@@ -31,7 +31,7 @@
     "@baggie/react": "workspace:*",
     "jest": "^29.7.0",
     "rimraf": "^5.0.5",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"
 }
