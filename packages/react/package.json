@@ -33,11 +33,11 @@
     "react-router-dom": "^6.18.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.1.1",
+    "@vitejs/plugin-react": "^4.2.1",
     "rimraf": "^5.0.5",
-    "typescript": "^5.2.2",
-    "vite-plugin-css-injected-by-js": "^3.3.0",
-    "vite-plugin-dts": "^3.6.3"
+    "typescript": "^5.3.3",
+    "vite-plugin-css-injected-by-js": "^3.3.1",
+    "vite-plugin-dts": "^3.7.0"
   },
   "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"
 }
