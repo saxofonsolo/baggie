@@ -60,7 +60,7 @@ jobs:
 
       - name: Core - Check for changes
         id: changed-core
-        uses: tj-actions/changed-files@v34
+        uses: tj-actions/changed-files@v41
         with:
           files: |
             packages/core/**
@@ -79,7 +79,7 @@ jobs:
 
       - name: React - Check for changes
         id: changed-react
-        uses: tj-actions/changed-files@v34
+        uses: tj-actions/changed-files@v41
         with:
           files: |
             packages/react/**
