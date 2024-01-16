@@ -23,7 +23,7 @@
     "#-- BUILD": "exit",
     "build": "pnpm --recursive run build",
     "build:workspace": "node scripts/build-workspace.mjs",
-    "build-storybook": "pnpm sb build --docs --test",
+    "build-storybook": "pnpm sb build --docs",
     " ": "exit",
     "#-- QUALITY ASSURANCE": "exit",
     "prettier": "prettier --write \"./**/*.{js,ts,tsx,css,scss,json}\"",
