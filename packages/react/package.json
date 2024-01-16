@@ -3,6 +3,10 @@
   "version": "1.2.1",
   "description": "A library of tools for your React project",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:saxofonsolo/baggie.git"
+  },
   "license": "MIT",
   "scripts": {
     "build": "vite build",
@@ -37,7 +41,7 @@
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
     "vite-plugin-css-injected-by-js": "^3.3.1",
-    "vite-plugin-dts": "^3.7.0"
+    "vite-plugin-dts": "^3.7.1"
   },
   "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"
 }
