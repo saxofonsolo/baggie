@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.1](https://github.com/saxofonsolo/baggie/compare/baggie-v2.4.0...baggie-v2.4.1) (2024-01-16)
+
+
+### Bug Fixes
+
+* Remove --test parameter from storybook script ([b6ac77b](https://github.com/saxofonsolo/baggie/commit/b6ac77be0d7956339e9d022cf5aff63233e65c28))
+
 ## [2.4.0](https://github.com/saxofonsolo/baggie/compare/baggie-v2.3.1...baggie-v2.4.0) (2024-01-16)
 
 
