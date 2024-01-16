@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/saxofonsolo/baggie/compare/baggie-v2.3.1...baggie-v2.4.0) (2024-01-16)
+
+
+### Features
+
+* **react:** Add FadeContent ([24b35f7](https://github.com/saxofonsolo/baggie/commit/24b35f726156b8e2a9082f4260c8ecdefdb1fcee))
+
 ## [2.3.1](https://github.com/saxofonsolo/baggie/compare/baggie-v2.3.0...baggie-v2.3.1) (2023-11-17)
 
 
