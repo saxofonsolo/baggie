@@ -42,7 +42,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.2"
   },
   "devDependencies": {
     "@ngneat/falso": "^7.1.1",
