@@ -2,6 +2,10 @@
   "name": "@baggie/core",
   "version": "1.5.2",
   "description": "A library of helper functions for your TypeScript project.",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:saxofonsolo/baggie.git"
+  },
   "license": "MIT",
   "scripts": {
     "build": "rimraf ./lib && tsc -b ./tsconfig.build.cjs.json ./tsconfig.build.esm.json ./tsconfig.build.types.json",
