@@ -18,9 +18,11 @@
     window.LOGLEVEL = 'info';
     window.FRAMEWORK_OPTIONS = {};
     window.CHANNEL_OPTIONS = {};
-    window.FEATURES = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":true,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false};
-    window.STORIES = [{"titlePrefix":"","directory":"./docs","files":"**/*.mdx","importPathMatcher":"^\\.[\\\\/](?:docs(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.mdx)$"},{"titlePrefix":"Core","files":"**/*.mdx","directory":"./packages/core/src","importPathMatcher":"^\\.[\\\\/](?:packages\\/core\\/src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.mdx)$"},{"titlePrefix":"React","files":"**/*.@(stories.tsx|mdx)","directory":"./packages/react/src","importPathMatcher":"^\\.[\\\\/](?:packages\\/react\\/src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.(stories\\.tsx|mdx))$"}];
-    window.DOCS_OPTIONS = {"docsMode":true,"defaultName":"Docs","autodocs":true};
+    window.FEATURES = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":true,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false,"disallowImplicitActionsInRenderV8":false};
+    window.STORIES = [{"titlePrefix":"React","files":"**/wrappers/InputWrapper/InputWrapper.stories.tsx","directory":"./packages/react/src","importPathMatcher":"^\\.[\\\\/](?:packages\\/react\\/src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)wrappers\\/InputWrapper\\/InputWrapper\\.stories\\.tsx)$"},{"titlePrefix":"React","files":"**/wrappers/FadeContent/FadeContent.stories.tsx","directory":"./packages/react/src","importPathMatcher":"^\\.[\\\\/](?:packages\\/react\\/src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)wrappers\\/FadeContent\\/FadeContent\\.stories\\.tsx)$"},{"titlePrefix":"React","files":"**/wrappers/ConditionalWrapper/ConditionalWrapper.stories.tsx","directory":"./packages/react/src","importPathMatcher":"^\\.[\\\\/](?:packages\\/react\\/src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)wrappers\\/ConditionalWrapper\\/ConditionalWrapper\\.stories\\.tsx)$"},{"titlePrefix":"React","files":"**/inputs/TextareaWithHighlights/TextareaWithHighlights.stories.tsx","directory":"./packages/react/src","importPathMatcher":"^\\.[\\\\/](?:packages\\/react\\/src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)inputs\\/TextareaWithHighlights\\/TextareaWithHighlights\\.stories\\.tsx)$"},{"titlePrefix":"React","files":"**/charts/ProgressCircle/ProgressCircle.stories.tsx","directory":"./packages/react/src","importPathMatcher":"^\\.[\\\\/](?:packages\\/react\\/src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)charts\\/ProgressCircle\\/ProgressCircle\\.stories\\.tsx)$"}];
+    window.DOCS_OPTIONS = {};
+
+    window["__STORYBOOK_BLOCKS_EMPTY_MODULE__"] = {};
 
     // We do this so that "module && module.hot" etc. in Storybook source code
     // doesn't fail (it will simply be disabled)
@@ -374,7 +376,7 @@
     }
 </style>
 
-  <script type="module" crossorigin src="./assets/iframe-gHzccT4x.js"></script>
+  <script type="module" crossorigin src="./assets/iframe-alF2ktNT.js"></script>
 </head>
 
 <body>
