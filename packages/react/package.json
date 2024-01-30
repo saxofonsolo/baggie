@@ -41,7 +41,7 @@
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
     "vite-plugin-css-injected-by-js": "^3.3.1",
-    "vite-plugin-dts": "^3.7.1"
+    "vite-plugin-dts": "^3.7.2"
   },
   "gitHead": "985da4250f8f3aee48b8ec6ee5b810491fdf166d"
 }
