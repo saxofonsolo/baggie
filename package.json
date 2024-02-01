@@ -32,7 +32,7 @@
     "  ": "exit",
     "#-- AUTOMATION": "exit",
     "commit-msg": "node scripts/check-commit-msg.js",
-    "prepare": "rimraf .husky && husky uninstall && husky install .husky && npx husky add .husky/pre-commit \"npm run pre-commit\" && npx husky add .husky/commit-msg \"npm run commit-msg \\$1\"",
+    "prepare": "husky",
     "prepublishOnly": "pnpm run lint && pnpm run prettier && pnpm run test",
     "pre-commit": "lint-staged"
   },
