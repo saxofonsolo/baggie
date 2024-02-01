@@ -2,7 +2,7 @@
   "extends": "../../tsconfig",
   "compilerOptions": {
     "outDir": "./lib",
-    "isolatedModules": true
+    "isolatedModules": true,
   },
-  "include": ["./src"]
+  "include": ["./src"],
 }
