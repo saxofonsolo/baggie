@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.2](https://github.com/saxofonsolo/baggie/compare/baggie-v2.4.1...baggie-v2.4.2) (2024-02-06)
+
+
+### Bug Fixes
+
+* Upgrade husky to v9 ([91bc091](https://github.com/saxofonsolo/baggie/commit/91bc091c310f26fa4880021b170fdf4b9e704144))
+
 ## [2.4.1](https://github.com/saxofonsolo/baggie/compare/baggie-v2.4.0...baggie-v2.4.1) (2024-01-16)
 
 
