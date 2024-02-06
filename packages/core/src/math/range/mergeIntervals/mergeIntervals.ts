@@ -4,10 +4,10 @@ import { normalizeRanges } from "../_helpers/normalizeRanges";
 /**
  * Merge and combine overlapping intervals.
  */
-export const mergeIntervals = (
+export function mergeIntervals(
     intervals: Range | Range[],
     combineEquals = true,
-) => {
+) {
     const intervalArrays = normalizeRanges(intervals);
 
     if (intervalArrays.length < 2) return intervalArrays;
@@ -36,4 +36,4 @@ export const mergeIntervals = (
     result.push(previous);
 
     return result;
-};
+}

@@ -13,5 +13,6 @@
  * // perimeter = 45
  * ```
  */
-export const getTrianglePerimeter = (a: number, b: number, c: number): number =>
-    a + b + c;
+export function getTrianglePerimeter(a: number, b: number, c: number): number {
+    return a + b + c;
+}

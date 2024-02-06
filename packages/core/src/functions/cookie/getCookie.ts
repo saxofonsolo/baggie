@@ -7,7 +7,7 @@ import { decodeCookieParts } from "./_helpers/decodeCookiePart.helper";
  * keep it a string (even though it might look like a number, an array or an
  * object), set the parameter `dontParseCookie` to `true`.
  */
-export const getCookie = (name: string, dontParseCookie = false): any => {
+export function getCookie(name: string, dontParseCookie = false): any {
     // Object for storing cookies
     const cookieJar: { [name: string]: string } = {};
 
@@ -53,4 +53,4 @@ export const getCookie = (name: string, dontParseCookie = false): any => {
 
     // Return specific cookie if a name is defined - otherwise return all cookies in an object
     return name ? cookieJar[name] : cookieJar;
-};
+}

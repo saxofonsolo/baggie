@@ -12,10 +12,10 @@ interface Options {
 /**
  * Convert a string (or an object) to a date.
  */
-export const convertToDate = (
+export function convertToDate(
     date: string | DateObject,
     options?: Options,
-): Date | undefined => {
+): Date | undefined {
     const { zeroBasedMonth = false, monthBeforeDay = false } = { ...options };
     const dateObject: DateObject = {};
     let dateArray: string[] = [];
@@ -72,4 +72,4 @@ export const convertToDate = (
     } else {
         return undefined;
     }
-};
+}

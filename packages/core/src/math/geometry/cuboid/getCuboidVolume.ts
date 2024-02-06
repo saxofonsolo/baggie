@@ -13,5 +13,6 @@
  * // volume = 6000
  * ```
  */
-export const getCuboidVolume = (x: number, y: number, z: number): number =>
-    x * y * z;
+export function getCuboidVolume(x: number, y: number, z: number): number {
+    return x * y * z;
+}

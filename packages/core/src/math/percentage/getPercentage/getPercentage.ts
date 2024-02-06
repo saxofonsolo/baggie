@@ -21,10 +21,10 @@ type Properties = GetPart | GetWhole | GetPercentage;
 /**
  * Perform calculations with percentage.
  */
-export const getPercentage = (
+export function getPercentage(
     { part, whole, percentage }: Properties,
     percentageAsDecimal = true,
-): number => {
+): number {
     const factor = percentageAsDecimal ? 1 : 100;
 
     if (part && whole) {
@@ -40,4 +40,4 @@ export const getPercentage = (
     }
 
     return 0;
-};
+}

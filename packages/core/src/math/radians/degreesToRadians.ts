@@ -11,5 +11,6 @@
  * // radians = 6.283185307179586
  * ```
  */
-export const degreesToRadians = (degrees: number): number =>
-    (degrees * Math.PI) / 180;
+export function degreesToRadians(degrees: number): number {
+    return (degrees * Math.PI) / 180;
+}

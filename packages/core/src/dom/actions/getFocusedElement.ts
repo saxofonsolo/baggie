@@ -3,5 +3,6 @@ import { isBrowser } from "../../detection";
 /**
  * If an element is focused, return it.
  */
-export const getFocusedElement = (): HTMLElement | null =>
-    (isBrowser && (document?.activeElement as HTMLElement)) || null;
+export function getFocusedElement(): HTMLElement | null {
+    return (isBrowser && (document?.activeElement as HTMLElement)) || null;
+}

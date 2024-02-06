@@ -1,8 +1,10 @@
 /**
  * Get the increase from one value to another in percentage.
  */
-export const getPercentageIncrease = (
+export function getPercentageIncrease(
     from: number,
     to: number,
     percentageAsDecimal = true,
-): number => ((to - from) / from) * (percentageAsDecimal ? 1 : 100) || 0;
+): number {
+    return ((to - from) / from) * (percentageAsDecimal ? 1 : 100) || 0;
+}

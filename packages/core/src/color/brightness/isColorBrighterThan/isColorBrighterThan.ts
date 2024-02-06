@@ -4,7 +4,9 @@ import { getColorBrightness } from "../getColorBrightness/getColorBrightness";
 /**
  * Compare the brightness of two colors.
  */
-export const isColorBrighterThan = (
+export function isColorBrighterThan(
     colorA: string | RGBA,
     colorB: string | RGBA,
-): boolean => getColorBrightness(colorA) > getColorBrightness(colorB);
+): boolean {
+    return getColorBrightness(colorA) > getColorBrightness(colorB);
+}

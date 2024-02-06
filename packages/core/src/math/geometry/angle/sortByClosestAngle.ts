@@ -18,11 +18,8 @@
  * // sorted = [0, 10, 300, 100, 200]
  * ```
  */
-export const sortByClosestAngle = (
-    target: number,
-    angles: number[],
-): number[] =>
-    [...angles].sort((a, b) => {
+export function sortByClosestAngle(target: number, angles: number[]): number[] {
+    return [...angles].sort((a, b) => {
         const aRawDiff = a > target ? a - target : target - a;
         const aModulusDiff = aRawDiff % 360;
         const aDistance =
@@ -35,3 +32,4 @@ export const sortByClosestAngle = (
 
         return aDistance < bDistance ? -1 : aDistance > bDistance ? 1 : 0;
     });
+}

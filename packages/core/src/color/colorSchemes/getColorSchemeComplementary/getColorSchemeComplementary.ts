@@ -7,9 +7,9 @@ import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 /**
  * Get a complementary color scheme.
  */
-export const getColorSchemeComplementary = (
+export function getColorSchemeComplementary(
     color: string | RGBA,
-): [string, string] => {
+): [string, string] {
     const hex = typeof color === "string" ? color : convertRgbToHex(color);
     const rgb = typeof color === "string" ? convertStringToRgb(color) : color;
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(rgb);
@@ -24,4 +24,4 @@ export const getColorSchemeComplementary = (
             }),
         ),
     ];
-};
+}

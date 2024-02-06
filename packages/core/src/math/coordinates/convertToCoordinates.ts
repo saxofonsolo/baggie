@@ -22,12 +22,12 @@ import { CoordinatesXY } from "./_interfaces/coordinatesXY.interface";
  * // nothing = { x: 0, y: 0 }
  * ```
  */
-export const convertToCoordinates = (
+export function convertToCoordinates(
     coordinates?: number | [x: number, y: number] | CoordinatesXY,
-): CoordinatesXY =>
-    typeof coordinates === "object" &&
-    Object.prototype.hasOwnProperty.call(coordinates, "x") &&
-    Object.prototype.hasOwnProperty.call(coordinates, "y")
+): CoordinatesXY {
+    return typeof coordinates === "object" &&
+        Object.prototype.hasOwnProperty.call(coordinates, "x") &&
+        Object.prototype.hasOwnProperty.call(coordinates, "y")
         ? {
               x: zeroIfNotNumber((coordinates as CoordinatesXY).x),
               y: zeroIfNotNumber((coordinates as CoordinatesXY).y),
@@ -41,3 +41,4 @@ export const convertToCoordinates = (
                 x: zeroIfNotNumber(coordinates),
                 y: zeroIfNotNumber(coordinates),
             };
+}

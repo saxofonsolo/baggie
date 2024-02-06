@@ -7,9 +7,9 @@ import { convertStringToRgb } from "../../convert/convertStringToRgb/convertStri
 /**
  * Get a triadic color scheme.
  */
-export const getColorSchemeTriadic = (
+export function getColorSchemeTriadic(
     color: string | RGBA,
-): [string, string, string] => {
+): [string, string, string] {
     const hex = typeof color === "string" ? color : convertRgbToHex(color);
     const rgb = typeof color === "string" ? convertStringToRgb(color) : color;
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(rgb);
@@ -32,4 +32,4 @@ export const getColorSchemeTriadic = (
             }),
         ),
     ];
-};
+}

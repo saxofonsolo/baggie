@@ -161,9 +161,10 @@ type ColorName = keyof typeof COLOR_NAMES;
  * Convert a color name to a hex color.
  */
 // eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
-export const convertColorNameToHex = <T extends ColorName | string>(
+export function convertColorNameToHex<T extends ColorName | string>(
     colorName: T,
-) =>
-    COLOR_NAMES[
+) {
+    return COLOR_NAMES[
         colorName as keyof typeof COLOR_NAMES
     ] as T extends keyof typeof COLOR_NAMES ? string : undefined;
+}

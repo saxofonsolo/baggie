@@ -10,5 +10,6 @@
  * // surfaceArea = 1256.6370614359173
  * ```
  */
-export const getSphereArea = (radius: number): number =>
-    Math.PI * Math.pow(radius * 2, 2);
+export function getSphereArea(radius: number): number {
+    return Math.PI * Math.pow(radius * 2, 2);
+}

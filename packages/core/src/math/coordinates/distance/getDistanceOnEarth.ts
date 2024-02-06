@@ -16,7 +16,9 @@ import { getDistanceOnSphere } from "./getDistanceOnSphere";
  * // distance = 100.70265108699398
  * ```
  */
-export const getDistanceOnEarth = (
+export function getDistanceOnEarth(
     from: CoordinatesLatLng,
     to: CoordinatesLatLng,
-): number => getDistanceOnSphere(from, to, 12742);
+): number {
+    return getDistanceOnSphere(from, to, 12742);
+}

@@ -84,10 +84,10 @@ interface GetAllDistancesReturn {
  * *\/
  * ```
  */
-export const getAllDistances = (
+export function getAllDistances(
     fromCoordinates: CoordinatesXY | null,
     ...toCoordinates: CoordinatesXY[]
-): GetAllDistancesReturn[] => {
+): GetAllDistancesReturn[] {
     const baseCoordinates = fromCoordinates ? [fromCoordinates] : toCoordinates;
     const offset = fromCoordinates ? 0 : 1;
     const allDistances: GetAllDistancesReturn[] = [];
@@ -113,4 +113,4 @@ export const getAllDistances = (
     );
 
     return allDistances;
-};
+}

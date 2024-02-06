@@ -3,7 +3,9 @@ import { getNewlineRegex } from "../../regex/getNewlineRegex/getNewlineRegex";
 /**
  * Replace newlines with break elements.
  */
-export const convertNewlinesToBreaks = (
+export function convertNewlinesToBreaks(
     string: string,
     keepWhitespace = false,
-): string => string.replace(getNewlineRegex(!keepWhitespace), "<br />");
+): string {
+    return string.replace(getNewlineRegex(!keepWhitespace), "<br />");
+}

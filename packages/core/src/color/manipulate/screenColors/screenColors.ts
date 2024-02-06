@@ -6,7 +6,7 @@ import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 /**
  * Blend two colors together with the screen mode.
  */
-export const screenColors = (colorA: string | RGBA, colorB: string | RGBA) => {
+export function screenColors(colorA: string | RGBA, colorB: string | RGBA) {
     const rgb1 =
         typeof colorA === "string" ? convertStringToRgb(colorA) : colorA;
     const rgb2 =
@@ -17,4 +17,4 @@ export const screenColors = (colorA: string | RGBA, colorB: string | RGBA) => {
         blue: Math.round(1 - (1 - rgb1.blue) * (1 - rgb2.blue)),
         alpha: Math.min(getMean([rgb1.alpha || 1, rgb2.alpha || 1]), 1),
     });
-};
+}

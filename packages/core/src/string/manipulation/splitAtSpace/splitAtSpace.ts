@@ -1,4 +1,4 @@
-export const splitAtSpace = (string: string, nearestIndex: number) => {
+export function splitAtSpace(string: string, nearestIndex: number) {
     const trimmed = string.trim();
     const index = Math.max(nearestIndex, 1);
     const regex = new RegExp(
@@ -7,4 +7,4 @@ export const splitAtSpace = (string: string, nearestIndex: number) => {
     );
 
     return trimmed.match(regex) || [trimmed];
-};
+}

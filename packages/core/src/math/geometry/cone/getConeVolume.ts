@@ -14,5 +14,6 @@ import { getCylinderVolume } from "../cylinder/getCylinderVolume";
  * // volume = 2094.3951023931954
  * ```
  */
-export const getConeVolume = (radius: number, height: number): number =>
-    getCylinderVolume(radius, height) / 3;
+export function getConeVolume(radius: number, height: number): number {
+    return getCylinderVolume(radius, height) / 3;
+}

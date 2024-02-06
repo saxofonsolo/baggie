@@ -8,14 +8,14 @@ type VerboseOutput = {
  * Get part of a string between the start and end indexes, or to the end of the
  * string. HTML entities are each counted as one character.
  */
-export const substringHtmlEntitySafe = <Verbose extends boolean = false>(
+export function substringHtmlEntitySafe<Verbose extends boolean = false>(
     string: string,
     indexStart: number,
     indexEnd?: number,
     options?: {
         verbose?: Verbose;
     },
-): Verbose extends true ? VerboseOutput : string => {
+): Verbose extends true ? VerboseOutput : string {
     const end =
         typeof indexEnd === "undefined"
             ? undefined
@@ -38,4 +38,4 @@ export const substringHtmlEntitySafe = <Verbose extends boolean = false>(
               }
             : output
     ) as Verbose extends true ? VerboseOutput : string;
-};
+}

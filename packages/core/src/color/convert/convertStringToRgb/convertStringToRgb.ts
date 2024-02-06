@@ -9,7 +9,7 @@ const isRgbColor = (input: string) => rgbRegExp.test(input);
 /**
  * Convert a hex color to an object with RGB color values.
  */
-export const convertStringToRgb = (input: string): RGBA => {
+export function convertStringToRgb(input: string): RGBA {
     if (isHexColor(input)) {
         const match = input.slice(1);
 
@@ -79,4 +79,4 @@ export const convertStringToRgb = (input: string): RGBA => {
     }
 
     throw "Not a valid color string";
-};
+}

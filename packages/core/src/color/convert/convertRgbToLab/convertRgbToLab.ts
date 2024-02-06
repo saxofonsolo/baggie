@@ -4,12 +4,7 @@ import { RGBA } from "../../_interfaces/rgba.interface";
 /**
  * Convert an object with RGB color values to Lab (CIELAB CIE76).
  */
-export const convertRgbToLab = ({
-    red,
-    green,
-    blue,
-    alpha = 1,
-}: RGBA): CIELAB => {
+export function convertRgbToLab({ red, green, blue, alpha = 1 }: RGBA): CIELAB {
     let r = red / 255;
     let g = green / 255;
     let b = blue / 255;
@@ -35,4 +30,4 @@ export const convertRgbToLab = ({
         b: 200 * (y - z),
         alpha,
     };
-};
+}

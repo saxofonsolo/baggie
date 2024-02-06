@@ -2,5 +2,6 @@
  * @internal
  * @category Cookie
  */
-export const decodeCookieParts = (part: string): string =>
-    part.replace(/(%[0-9A-Z]{2})+/g, decodeURIComponent);
+export function decodeCookieParts(part: string): string {
+    return part.replace(/(%[0-9A-Z]{2})+/g, decodeURIComponent);
+}

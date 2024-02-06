@@ -16,11 +16,11 @@ interface GetPointsOnCircleReturn {
 /**
  * Get an array of equally distanced points on the perimeter of a circle.
  */
-export const getPointsOnCircle = ({
+export function getPointsOnCircle({
     radius,
     numberOfPoints,
     offset = 0,
-}: GetPointsOnCircleProperties): GetPointsOnCircleReturn[] => {
+}: GetPointsOnCircleProperties): GetPointsOnCircleReturn[] {
     const result = [];
 
     const degreesToFirstPoint =
@@ -43,4 +43,4 @@ export const getPointsOnCircle = ({
     }
 
     return result;
-};
+}

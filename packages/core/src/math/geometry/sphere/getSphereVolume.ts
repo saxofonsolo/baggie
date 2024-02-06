@@ -10,5 +10,6 @@
  * // volume = 4188.790204786391
  * ```
  */
-export const getSphereVolume = (radius: number): number =>
-    (Math.PI * Math.pow(radius * 2, 3)) / 6;
+export function getSphereVolume(radius: number): number {
+    return (Math.PI * Math.pow(radius * 2, 3)) / 6;
+}

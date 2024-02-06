@@ -17,10 +17,13 @@ import { getCircleArea } from "../circle/getCircleArea/getCircleArea";
  * // area = 1256.6370614359173
  * ```
  */
-export const getCylinderArea = (
+export function getCylinderArea(
     radius: number,
     height: number,
     excludeEnds = false,
-): number =>
-    Math.PI * (radius * 2) * height +
-    (excludeEnds ? 0 : 2 * getCircleArea(radius));
+): number {
+    return (
+        Math.PI * (radius * 2) * height +
+        (excludeEnds ? 0 : 2 * getCircleArea(radius))
+    );
+}

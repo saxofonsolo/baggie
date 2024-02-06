@@ -7,9 +7,9 @@ import { convertStringToRgb } from "../../convert/convertStringToRgb/convertStri
 /**
  * Get a tetradic color scheme.
  */
-export const getColorSchemeTetradic = (
+export function getColorSchemeTetradic(
     color: string | RGBA,
-): [string, string, string, string] => {
+): [string, string, string, string] {
     const hex = typeof color === "string" ? color : convertRgbToHex(color);
     const rgb = typeof color === "string" ? convertStringToRgb(color) : color;
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(rgb);
@@ -40,4 +40,4 @@ export const getColorSchemeTetradic = (
             }),
         ),
     ];
-};
+}

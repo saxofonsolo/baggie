@@ -4,7 +4,7 @@ import { convertStringToRgb } from "../../convert/convertStringToRgb/convertStri
 /**
  * Get the perceived brightness of a color as percentage in decimal form.
  */
-export const getColorBrightness = (color: string | RGBA): number => {
+export function getColorBrightness(color: string | RGBA): number {
     try {
         const { red, green, blue } =
             typeof color === "string" ? convertStringToRgb(color) : color;
@@ -19,4 +19,4 @@ export const getColorBrightness = (color: string | RGBA): number => {
     } catch (err) {
         return 0;
     }
-};
+}

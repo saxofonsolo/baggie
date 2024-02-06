@@ -3,11 +3,11 @@ import { isNumberRound } from "../isNumberRound/isNumberRound";
 /**
  * @internal
  */
-export const decimalAdjust = (
+export function decimalAdjust(
     number: number,
     decimalPlaces: number,
     func: (number: number) => number,
-): number => {
+): number {
     if (isNumberRound(number, decimalPlaces || 0)) {
         return number;
     }
@@ -15,4 +15,4 @@ export const decimalAdjust = (
     const p = Math.pow(10, decimalPlaces || 0);
     const m = number * p * (1 + Number.EPSILON);
     return func(m) / p;
-};
+}

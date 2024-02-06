@@ -2,8 +2,10 @@
  * Calculate how much a substance has decayed given it's half life
  * and the time passed.
  */
-export const getHalfLifeDecay = (
+export function getHalfLifeDecay(
     initialValue: number,
     timePassed: number,
     halfLife: number,
-) => initialValue * 0.5 ** (timePassed / halfLife);
+) {
+    return initialValue * 0.5 ** (timePassed / halfLife);
+}

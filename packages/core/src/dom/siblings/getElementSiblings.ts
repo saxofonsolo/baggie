@@ -1,7 +1,7 @@
 /**
  * Get all siblings of an element.
  */
-export const getElementSiblings = (
+export function getElementSiblings(
     element: Element,
     options?: {
         includeOriginalElement?: boolean;
@@ -9,7 +9,7 @@ export const getElementSiblings = (
         untilElement?: boolean | Element;
         matchSelector?: string;
     },
-): Element[] => {
+): Element[] {
     const { includeOriginalElement, fromElement, untilElement, matchSelector } =
         {
             ...options,
@@ -67,4 +67,4 @@ export const getElementSiblings = (
 
     // Return array of elements
     return siblings;
-};
+}

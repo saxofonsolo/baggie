@@ -1,8 +1,8 @@
-export const downloadData = (config: {
+export function downloadData(config: {
     content: string;
     filename: string;
     mimeType: string;
-}) => {
+}) {
     const { content, filename, mimeType } = config;
     const a = document.createElement("a");
     const blob = new Blob([content], { type: mimeType });
@@ -10,4 +10,4 @@ export const downloadData = (config: {
     a.setAttribute("href", url);
     a.setAttribute("download", filename);
     a.click(); // Start downloading
-};
+}

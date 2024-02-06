@@ -3,7 +3,7 @@ import { getMean } from "../getMean/getMean";
 /**
  * Get the median from an array of numbers.
  */
-export const getMedian = (numbers: number[]): number => {
+export function getMedian(numbers: number[]): number {
     const numbersCount = numbers.length;
     const halfOfNumbersCount = Math.floor(numbersCount / 2);
 
@@ -20,4 +20,4 @@ export const getMedian = (numbers: number[]): number => {
             : // If the amount of numbers is odd, the median is the middle number
               sortedNumbers[halfOfNumbersCount]
         : 0;
-};
+}

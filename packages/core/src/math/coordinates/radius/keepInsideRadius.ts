@@ -21,10 +21,10 @@ import { isInsideRadius } from "./isInsideRadius";
  * // newPositionB = { x: 10, y: 0 }
  * ```
  */
-export const keepInsideRadius = (
+export function keepInsideRadius(
     position: CoordinatesXY,
     radius: number,
-): CoordinatesXY => {
+): CoordinatesXY {
     if (isInsideRadius(position, radius)) {
         return position;
     }
@@ -34,4 +34,4 @@ export const keepInsideRadius = (
         x: Math.cos(radians) * radius,
         y: Math.sin(radians) * radius,
     };
-};
+}
