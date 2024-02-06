@@ -9,7 +9,7 @@ type VerboseOutput = {
  * string. HTML entities are each counted as one character, and HTML tags are
  * ignored.
  */
-export const substringHtmlSafe = <Verbose extends boolean = false>(
+export function substringHtmlSafe<Verbose extends boolean = false>(
     string: string,
     indexStart: number,
     indexEnd?: number,
@@ -17,7 +17,7 @@ export const substringHtmlSafe = <Verbose extends boolean = false>(
         document?: globalThis.Document;
         verbose?: Verbose;
     },
-): Verbose extends true ? VerboseOutput : string => {
+): Verbose extends true ? VerboseOutput : string {
     const end =
         typeof indexEnd === "undefined"
             ? undefined
@@ -46,4 +46,4 @@ export const substringHtmlSafe = <Verbose extends boolean = false>(
               }
             : output
     ) as Verbose extends true ? VerboseOutput : string;
-};
+}

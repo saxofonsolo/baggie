@@ -28,14 +28,14 @@
  * // a parent matching the selector ".main"
  * ```
  */
-export const getAllParents = (
+export function getAllParents(
     element: HTMLElement,
     options?: {
         matchSelector?: string;
         limit?: number;
         maxDistance?: number | string | HTMLElement;
     },
-): Element[] => {
+): Element[] {
     const matchSelector = options?.matchSelector || "*";
     const limit = options?.limit || Infinity;
     const maxDistance = options?.maxDistance || Infinity;
@@ -66,4 +66,4 @@ export const getAllParents = (
     }
 
     return parents;
-};
+}

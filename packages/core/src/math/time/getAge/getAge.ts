@@ -1,4 +1,4 @@
-export const getAge = (birth: Date, death?: Date): number => {
+export function getAge(birth: Date, death?: Date): number {
     const today = death || new Date();
     const birthDate = new Date(birth);
     const m = today.getMonth() - birthDate.getMonth();
@@ -9,4 +9,4 @@ export const getAge = (birth: Date, death?: Date): number => {
     }
 
     return age;
-};
+}

@@ -19,7 +19,7 @@ import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
  * // bounds = { min: { x: -10, y: -10 }, max: { x: 10, y: 10 }}
  * ```
  */
-export const getBounds = (coordinates: CoordinatesXY[]): Bounds => {
+export function getBounds(coordinates: CoordinatesXY[]): Bounds {
     return coordinates.reduce(
         (previous, current) => {
             const returnCoordinates = { ...previous };
@@ -53,4 +53,4 @@ export const getBounds = (coordinates: CoordinatesXY[]): Bounds => {
             },
         },
     );
-};
+}

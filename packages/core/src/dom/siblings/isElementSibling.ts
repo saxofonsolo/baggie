@@ -6,11 +6,11 @@ import { getElementSiblings } from "./getElementSiblings";
  * @param element2 - Another element to check
  * @param adjacentOnly - Set to `true` if elements have to be right next to each other
  */
-export const isElementSibling = (
+export function isElementSibling(
     element1: Element,
     element2: Element,
     adjacentOnly = false,
-): boolean => {
+): boolean {
     if (adjacentOnly) {
         return (
             element1.nextElementSibling === element2 ||
@@ -33,4 +33,4 @@ export const isElementSibling = (
 
     // If element2 wasn't found amongst element1's children, return false
     return siblingsCheck;
-};
+}

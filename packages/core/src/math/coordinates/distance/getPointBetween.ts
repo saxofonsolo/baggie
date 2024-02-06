@@ -16,11 +16,13 @@ import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
  * // point = { x: 15, y: 15 }
  * ```
  */
-export const getPointBetween = (
+export function getPointBetween(
     from: CoordinatesXY,
     to: CoordinatesXY,
     progress = 0.5,
-): CoordinatesXY => ({
-    x: from.x + (to.x - from.x) * progress,
-    y: from.y + (to.y - from.y) * progress,
-});
+): CoordinatesXY {
+    return {
+        x: from.x + (to.x - from.x) * progress,
+        y: from.y + (to.y - from.y) * progress,
+    };
+}

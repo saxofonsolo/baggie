@@ -1,11 +1,11 @@
 /**
  * Sort an array of numbers by their distance to a target number.
  */
-export const sortByDifference = <T>(
+export function sortByDifference<T>(
     target: number | T,
     array: T[],
     getDifference?: T extends number ? undefined : (item: T) => number,
-): T[] => {
+): T[] {
     const getSortingValue =
         typeof getDifference === "function"
             ? getDifference
@@ -19,4 +19,4 @@ export const sortByDifference = <T>(
             Math.abs(realTarget - getSortingValue(a)) -
             Math.abs(realTarget - getSortingValue(b)),
     );
-};
+}

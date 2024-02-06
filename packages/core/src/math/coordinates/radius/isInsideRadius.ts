@@ -19,8 +19,11 @@ import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
  * // checkB = false
  * ```
  */
-export const isInsideRadius = (
+export function isInsideRadius(
     position: CoordinatesXY,
     radius: number,
-): boolean =>
-    Math.sqrt(position.x * position.x + position.y * position.y) < radius;
+): boolean {
+    return (
+        Math.sqrt(position.x * position.x + position.y * position.y) < radius
+    );
+}

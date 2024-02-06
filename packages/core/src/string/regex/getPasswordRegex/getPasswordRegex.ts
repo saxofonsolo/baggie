@@ -21,7 +21,7 @@ export const passwordSpecialCharactersDefault =
  * - forbiddenCharacters
  * - allowUnicode - defaults to `false`
  */
-export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
+export function getPasswordRegex(options?: PasswordOptions): RegExp {
     const passwordSettings: PasswordOptions = {
         ...options,
         minLength: Math.max(
@@ -98,4 +98,4 @@ export const getPasswordRegex = (options?: PasswordOptions): RegExp => {
         }}$`,
         passwordSettings.allowUnicode ? "u" : "",
     );
-};
+}

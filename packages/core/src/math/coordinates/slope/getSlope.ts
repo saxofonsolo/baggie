@@ -18,5 +18,6 @@ import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
  * // slope = 1.5
  * ```
  */
-export const getSlope = (from: CoordinatesXY, to: CoordinatesXY): number =>
-    (to.y - from.y) / (to.x - from.x) || 0;
+export function getSlope(from: CoordinatesXY, to: CoordinatesXY): number {
+    return (to.y - from.y) / (to.x - from.x) || 0;
+}

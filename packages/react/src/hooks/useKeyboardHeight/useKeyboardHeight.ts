@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-export const useKeyboardHeight = (customProperty: boolean | string = false) => {
+export function useKeyboardHeight(customProperty: boolean | string = false) {
     const [keyboardHeight, setKeyboardHeight] = useState(0);
 
     const onResizeVisualViewport = useCallback(() => {
@@ -34,4 +34,4 @@ export const useKeyboardHeight = (customProperty: boolean | string = false) => {
     }, [onResizeVisualViewport]);
 
     return keyboardHeight;
-};
+}

@@ -21,11 +21,11 @@ export interface CookieAttributes {
 /**
  * Set a cookie with a name, value and optional attributes.
  */
-export const setCookie = (
+export function setCookie(
     name: string,
     value: any,
     attributes?: CookieAttributes,
-): void => {
+): void {
     const options: CookieAttributes = {
         path: "",
         domain: "",
@@ -102,4 +102,4 @@ export const setCookie = (
     document.cookie = `${cookieName}=${
         cookieValue as string
     }${attributesString}`;
-};
+}

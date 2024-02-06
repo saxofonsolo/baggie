@@ -14,7 +14,9 @@ interface Options {
 /**
  * Check if a date is valid. Returns true or false.
  */
-export const isDateValid = (
+export function isDateValid(
     date: string | DateObject,
     options?: Options,
-): boolean => !!convertToDate(date, options);
+): boolean {
+    return !!convertToDate(date, options);
+}

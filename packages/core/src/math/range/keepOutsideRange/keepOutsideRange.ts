@@ -4,12 +4,12 @@ import { Range } from "../_interfaces/range.interface";
 /**
  * Make sure a number is outside the range of a minimum and maximum value.
  */
-export const keepOutsideRange = (
+export function keepOutsideRange(
     number: number,
     ranges: Range | Range[],
     combineEquals = true,
-): number =>
-    mergeIntervals(ranges, combineEquals).reduce(
+): number {
+    return mergeIntervals(ranges, combineEquals).reduce(
         (returnNumber, { from, to }) =>
             returnNumber > from && returnNumber < to
                 ? [from, to].reduce((previous: number, current: number) => {
@@ -20,3 +20,4 @@ export const keepOutsideRange = (
                 : returnNumber,
         number,
     );
+}

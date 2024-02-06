@@ -9,7 +9,7 @@ const formatDate8601 = (date: Date) =>
         date.getDate().toString().padStart(2, "0"),
     ].join("-");
 
-export const useRefreshedToday = () => {
+export function useRefreshedToday() {
     const lastRefreshDate = useRef(DEFAULT_DATE_IN_PAST);
 
     const resetRefreshDate = useCallback(() => {
@@ -30,4 +30,4 @@ export const useRefreshedToday = () => {
         updateRefreshDate,
         wasRefreshedToday,
     };
-};
+}

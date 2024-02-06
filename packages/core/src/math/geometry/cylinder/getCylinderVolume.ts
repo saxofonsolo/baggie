@@ -12,5 +12,6 @@
  * // volume = 6283.185307179587
  * ```
  */
-export const getCylinderVolume = (radius: number, height: number): number =>
-    Math.PI * radius * radius * height;
+export function getCylinderVolume(radius: number, height: number): number {
+    return Math.PI * radius * radius * height;
+}

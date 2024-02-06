@@ -1,7 +1,7 @@
 /**
  * Count the number of decimals in a number.
  */
-export const countDecimals = (value: number | string): number => {
+export function countDecimals(value: number | string): number {
     const valueIsString = typeof value === "string";
     const text = valueIsString ? value : value.toString();
     const number = valueIsString ? parseInt(value, 10) : value;
@@ -19,4 +19,4 @@ export const countDecimals = (value: number | string): number => {
     }
 
     return 0;
-};
+}

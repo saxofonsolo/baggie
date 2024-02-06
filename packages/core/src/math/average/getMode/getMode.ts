@@ -2,9 +2,9 @@
  * Get the mode from an array of numbers.
  * The mode is the most frequent value in a data set.
  */
-export const getMode = (
+export function getMode(
     numbers: number[],
-): { numbers: number[]; frequency: number } | undefined => {
+): { numbers: number[]; frequency: number } | undefined {
     const numbersMapping: { [key: string]: number } = {};
     let greatestFrequency = 0;
     let mode: number[] = [];
@@ -24,4 +24,4 @@ export const getMode = (
         numbers: mode,
         frequency: greatestFrequency,
     };
-};
+}

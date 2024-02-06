@@ -2,9 +2,9 @@
  * Get the anti mode from an array of numbers.
  * The anti mode is the least frequent value in a data set.
  */
-export const getAntiMode = (
+export function getAntiMode(
     numbers: number[],
-): { numbers: number[]; frequency: number } | undefined => {
+): { numbers: number[]; frequency: number } | undefined {
     const numbersMapping = numbers.reduce<
         Record<string, { value: number; frequency: number }>
     >((obj, cur) => {
@@ -34,4 +34,4 @@ export const getAntiMode = (
                 frequency: 0,
             },
         );
-};
+}

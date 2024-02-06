@@ -4,12 +4,7 @@ import { RGBA } from "../../_interfaces/rgba.interface";
 /**
  * Convert an object with RGB color to HSL color values.
  */
-export const convertRgbToHsl = ({
-    red,
-    green,
-    blue,
-    alpha = 1,
-}: RGBA): HSLA => {
+export function convertRgbToHsl({ red, green, blue, alpha = 1 }: RGBA): HSLA {
     const r = red / 255;
     const g = green / 255;
     const b = blue / 255;
@@ -41,4 +36,4 @@ export const convertRgbToHsl = ({
         lightness,
         alpha,
     };
-};
+}

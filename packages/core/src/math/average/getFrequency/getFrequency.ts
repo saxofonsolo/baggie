@@ -1,10 +1,10 @@
 /**
  * Get the frequency of each item in an array of numbers or strings.
  */
-export const getFrequency = <T, R extends boolean = false>(
+export function getFrequency<T, R extends boolean = false>(
     values: T[],
     returnMap?: R,
-): R extends true ? Map<T, number> : { value: T; frequency: number }[] => {
+): R extends true ? Map<T, number> : { value: T; frequency: number }[] {
     const map = new Map<T, number>();
     values.forEach((value) =>
         map.set(value, map.has(value) ? (map.get(value) || 0) + 1 : 1),
@@ -23,4 +23,4 @@ export const getFrequency = <T, R extends boolean = false>(
                         : 0,
               )
     ) as R extends true ? Map<T, number> : { value: T; frequency: number }[];
-};
+}

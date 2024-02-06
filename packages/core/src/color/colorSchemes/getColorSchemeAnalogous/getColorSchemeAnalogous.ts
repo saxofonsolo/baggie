@@ -7,11 +7,11 @@ import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 /**
  * Get an analogous color scheme.
  */
-export const getColorSchemeAnalogous = (
+export function getColorSchemeAnalogous(
     color: string | RGBA,
     count = 3,
     steps = 12,
-): string[] => {
+): string[] {
     const hex = typeof color === "string" ? color : convertRgbToHex(color);
     const rgb = typeof color === "string" ? convertStringToRgb(color) : color;
     const { hue, saturation, lightness, alpha } = convertRgbToHsl(rgb);
@@ -30,4 +30,4 @@ export const getColorSchemeAnalogous = (
     }
 
     return colors;
-};
+}

@@ -4,14 +4,14 @@ import { radiansToDegrees } from "../../../radians/radiansToDegrees";
 /**
  * Get the angle from one set of coordinates to another.
  */
-export const getCoordinatesAngle = (
+export function getCoordinatesAngle(
     from: CoordinatesXY,
     to: CoordinatesXY,
     options?: {
         clockwise?: boolean;
         offset?: number;
     },
-): number => {
+): number {
     if (from.x === to.x && from.y === to.y) return 0;
 
     const settings = {
@@ -32,4 +32,4 @@ export const getCoordinatesAngle = (
           : angle < 0
             ? angle + 360
             : angle;
-};
+}

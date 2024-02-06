@@ -6,11 +6,11 @@ import { clamp } from "../../../math";
 /**
  * Mix two colors together.
  */
-export const mixColors = (
+export function mixColors(
     colorA: string | RGBA,
     colorB: string | RGBA,
     weight = 0.5,
-): string => {
+): string {
     const amount = clamp(weight, { min: 0, max: 1 });
     const rgb1 =
         typeof colorA === "string" ? convertStringToRgb(colorA) : colorA;
@@ -31,4 +31,4 @@ export const mixColors = (
         blue: Math.round((blue2 + (blue1 - blue2) * amount) * 255),
         alpha: Math.round((alpha2 + (alpha1 - alpha2) * amount) * 1000) / 1000,
     });
-};
+}

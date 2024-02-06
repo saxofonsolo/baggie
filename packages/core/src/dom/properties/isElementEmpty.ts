@@ -1,10 +1,11 @@
 /**
  * Check if an element is empty.
  */
-export const isElementEmpty = (
+export function isElementEmpty(
     element: Element,
     trimWhitespace = false,
-): boolean =>
-    trimWhitespace
+): boolean {
+    return trimWhitespace
         ? !element.innerHTML.trim().length
         : !element.childNodes.length;
+}

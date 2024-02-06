@@ -1,13 +1,13 @@
 /**
  * Insert new values between all existing values in an array.
  */
-export const intersperse = <A, I>(
+export function intersperse<A, I>(
     array: A[],
     ...insertion: (I extends () => any
         ? (args: { previous: A; next: A; index: number }) => any
         : any)[]
-): (A | (I extends () => any ? ReturnType<I> : I))[] =>
-    array.reduce((accumulator: any[], element, index, array) => {
+): (A | (I extends () => any ? ReturnType<I> : I))[] {
+    return array.reduce((accumulator: any[], element, index, array) => {
         accumulator.push(element);
         if (index < array.length - 1) {
             insertion.forEach((insert, insertIndex) =>
@@ -24,3 +24,4 @@ export const intersperse = <A, I>(
         }
         return accumulator;
     }, []);
+}

@@ -6,10 +6,7 @@ import { convertRgbToHex } from "../../convert/convertRgbToHex/convertRgbToHex";
 /**
  * Blend two colors together with the multiply mode.
  */
-export const multiplyColors = (
-    colorA: string | RGBA,
-    colorB: string | RGBA,
-) => {
+export function multiplyColors(colorA: string | RGBA, colorB: string | RGBA) {
     const rgb1 =
         typeof colorA === "string" ? convertStringToRgb(colorA) : colorA;
     const rgb2 =
@@ -20,4 +17,4 @@ export const multiplyColors = (
         blue: Math.round((rgb1.blue * rgb2.blue) / 255),
         alpha: Math.min(getMean([rgb1.alpha || 1, rgb2.alpha || 1]), 1),
     });
-};
+}

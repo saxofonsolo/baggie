@@ -17,9 +17,12 @@ import { getCircleArea } from "../circle/getCircleArea/getCircleArea";
  * // areaWithoutBottom = 628.3185307179587
  * ```
  */
-export const getConeArea = (
+export function getConeArea(
     radius: number,
     height: number,
     excludeBottom = false,
-): number =>
-    Math.PI * radius * height + (excludeBottom ? 0 : getCircleArea(radius));
+): number {
+    return (
+        Math.PI * radius * height + (excludeBottom ? 0 : getCircleArea(radius))
+    );
+}

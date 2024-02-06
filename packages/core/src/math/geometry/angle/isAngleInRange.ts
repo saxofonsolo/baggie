@@ -19,21 +19,25 @@
  * // checkD = false
  * ```
  */
-export const isAngleInRange = (
+export function isAngleInRange(
     angle: number,
     ...ranges: [number, number][]
-): boolean =>
-    ranges.reduce<boolean>((inRange: boolean, range: [number, number]) => {
-        if (inRange) return inRange;
+): boolean {
+    return ranges.reduce<boolean>(
+        (inRange: boolean, range: [number, number]) => {
+            if (inRange) return inRange;
 
-        const [from, to] = range;
+            const [from, to] = range;
 
-        if (from > to) {
-            return (
-                (angle >= -(360 % from) && angle <= to) ||
-                (angle >= from && angle <= 360 + to)
-            );
-        }
+            if (from > to) {
+                return (
+                    (angle >= -(360 % from) && angle <= to) ||
+                    (angle >= from && angle <= 360 + to)
+                );
+            }
 
-        return angle >= from && angle <= to;
-    }, false);
+            return angle >= from && angle <= to;
+        },
+        false,
+    );
+}

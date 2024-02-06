@@ -17,11 +17,11 @@ import { degreesToRadians } from "../../radians/degreesToRadians";
  * // distance = 100.70265108699398
  * ```
  */
-export const getDistanceOnSphere = (
+export function getDistanceOnSphere(
     from: CoordinatesLatLng,
     to: CoordinatesLatLng,
     diameter: number,
-): number => {
+): number {
     const dLat = degreesToRadians(to.lat - from.lat);
     const dLon = degreesToRadians(to.lng - from.lng);
 
@@ -33,4 +33,4 @@ export const getDistanceOnSphere = (
             Math.sin(dLon / 2);
 
     return diameter * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-};
+}

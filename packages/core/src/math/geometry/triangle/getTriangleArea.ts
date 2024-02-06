@@ -15,7 +15,7 @@ import { getTrianglePerimeter } from "./getTrianglePerimeter";
  * // surfaceArea = 205.3959590644373
  * ```
  */
-export const getTriangleArea = (a: number, b: number, c: number): number => {
+export function getTriangleArea(a: number, b: number, c: number): number {
     const semiPerimeter = getTrianglePerimeter(a, b, c) / 2;
     return Math.sqrt(semiPerimeter * (-a + b + c) * (a - b + c) * (a + b - c));
-};
+}

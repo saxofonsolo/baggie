@@ -15,5 +15,6 @@ import { CoordinatesXY } from "../_interfaces/coordinatesXY.interface";
  * // distance = 10
  * ```
  */
-export const getDistance = (from: CoordinatesXY, to: CoordinatesXY): number =>
-    Math.sqrt(Math.pow(to.x - from.x, 2) + Math.pow(to.y - from.y, 2));
+export function getDistance(from: CoordinatesXY, to: CoordinatesXY): number {
+    return Math.sqrt(Math.pow(to.x - from.x, 2) + Math.pow(to.y - from.y, 2));
+}

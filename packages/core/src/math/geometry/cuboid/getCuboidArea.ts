@@ -13,5 +13,6 @@
  * // surfaceArea = 2200
  * ```
  */
-export const getCuboidArea = (x: number, y: number, z: number): number =>
-    (x * y + x * z + y * z) * 2;
+export function getCuboidArea(x: number, y: number, z: number): number {
+    return (x * y + x * z + y * z) * 2;
+}

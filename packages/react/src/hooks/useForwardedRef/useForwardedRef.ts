@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 
-export const useForwardedRef = <T>(
+export function useForwardedRef<T>(
     forwardedRef: React.ForwardedRef<T>,
     initialValue: any = null,
-): React.RefObject<T> => {
+): React.RefObject<T> {
     const innerRef = useRef<T>(initialValue);
 
     useEffect(() => {
@@ -21,4 +21,4 @@ export const useForwardedRef = <T>(
     });
 
     return innerRef;
-};
+}
