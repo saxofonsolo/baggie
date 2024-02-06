@@ -28,7 +28,7 @@
     "#-- QUALITY ASSURANCE": "exit",
     "prettier": "prettier --write \"./**/*.{js,ts,tsx,css,scss,json}\"",
     "lint": "tsc --noEmit && eslint packages/**/src/**/*.{ts,tsx} --fix --cache -c .eslintrc.commit.json --max-warnings=0",
-    "test": "pnpm --recursive run jest --passWithNoTests",
+    "test": "pnpm --recursive run test --passWithNoTests",
     "  ": "exit",
     "#-- AUTOMATION": "exit",
     "commit-msg": "node scripts/check-commit-msg.js",
