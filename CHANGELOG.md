@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.3](https://github.com/saxofonsolo/baggie/compare/baggie-v2.4.2...baggie-v2.4.3) (2024-04-05)
+
+
+### Bug Fixes
+
+* IsJsDom breaks in react-native ([a9c7f57](https://github.com/saxofonsolo/baggie/commit/a9c7f572d9c063ea1e234bd568866d016d066e58))
+
 ## [2.4.2](https://github.com/saxofonsolo/baggie/compare/baggie-v2.4.1...baggie-v2.4.2) (2024-02-06)
 
 

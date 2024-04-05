@@ -1,6 +1,6 @@
 {
   "name": "@baggie/core",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "A library of helper functions for your TypeScript project.",
   "repository": {
     "type": "git",
