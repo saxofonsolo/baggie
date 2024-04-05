@@ -1,1 +1,0 @@
-const e=a=>a*Math.PI/180;export{e as d};

@@ -1,0 +1,1 @@
+function u({red:f,green:r,blue:h,alpha:l=1}){const n=f/255,s=r/255,e=h/255,o=Math.max(n,s,e),i=Math.min(n,s,e),a=(o+i)/2,t=o-i,m=t===0?0:t/(1-Math.abs(2*a-1));let c=0;return t&&(o===n?c=(s-e)/t%6:o===s?c=(e-n)/t+2:o===e&&(c=(n-s)/t+4),c*=60),{hue:c,saturation:m,lightness:a,alpha:l}}export{u as c};
