@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.3](https://github.com/saxofonsolo/baggie/compare/core-v1.5.2...core-v1.5.3) (2024-04-05)
+
+
+### Bug Fixes
+
+* IsJsDom breaks in react-native ([a9c7f57](https://github.com/saxofonsolo/baggie/commit/a9c7f572d9c063ea1e234bd568866d016d066e58))
+
 ## [1.5.2](https://github.com/saxofonsolo/baggie/compare/core-v1.5.1...core-v1.5.2) (2023-11-16)
 
 
