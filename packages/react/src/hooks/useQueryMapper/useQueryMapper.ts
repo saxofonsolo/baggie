@@ -9,18 +9,20 @@ interface Options<T> {
 export type QueryMapperParams = [key: string, value: string][];
 
 export function useQueryMapper<T>(
-    valueToParams: (value: T) => QueryMapperParams,
-    paramsToValue: (params: QueryMapperParams) => T,
+    valueToParams: (value: T, defaultValue?: T) => QueryMapperParams,
+    paramsToValue: (params: QueryMapperParams, defaultValue?: T) => T,
     options?: Options<T>,
 ): [T, (value: T | ((prev: T) => T)) => void] {
     const [searchParams, setSearchParams] = useSearchParams(
-        options?.defaultValue ? valueToParams(options.defaultValue) : undefined,
+        options?.defaultValue
+            ? valueToParams(options.defaultValue, options.defaultValue)
+            : undefined,
     );
 
     const state = useMemo(() => {
         const entries = Array.from(searchParams.entries());
-        return paramsToValue(entries);
-    }, [paramsToValue, searchParams]);
+        return paramsToValue(entries, options?.defaultValue);
+    }, [options, paramsToValue, searchParams]);
 
     const stateForComparison = useRef<T>(state);
     const paramsForComparison = useRef(Array.from(searchParams.entries()));
@@ -53,7 +55,7 @@ export function useQueryMapper<T>(
                 typeof value === "function"
                     ? (value as (prev: T) => T)(stateForComparison.current)
                     : value;
-            const newParams = valueToParams(newValue);
+            const newParams = valueToParams(newValue, options?.defaultValue);
 
             // Check if params have changed
             const haveParamsChanged =
@@ -71,7 +73,7 @@ export function useQueryMapper<T>(
                 stateForComparison.current = newValue;
             }
         },
-        [setParams, valueToParams],
+        [options, setParams, valueToParams],
     );
 
     useEffect(() => {
