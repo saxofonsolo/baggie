@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/saxofonsolo/baggie/compare/core-v1.5.3...core-v1.6.0) (2024-07-11)
+
+
+### Features
+
+* Add defaultValue as parameter to function in useQueryMapper ([c8ee2a6](https://github.com/saxofonsolo/baggie/commit/c8ee2a6c1808302dec41146fb64b3b84d2b5142c))
+
 ## [1.5.3](https://github.com/saxofonsolo/baggie/compare/core-v1.5.2...core-v1.5.3) (2024-04-05)
 
 

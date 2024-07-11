@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/saxofonsolo/baggie/compare/react-v1.3.0...react-v1.4.0) (2024-07-11)
+
+
+### Features
+
+* Add defaultValue as parameter to function in useQueryMapper ([c8ee2a6](https://github.com/saxofonsolo/baggie/commit/c8ee2a6c1808302dec41146fb64b3b84d2b5142c))
+
 ## [1.3.0](https://github.com/saxofonsolo/baggie/compare/react-v1.2.1...react-v1.3.0) (2024-01-16)
 
 
