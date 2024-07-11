@@ -1,0 +1,1 @@
+import{n as f}from"./normalizeRanges-CV2ihbHB.js";function l(n,s=!0){const r=f(n);if(r.length<2)return r;r.sort((o,m)=>o.from-m.from);const e=[];let t=r[0];for(let o=1;o<r.length;o+=1)(s?t.to>=r[o].from:t.to>r[o].from)?t={from:t.from,to:Math.max(t.to,r[o].to)}:(e.push(t),t=r[o]);return e.push(t),e}export{l as m};
